@@ -1,33 +1,16 @@
 import React, { useState } from 'react'
-
 import Link from 'next/link'
+
+import { menuLinks } from '@/constants'
 
 const Header = (): JSX.Element => {
   const [isMobileHidden, setIsMobileHidden] = useState<boolean>(true)
-  const menuLinks = [
-    {
-      name: '社團歷史',
-      url: '/',
-    },
-    {
-      name: '社友來稿',
-      url: '/',
-    },
-    {
-      name: '留言板',
-      url: '/',
-    },
-    {
-      name: '贊助我們',
-      url: '/',
-    },
-  ]
 
   return (
     <header className="shadow-md fixed top-0 w-full bg-gray-700">
       <nav className="flex items-center justify-between px-8 h-12">
         <div className="flex items-center w-12 text-2xl">
-          <Link href="/">
+          <Link href="/" passHref>
             <img
               src="/img/logo.png"
               className="cursor-pointer"
@@ -36,11 +19,11 @@ const Header = (): JSX.Element => {
           </Link>
         </div>
         <div className="hidden sm:flex-1"></div>
-        <div className="hidden sm:flex gap-x-4 items-center justify-between tracking-wider font-light">
+        <div className="hidden sm:flex gap-x-4 items-center justify-between">
           {menuLinks.map((link, index) => {
             return (
-              <Link key={`desktop-${index}`} href={link.url}>
-                <span className="py-1 cursor-pointer border-b-2 border-opacity-0 hover:border-opacity-25 transition-all duration-300">
+              <Link key={`desktop-${index}`} href={link.url} passHref>
+                <span className="py-1 cursor-pointer border-b-2 border-opacity-0 hover:border-opacity-25 hover:font-normal transition-all duration-300 tracking-wider font-light">
                   {link.name}
                 </span>
               </Link>
@@ -65,7 +48,7 @@ const Header = (): JSX.Element => {
       <div
         className={`${
           isMobileHidden ? 'max-h-0' : 'max-h-screen'
-        } sm:max-h-0 text-center overflow-hidden transition-max-height duration-700 ease-in-out`}
+        } sm:max-h-0 text-center overflow-hidden transition-max-height duration-700`}
       >
         {menuLinks.map((link, index) => {
           return (
@@ -73,8 +56,8 @@ const Header = (): JSX.Element => {
               key={`mobile-${index}`}
               className={`p-2 ${index + 1 === menuLinks.length ? 'pb-4' : ''}`}
             >
-              <Link href={link.url}>
-                <span className="py-2  cursor-pointer border-b-2 border-opacity-0 hover:border-opacity-25 transition-all duration-300">
+              <Link href={link.url} passHref>
+                <span className="py-2 cursor-pointer border-b-2 border-opacity-0 hover:border-opacity-25 hover:font-normal transition-all duration-300 tracking-wider font-light">
                   {link.name}
                 </span>
               </Link>

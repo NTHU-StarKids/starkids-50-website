@@ -15,9 +15,11 @@ const Layout = ({
   return (
     <div className="font-sans bg-gray-700 text-white">
       <Head>
+        <meta charSet="utf-8" />
+
         <title>{`${title} - 清大天文社 50 週年`}</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta charSet="utf-8" />
+
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 

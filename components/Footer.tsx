@@ -1,13 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faBirthdayCake,
-  faBookReader,
-  faGlobe,
-  faGraduationCap,
-  faUserAstronaut,
-} from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import Section from '@/components/Section'
+import { clubLinks, relatedLinks } from '@/constants'
 
 const Footer = (): JSX.Element => {
   return (
@@ -19,36 +11,18 @@ const Footer = (): JSX.Element => {
               清大天文社
             </h3>
             <div className="flex flex-shrink-0 px-2 py-8 items-center justify-between">
-              <div className="w-6">
-                <a
-                  href="http://my.nthu.edu.tw/~res9202/"
-                  target="_blank"
-                  title="國立清華大學天文社 NTHU Astronomy Club (官網)"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon fixedWidth icon={faGlobe} />
-                </a>
-              </div>
-              <div className="w-4">
-                <a
-                  href="https://www.facebook.com/nthuastro"
-                  target="_blank"
-                  title="清大天文社 NTHU Astronomy Club (Facebook)"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon fixedWidth icon={faFacebookF} />
-                </a>
-              </div>
-              <div className="w-6">
-                <a
-                  href="https://www.instagram.com/nthuastroclub/"
-                  target="_blank"
-                  title="清大天文社 NTHU Astronomy Club (Instagram)"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon fixedWidth icon={faInstagram} />
-                </a>
-              </div>
+              {clubLinks.map((link, index) => (
+                <div className="w-7" key={`club-link-${index}`}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    title={link.title}
+                    rel="noreferrer"
+                  >
+                    <img src={link.image} alt={link.title} />
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -59,46 +33,18 @@ const Footer = (): JSX.Element => {
               相關連結
             </h3>
             <div className="flex flex-shrink-0 gap-x-6 px-2 py-8 items-center justify-between">
-              <div className="w-6">
-                <a
-                  href="https://sites.google.com/site/nthuastro40th/"
-                  target="_blank"
-                  title="清大天文社四十周年"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon fixedWidth icon={faBirthdayCake} />
-                </a>
-              </div>
-              <div className="w-6">
-                <a
-                  href="http://my.nthu.edu.tw/~res9202/astrocamp/2021/"
-                  target="_blank"
-                  title="2021 清華大學星空之子天文營"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon fixedWidth icon={faBookReader} />
-                </a>
-              </div>
-              <div className="w-6">
-                <a
-                  href="http://nthuobs.phys.nthu.edu.tw/tw"
-                  target="_blank"
-                  title="清華大學天文台"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon fixedWidth icon={faUserAstronaut} />
-                </a>
-              </div>
-              <div className="w-8">
-                <a
-                  href="https://www.facebook.com/AstronomyClubUnion/"
-                  target="_blank"
-                  title="全國大學天文社聯盟 (Facebook)"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon fixedWidth icon={faGraduationCap} />
-                </a>
-              </div>
+              {relatedLinks.map((link, index) => (
+                <div className="w-7" key={`related-link-${index}`}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    title={link.title}
+                    rel="noreferrer"
+                  >
+                    <img src={link.image} alt={link.title} />
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
         </div>

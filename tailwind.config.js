@@ -1,12 +1,21 @@
+const purple = '#38364e'
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      borderColor: {
+        purple: purple,
+      },
+      transitionProperty: {
+        'max-height': 'max-height',
+      },
+    },
     backgroundColor: {
       'gray-700': '#333333',
-      purple: '#38364e',
+      purple: purple,
       white: '#ffffff',
     },
     boxShadow: {

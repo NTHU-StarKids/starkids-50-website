@@ -1,11 +1,11 @@
-import Container from '@/components/Container'
+import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 
 export default function Home(): JSX.Element {
   return (
     <Layout title="首頁">
-      <Container>
-        <div className="flex flex-col items-center justify-center py-12">
+      <Section>
+        <div className="flex flex-col items-center justify-center">
           <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
             <h1 className="text-6xl font-bold">Coming Soon ......</h1>
 
@@ -60,7 +60,9 @@ export default function Home(): JSX.Element {
             </div>
           </main>
         </div>
-      </Container>
+      </Section>
+
+      <Section color="white"></Section>
     </Layout>
   )
 }

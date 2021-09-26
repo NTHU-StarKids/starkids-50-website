@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode
+  children?: ReactNode
   color?: 'default' | 'white' | 'purple'
 }
 
-const Container = ({ children, color = 'default' }: Props): JSX.Element => {
+const Section = ({ children, color = 'default' }: Props): JSX.Element => {
   let colorClass = ''
   switch (color) {
     case 'white':
@@ -18,9 +18,12 @@ const Container = ({ children, color = 'default' }: Props): JSX.Element => {
       colorClass = 'bg-gray-700 text-white'
       break
   }
+
   return (
-    <div className={`container px-8 text-center ${colorClass}`}>{children}</div>
+    <div className={colorClass}>
+      <div className="container px-8 py-12 text-center">{children}</div>
+    </div>
   )
 }
 
-export default Container
+export default Section

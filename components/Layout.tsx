@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import Head from 'next/head'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -23,9 +23,7 @@ const Layout = ({
 
       <Header />
 
-      <div className="pt-16">
-        <div className="container mx-auto px-8 text-center">{children}</div>
-      </div>
+      <div className="pt-16">{children}</div>
 
       <Footer />
     </div>

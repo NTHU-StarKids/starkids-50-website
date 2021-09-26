@@ -7,15 +7,13 @@ import {
   faUserAstronaut,
 } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import Container from '@/components/Container'
 
 const Footer = (): JSX.Element => {
   return (
-    <footer
-      className="pt-12 pb-8 w-full"
-      style={{ backgroundColor: '#38364e' }}
-    >
-      <div className="container mx-auto px-8 text-center">
-        <div className="flex items-center justify-center mb-8">
+    <footer className="bg-purple pt-12 pb-8 w-full">
+      <Container color="purple">
+        <div className="flex flex-col sm:flex-row items-center justify-center mb-8">
           <div className="w-48">
             <h3 className="border-b border-opacity-20 pb-4 text-xl tracking-widest">
               清大天文社
@@ -54,7 +52,7 @@ const Footer = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="flex-1"></div>
+          <div className="flex-1 invisible sm:visible"></div>
 
           <div className="w-72">
             <h3 className="border-b border-opacity-20 pb-4 text-xl tracking-widest">
@@ -104,7 +102,7 @@ const Footer = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <p className="font-extralight tracking-wider text-sm leading-6">
+        <p className="font-extralight tracking-wider text-xs sm:text-sm leading-6">
           1971-2021 Copyright © NTHU Astronomy Club. All rights reserved.
           <br></br>
           Designed by Kuo Jen-Hsuan. Developed by Hsu An-Ting. Maintained by
@@ -112,7 +110,7 @@ const Footer = (): JSX.Element => {
           <br></br>
           本網頁由外語18郭人萱設計、電機18徐安廷開發、第51屆幹部維護
         </p>
-      </div>
+      </Container>
     </footer>
   )
 }

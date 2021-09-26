@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Header = (): JSX.Element => {
   return (
     <header className="shadow-md fixed top-0 w-full bg-gray-700">
-      <nav className="flex items-center justify-between px-8 h-12 bg-white">
+      <nav className="flex items-center justify-between px-8 h-12">
         <div className="flex items-center w-12 text-2xl">
           <Link href="/">
             <img src="/img/logo.png" alt="清大天文社 Logo" />

@@ -1,9 +1,45 @@
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 export default function Home(): JSX.Element {
+  const sliderSettings = {
+    className: 'center',
+    dots: true,
+    centerMode: true,
+    infinite: true,
+    centerPadding: '60px',
+    slidesToShow: 1,
+    speed: 500,
+  }
+
   return (
     <Layout title="首頁">
+      <Section color="white">
+        <Slider {...sliderSettings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+        </Slider>
+      </Section>
       <Section>
         <div className="flex flex-col items-center justify-center">
           <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">

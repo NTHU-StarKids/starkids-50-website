@@ -11,26 +11,20 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      borderColor: {
+      colors: {
+        'gray-600': gray600,
+        'gray-700': gray700,
+        'gray-900': gray900,
+        'purple-100': purple100,
         'purple-500': purple500,
+        'purple-700': purple700,
       },
       maxHeight: {
         '2x-screen': '200vh',
       },
-      textColor: {
-        'gray-600': gray600,
-      },
       transitionProperty: {
         'max-height': 'max-height',
       },
-    },
-    backgroundColor: {
-      'gray-700': gray700,
-      'gray-900': gray900,
-      'purple-700': purple700,
-      'purple-500': purple500,
-      'purple-100': purple100,
-      white: '#ffffff',
     },
     boxShadow: {
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',

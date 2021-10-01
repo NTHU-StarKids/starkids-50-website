@@ -134,12 +134,12 @@ const AboutUsSection = (): JSX.Element => {
 
       <div className="flex justify-center">
         <div
-          className="flex px-3 py-2 border-2 border-purple-500 rounded-lg cursor-pointer select-none"
+          className="flex items-center h-12 pl-2 pr-4 py-2 border-2 border-purple-500 rounded-lg cursor-pointer select-none pulse-button"
           onClick={() => setShowForm(!showForm)}
         >
-          <span className="w-20 tracking-wider">社慶報名</span>
+          <p className="w-24 tracking-wider max-h-full">社慶報名</p>
           <FontAwesomeIcon
-            className={`ml-1 w-3 transform transition-transform duration-500 ${
+            className={`max-h-full w-3 transform transition-transform duration-500 ${
               showForm ? `rotate-90` : ''
             }`}
             icon={faChevronRight}
@@ -172,21 +172,21 @@ const AboutUsSection = (): JSX.Element => {
                 <input
                   type="text"
                   name="name"
-                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-500 ring-opacity-60"
                   placeholder="姓名"
                 />
 
                 <input
                   type="text"
                   name="department"
-                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-500 ring-opacity-60"
                   placeholder="系級（請填寫校系全名）"
                 />
 
                 <input
                   type="email"
                   name="email"
-                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-500 ring-opacity-60"
                   placeholder="電子信箱"
                 />
 
@@ -205,7 +205,7 @@ const AboutUsSection = (): JSX.Element => {
                     <input
                       type="text"
                       name="memberAge"
-                      className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black"
+                      className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-500 ring-opacity-60"
                       placeholder="成員年齡"
                     />
                   </div>

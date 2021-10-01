@@ -104,3 +104,17 @@
 .slick-next:before {
   font-size: 26px !important;
 }
+
+.pulse-button {
+  box-shadow: 0 0 0 0 rgba(101, 98, 191, 0.6);
+  -webkit-animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  60% {
+    box-shadow: 0 0 0 6px rgba(101, 98, 191, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(101, 98, 191, 0);
+  }
+}

@@ -4,7 +4,8 @@
     "dev": "next dev",
     "pre-deploy": "sh pre-deploy.sh",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "reformat": "prettier --write ."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",

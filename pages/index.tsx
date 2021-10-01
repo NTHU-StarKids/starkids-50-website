@@ -31,7 +31,7 @@ const AnniversarySection = (): JSX.Element => {
 
 const CarouselSection = (): JSX.Element => {
   const sliderSettings = {
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 6000,
     className: 'center',
     dots: true,

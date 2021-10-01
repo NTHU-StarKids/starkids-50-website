@@ -2,7 +2,10 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import {
+  faChevronRight,
+  faMapMarkerAlt,
+} from '@fortawesome/free-solid-svg-icons'
 import Slider from 'react-slick'
 
 import Section from '@/components/Section'
@@ -28,7 +31,7 @@ const AnniversarySection = (): JSX.Element => {
 
 const CarouselSection = (): JSX.Element => {
   const sliderSettings = {
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 6000,
     className: 'center',
     dots: true,
@@ -44,7 +47,7 @@ const CarouselSection = (): JSX.Element => {
       <Slider {...sliderSettings}>
         <div className="w-2/3">
           <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/rzVcfp4.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
@@ -57,7 +60,7 @@ const CarouselSection = (): JSX.Element => {
         </div>
         <div className="w-2/3">
           <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/daiczNk.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
@@ -70,7 +73,7 @@ const CarouselSection = (): JSX.Element => {
         </div>
         <div className="w-2/3">
           <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/wTWsNlJ.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
@@ -85,7 +88,7 @@ const CarouselSection = (): JSX.Element => {
         </div>
         <div className="w-2/3">
           <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/zAVoLcR.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
@@ -98,7 +101,7 @@ const CarouselSection = (): JSX.Element => {
         </div>
         <div className="w-2/3">
           <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/IwetuAv.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
@@ -158,7 +161,13 @@ const AboutUsSection = (): JSX.Element => {
             showForm ? 'opacity-100' : 'opacity-0 delay-500'
           }`}
         >
-          <h3 className="text-xl tracking-widest mb-2">國立清華大學 名人堂</h3>
+          <h3 className="text-xl tracking-widest mb-2">
+            國立清華大學 名人堂
+            <FontAwesomeIcon
+              className="w-4 inline mb-1.5 ml-2 text-purple-500"
+              icon={faMapMarkerAlt}
+            />
+          </h3>
           <h3 className="text-xl tracking-widest mb-8">2021年11月27日 下午</h3>
           <p className="mb-4 font-light tracking-wider">
             安排社友短講、文物展覽、攝影作品、紀念品販售、社窩參觀、茶點。

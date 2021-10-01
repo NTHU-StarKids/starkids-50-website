@@ -3,8 +3,8 @@ import { clubLinks, relatedLinks } from '@/constants'
 
 const Footer = (): JSX.Element => {
   return (
-    <footer className="bg-purple pt-12 pb-8 w-full">
-      <Section color="purple">
+    <footer className="bg-purple-700 pt-12 pb-8 w-full">
+      <Section color="purple-700">
         <div className="flex flex-col sm:flex-row items-center justify-center mb-8">
           <div className="w-48">
             <h3 className="border-b border-opacity-20 pb-4 text-xl tracking-widest">

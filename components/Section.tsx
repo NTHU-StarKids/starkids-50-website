@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 type Props = {
   children?: ReactNode
-  color?: 'default' | 'white' | 'purple' | 'lightpurple'
+  color?: 'default' | 'white' | 'purple-700' | 'purple-100'
 }
 
 const Section = ({ children, color = 'default' }: Props): JSX.Element => {
@@ -11,11 +11,11 @@ const Section = ({ children, color = 'default' }: Props): JSX.Element => {
     case 'white':
       colorClass = 'bg-white text-black'
       break
-    case 'purple':
+    case 'purple-700':
       colorClass = 'bg-purple text-white'
       break
-    case 'lightpurple':
-      colorClass = 'bg-lightpurple text-black'
+    case 'purple-100':
+      colorClass = 'bg-purple-100 text-black'
       break
     default:
       colorClass = 'bg-gray-700 text-white'
@@ -23,7 +23,7 @@ const Section = ({ children, color = 'default' }: Props): JSX.Element => {
   }
 
   return (
-    <div className={colorClass}>
+    <div className={`z-10 ${colorClass}`}>
       <div className="container px-8 py-12 text-center">{children}</div>
     </div>
   )

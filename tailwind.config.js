@@ -1,5 +1,6 @@
-const purple = '#38364e'
-const lightpurple = '#F8F7FD'
+const purple700 = '#38364e'
+const purple500 = '#6562BF'
+const purple100 = '#F8F7FD'
 
 module.exports = {
   mode: 'jit',
@@ -8,7 +9,13 @@ module.exports = {
   theme: {
     extend: {
       borderColor: {
-        purple: '#6562BF',
+        'purple-500': purple500,
+      },
+      maxHeight: {
+        '2x-screen': '200vh',
+      },
+      textColor: {
+        'gray-600': '#4D4D4D',
       },
       transitionProperty: {
         'max-height': 'max-height',
@@ -16,8 +23,9 @@ module.exports = {
     },
     backgroundColor: {
       'gray-700': '#333333',
-      purple: purple,
-      lightpurple: lightpurple,
+      'purple-700': purple700,
+      'purple-500': purple500,
+      'purple-100': purple100,
       white: '#ffffff',
     },
     boxShadow: {
@@ -47,5 +55,10 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    // @ts-ignore
+    require('@tailwindcss/forms')({
+      strategy: 'class',
+    }),
+  ],
 }

@@ -78,29 +78,29 @@ const CarouselSection = (): JSX.Element => {
 const AboutUsSection = (): JSX.Element => {
   const [showForm, setShowForm] = useState<boolean>(false)
   return (
-    <Section color="lightpurple">
+    <Section color="purple-100">
       <h2 className="text-2xl tracking-widest mb-8">關於我們</h2>
-      <p className="mb-4 font-light">
+      <p className="mb-4 font-light tracking-wider">
         方便需要看別人。間的日常禮於個小，要多願望難人婚交往自己可能。
       </p>
-      <p className="mb-4 font-light">
+      <p className="mb-4 font-light tracking-wider">
         那笑我我對重大人，同一認親卡一個完了不覺得，是時知道自都是我，能有會有，的人都什麼以一點點沒看過一件，得很得不村民帥哥做的那麼。況帽發生想不覺得，想：過看來是一是無炭治郎一下這不小心？
       </p>
-      <p className="mb-4 font-light">
+      <p className="mb-4 font-light tracking-wider">
         很討厭好看一般的可能不⋯給對方：天使沒關開很認真，了我跟我一方好一點的開始太棒⋯我不會可以。
       </p>
-      <p className="mb-8 font-light">
+      <p className="mb-8 font-light tracking-wider">
         認為道為什邊不安好好笑是要都不用，這些台灣一也是我眼神。
       </p>
 
       <div className="flex justify-center">
         <div
-          className="flex px-3 py-2 border-2 border-purple rounded-lg cursor-pointer select-none"
+          className="flex px-3 py-2 border-2 border-purple-500 rounded-lg cursor-pointer select-none"
           onClick={() => setShowForm(!showForm)}
         >
           <span className="w-20 tracking-wider">社慶報名</span>
           <FontAwesomeIcon
-            className={`ml-1 w-3 transform transition-transform duration-200 ${
+            className={`ml-1 w-3 transform transition-transform duration-500 ${
               showForm ? `rotate-90` : ''
             }`}
             icon={faChevronRight}
@@ -108,71 +108,98 @@ const AboutUsSection = (): JSX.Element => {
           />
         </div>
       </div>
+
+      <div
+        className={`transition-max-height duration-500 overflow-hidden ${
+          showForm ? 'max-h-2x-screen' : 'max-h-0 delay-400'
+        }`}
+      >
+        <div
+          className={`transition duration-500 ease-in-out mt-16 ${
+            showForm ? 'opacity-100' : 'opacity-0 delay-500'
+          }`}
+        >
+          <h3 className="text-xl tracking-widest mb-2">國立清華大學 名人堂</h3>
+          <h3 className="text-xl tracking-widest mb-8">2021年11月27日 下午</h3>
+          <p className="mb-4 font-light tracking-wider">
+            安排社友短講、文物展覽、攝影作品、紀念品販售、社窩參觀、茶點。
+            <br></br>
+            （以上規劃將視疫情波動調整）
+          </p>
+
+          <div className="flex justify-center mt-12">
+            <div className="w-72">
+              <form>
+                <input
+                  type="text"
+                  name="name"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black"
+                  placeholder="姓名"
+                />
+
+                <input
+                  type="text"
+                  name="department"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black"
+                  placeholder="系級（請填寫校系全名）"
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black"
+                  placeholder="電子信箱"
+                />
+
+                <p className="mt-4 my-2 font-light tracking-wider">
+                  是否攜帶家庭成員？
+                </p>
+
+                <div className="my-2">
+                  <div className="flex items-center my-2">
+                    <input
+                      type="radio"
+                      name="member"
+                      className="form-radio p-2 bg-white border-2 border-purple-500 checked:bg-purple-500 checked:bg-none focus:ring-0 focus:ring-transparent"
+                    />
+                    <p className="mx-2 font-light tracking-wider">是，</p>
+                    <input
+                      type="text"
+                      name="memberAge"
+                      className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black"
+                      placeholder="成員年齡"
+                    />
+                  </div>
+                  <div className="flex items-center my-2">
+                    <input
+                      type="radio"
+                      name="member"
+                      className="form-radio p-2 bg-white border-2 border-purple-500 checked:bg-purple-500 checked:bg-none focus:ring-0 focus:ring-transparent"
+                    />
+                    <p className="mx-2 font-light tracking-wider">否</p>
+                  </div>
+                </div>
+
+                <div className="flex justify-center mt-12">
+                  <div
+                    className="px-3 py-2 w-28 border-2 border-purple-500 bg-purple-500 text-white rounded-lg cursor-pointer select-none tracking-wider"
+                    onClick={() => console.log('submit form')}
+                  >
+                    確認送出
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <p className="mt-6 font-light text-gray-600 tracking-wider">
+            詳細辦理規劃將於11月初以電子郵件寄發。<br></br>
+            任何問題請聯絡天文社信箱：nthu.astro@gmail.com
+          </p>
+        </div>
+      </div>
     </Section>
   )
-}
-
-const TestSection = (): JSX.Element => (
-  <Section>
-    <div className="flex flex-col items-center justify-center">
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">Coming Soon ......</h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md text-blue-600">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-    </div>
-  </Section>
-)
-
-const SignUpFormSection = (): JSX.Element => {
-  return <Section color="white"></Section>
 }
 
 export default function HomePage(): JSX.Element {
@@ -181,8 +208,6 @@ export default function HomePage(): JSX.Element {
       <AnniversarySection />
       <CarouselSection />
       <AboutUsSection />
-      <TestSection />
-      <SignUpFormSection />
     </Layout>
   )
 }

@@ -56,7 +56,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    // @ts-ignore
     require('@tailwindcss/forms')({
       strategy: 'class',
     }),

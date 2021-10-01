@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 type Props = {
   children?: ReactNode
-  color?: 'default' | 'white' | 'purple'
+  color?: 'default' | 'white' | 'purple' | 'lightpurple'
 }
 
 const Section = ({ children, color = 'default' }: Props): JSX.Element => {
@@ -13,6 +13,9 @@ const Section = ({ children, color = 'default' }: Props): JSX.Element => {
       break
     case 'purple':
       colorClass = 'bg-purple text-white'
+      break
+    case 'lightpurple':
+      colorClass = 'bg-lightpurple text-black'
       break
     default:
       colorClass = 'bg-gray-700 text-white'

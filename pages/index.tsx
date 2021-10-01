@@ -1,9 +1,13 @@
-import Section from '@/components/Section'
-import Layout from '@/components/Layout'
-
-import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import Slider from 'react-slick'
+
+import Section from '@/components/Section'
+import Layout from '@/components/Layout'
+import { useState } from 'react'
 
 const AnniversarySection = (): JSX.Element => {
   return (
@@ -67,6 +71,43 @@ const CarouselSection = (): JSX.Element => {
           </div>
         </div>
       </Slider>
+    </Section>
+  )
+}
+
+const AboutUsSection = (): JSX.Element => {
+  const [showForm, setShowForm] = useState<boolean>(false)
+  return (
+    <Section color="lightpurple">
+      <h2 className="text-2xl tracking-widest mb-8">關於我們</h2>
+      <p className="mb-4 font-light">
+        方便需要看別人。間的日常禮於個小，要多願望難人婚交往自己可能。
+      </p>
+      <p className="mb-4 font-light">
+        那笑我我對重大人，同一認親卡一個完了不覺得，是時知道自都是我，能有會有，的人都什麼以一點點沒看過一件，得很得不村民帥哥做的那麼。況帽發生想不覺得，想：過看來是一是無炭治郎一下這不小心？
+      </p>
+      <p className="mb-4 font-light">
+        很討厭好看一般的可能不⋯給對方：天使沒關開很認真，了我跟我一方好一點的開始太棒⋯我不會可以。
+      </p>
+      <p className="mb-8 font-light">
+        認為道為什邊不安好好笑是要都不用，這些台灣一也是我眼神。
+      </p>
+
+      <div className="flex justify-center">
+        <div
+          className="flex px-3 py-2 border-2 border-purple rounded-lg cursor-pointer select-none"
+          onClick={() => setShowForm(!showForm)}
+        >
+          <span className="w-20 tracking-wider">社慶報名</span>
+          <FontAwesomeIcon
+            className={`ml-1 w-3 transform transition-transform duration-200 ${
+              showForm ? `rotate-90` : ''
+            }`}
+            icon={faChevronRight}
+            fixedWidth
+          />
+        </div>
+      </div>
     </Section>
   )
 }
@@ -139,6 +180,7 @@ export default function HomePage(): JSX.Element {
     <Layout title="首頁">
       <AnniversarySection />
       <CarouselSection />
+      <AboutUsSection />
       <TestSection />
       <SignUpFormSection />
     </Layout>

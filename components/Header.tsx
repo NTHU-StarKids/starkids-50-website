@@ -7,7 +7,7 @@ const Header = (): JSX.Element => {
   const [isMobileHidden, setIsMobileHidden] = useState<boolean>(true)
 
   return (
-    <header className="shadow-md fixed top-0 w-full bg-gray-700">
+    <header className="shadow-md fixed top-0 w-full bg-gray-700 z-50">
       <nav className="flex items-center justify-between px-8 h-12">
         <div className="flex items-center w-12 text-2xl">
           <Link href="/" passHref>

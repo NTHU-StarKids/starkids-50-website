@@ -1,4 +1,5 @@
 const purple = '#38364e'
+const lightpurple = '#F8F7FD'
 
 module.exports = {
   mode: 'jit',
@@ -7,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       borderColor: {
-        purple: purple,
+        purple: '#6562BF',
       },
       transitionProperty: {
         'max-height': 'max-height',
@@ -16,6 +17,7 @@ module.exports = {
     backgroundColor: {
       'gray-700': '#333333',
       purple: purple,
+      lightpurple: lightpurple,
       white: '#ffffff',
     },
     boxShadow: {

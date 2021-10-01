@@ -2,10 +2,15 @@ import { ReactNode } from 'react'
 
 type Props = {
   children?: ReactNode
+  className?: string
   color?: 'default' | 'white' | 'purple-700' | 'purple-100'
 }
 
-const Section = ({ children, color = 'default' }: Props): JSX.Element => {
+const Section = ({
+  children,
+  className,
+  color = 'default',
+}: Props): JSX.Element => {
   let colorClass = ''
   switch (color) {
     case 'white':
@@ -24,7 +29,9 @@ const Section = ({ children, color = 'default' }: Props): JSX.Element => {
 
   return (
     <div className={`z-10 ${colorClass}`}>
-      <div className="container px-8 py-12 text-center">{children}</div>
+      <div className={`${className} container px-8 py-12 text-center`}>
+        {children}
+      </div>
     </div>
   )
 }

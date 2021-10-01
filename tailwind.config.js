@@ -1,3 +1,6 @@
+const gray600 = '#4D4D4D'
+const gray700 = '#333333'
+const gray900 = '#1A1A1A'
 const purple700 = '#38364e'
 const purple500 = '#6562BF'
 const purple100 = '#F8F7FD'
@@ -15,14 +18,15 @@ module.exports = {
         '2x-screen': '200vh',
       },
       textColor: {
-        'gray-600': '#4D4D4D',
+        'gray-600': gray600,
       },
       transitionProperty: {
         'max-height': 'max-height',
       },
     },
     backgroundColor: {
-      'gray-700': '#333333',
+      'gray-700': gray700,
+      'gray-900': gray900,
       'purple-700': purple700,
       'purple-500': purple500,
       'purple-100': purple100,

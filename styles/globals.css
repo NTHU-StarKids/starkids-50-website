@@ -74,3 +74,33 @@
   background-color: rgb(101, 98, 191);
   background-image: none;
 }
+
+.slick-dots {
+  bottom: 16px !important;
+}
+
+.slick-dots li button:before {
+  color: #f8f7fd !important;
+  opacity: 0.6 !important;
+  font-size: 14px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: #ffc26e !important;
+}
+
+.slick-prev {
+  z-index: 10;
+  left: 10px !important;
+}
+
+.slick-next {
+  z-index: 10;
+  right: 16px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 26px !important;
+}

@@ -28,46 +28,85 @@ const AnniversarySection = (): JSX.Element => {
 
 const CarouselSection = (): JSX.Element => {
   const sliderSettings = {
+    autoplay: true,
+    autoplaySpeed: 6000,
     className: 'center',
     dots: true,
     centerMode: true,
     infinite: true,
-    centerPadding: '50px',
+    centerPadding: '16%',
     slidesToShow: 1,
     speed: 500,
   }
 
   return (
-    <Section>
+    <Section className="pt-6 pb-4">
       <Slider {...sliderSettings}>
-        <div>
-          <div className="bg-white h-72 mx-1.5 text-black">
-            <h3>1</h3>
+        <div className="w-2/3">
+          <div
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            style={{ backgroundImage: "url('https://imgur.com/rzVcfp4.jpg')" }}
+          >
+            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
+              <h2 className="mb-1 text-xl tracking-widest truncate">
+                聖誕樹星雲
+              </h2>
+              <h3 className="font-thin tracking-wider truncate">清大天文社</h3>
+            </div>
           </div>
         </div>
-        <div>
-          <div className="bg-white h-72 mx-1.5 text-black">
-            <h3>2</h3>
+        <div className="w-2/3">
+          <div
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            style={{ backgroundImage: "url('https://imgur.com/daiczNk.jpg')" }}
+          >
+            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
+              <h2 className="mb-1 text-xl tracking-widest truncate">
+                玫瑰星雲
+              </h2>
+              <h3 className="font-thin tracking-wider truncate">王立宇</h3>
+            </div>
           </div>
         </div>
-        <div>
-          <div className="bg-white h-72 mx-1.5 text-black">
-            <h3>3</h3>
+        <div className="w-2/3">
+          <div
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            style={{ backgroundImage: "url('https://imgur.com/wTWsNlJ.jpg')" }}
+          >
+            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
+              <h2 className="mb-1 text-xl tracking-widest truncate">
+                北美洲星雲
+              </h2>
+              <h3 className="font-thin tracking-wider truncate">
+                吳家頡、王立宇
+              </h3>
+            </div>
           </div>
         </div>
-        <div>
-          <div className="bg-white h-72 mx-1.5 text-black">
-            <h3>4</h3>
+        <div className="w-2/3">
+          <div
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            style={{ backgroundImage: "url('https://imgur.com/zAVoLcR.jpg')" }}
+          >
+            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
+              <h2 className="mb-1 text-xl tracking-widest truncate">
+                歐米茄星雲
+              </h2>
+              <h3 className="font-thin tracking-wider truncate">王立宇</h3>
+            </div>
           </div>
         </div>
-        <div>
-          <div className="bg-white h-72 mx-1.5 text-black">
-            <h3>5</h3>
-          </div>
-        </div>
-        <div>
-          <div className="bg-white h-72 mx-1.5 text-black">
-            <h3>6</h3>
+        <div className="w-2/3">
+          <div
+            className="relative bg-center bg-cover h-80 mx-1.5 text-black cursor-pointer"
+            style={{ backgroundImage: "url('https://imgur.com/IwetuAv.jpg')" }}
+          >
+            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
+              <h2 className="mb-1 text-xl tracking-widest truncate">
+                環狀星雲
+              </h2>
+              <h3 className="font-thin tracking-wider truncate">張瓊尹</h3>
+            </div>
           </div>
         </div>
       </Slider>

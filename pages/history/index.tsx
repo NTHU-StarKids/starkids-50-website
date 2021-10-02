@@ -1,3 +1,7 @@
+import { useState } from 'react'
+import { Range } from 'react-range'
+
+import { CABINETS } from '@/constants'
 import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
@@ -19,52 +23,111 @@ const OriginSection = (): JSX.Element => {
 }
 
 const CabinetSection = (): JSX.Element => {
+  const [age, setAge] = useState<number[]>([0])
+  const [cabinet, setCabinet] = useState<TCabinet>(CABINETS[0])
+
+  const onAgeChange = (ages: number[]) => {
+    const [newAge] = ages
+    setAge([newAge])
+
+    const newCabinet = CABINETS.find((record) => record.age == newAge)
+    if (newCabinet) {
+      setCabinet(newCabinet)
+    }
+  }
+
   return (
     <Section>
       <H2>歷屆幹部</H2>
       <div className="flex justify-center">
-        <div className="bg-purple-100 w-full md:w-3/5 rounded-xl px-6 md:px-14 py-8">
-          <H3 className="text-purple-500">創社元老</H3>
-          <table className="text-black font-light tracking-wider w-full mt-4 text-left">
+        <div
+          className="bg-purple-100 w-full md:w-3/5 rounded-xl px-6 md:px-14 py-8 overflow-scroll"
+          style={{ height: '28rem' }}
+        >
+          <H3 className="text-purple-500">{cabinet.name}</H3>
+          <table className="text-black font-light tracking-wider w-full mt-4 text-left text-sm sm:text-base">
             <tbody>
-              <tr>
-                <td className="p-2">北極星</td>
-                <td className="p-2">系級 00</td>
-                <td className="p-2 text-right">職位</td>
-              </tr>
-              <tr>
-                <td className="p-2">北極星</td>
-                <td className="p-2">系級 00</td>
-                <td className="p-2 text-right">職位</td>
-              </tr>
-              <tr>
-                <td className="p-2">北極星</td>
-                <td className="p-2">系級 00</td>
-                <td className="p-2 text-right">職位</td>
-              </tr>
-              <tr>
-                <td className="p-2">北極星</td>
-                <td className="p-2">系級 00</td>
-                <td className="p-2 text-right">職位</td>
-              </tr>
-              <tr>
-                <td className="p-2">北極星</td>
-                <td className="p-2">系級 00</td>
-                <td className="p-2 text-right">職位</td>
-              </tr>
-              <tr>
-                <td className="p-2">北極星</td>
-                <td className="p-2">系級 00</td>
-                <td className="p-2 text-right">職位</td>
-              </tr>
-              <tr>
-                <td className="p-2">北極星</td>
-                <td className="p-2">系級 00</td>
-                <td className="p-2 text-right">職位</td>
-              </tr>
+              {cabinet.positions.map((people, index) => {
+                return (
+                  <tr key={`cabinet-${index}`}>
+                    <td className="p-2 w-20">{people.name}</td>
+                    <td
+                      className={`p-2${cabinet.age != 0 ? '' : ' text-right'}`}
+                    >
+                      {people.department}
+                    </td>
+                    {cabinet.age != 0 ? (
+                      <td className="p-2 text-right">{people.position}</td>
+                    ) : (
+                      ''
+                    )}
+                  </tr>
+                )
+              })}
             </tbody>
           </table>
         </div>
+      </div>
+
+      <div className="mt-16 px-8">
+        <Range
+          step={1}
+          min={0}
+          max={51}
+          values={age}
+          onChange={(values) => onAgeChange(values)}
+          renderTrack={({ props, children }) => (
+            <div
+              {...props}
+              className="relative bg-gray-600 rounded"
+              style={{
+                ...props.style,
+                height: '6px',
+                width: '100%',
+              }}
+            >
+              <div
+                className="absolute -left-1 w-2.5 h-2.5 rounded-lg bg-gray-600"
+                style={{ top: '-0.1rem' }}
+              ></div>
+              <div
+                className="absolute -right-1 w-2.5 h-2.5 rounded-lg bg-gray-600"
+                style={{ top: '-0.1rem' }}
+              ></div>
+
+              <div
+                className="absolute -left-3 tracking-wider text-gray-300"
+                style={{ top: '-2.4rem', paddingLeft: '0.1rem' }}
+              >
+                00
+              </div>
+              <div
+                className="absolute -right-2 tracking-wider text-gray-300"
+                style={{ top: '-2.4rem', paddingLeft: '0.1rem' }}
+              >
+                51
+              </div>
+              {children}
+            </div>
+          )}
+          renderThumb={({ props }) => (
+            <div
+              {...props}
+              className="w-2.5 h-5 bg-white rounded focus:outline-none"
+              style={{
+                ...props.style,
+                zIndex: 10,
+              }}
+            >
+              <div
+                className="absolute -top-8 w-10 bg-purple-500 rounded-xl tracking-wider text-center"
+                style={{ left: '-0.95rem', paddingLeft: '0.1rem' }}
+              >
+                {`${age[0] < 10 ? '0' : ''}${age[0]}`}
+              </div>
+            </div>
+          )}
+        />
       </div>
     </Section>
   )

@@ -1,3 +1,4 @@
+const gray300 = '#A3A3A3'
 const gray600 = '#4D4D4D'
 const gray700 = '#333333'
 const gray900 = '#1A1A1A'
@@ -12,6 +13,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'gray-300': gray300,
         'gray-600': gray600,
         'gray-700': gray700,
         'gray-900': gray900,

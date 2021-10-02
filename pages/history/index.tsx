@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Range } from 'react-range'
+import { Range, getTrackBackground } from 'react-range'
 
 import { CABINETS } from '@/constants'
 import { H2, H3 } from '@/components/Headings'
@@ -24,8 +24,9 @@ const OriginSection = (): JSX.Element => {
 
 const CabinetSection = (): JSX.Element => {
   const foundYear = 1971
-  const [age, setAge] = useState<number[]>([0])
-  const [cabinet, setCabinet] = useState<TCabinet>(CABINETS[0])
+  const defaultAge = 0
+  const [age, setAge] = useState<number[]>([defaultAge])
+  const [cabinet, setCabinet] = useState<TCabinet>(CABINETS[defaultAge])
 
   const onAgeChange = (ages: number[]) => {
     const [newAge] = ages
@@ -95,7 +96,22 @@ const CabinetSection = (): JSX.Element => {
               }}
             >
               <div
-                className="absolute -left-1 w-2.5 h-2.5 rounded-lg bg-gray-600"
+                ref={props.ref}
+                style={{
+                  height: '5px',
+                  width: '100%',
+                  borderRadius: '4px',
+                  background: getTrackBackground({
+                    values: age,
+                    colors: ['#6562BF', '#4D4D4D'],
+                    min: 0,
+                    max: CABINETS.length - 1,
+                  }),
+                  alignSelf: 'center',
+                }}
+              ></div>
+              <div
+                className="absolute -left-1 w-2.5 h-2.5 rounded-lg bg-purple-500"
                 style={{ top: '-0.1rem' }}
               ></div>
               <div
@@ -125,6 +141,7 @@ const CabinetSection = (): JSX.Element => {
               style={{
                 ...props.style,
                 zIndex: 10,
+                bottom: '-0.9rem',
               }}
             >
               <div

@@ -1,6 +1,7 @@
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
+import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronRight,
@@ -12,7 +13,6 @@ import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 import P from '@/components/Paragraph'
-import { useState } from 'react'
 
 const AnniversarySection = (): JSX.Element => {
   return (

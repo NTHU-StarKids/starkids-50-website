@@ -5,15 +5,15 @@ export const menuLinks = [
   },
   {
     name: '社友來稿',
-    url: '/',
+    url: '/posts',
   },
   {
     name: '留言板',
-    url: '/',
+    url: '/messages',
   },
   {
     name: '贊助我們',
-    url: '/',
+    url: '/sponser',
   },
 ]
 

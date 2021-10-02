@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { menuLinks } from '@/constants'
 
 const Header = (): JSX.Element => {
   const [isMobileHidden, setIsMobileHidden] = useState<boolean>(true)
+  const router = useRouter()
 
   return (
     <header className="shadow-md fixed top-0 w-full bg-gray-700 z-50">
@@ -23,7 +25,13 @@ const Header = (): JSX.Element => {
           {menuLinks.map((link, index) => {
             return (
               <Link key={`desktop-${index}`} href={link.url} passHref>
-                <span className="py-1 cursor-pointer border-b-2 border-opacity-0 hover:border-opacity-25 hover:font-normal transition-all duration-300 tracking-wider font-light">
+                <span
+                  className={`py-1 cursor-pointer border-b-2 transition-all duration-300 tracking-wider font-light ${
+                    router.pathname.startsWith(link.url)
+                      ? 'text-purple-300 border-purple-300 font-normal border-opacity-100'
+                      : 'border-opacity-0 hover:border-opacity-25 hover:font-normal'
+                  }`}
+                >
                   {link.name}
                 </span>
               </Link>
@@ -57,7 +65,13 @@ const Header = (): JSX.Element => {
               className={`p-2 ${index + 1 === menuLinks.length ? 'pb-4' : ''}`}
             >
               <Link href={link.url} passHref>
-                <span className="py-2 cursor-pointer border-b-2 border-opacity-0 hover:border-opacity-25 hover:font-normal transition-all duration-300 tracking-wider font-light">
+                <span
+                  className={`py-2 cursor-pointer border-b-2 transition-all duration-300 tracking-wider font-light ${
+                    router.pathname.startsWith(link.url)
+                      ? 'text-purple-300 border-purple-300 font-normal border-opacity-100'
+                      : 'border-opacity-0 hover:border-opacity-25 hover:font-normal'
+                  }`}
+                >
                   {link.name}
                 </span>
               </Link>

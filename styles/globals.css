@@ -96,12 +96,18 @@
 
 .slick-prev {
   z-index: 10;
-  left: 10px !important;
+  left: 8px !important;
 }
 
 .slick-next {
   z-index: 10;
-  right: 16px !important;
+  right: 8px !important;
+}
+
+.slick-prev,
+.slick-next {
+  width: 26px !important;
+  height: 26px !important;
 }
 
 .slick-prev:before,

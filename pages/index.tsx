@@ -1,18 +1,16 @@
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronRight,
   faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons'
-import Slider from 'react-slick'
 
+import CarouselSection from '@/components/CarouselSection'
 import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 import P from '@/components/Paragraph'
+import { exampleSlides } from '@/constants'
 
 const AnniversarySection = (): JSX.Element => {
   return (
@@ -27,82 +25,6 @@ const AnniversarySection = (): JSX.Element => {
           style={{ backgroundColor: '#2d2d30', borderRadius: '50%' }}
         ></div>
       </div>
-    </Section>
-  )
-}
-
-const CarouselSection = (): JSX.Element => {
-  const sliderSettings = {
-    autoplay: true,
-    autoplaySpeed: 6000,
-    className: 'center',
-    dots: true,
-    centerMode: true,
-    infinite: true,
-    centerPadding: '16%',
-    slidesToShow: 1,
-    speed: 500,
-  }
-
-  return (
-    <Section className="pt-6 pb-4">
-      <Slider {...sliderSettings}>
-        <div className="w-2/3 outline-none">
-          <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
-            style={{ backgroundImage: "url('https://imgur.com/rzVcfp4.jpg')" }}
-          >
-            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <H3 className="mb-1 truncate">聖誕樹星雲</H3>
-              <P className="truncate">清大天文社</P>
-            </div>
-          </div>
-        </div>
-        <div className="w-2/3 outline-none">
-          <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
-            style={{ backgroundImage: "url('https://imgur.com/daiczNk.jpg')" }}
-          >
-            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <H3 className="mb-1 truncate">玫瑰星雲</H3>
-              <P className="truncate">王立宇</P>
-            </div>
-          </div>
-        </div>
-        <div className="w-2/3 outline-none">
-          <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
-            style={{ backgroundImage: "url('https://imgur.com/wTWsNlJ.jpg')" }}
-          >
-            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <H3 className="mb-1 truncate">北美洲星雲</H3>
-              <P className="truncate">吳家頡、王立宇</P>
-            </div>
-          </div>
-        </div>
-        <div className="w-2/3 outline-none">
-          <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
-            style={{ backgroundImage: "url('https://imgur.com/zAVoLcR.jpg')" }}
-          >
-            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <H3 className="mb-1 truncate">歐米茄星雲</H3>
-              <P className="truncate">王立宇</P>
-            </div>
-          </div>
-        </div>
-        <div className="w-2/3 outline-none">
-          <div
-            className="relative bg-center bg-cover h-80 mx-1.5 text-black"
-            style={{ backgroundImage: "url('https://imgur.com/IwetuAv.jpg')" }}
-          >
-            <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <H3 className="mb-1 truncate">環狀星雲</H3>
-              <P className="truncate">張瓊尹</P>
-            </div>
-          </div>
-        </div>
-      </Slider>
     </Section>
   )
 }
@@ -242,7 +164,7 @@ export default function HomePage(): JSX.Element {
   return (
     <Layout title="首頁">
       <AnniversarySection />
-      <CarouselSection />
+      <CarouselSection slides={exampleSlides} />
       <AboutUsSection />
     </Layout>
   )

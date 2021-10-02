@@ -23,6 +23,7 @@ const OriginSection = (): JSX.Element => {
 }
 
 const CabinetSection = (): JSX.Element => {
+  const foundYear = 1971
   const [age, setAge] = useState<number[]>([0])
   const [cabinet, setCabinet] = useState<TCabinet>(CABINETS[0])
 
@@ -37,14 +38,23 @@ const CabinetSection = (): JSX.Element => {
   }
 
   return (
-    <Section>
+    <Section className="pt-0">
       <H2>歷屆幹部</H2>
       <div className="flex justify-center">
         <div
           className="bg-purple-100 w-full md:w-3/5 rounded-xl px-6 md:px-14 py-8 overflow-scroll"
           style={{ height: '28rem' }}
         >
-          <H3 className="text-purple-500">{cabinet.name}</H3>
+          <H3 className="text-purple-500">
+            {cabinet.name}
+            <span className="ml-2 tracking-wider">
+              (
+              {cabinet.age
+                ? `${foundYear + cabinet.age - 1} ~ ${foundYear + cabinet.age}`
+                : foundYear}
+              )
+            </span>
+          </H3>
           <table className="text-black font-light tracking-wider w-full mt-4 text-left text-sm sm:text-base">
             <tbody>
               {cabinet.positions.map((people, index) => {
@@ -58,9 +68,7 @@ const CabinetSection = (): JSX.Element => {
                     </td>
                     {cabinet.age != 0 ? (
                       <td className="p-2 text-right">{people.position}</td>
-                    ) : (
-                      ''
-                    )}
+                    ) : null}
                   </tr>
                 )
               })}
@@ -73,7 +81,7 @@ const CabinetSection = (): JSX.Element => {
         <Range
           step={1}
           min={0}
-          max={51}
+          max={CABINETS.length - 1}
           values={age}
           onChange={(values) => onAgeChange(values)}
           renderTrack={({ props, children }) => (

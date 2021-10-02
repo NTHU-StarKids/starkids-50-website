@@ -13,7 +13,7 @@ type TProps = {
 
 const CarouselSection = ({ slides }: TProps): JSX.Element => {
   const sliderSettings = {
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 6000,
     className: 'center',
     dots: true,
@@ -22,6 +22,14 @@ const CarouselSection = ({ slides }: TProps): JSX.Element => {
     centerPadding: '16%',
     slidesToShow: 1,
     speed: 500,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: false,
+        },
+      },
+    ],
   }
 
   return (
@@ -32,7 +40,7 @@ const CarouselSection = ({ slides }: TProps): JSX.Element => {
             return (
               <div key={`slide-${index}`} className="w-2/3 outline-none">
                 <div
-                  className="relative bg-center bg-cover h-80 mx-1.5 text-black"
+                  className="relative bg-center bg-cover h-80 lg:h-96 mx-1.5 text-black"
                   style={{
                     backgroundImage: `url('${slide.imageUrl}')`,
                   }}

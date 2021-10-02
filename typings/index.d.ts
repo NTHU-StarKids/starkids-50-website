@@ -4,6 +4,13 @@ type TSlide = {
   description: string
 }
 
+type TPost = {
+  author: string
+  imageUrl: string
+  heading: string
+  body: string
+}
+
 type TPosition = {
   name: string
   department: string

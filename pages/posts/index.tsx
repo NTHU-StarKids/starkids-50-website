@@ -20,7 +20,9 @@ const PostsSection = (): JSX.Element => {
                   selected ? 'bg-purple-500 text-white' : 'text-gray-200'
                 }`}
               >
-                1970年代
+                1970
+                <span className="lg:inline hidden">年代</span>
+                <span className="lg:hidden inline">'s</span>
               </button>
             )}
           </Tab>
@@ -31,7 +33,9 @@ const PostsSection = (): JSX.Element => {
                   selected ? 'bg-purple-500 text-white' : 'text-gray-200'
                 }`}
               >
-                1980年代
+                1980
+                <span className="lg:inline hidden">年代</span>
+                <span className="lg:hidden inline">'s</span>
               </button>
             )}
           </Tab>
@@ -42,7 +46,9 @@ const PostsSection = (): JSX.Element => {
                   selected ? 'bg-purple-500 text-white' : 'text-gray-200'
                 }`}
               >
-                1990年代
+                1990
+                <span className="lg:inline hidden">年代</span>
+                <span className="lg:hidden inline">'s</span>
               </button>
             )}
           </Tab>
@@ -53,7 +59,9 @@ const PostsSection = (): JSX.Element => {
                   selected ? 'bg-purple-500 text-white' : 'text-gray-200'
                 }`}
               >
-                2000年代
+                2000
+                <span className="lg:inline hidden">年代</span>
+                <span className="lg:hidden inline">'s</span>
               </button>
             )}
           </Tab>
@@ -64,7 +72,9 @@ const PostsSection = (): JSX.Element => {
                   selected ? 'bg-purple-500 text-white' : 'text-gray-200'
                 }`}
               >
-                2010年代
+                2010
+                <span className="lg:inline hidden">年代</span>
+                <span className="lg:hidden inline">'s</span>
               </button>
             )}
           </Tab>

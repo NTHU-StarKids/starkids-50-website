@@ -38,7 +38,7 @@ const CarouselSection = ({ slides }: TProps): JSX.Element => {
                   }}
                 >
                   <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-                    <H3 className="mb-1 truncate">{slide.heading}</H3>
+                    <H3 className="mb-1 truncate">{slide.title}</H3>
                     <P className="truncate">{slide.description}</P>
                   </div>
                 </div>

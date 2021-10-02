@@ -1,13 +1,13 @@
 type TSlide = {
   imageUrl: string
-  heading: string
+  title: string
   description: string
 }
 
 type TPost = {
   author: string
   imageUrl: string
-  heading: string
+  title: string
   body: string
 }
 

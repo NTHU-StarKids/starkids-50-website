@@ -61,27 +61,27 @@ export const relatedLinks = [
 export const exampleSlides = [
   {
     imageUrl: 'https://imgur.com/rzVcfp4.jpg',
-    heading: '聖誕樹星雲',
+    title: '聖誕樹星雲',
     description: '清大天文社',
   },
   {
     imageUrl: 'https://imgur.com/daiczNk.jpg',
-    heading: '玫瑰星雲',
+    title: '玫瑰星雲',
     description: '王立宇',
   },
   {
     imageUrl: 'https://imgur.com/wTWsNlJ.jpg',
-    heading: '北美洲星雲',
+    title: '北美洲星雲',
     description: '吳家頡、王立宇',
   },
   {
     imageUrl: 'https://imgur.com/zAVoLcR.jpg',
-    heading: '歐米茄星雲',
+    title: '歐米茄星雲',
     description: '王立宇',
   },
   {
     imageUrl: 'https://imgur.com/IwetuAv.jpg',
-    heading: '環狀星雲',
+    title: '環狀星雲',
     description: '張瓊尹',
   },
 ]

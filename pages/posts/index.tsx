@@ -5,7 +5,9 @@ import CarouselSection from '@/components/CarouselSection'
 import { H2 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
+import PostList from '@/components/PostList'
 import { exampleSlides } from '@/constants'
+import samplePosts from '@/constants/posts'
 
 const PostsSection = (): JSX.Element => {
   return (
@@ -80,11 +82,21 @@ const PostsSection = (): JSX.Element => {
           </Tab>
         </Tab.List>
         <Tab.Panels>
-          <Tab.Panel>Content 1</Tab.Panel>
-          <Tab.Panel>Content 2</Tab.Panel>
-          <Tab.Panel>Content 3</Tab.Panel>
-          <Tab.Panel>Content 4</Tab.Panel>
-          <Tab.Panel>Content 5</Tab.Panel>
+          <Tab.Panel className="outline-none">
+            <PostList posts={samplePosts} />
+          </Tab.Panel>
+          <Tab.Panel className="outline-none">
+            <PostList posts={samplePosts} />
+          </Tab.Panel>
+          <Tab.Panel className="outline-none">
+            <PostList posts={samplePosts} />
+          </Tab.Panel>
+          <Tab.Panel className="outline-none">
+            <PostList posts={samplePosts} />
+          </Tab.Panel>
+          <Tab.Panel className="outline-none">
+            <PostList posts={samplePosts} />
+          </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
     </Section>

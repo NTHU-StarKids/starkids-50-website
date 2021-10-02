@@ -37,7 +37,7 @@ export const H3 = ({ children, className = '' }: TProps) => {
 
 export const H4 = ({ children, className = '' }: TProps) => {
   return (
-    <h4 className={classNames('text-xg tracking-wider', className)}>
+    <h4 className={classNames('text-lg tracking-wider', className)}>
       {children}
     </h4>
   )

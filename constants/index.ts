@@ -1,7 +1,7 @@
 export const menuLinks = [
   {
     name: '社團歷史',
-    url: '/',
+    url: '/history',
   },
   {
     name: '社友來稿',

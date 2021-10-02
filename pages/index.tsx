@@ -8,8 +8,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import Slider from 'react-slick'
 
+import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
+import P from '@/components/Paragraph'
 import { useState } from 'react'
 
 const AnniversarySection = (): JSX.Element => {
@@ -51,10 +53,8 @@ const CarouselSection = (): JSX.Element => {
             style={{ backgroundImage: "url('https://imgur.com/rzVcfp4.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <h2 className="mb-1 text-xl tracking-widest truncate">
-                聖誕樹星雲
-              </h2>
-              <h3 className="font-thin tracking-wider truncate">清大天文社</h3>
+              <H3 className="mb-1 truncate">聖誕樹星雲</H3>
+              <P className="truncate">清大天文社</P>
             </div>
           </div>
         </div>
@@ -64,10 +64,8 @@ const CarouselSection = (): JSX.Element => {
             style={{ backgroundImage: "url('https://imgur.com/daiczNk.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <h2 className="mb-1 text-xl tracking-widest truncate">
-                玫瑰星雲
-              </h2>
-              <h3 className="font-thin tracking-wider truncate">王立宇</h3>
+              <H3 className="mb-1 truncate">玫瑰星雲</H3>
+              <P className="truncate">王立宇</P>
             </div>
           </div>
         </div>
@@ -77,12 +75,8 @@ const CarouselSection = (): JSX.Element => {
             style={{ backgroundImage: "url('https://imgur.com/wTWsNlJ.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <h2 className="mb-1 text-xl tracking-widest truncate">
-                北美洲星雲
-              </h2>
-              <h3 className="font-thin tracking-wider truncate">
-                吳家頡、王立宇
-              </h3>
+              <H3 className="mb-1 truncate">北美洲星雲</H3>
+              <P className="truncate">吳家頡、王立宇</P>
             </div>
           </div>
         </div>
@@ -92,10 +86,8 @@ const CarouselSection = (): JSX.Element => {
             style={{ backgroundImage: "url('https://imgur.com/zAVoLcR.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <h2 className="mb-1 text-xl tracking-widest truncate">
-                歐米茄星雲
-              </h2>
-              <h3 className="font-thin tracking-wider truncate">王立宇</h3>
+              <H3 className="mb-1 truncate">歐米茄星雲</H3>
+              <P className="truncate">王立宇</P>
             </div>
           </div>
         </div>
@@ -105,10 +97,8 @@ const CarouselSection = (): JSX.Element => {
             style={{ backgroundImage: "url('https://imgur.com/IwetuAv.jpg')" }}
           >
             <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-              <h2 className="mb-1 text-xl tracking-widest truncate">
-                環狀星雲
-              </h2>
-              <h3 className="font-thin tracking-wider truncate">張瓊尹</h3>
+              <H3 className="mb-1 truncate">環狀星雲</H3>
+              <P className="truncate">張瓊尹</P>
             </div>
           </div>
         </div>
@@ -121,19 +111,19 @@ const AboutUsSection = (): JSX.Element => {
   const [showForm, setShowForm] = useState<boolean>(false)
   return (
     <Section color="purple-100">
-      <h2 className="text-2xl tracking-widest mb-8">關於我們</h2>
-      <p className="mb-4 font-light tracking-wider">
+      <H2>關於我們</H2>
+      <P className="mb-4">
         方便需要看別人。間的日常禮於個小，要多願望難人婚交往自己可能。
-      </p>
-      <p className="mb-4 font-light tracking-wider">
+      </P>
+      <P className="mb-4">
         那笑我我對重大人，同一認親卡一個完了不覺得，是時知道自都是我，能有會有，的人都什麼以一點點沒看過一件，得很得不村民帥哥做的那麼。況帽發生想不覺得，想：過看來是一是無炭治郎一下這不小心？
-      </p>
-      <p className="mb-4 font-light tracking-wider">
+      </P>
+      <P className="mb-4">
         很討厭好看一般的可能不⋯給對方：天使沒關開很認真，了我跟我一方好一點的開始太棒⋯我不會可以。
-      </p>
-      <p className="mb-8 font-light tracking-wider">
+      </P>
+      <P className="mb-8">
         認為道為什邊不安好好笑是要都不用，這些台灣一也是我眼神。
-      </p>
+      </P>
 
       <div className="flex justify-center">
         <div
@@ -161,19 +151,19 @@ const AboutUsSection = (): JSX.Element => {
             showForm ? 'opacity-100' : 'opacity-0 delay-500'
           }`}
         >
-          <h3 className="text-xl tracking-widest mb-2">
+          <H3 className="mb-2">
             國立清華大學 名人堂
             <FontAwesomeIcon
               className="w-4 inline mb-1.5 ml-2 text-purple-500"
               icon={faMapMarkerAlt}
             />
-          </h3>
-          <h3 className="text-xl tracking-widest mb-8">2021年11月27日 下午</h3>
-          <p className="mb-4 font-light tracking-wider">
+          </H3>
+          <H3 className="mb-8">2021年11月27日 下午</H3>
+          <P className="mb-4">
             安排社友短講、文物展覽、攝影作品、紀念品販售、社窩參觀、茶點。
             <br></br>
             （以上規劃將視疫情波動調整）
-          </p>
+          </P>
 
           <div className="flex justify-center mt-12">
             <div className="w-72">
@@ -199,9 +189,7 @@ const AboutUsSection = (): JSX.Element => {
                   placeholder="電子信箱"
                 />
 
-                <p className="mt-4 my-2 font-light tracking-wider">
-                  是否攜帶家庭成員？
-                </p>
+                <P className="mt-4 my-2">是否攜帶家庭成員？</P>
 
                 <div className="my-2">
                   <div className="flex items-center my-2">
@@ -210,7 +198,7 @@ const AboutUsSection = (): JSX.Element => {
                       name="member"
                       className="form-radio p-2 bg-white border-2 border-purple-500 checked:bg-purple-500 checked:bg-none focus:ring-0 focus:ring-transparent"
                     />
-                    <p className="mx-2 font-light tracking-wider">是，</p>
+                    <P className="mx-2">是，</P>
                     <input
                       type="text"
                       name="memberAge"
@@ -224,7 +212,7 @@ const AboutUsSection = (): JSX.Element => {
                       name="member"
                       className="form-radio p-2 bg-white border-2 border-purple-500 checked:bg-purple-500 checked:bg-none focus:ring-0 focus:ring-transparent"
                     />
-                    <p className="mx-2 font-light tracking-wider">否</p>
+                    <P className="mx-2">否</P>
                   </div>
                 </div>
 
@@ -240,10 +228,10 @@ const AboutUsSection = (): JSX.Element => {
             </div>
           </div>
 
-          <p className="mt-6 font-light text-gray-600 tracking-wider">
+          <P className="mt-6 text-gray-600">
             詳細辦理規劃將於11月初以電子郵件寄發。<br></br>
             任何問題請聯絡天文社信箱：nthu.astro@gmail.com
-          </p>
+          </P>
         </div>
       </div>
     </Section>

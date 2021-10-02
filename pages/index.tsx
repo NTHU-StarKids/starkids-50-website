@@ -47,7 +47,7 @@ const CarouselSection = (): JSX.Element => {
   return (
     <Section className="pt-6 pb-4">
       <Slider {...sliderSettings}>
-        <div className="w-2/3">
+        <div className="w-2/3 outline-none">
           <div
             className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/rzVcfp4.jpg')" }}
@@ -58,7 +58,7 @@ const CarouselSection = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className="w-2/3">
+        <div className="w-2/3 outline-none">
           <div
             className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/daiczNk.jpg')" }}
@@ -69,7 +69,7 @@ const CarouselSection = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className="w-2/3">
+        <div className="w-2/3 outline-none">
           <div
             className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/wTWsNlJ.jpg')" }}
@@ -80,7 +80,7 @@ const CarouselSection = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className="w-2/3">
+        <div className="w-2/3 outline-none">
           <div
             className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/zAVoLcR.jpg')" }}
@@ -91,7 +91,7 @@ const CarouselSection = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className="w-2/3">
+        <div className="w-2/3 outline-none">
           <div
             className="relative bg-center bg-cover h-80 mx-1.5 text-black"
             style={{ backgroundImage: "url('https://imgur.com/IwetuAv.jpg')" }}

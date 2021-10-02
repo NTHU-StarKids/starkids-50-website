@@ -113,7 +113,7 @@ const CabinetSection = (): JSX.Element => {
                 className="absolute -right-2 tracking-wider text-gray-300"
                 style={{ top: '-2.4rem', paddingLeft: '0.1rem' }}
               >
-                51
+                {CABINETS.length - 1}
               </div>
               {children}
             </div>

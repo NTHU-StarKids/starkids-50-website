@@ -11,6 +11,12 @@ type TPost = {
   body: string
 }
 
+type TGoods = {
+  imageUrl: string
+  name: string
+  description: string
+}
+
 type TPosition = {
   name: string
   department: string

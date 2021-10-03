@@ -67,8 +67,17 @@ const MagazinePostPage = (): JSX.Element => {
   const post = posts.find((p) => p.slug == slug)
   if (!post) return <Error statusCode={404} />
 
+  const firstParagraph = post.contents.find(
+    (content) => content.type == 'paragraph'
+    // @ts-ignore
+  ).text
+  const metadata: TMetadata = {
+    imageUrl: post.coverUrl,
+    description: firstParagraph,
+  }
+
   return (
-    <Layout title={post.title}>
+    <Layout title={post.title} metadata={metadata}>
       <PostSection post={post} />
     </Layout>
   )

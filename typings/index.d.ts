@@ -1,3 +1,8 @@
+type TMetadata = {
+  imageUrl?: string
+  description?: string
+}
+
 type TSlide = {
   imageUrl: string
   title: string

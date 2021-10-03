@@ -1,17 +1,22 @@
 import { ReactNode } from 'react'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-type Props = {
+type TProps = {
   children: ReactNode
   title?: string
+  metadata?: TMetadata
 }
 
 const Layout = ({
   children,
   title = 'This is the default title',
-}: Props): JSX.Element => {
+  metadata,
+}: TProps): JSX.Element => {
+  const router = useRouter()
+
   return (
     <div className="font-sans bg-gray-700 text-white">
       <Head>
@@ -33,12 +38,25 @@ const Layout = ({
         />
         <meta name="description" content="" />
 
-        <meta property="og:title" content="清大天文社 50 週年" />
+        <meta property="og:title" content={`${title} - 清大天文社 50 週年`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://50.starkids.club" />
-        <meta property="og:image" content="" />
+        <meta
+          property="og:url"
+          content={`https://50.starkids.club${router.pathname}`}
+        />
+        <meta
+          property="og:image"
+          content={
+            metadata.imageUrl
+              ? `https://50.starkids.club${metadata.imageUrl}`
+              : ''
+          }
+        />
         <meta property="og:site_name" content="清大天文社 50 週年" />
-        <meta property="og:description" content="" />
+        <meta
+          property="og:description"
+          content={metadata.description ? metadata.description : ''}
+        />
 
         {/* Global site tag (gtag.js) - Google Analytics */}
         <script

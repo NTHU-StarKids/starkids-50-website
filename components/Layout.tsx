@@ -25,7 +25,7 @@ const Layout = ({
 
       <Header />
 
-      <div className="pt-12">{children}</div>
+      <div className="pt-12 overscroll-none">{children}</div>
 
       <Footer />
     </div>

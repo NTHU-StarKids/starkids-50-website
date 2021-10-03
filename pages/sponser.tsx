@@ -45,13 +45,13 @@ const SponsorshipSection = (): JSX.Element => {
 
 const Goods = ({ good }: TProps): JSX.Element => {
   return (
-    <div className="flex flex-col bg-white text-purple-500 border-2 border-purple-500 rounded-2xl h-96 w-full overflow-hidden transition-colors duration-200 cursor-pointer">
+    <div className="flex flex-col bg-white text-purple-500 border-2 border-purple-500 rounded-2xl h-96 w-full overflow-hidden transition-colors duration-200">
       <div
         className="w-full bg-center bg-cover h-60"
         style={{ backgroundImage: `url('${good.imageUrl}')` }}
       ></div>
       <div className="w-full px-4 lg:px-8 py-4 text-left">
-        <H3 className="mb-1 text-center">{good.name}</H3>
+        <H3 className="mb-1 text-center truncate">{good.name}</H3>
         <p
           className="text-center font-light tracking-wider overflow-hidden w-full h-20 leading-7"
           style={{ textOverflow: 'ellipsis' }}
@@ -67,7 +67,7 @@ const GoodsSection = ({ goods }: TListProps): JSX.Element => {
   return (
     <Section className="pt-0">
       <H2>回饋商品</H2>
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-3 lg:px-16 outline-none">
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:px-16 outline-none">
         {goods.map((good, index) => (
           <Goods key={`good-${index}`} good={good} />
         ))}

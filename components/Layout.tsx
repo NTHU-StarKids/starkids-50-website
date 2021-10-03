@@ -47,7 +47,7 @@ const Layout = ({
         <meta
           property="og:image"
           content={
-            metadata.imageUrl
+            metadata?.imageUrl
               ? `https://50.starkids.club${metadata.imageUrl}`
               : ''
           }
@@ -55,7 +55,7 @@ const Layout = ({
         <meta property="og:site_name" content="清大天文社 50 週年" />
         <meta
           property="og:description"
-          content={metadata.description ? metadata.description : ''}
+          content={metadata?.description ? metadata.description : ''}
         />
 
         {/* Global site tag (gtag.js) - Google Analytics */}

@@ -21,6 +21,24 @@ const Layout = ({
         <link rel="icon" href="/favicon.ico" />
 
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="author"
+          content="清大外語18級 郭人萱、清大電機18級 徐安廷"
+        />
+
+        <meta name="robots" content="all" />
+        <meta
+          name="keywords"
+          content="清大天文社50週年,清大天文社50社慶,週年,周年,社慶,50,50歲,清華,大學,清大,清華大學,清大天文社,天文,天文社,星空之子,NTHU Astronomy Club 50 Anniversary,50 anniversary"
+        />
+        <meta name="description" content="" />
+
+        <meta property="og:title" content="清大天文社 50 週年" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://50.starkids.club" />
+        <meta property="og:image" content="" />
+        <meta property="og:site_name" content="清大天文社 50 週年" />
+        <meta property="og:description" content="" />
 
         {/* Global site tag (gtag.js) - Google Analytics */}
         <script

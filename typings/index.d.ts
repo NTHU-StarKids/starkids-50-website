@@ -4,11 +4,25 @@ type TSlide = {
   description: string
 }
 
+type TPostParagraph = {
+  type: string = 'paragraph'
+  text: string
+}
+
+type TPostImage = {
+  type: string = 'image'
+  url: string
+  description: string
+}
+
 type TPost = {
   author: string
-  imageUrl: string
+  coverUrl: string
+  slug: string
   title: string
-  body: string
+  decade?: number
+  recommended: boolean
+  contents: (TPostParagraph | TPostImage)[]
 }
 
 type TGoods = {

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Range, getTrackBackground } from 'react-range'
 
 import { CABINETS } from '@/constants'
-import samplePosts from '@/constants/posts'
+import posts from '@/constants/historyPosts'
 import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
@@ -164,7 +164,7 @@ const EventsSection = (): JSX.Element => {
   return (
     <Section>
       <H2>歷史事件</H2>
-      <PostList posts={samplePosts} />
+      <PostList posts={posts} />
     </Section>
   )
 }

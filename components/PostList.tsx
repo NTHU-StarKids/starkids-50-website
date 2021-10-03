@@ -1,5 +1,3 @@
-import { H3 } from '@/components/Headings'
-
 type TProps = {
   post: TPost
 }
@@ -9,19 +7,26 @@ type TListProps = {
 }
 
 const Post = ({ post }: TProps): JSX.Element => {
+  const firstParagraph = post.contents.find(
+    (content) => content.type == 'paragraph'
+    // @ts-ignore
+  ).text
+
   return (
     <div className="flex flex-col lg:flex-row bg-gray-600 hover:bg-gray-650 rounded-2xl h-96 lg:h-48 w-full overflow-hidden transition-colors duration-200 cursor-pointer">
       <div
-        className="w-full lg:w-2/5 bg-center bg-cover h-40 lg:h-auto"
-        style={{ backgroundImage: `url('${post.imageUrl}')` }}
+        className="w-full lg:w-2/5 xl:w-1/3 2xl:w-1/4 bg-center bg-cover h-40 lg:h-auto"
+        style={{ backgroundImage: `url('${post.coverUrl}')` }}
       ></div>
-      <div className="w-full px-4 lg:px-8 py-4 text-left">
-        <H3 className="mb-1 lg:mb-4 text-center lg:text-left">
-          {post.title}
-          <span className="hidden lg:inline lg:ml-16 text-base">
+      <div className="w-full lg:w-3/5 xl:w-full px-4 lg:px-8 py-4 text-left">
+        <div className="flex justify-between tracking-widest">
+          <span className="text-xl mb-1 lg:mb-4 text-center lg:text-left w-full lg:w-2/3 truncate">
+            {post.title}
+          </span>
+          <span className="hidden lg:inline lg:ml-4 text-base text-right w-max">
             作者/{post.author}
           </span>
-        </H3>
+        </div>
         <p className="lg:hidden mb-4 text-base text-center tracking-widest">
           作者/{post.author}
         </p>
@@ -29,7 +34,7 @@ const Post = ({ post }: TProps): JSX.Element => {
           className="text-center lg:text-left font-light tracking-wider overflow-hidden w-full h-28 leading-7"
           style={{ textOverflow: 'ellipsis' }}
         >
-          {post.body}
+          {firstParagraph}
         </p>
       </div>
     </div>

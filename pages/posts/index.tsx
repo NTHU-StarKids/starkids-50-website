@@ -7,10 +7,11 @@ import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 import PostList from '@/components/PostList'
 import { exampleSlides } from '@/constants'
-import samplePosts from '@/constants/posts'
+import posts from '@/constants/magazinePosts'
 
 const PostsSection = (): JSX.Element => {
   const [defaultTab, setDefaultTab] = useState<number>(-1)
+  const decades = [1970, 1980, 1990, 2000, 2010]
 
   const onTabChange = (index: number) => {
     window.sessionStorage.setItem('defaultTag', String(index))
@@ -25,88 +26,39 @@ const PostsSection = (): JSX.Element => {
       <H2 className="mt-4 mb-12">社友來稿</H2>
       <Tab.Group defaultIndex={defaultTab} onChange={onTabChange}>
         <Tab.List className="border-b-4 border-purple-500 mb-10 flex justify-between overflow-x-scroll">
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`mr-1 rounded-t-2xl rounded-b-none px-2 sm:px-4 md:px-5 pt-3 pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 ${
-                  selected ? 'bg-purple-500 text-white' : 'text-gray-200'
-                }`}
-              >
-                <span className="ml-1">1970</span>
-                <span className="lg:inline hidden">年代</span>
-                <span className="lg:hidden inline">'s</span>
-              </button>
-            )}
-          </Tab>
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`mx-1 rounded-t-2xl rounded-b-none px-3 sm:px-4 md:px-6 pt-3 pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 ${
-                  selected ? 'bg-purple-500 text-white' : 'text-gray-200'
-                }`}
-              >
-                <span className="ml-1">1980</span>
-                <span className="lg:inline hidden">年代</span>
-                <span className="lg:hidden inline">'s</span>
-              </button>
-            )}
-          </Tab>
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`mx-1 rounded-t-2xl rounded-b-none px-3 sm:px-4 md:px-6 pt-3 pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 ${
-                  selected ? 'bg-purple-500 text-white' : 'text-gray-200'
-                }`}
-              >
-                <span className="ml-1">1990</span>
-                <span className="lg:inline hidden">年代</span>
-                <span className="lg:hidden inline">'s</span>
-              </button>
-            )}
-          </Tab>
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`mx-1 rounded-t-2xl rounded-b-none px-3 sm:px-4 md:px-6 pt-3 pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 ${
-                  selected ? 'bg-purple-500 text-white' : 'text-gray-200'
-                }`}
-              >
-                <span className="ml-1">2000</span>
-                <span className="lg:inline hidden">年代</span>
-                <span className="lg:hidden inline">'s</span>
-              </button>
-            )}
-          </Tab>
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`ml-1 rounded-t-2xl rounded-b-none px-3 sm:px-4 md:px-6 pt-3 pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 ${
-                  selected ? 'bg-purple-500 text-white' : 'text-gray-200'
-                }`}
-              >
-                <span className="ml-1">2010</span>
-                <span className="lg:inline hidden">年代</span>
-                <span className="lg:hidden inline">'s</span>
-              </button>
-            )}
-          </Tab>
+          {decades.map((year, index) => {
+            const margin =
+              index == 0
+                ? 'mr-1'
+                : index == decades.length - 1
+                ? 'ml-1'
+                : 'mx-1'
+            return (
+              <Tab as={Fragment} key={`tab-${year}`}>
+                {({ selected }) => (
+                  <button
+                    className={`${margin} rounded-t-2xl rounded-b-none px-2 sm:px-4 md:px-5 pt-3 pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 ${
+                      selected ? 'bg-purple-500 text-white' : 'text-gray-200'
+                    }`}
+                  >
+                    <span className="ml-1">{year}</span>
+                    <span className="lg:inline hidden">年代</span>
+                    <span className="lg:hidden inline">'s</span>
+                  </button>
+                )}
+              </Tab>
+            )
+          })}
         </Tab.List>
         <Tab.Panels>
-          <Tab.Panel className="outline-none">
-            <PostList posts={samplePosts} />
-          </Tab.Panel>
-          <Tab.Panel className="outline-none">
-            <PostList posts={samplePosts} />
-          </Tab.Panel>
-          <Tab.Panel className="outline-none">
-            <PostList posts={samplePosts} />
-          </Tab.Panel>
-          <Tab.Panel className="outline-none">
-            <PostList posts={samplePosts} />
-          </Tab.Panel>
-          <Tab.Panel className="outline-none">
-            <PostList posts={samplePosts} />
-          </Tab.Panel>
+          {decades.map((decade) => {
+            const decadePosts = posts.filter((post) => post.decade == decade)
+            return (
+              <Tab.Panel key={`panel-${decade}`} className="outline-none">
+                <PostList posts={decadePosts} />
+              </Tab.Panel>
+            )
+          })}
         </Tab.Panels>
       </Tab.Group>
     </Section>

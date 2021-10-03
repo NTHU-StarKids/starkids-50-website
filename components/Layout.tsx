@@ -42,7 +42,7 @@ const Layout = ({
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://50.starkids.club${router.pathname}`}
+          content={`https://50.starkids.club${router.asPath}`}
         />
         <meta
           property="og:image"

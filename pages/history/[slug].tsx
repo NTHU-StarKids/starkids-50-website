@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
-import posts from '@/constants/magazinePosts'
+import posts from '@/constants/historyPosts'
 
 type TProps = {
   post: TPost

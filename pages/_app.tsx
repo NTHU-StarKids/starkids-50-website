@@ -1,5 +1,7 @@
-import { useEffect } from 'react'
 import '@/styles/globals.css'
+import '@/styles/fonts.css'
+
+import { useEffect } from 'react'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import { AppProps } from 'next/app'
 

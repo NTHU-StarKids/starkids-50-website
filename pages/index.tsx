@@ -15,10 +15,18 @@ import { exampleSlides } from '@/constants'
 const AnniversarySection = (): JSX.Element => {
   return (
     <Section>
-      <h1 className="font-semibold tracking-widest text-3xl mb-2">
+      <h1
+        className="font-semibold tracking-widest text-3xl mb-3"
+        style={{ fontFamily: 'GenYoMin' }}
+      >
         清大天文社
       </h1>
-      <h1 className="font-semibold tracking-widest text-5xl">50週年</h1>
+      <h1
+        className="font-semibold tracking-widest text-5xl"
+        style={{ fontFamily: 'GenYoMin' }}
+      >
+        50週年
+      </h1>
       <div className="flex justify-center">
         <div
           className="mt-4 w-48 h-2.5"

@@ -1,0 +1,9 @@
+// font source: https://github.com/ButTaiwan/genyo-font
+
+@font-face {
+  font-family: 'GenYoMin';
+  font-style: normal;
+  font-weight: normal;
+  src: local('GenYoMin'),
+    url('/fonts/GenYoMinTWStripped-B-01.ttf') format('woff');
+}

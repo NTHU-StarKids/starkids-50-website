@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
-import posts from '@/constants/historyPosts'
+import posts from '@/constants/magazinePosts'
 
 type TProps = {
   post: TPost
@@ -20,15 +20,22 @@ const PostSection = ({ post }: TProps): JSX.Element => {
       <h2 className="text-2xl tracking-widest mb-2">{post.title}</h2>
       <H3>作者/{post.author}</H3>
       <div className="mt-12 text-left">
-        {post.contents.map((content) => {
+        {post.contents.map((content, index) => {
           if (content.type == 'paragraph') {
             return (
-              // @ts-ignore
-              <p className="mb-6 font-light tracking-widest">{content.text}</p>
+              <p
+                key={`content-${index}`}
+                className="mb-6 font-light tracking-widest"
+              >
+                {
+                  // @ts-ignore
+                  content.text
+                }
+              </p>
             )
           } else if (content.type == 'image') {
             return (
-              <div className="my-10">
+              <div key={`content-${index}`} className="my-10">
                 <img
                   // @ts-ignore
                   src={content.url}
@@ -54,7 +61,7 @@ const PostSection = ({ post }: TProps): JSX.Element => {
   )
 }
 
-const HistoryPostPage = (): JSX.Element => {
+const MagazinePostPage = (): JSX.Element => {
   const router = useRouter()
   const { slug } = router.query
   const post = posts.find((p) => p.slug == slug)
@@ -67,4 +74,4 @@ const HistoryPostPage = (): JSX.Element => {
   )
 }
 
-export default HistoryPostPage
+export default MagazinePostPage

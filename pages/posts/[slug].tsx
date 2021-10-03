@@ -20,15 +20,22 @@ const PostSection = ({ post }: TProps): JSX.Element => {
       <h2 className="text-2xl tracking-widest mb-2">{post.title}</h2>
       <H3>作者/{post.author}</H3>
       <div className="mt-12 text-left">
-        {post.contents.map((content) => {
+        {post.contents.map((content, index) => {
           if (content.type == 'paragraph') {
             return (
-              // @ts-ignore
-              <p className="mb-6 font-light tracking-widest">{content.text}</p>
+              <p
+                key={`content-${index}`}
+                className="mb-6 font-light tracking-widest"
+              >
+                {
+                  // @ts-ignore
+                  content.text
+                }
+              </p>
             )
           } else if (content.type == 'image') {
             return (
-              <div className="my-10">
+              <div key={`content-${index}`} className="my-10">
                 <img
                   // @ts-ignore
                   src={content.url}

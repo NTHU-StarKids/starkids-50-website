@@ -21,6 +21,24 @@ const Layout = ({
         <link rel="icon" href="/favicon.ico" />
 
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-SBKWE3FLH6"
+        ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-SBKWE3FLH6');
+            `,
+          }}
+        />
       </Head>
 
       <Header />

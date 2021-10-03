@@ -43,7 +43,6 @@ const CabinetSection = (): JSX.Element => {
   return (
     <Section className="pt-0">
       <H2>歷屆幹部</H2>
-      <H3 className="mb-6">多元發展期</H3>
       <div className="flex justify-center">
         <div
           className="bg-purple-100 w-full md:w-3/5 rounded-xl px-6 md:px-14 py-8 overflow-scroll"

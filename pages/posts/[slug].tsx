@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import Error from 'next/error'
 import { useRouter } from 'next/router'
 
 import { H3 } from '@/components/Headings'
@@ -62,36 +62,44 @@ const PostSection = ({ post }: TProps): JSX.Element => {
 }
 
 const MagazinePostPage = (): JSX.Element => {
-  const [post, setPost] = useState<TPost | undefined>()
-  const [metadata, setMetadata] = useState<TMetadata | undefined>()
   const router = useRouter()
+  const { slug } = router.query
+  const post = posts.find((p) => p.slug == slug)
+  if (!post) return <Error statusCode={404} />
 
-  useEffect(() => {
-    if (router.isReady) {
-      const { slug } = router.query
-      const foundPost = posts.find((p) => p.slug == slug)
-      if (!foundPost) {
-        router.replace('/404')
-      } else {
-        setPost(foundPost)
-        const firstParagraph = foundPost.contents.find(
-          (content) => content.type == 'paragraph'
-          // @ts-ignore
-        ).text
-        const metadata: TMetadata = {
-          imageUrl: foundPost.coverUrl,
-          description: firstParagraph,
-        }
-        setMetadata(metadata)
-      }
-    }
-  }, [router.isReady])
+  const firstParagraph = post.contents.find(
+    (content) => content.type == 'paragraph'
+    // @ts-ignore
+  ).text
+  const metadata: TMetadata = {
+    imageUrl: post.coverUrl,
+    description: firstParagraph,
+  }
 
   return (
-    <Layout title={post?.title} metadata={metadata}>
-      {post && <PostSection post={post} />}
+    <Layout title={post.title} metadata={metadata}>
+      <PostSection post={post} />
     </Layout>
   )
+}
+
+export async function getStaticPaths() {
+  // Get the paths we want to pre-render based on posts
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug },
+  }))
+
+  // We'll pre-render only these paths at build time.
+  // { fallback: false } means other routes should 404.
+  return { paths, fallback: false }
+}
+
+// This also gets called at build time
+export async function getStaticProps({ params }) {
+  const post = posts.find((p) => p.slug == params.slug)
+
+  // Pass post data to the page via props
+  return { props: { post } }
 }
 
 export default MagazinePostPage

@@ -25,19 +25,13 @@ const PostsSection = (): JSX.Element => {
     <Section>
       <H2 className="mt-4 mb-12">社友來稿</H2>
       <Tab.Group defaultIndex={defaultTab} onChange={onTabChange}>
-        <Tab.List className="border-b-4 border-purple-500 mb-10 flex justify-between overflow-x-scroll">
-          {decades.map((year, index) => {
-            const margin =
-              index == 0
-                ? 'mr-1'
-                : index == decades.length - 1
-                ? 'ml-1'
-                : 'mx-1'
+        <Tab.List className="sm:border-b-4 border-purple-500 mb-10 flex flex-wrap gap-2 justify-center sm:justify-between">
+          {decades.map((year) => {
             return (
               <Tab as={Fragment} key={`tab-${year}`}>
                 {({ selected }) => (
                   <button
-                    className={`${margin} rounded-t-2xl rounded-b-none px-2 sm:px-4 md:px-5 pt-3 pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 ${
+                    className={`history-tab rounded-xl sm:rounded-t-2xl sm:rounded-b-none p-2 sm:px-4 md:px-5 sm:pt-3 sm:pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 ${
                       selected ? 'bg-purple-500 text-white' : 'text-gray-200'
                     }`}
                   >

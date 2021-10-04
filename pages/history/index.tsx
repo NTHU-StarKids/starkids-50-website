@@ -45,7 +45,7 @@ const CabinetSection = (): JSX.Element => {
       <H2>歷屆幹部</H2>
       <div className="flex justify-center">
         <div
-          className="bg-purple-100 w-full md:w-3/5 rounded-xl px-6 md:px-14 py-8 overflow-scroll"
+          className="bg-purple-100 w-full md:w-3/5 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-scroll"
           style={{ height: '28rem' }}
         >
           <H3 className="text-purple-500">
@@ -63,7 +63,9 @@ const CabinetSection = (): JSX.Element => {
               {cabinet.positions.map((people, index) => {
                 return (
                   <tr key={`cabinet-${index}`}>
-                    <td className="p-2 w-20">{people.name}</td>
+                    <td className="p-2 w-20 lg:w-28 xl:w-32 2xl:w-36">
+                      {people.name}
+                    </td>
                     <td
                       className={`p-2${cabinet.age != 0 ? '' : ' text-right'}`}
                     >

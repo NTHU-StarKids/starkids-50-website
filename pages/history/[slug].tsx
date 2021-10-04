@@ -5,6 +5,7 @@ import { H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 import posts from '@/constants/historyPosts'
+import { getPostFirstParagraph } from '@/utils'
 
 type TProps = {
   post: TPost
@@ -25,7 +26,7 @@ const PostSection = ({ post }: TProps): JSX.Element => {
             return (
               <p
                 key={`content-${index}`}
-                className="mb-6 font-light tracking-widest"
+                className="mb-6 font-light tracking-widest ml-1 md:ml-0"
               >
                 {
                   // @ts-ignore
@@ -67,10 +68,7 @@ const HistoryPostPage = (): JSX.Element => {
   const post = posts.find((p) => p.slug == slug)
   if (!post) return <Error statusCode={404} />
 
-  const firstParagraph = post.contents.find(
-    (content) => content.type == 'paragraph'
-    // @ts-ignore
-  ).text
+  const firstParagraph = getPostFirstParagraph(post)
   const metadata: TMetadata = {
     imageUrl: post.coverUrl,
     description: firstParagraph,

@@ -122,10 +122,10 @@ const CabinetSection = (): JSX.Element => {
               ></div>
 
               <div
-                className="absolute -left-3 tracking-wider text-gray-300"
-                style={{ top: '-2.4rem', paddingLeft: '0.1rem' }}
+                className="absolute -left-3 tracking-wider text-gray-300 text-sm"
+                style={{ top: '-2.3rem', paddingLeft: '0.1rem' }}
               >
-                00
+                元老
               </div>
               <div
                 className="absolute -right-2 tracking-wider text-gray-300"
@@ -150,7 +150,11 @@ const CabinetSection = (): JSX.Element => {
                 className="absolute -top-8 w-10 bg-purple-500 rounded-xl tracking-wider text-center"
                 style={{ left: '-0.95rem', paddingLeft: '0.1rem' }}
               >
-                {`${age[0] < 10 ? '0' : ''}${age[0]}`}
+                {age[0] == 0 ? (
+                  <span className="text-sm">元老</span>
+                ) : (
+                  `${age[0] < 10 ? '0' : ''}${age[0]}`
+                )}
               </div>
             </div>
           )}

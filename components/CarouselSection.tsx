@@ -2,6 +2,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 import Slider from 'react-slick'
+import { useRouter } from 'next/router'
 
 import { H3 } from '@/components/Headings'
 import Section from '@/components/Section'
@@ -9,9 +10,11 @@ import P from '@/components/Paragraph'
 
 type TProps = {
   slides: TSlide[]
+  link: 'history' | 'posts'
 }
 
-const CarouselSection = ({ slides }: TProps): JSX.Element => {
+const CarouselSection = ({ slides, link }: TProps): JSX.Element => {
+  const router = useRouter()
   const sliderSettings = {
     autoplay: true,
     autoplaySpeed: 6000,
@@ -38,7 +41,11 @@ const CarouselSection = ({ slides }: TProps): JSX.Element => {
         {slides &&
           slides.map((slide, index) => {
             return (
-              <div key={`slide-${index}`} className="w-2/3 outline-none">
+              <div
+                key={`slide-${index}`}
+                className="w-2/3 outline-none"
+                onClick={() => router.replace(`/${link}/${slide.slug}`)}
+              >
                 <div
                   className="relative bg-center bg-cover h-80 lg:h-96 mx-1.5 text-black"
                   style={{

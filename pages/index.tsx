@@ -10,7 +10,7 @@ import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 import P from '@/components/Paragraph'
-import { exampleSlides } from '@/constants'
+import { getPostFirstParagraph, getRecommendedHistoryPosts } from '@/utils'
 
 const AnniversarySection = (): JSX.Element => {
   return (
@@ -169,10 +169,21 @@ const AboutUsSection = (): JSX.Element => {
 }
 
 export default function HomePage(): JSX.Element {
+  const recommendedPosts = getRecommendedHistoryPosts()
+  const slides = recommendedPosts.map((post) => {
+    const slide: TSlide = {
+      imageUrl: post.coverUrl,
+      title: post.title,
+      description: getPostFirstParagraph(post),
+      slug: post.slug,
+    }
+    return slide
+  })
+
   return (
     <Layout title="首頁">
       <AnniversarySection />
-      <CarouselSection slides={exampleSlides} />
+      <CarouselSection slides={slides} link="history" />
       <AboutUsSection />
     </Layout>
   )

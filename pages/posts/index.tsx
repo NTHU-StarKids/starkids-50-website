@@ -6,8 +6,8 @@ import { H2 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 import PostList from '@/components/PostList'
-import { exampleSlides } from '@/constants'
 import posts from '@/constants/magazinePosts'
+import { getPostFirstParagraph, getRecommendedMagazinePosts } from '@/utils'
 
 const PostsSection = (): JSX.Element => {
   const [defaultTab, setDefaultTab] = useState<number>(-1)
@@ -66,9 +66,20 @@ const PostsSection = (): JSX.Element => {
 }
 
 export default function PostsPage(): JSX.Element {
+  const recommendedPosts = getRecommendedMagazinePosts()
+  const slides = recommendedPosts.map((post) => {
+    const slide: TSlide = {
+      imageUrl: post.coverUrl,
+      title: post.title,
+      description: getPostFirstParagraph(post),
+      slug: post.slug,
+    }
+    return slide
+  })
+
   return (
     <Layout title="社友來稿">
-      <CarouselSection slides={exampleSlides} />
+      <CarouselSection slides={slides} link="posts" />
       <PostsSection />
     </Layout>
   )

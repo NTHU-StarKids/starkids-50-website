@@ -28,7 +28,7 @@ const Post = ({ post }: TProps): JSX.Element => {
             <span className="text-xl mb-1 lg:mb-4 text-center lg:text-left w-full lg:w-2/3 truncate">
               {post.title}
             </span>
-            <span className="hidden lg:inline lg:ml-4 text-base text-right w-max">
+            <span className="hidden lg:inline lg:ml-4 lg:mr-2 text-base text-right w-max">
               作者/{post.author}
             </span>
           </div>

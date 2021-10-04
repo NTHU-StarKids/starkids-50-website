@@ -187,7 +187,7 @@ const posts = [
     slug: 'chang-bu-de-gu-shi-dao-xiang-hui-mei-guan-xi-ye-wu-fa',
     title: '常不的故事到想會沒關係也無法',
     decade: 1970,
-    recommended: true,
+    recommended: false,
     contents: [
       {
         type: 'paragraph',
@@ -213,7 +213,7 @@ const posts = [
     slug: 'chuang-zuo-zhe-da-da-jia-chu-lai-liao',
     title: '創作者大大家出來了',
     decade: 1970,
-    recommended: true,
+    recommended: false,
     contents: [
       {
         type: 'paragraph',
@@ -370,7 +370,7 @@ const posts = [
     slug: 'you-xiao-shi-zui-dao-di-xiu-gai-wen-nuan-qi',
     title: '有小是最到底修改溫暖七',
     decade: 1980,
-    recommended: true,
+    recommended: false,
     contents: [
       {
         type: 'paragraph',
@@ -438,7 +438,7 @@ const posts = [
     slug: 'wo-du-mei-bu-shi-duan-shi-jian',
     title: '我都沒不是段時間',
     decade: 1990,
-    recommended: true,
+    recommended: false,
     contents: [
       {
         type: 'paragraph',
@@ -596,7 +596,7 @@ const posts = [
     slug: 'feng-kuang-wo-ping-chang-bi-jiao-duo-yao-shang-bu-zhe-ge-jiao',
     title: '瘋狂我平常比較多要上，不這個角',
     decade: 1990,
-    recommended: true,
+    recommended: false,
     contents: [
       {
         type: 'paragraph',
@@ -833,7 +833,7 @@ const posts = [
     slug: 'ben-de-zhe-ge-zhen-ke-yi-bu-de-shi-hou-de-zai-xin-men',
     title: '本的這個真可以不，的時候得在心們',
     decade: 2010,
-    recommended: true,
+    recommended: false,
     contents: [
       {
         type: 'paragraph',
@@ -891,7 +891,7 @@ const posts = [
     slug: 'bu-shi-ying-gai-you-xiang-wo-ye-zhi-jie-shuo-de',
     title: '不是應該有想我也直接說的',
     decade: 2010,
-    recommended: true,
+    recommended: false,
     contents: [
       {
         type: 'paragraph',

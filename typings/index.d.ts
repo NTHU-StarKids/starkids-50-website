@@ -7,6 +7,7 @@ type TSlide = {
   imageUrl: string
   title: string
   description: string
+  slug: string
 }
 
 type TPostParagraph = {

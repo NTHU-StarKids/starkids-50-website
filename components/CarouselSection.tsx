@@ -11,9 +11,15 @@ import P from '@/components/Paragraph'
 type TProps = {
   slides: TSlide[]
   link: 'history' | 'posts'
+  initialSlide?: number
+  onSlideChange?: (index: number) => void
 }
 
-const CarouselSection = ({ slides, link }: TProps): JSX.Element => {
+const CarouselSection = ({
+  slides,
+  link,
+  initialSlide = 0,
+}: TProps): JSX.Element => {
   const router = useRouter()
   const sliderSettings = {
     autoplay: true,
@@ -25,6 +31,8 @@ const CarouselSection = ({ slides, link }: TProps): JSX.Element => {
     centerPadding: '16%',
     slidesToShow: 1,
     speed: 500,
+    initialSlide: initialSlide,
+    // afterChange: onSlideChange,
     responsive: [
       {
         breakpoint: 768,

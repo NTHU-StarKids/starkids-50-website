@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Range, getTrackBackground } from 'react-range'
 
 import { CABINETS } from '@/constants'
@@ -32,13 +32,25 @@ const CabinetSection = (): JSX.Element => {
 
   const onAgeChange = (ages: number[]) => {
     const [newAge] = ages
+    window.sessionStorage.setItem('defaultAge', String(newAge))
     setAge([newAge])
+    setNewCabinet(newAge)
+  }
 
+  const setNewCabinet = (newAge: number) => {
     const newCabinet = CABINETS.find((record) => record.age == newAge)
     if (newCabinet) {
       setCabinet(newCabinet)
     }
   }
+
+  useEffect(() => {
+    const newAge = parseInt(
+      window.sessionStorage.getItem('defaultAge') || String(defaultAge)
+    )
+    setAge([newAge])
+    setNewCabinet(newAge)
+  }, [])
 
   return (
     <Section className="pt-0">

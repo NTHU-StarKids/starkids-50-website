@@ -8,7 +8,7 @@ const Footer = (): JSX.Element => {
   return (
     <footer className="bg-purple-700 pt-12 pb-8 w-full">
       <Section color="purple-700">
-        <div className="flex flex-col sm:flex-row items-center justify-center mb-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-28 md:gap-40 lg:gap-64 xl:gap-80 2xl:gap-96 mb-8">
           <div className="w-48">
             <H3 className="border-b border-opacity-20 pb-4">清大天文社</H3>
             <div className="flex flex-shrink-0 px-2 py-8 items-center justify-between">
@@ -26,8 +26,6 @@ const Footer = (): JSX.Element => {
               ))}
             </div>
           </div>
-
-          <div className="flex-1 invisible sm:visible"></div>
 
           <div className="w-72">
             <H3 className="border-b border-opacity-20 pb-4">相關連結</H3>

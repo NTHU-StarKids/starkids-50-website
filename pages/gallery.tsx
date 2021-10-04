@@ -17,9 +17,9 @@ const ComingSoonSection = (): JSX.Element => {
   )
 }
 
-export default function MessagesPage(): JSX.Element {
+export default function GalleryPage(): JSX.Element {
   return (
-    <Layout title="留言板">
+    <Layout title="藝廊">
       <ComingSoonSection />
     </Layout>
   )

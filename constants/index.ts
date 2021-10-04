@@ -9,7 +9,7 @@ export const menuLinks = [
   },
   {
     name: '留言板',
-    url: '/messages',
+    url: '/chat',
   },
   {
     name: '贊助我們',

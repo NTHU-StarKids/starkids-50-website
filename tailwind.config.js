@@ -10,6 +10,34 @@ const purple500 = '#6562BF'
 const purple300 = '#B6B5FF'
 const purple100 = '#F8F7FD'
 
+const extendHeight = {
+  92: '23rem',
+  100: '25rem',
+  104: '26rem',
+  108: '27rem',
+  112: '28rem',
+  116: '29rem',
+  120: '30rem',
+  124: '31rem',
+  128: '32rem',
+  132: '33rem',
+  136: '34rem',
+  140: '35rem',
+  144: '36rem',
+  148: '37rem',
+  152: '38rem',
+  156: '39rem',
+  160: '40rem',
+  164: '41rem',
+  168: '42rem',
+  172: '43rem',
+  176: '44rem',
+  180: '45rem',
+  184: '46rem',
+  188: '47rem',
+  192: '48rem',
+}
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -30,14 +58,11 @@ module.exports = {
         'purple-700': purple700,
       },
       height: {
-        112: '28rem',
-        120: '30rem',
-        128: '32rem',
-        136: '34rem',
-        144: '36rem',
+        ...extendHeight,
       },
       maxHeight: {
         '2x-screen': '200vh',
+        ...extendHeight,
       },
       transitionProperty: {
         'max-height': 'max-height',

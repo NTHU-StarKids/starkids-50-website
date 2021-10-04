@@ -56,10 +56,7 @@ const CabinetSection = (): JSX.Element => {
     <Section className="pt-0">
       <H2>歷屆幹部</H2>
       <div className="flex justify-center">
-        <div
-          className="bg-purple-100 w-full md:w-3/5 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-scroll"
-          style={{ height: '28rem' }}
-        >
+        <div className="bg-purple-100 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-scroll">
           <H3 className="text-purple-500">
             {cabinet.name}
             <span className="ml-2 tracking-wider">

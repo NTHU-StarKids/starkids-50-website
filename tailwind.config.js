@@ -29,6 +29,13 @@ module.exports = {
         'purple-500': purple500,
         'purple-700': purple700,
       },
+      height: {
+        112: '28rem',
+        120: '30rem',
+        128: '32rem',
+        136: '34rem',
+        144: '36rem',
+      },
       maxHeight: {
         '2x-screen': '200vh',
       },

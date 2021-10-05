@@ -1,5 +1,6 @@
 const gray200 = '#C2C2C2'
 const gray300 = '#A3A3A3'
+const gray400 = '#858585'
 const gray500 = '#666666'
 const gray600 = '#4D4D4D'
 const gray650 = '#404040'
@@ -48,6 +49,7 @@ module.exports = {
       colors: {
         'gray-200': gray200,
         'gray-300': gray300,
+        'gray-400': gray400,
         'gray-500': gray500,
         'gray-600': gray600,
         'gray-650': gray650,

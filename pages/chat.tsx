@@ -41,7 +41,7 @@ const MessageGroup = ({
       <div className="w-full text-left px-3">
         {messages.map((message, index) => {
           return (
-            <div key={`message-${index}`} className="font-thin">
+            <div key={`message-${index}`} className="font-light">
               {index == 0 &&
                 (isSelf ? (
                   <p className="tracking-wide text-gray-50 text-right">
@@ -166,17 +166,17 @@ const ChatSection = (): JSX.Element => {
   return (
     <Section>
       <H2>留言板</H2>
-      <div className="relative bg-gray-600 w-full h-112 sm:h-128 md:h-144 lg:h-160 xl:h-176 2xl:h-196 rounded-xl overflow-scroll">
-        <div className="absolute left-0 bottom-20 flex flex-col gap-4 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-172 px-2 py-3 overflow-y-scroll">
+      <div className="relative bg-gray-600 w-full h-116 sm:h-132 md:h-148 lg:h-164 xl:h-180 2xl:h-200 rounded-xl overflow-scroll">
+        <div className="absolute left-0 bottom-24 flex flex-col gap-4 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-176 px-2 py-3 lg:p-4 overflow-y-scroll">
           {messageGroups.map((messageGroup, index) => (
             <MessageGroup key={`messageGroup-${index}`} {...messageGroup} />
           ))}
         </div>
-        <div className="absolute left-0 bottom-0 w-full h-20 border-t-2 border-gray-500 px-4 py-2">
-          <div className="flex gap-1">
-            <div className="w-16 h-full">
+        <div className="absolute left-0 bottom-0 w-full h-24 border-t-2 border-gray-500 px-4 py-2">
+          <div className="flex gap-1 h-full">
+            <div className="flex w-12 md:w-16 h-full">
               <div
-                className="relative w-16 h-16 rounded-full bg-center bg-cover cursor-pointer"
+                className="relative self-center w-12 md:w-16 h-12 md:h-16 rounded-full bg-center bg-cover cursor-pointer"
                 style={{ backgroundImage: `url('${profileUrl}')` }}
               >
                 <div className="absolute right-0 bottom-0 w-6 h-6 rounded-full bg-purple-500 p-1">
@@ -186,23 +186,23 @@ const ChatSection = (): JSX.Element => {
             </div>
 
             <div className="w-full h-full flex flex-col gap-2 pl-2">
-              <div className="w-1/2 h-7 bg-white rounded-full px-3.5 overflow-hidden">
+              <div className="w-3/4 sm:w-1/2 h-9 bg-white rounded-full px-3.5 overflow-hidden">
                 <input
                   type="text"
-                  className="form-input w-full h-full px-0 placeholder-gray-400 text-black tracking-wider border-none outline-none focus:ring-0 focus:ring-transparent"
+                  className="form-input w-full h-full px-0 rounded placeholder-gray-400 text-black tracking-wider border-none outline-none focus:ring-0 focus:ring-transparent"
                   name="nickname"
                   placeholder="名字/暱稱"
                 />
               </div>
-              <div className="relative w-full h-7 bg-white rounded-full px-3.5 overflow-hidden">
+              <div className="relative w-full h-9 bg-white rounded-full px-3.5 overflow-hidden">
                 <textarea
-                  className="form-textarea w-full h-full px-0 pt-0.5 placeholder-gray-400 text-black tracking-wider border-none outline-none focus:ring-0 focus:ring-transparent"
+                  className="form-textarea w-full h-full px-0 pt-1.5 rounded placeholder-gray-400 text-black tracking-wider border-none outline-none focus:ring-0 focus:ring-transparent"
                   name="message"
                   placeholder="輸入訊息"
                 />
                 <div
-                  className="absolute w-6 h-6 rounded-full bg-purple-500 p-1 pl-0.5 cursor-pointer"
-                  style={{ bottom: '0.125rem', right: '0.125rem' }}
+                  className="absolute w-8 h-8 rounded-full bg-purple-500 p-1.5 pl-1 cursor-pointer"
+                  style={{ bottom: '0.09rem', right: '0.125rem' }}
                 >
                   <FontAwesomeIcon icon={faPaperPlane} />
                 </div>

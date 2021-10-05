@@ -88,7 +88,7 @@ const AboutUsSection = (): JSX.Element => {
               icon={faMapMarkerAlt}
             />
           </H3>
-          <H3 className="mb-8">2021年11月27日 下午</H3>
+          <H3 className="mb-8">2021年11月20日 (六) 13:30~17:00</H3>
           <P className="mb-4">
             安排社友短講、文物展覽、攝影作品、紀念品販售、社窩參觀、茶點。
             <br></br>

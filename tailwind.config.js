@@ -39,6 +39,8 @@ const extendHeight = {
   184: '46rem',
   188: '47rem',
   192: '48rem',
+  196: '49rem',
+  200: '50rem',
 }
 
 module.exports = {

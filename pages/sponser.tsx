@@ -45,7 +45,7 @@ const SponsorshipSection = (): JSX.Element => {
 
 const Goods = ({ good }: TProps): JSX.Element => {
   return (
-    <div className="flex flex-col bg-white text-purple-500 border-2 border-purple-500 rounded-2xl h-96 w-full overflow-hidden transition-colors duration-200">
+    <div className="flex flex-col bg-white text-purple-600 border-2 border-purple-600 rounded-2xl h-96 w-full overflow-hidden transition-colors duration-200">
       <div
         className="w-full bg-center bg-cover h-60"
         style={{ backgroundImage: `url('${good.imageUrl}')` }}

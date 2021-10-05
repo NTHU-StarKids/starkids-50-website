@@ -57,7 +57,7 @@ const AboutUsSection = (): JSX.Element => {
 
       <div className="flex justify-center">
         <div
-          className="flex items-center h-12 pl-2 pr-4 py-2 border-2 border-purple-500 rounded-lg cursor-pointer select-none pulse-button"
+          className="flex items-center h-12 pl-2 pr-4 py-2 border-2 border-purple-600 rounded-lg cursor-pointer select-none pulse-button"
           onClick={() => setShowForm(!showForm)}
         >
           <p className="w-24 tracking-wider max-h-full">社慶報名</p>
@@ -84,7 +84,7 @@ const AboutUsSection = (): JSX.Element => {
           <H3 className="mb-2">
             國立清華大學 名人堂
             <FontAwesomeIcon
-              className="w-4 inline mb-1.5 ml-2 text-purple-500"
+              className="w-4 inline mb-1.5 ml-2 text-purple-600"
               icon={faMapMarkerAlt}
             />
           </H3>
@@ -101,21 +101,21 @@ const AboutUsSection = (): JSX.Element => {
                 <input
                   type="text"
                   name="name"
-                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-500 ring-opacity-60"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="姓名"
                 />
 
                 <input
                   type="text"
                   name="department"
-                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-500 ring-opacity-60"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="系級（請填寫校系全名）"
                 />
 
                 <input
                   type="email"
                   name="email"
-                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-500 ring-opacity-60"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="電子信箱"
                 />
 
@@ -126,13 +126,13 @@ const AboutUsSection = (): JSX.Element => {
                     <input
                       type="radio"
                       name="member"
-                      className="form-radio p-2 bg-white border-2 border-purple-500 checked:bg-purple-500 checked:bg-none focus:ring-0 focus:ring-transparent"
+                      className="form-radio p-2 bg-white border-2 border-purple-600 checked:bg-purple-600 checked:bg-none focus:ring-0 focus:ring-transparent"
                     />
                     <P className="mx-2">是，</P>
                     <input
                       type="text"
                       name="memberAge"
-                      className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-500 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-500 ring-opacity-60"
+                      className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                       placeholder="成員年齡"
                     />
                   </div>
@@ -140,7 +140,7 @@ const AboutUsSection = (): JSX.Element => {
                     <input
                       type="radio"
                       name="member"
-                      className="form-radio p-2 bg-white border-2 border-purple-500 checked:bg-purple-500 checked:bg-none focus:ring-0 focus:ring-transparent"
+                      className="form-radio p-2 bg-white border-2 border-purple-600 checked:bg-purple-600 checked:bg-none focus:ring-0 focus:ring-transparent"
                     />
                     <P className="mx-2">否</P>
                   </div>
@@ -148,7 +148,7 @@ const AboutUsSection = (): JSX.Element => {
 
                 <div className="flex justify-center mt-12">
                   <div
-                    className="px-3 py-2 w-28 border-2 border-purple-500 bg-purple-500 text-white rounded-lg cursor-pointer select-none tracking-wider"
+                    className="px-3 py-2 w-28 border-2 border-purple-600 bg-purple-600 text-white rounded-lg cursor-pointer select-none tracking-wider"
                     onClick={() => console.log('submit form')}
                   >
                     確認送出

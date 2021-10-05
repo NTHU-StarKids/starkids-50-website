@@ -57,7 +57,7 @@ const CabinetSection = (): JSX.Element => {
       <H2>歷屆幹部</H2>
       <div className="flex justify-center">
         <div className="bg-purple-100 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-scroll">
-          <H3 className="text-purple-500">
+          <H3 className="text-purple-600">
             {cabinet.name}
             <span className="ml-2 tracking-wider">
               (
@@ -124,7 +124,7 @@ const CabinetSection = (): JSX.Element => {
                 }}
               ></div>
               <div
-                className="absolute -left-1 w-2.5 h-2.5 rounded-lg bg-purple-500"
+                className="absolute -left-1 w-2.5 h-2.5 rounded-lg bg-purple-600"
                 style={{ top: '-0.1rem' }}
               ></div>
               <div
@@ -158,7 +158,7 @@ const CabinetSection = (): JSX.Element => {
               }}
             >
               <div
-                className="absolute -top-8 w-10 bg-purple-500 rounded-xl tracking-wider text-center"
+                className="absolute -top-8 w-10 bg-purple-600 rounded-xl tracking-wider text-center"
                 style={{ left: '-0.95rem', paddingLeft: '0.1rem' }}
               >
                 {age[0] == 0 ? (

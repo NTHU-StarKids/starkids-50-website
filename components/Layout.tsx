@@ -47,7 +47,7 @@ const Layout = ({ children, title = '', metadata }: TProps): JSX.Element => {
           content={
             metadata?.imageUrl
               ? `https://50.starkids.club${metadata.imageUrl}`
-              : ''
+              : 'https://50.starkids.club/img/fb-sharing-cover.png'
           }
         />
         <meta property="og:site_name" content="清大天文社 50 週年" />

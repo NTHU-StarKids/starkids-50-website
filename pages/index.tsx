@@ -97,12 +97,13 @@ const AboutUsSection = (): JSX.Element => {
 
           <div className="flex justify-center mt-12">
             <div className="w-72">
-              <form>
+              <form autoComplete="off">
                 <input
                   type="text"
                   name="name"
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="姓名"
+                  autoComplete="off"
                 />
 
                 <input
@@ -110,6 +111,7 @@ const AboutUsSection = (): JSX.Element => {
                   name="department"
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="系級（請填寫校系全名）"
+                  autoComplete="off"
                 />
 
                 <input
@@ -117,6 +119,7 @@ const AboutUsSection = (): JSX.Element => {
                   name="email"
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="電子信箱"
+                  autoComplete="off"
                 />
 
                 <P className="mt-4 my-2">是否攜帶家庭成員？</P>
@@ -134,6 +137,7 @@ const AboutUsSection = (): JSX.Element => {
                       name="memberAge"
                       className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                       placeholder="成員年齡"
+                      autoComplete="off"
                     />
                   </div>
                   <div className="flex items-center my-2">

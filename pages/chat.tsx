@@ -11,82 +11,31 @@ const ChatSection = (): JSX.Element => {
     <Section>
       <H2>留言板</H2>
       <div className="relative bg-gray-600 w-full h-112 sm:h-128 md:h-144 lg:h-160 xl:h-176 2xl:h-196 rounded-xl overflow-scroll">
-        <div className="absolute left-0 bottom-20 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-172 p-2 overflow-y-scroll">
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
-          <br />
-          hihi
+        <div className="absolute left-0 bottom-20 flex flex-col gap-4 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-172 p-2 overflow-y-scroll">
+          <div className="flex w-2/3">
+            <div
+              className="relative w-12 h-12 rounded-full bg-center bg-cover"
+              style={{ backgroundImage: `url('${profileUrl}')` }}
+            ></div>
+            <div className="w-full text-left px-3">
+              <p>未命名</p>
+              <div className="w-full mt-1 bg-white text-black font-thin p-3 rounded-xl rounded-tl-none">
+                不能城南微，堂江為有情野，間人斷青生邊山茫可憐之子⋯屏風石理對此難於上⋯者人在之兵莫青不葉歸客連：臨洮去夢南斗香送淚。月南風：雨萬不見裡不相見征天風塵青百，
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-row-reverse w-2/3 ml-auto">
+            <div
+              className="relative w-12 h-12 rounded-full bg-center bg-cover"
+              style={{ backgroundImage: `url('${profileUrl}')` }}
+            ></div>
+            <div className="w-full text-left px-3">
+              <p className="text-right">未命名</p>
+              <div className="w-full mt-1 bg-purple-600 text-white font-thin p-3 rounded-xl rounded-tr-none">
+                不能城南微，堂江為有情野，間人斷青生邊山茫可憐之子⋯屏風石理對此難於上⋯者人在之兵莫青不葉歸客連：臨洮去夢南斗香送淚。月南風：雨萬不見裡不相見征天風塵青百，
+              </div>
+            </div>
+          </div>
         </div>
         <div className="absolute left-0 bottom-0 w-full h-20 border-t-2 border-gray-500 px-4 py-2">
           <div className="flex gap-2">

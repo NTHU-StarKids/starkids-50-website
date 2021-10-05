@@ -1,10 +1,12 @@
 import dayjs from 'dayjs'
+// import { v4 as uuidv4 } from 'uuid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane, faRandom } from '@fortawesome/free-solid-svg-icons'
 
 import { H2 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
+// import credential from '@/constants/googleCredential'
 
 type TProps = {
   disabled: boolean
@@ -159,63 +161,32 @@ const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
   )
 }
 
-export default function ChatPage({ sheets }: { sheets?: any }): JSX.Element {
+export default function ChatPage(): JSX.Element {
   const disabled = false
-  console.log(sheets)
-  const dataSheets = sheets.filter((sheet, index) => index != 0)
-  console.log(dataSheets, 'dataSheets')
-  const profileMap = {
-    'sample-profile-1@4x.png': '/img/profile/sample-profile-1@4x.png',
-  }
-  const messageGroups = dataSheets.map((sheet) => {
-    return {
-      name: sheet[1],
-      profileUrl: profileMap[sheet[3]],
-      isSelf: false,
-      sentAt: sheet[0],
-      messages: [
-        {
-          sentAt: sheet[0],
-          text: sheet[2],
-        },
-      ],
-    }
-  })
+
+  // const dataSheets = sheets.filter((sheet, index) => index != 0)
+  // const profileMap = {
+  //   'sample-profile-1@4x.png': '/img/profile/sample-profile-1@4x.png',
+  // }
+  // const messageGroups = dataSheets.map((sheet) => {
+  //   return {
+  //     name: sheet[2],
+  //     profileUrl: profileMap[sheet[4]],
+  //     isSelf: false,
+  //     sentAt: sheet[0],
+  //     messages: [
+  //       {
+  //         sentAt: sheet[0],
+  //         text: sheet[3],
+  //       },
+  //     ],
+  //   }
+  // })
+
+  // console.log(uuidv4())
   return (
     <Layout title="留言板">
-      <ChatSection disabled={disabled} messageGroups={messageGroups} />
+      <ChatSection disabled={disabled} messageGroups={[]} />
     </Layout>
   )
-}
-import { google } from 'googleapis'
-import credential from '@/constants/googleCredential'
-
-export async function getStaticProps({}) {
-  try {
-    const scopes = ['https://www.googleapis.com/auth/spreadsheets']
-    const jwt = new google.auth.JWT(
-      credential.client_email,
-      null,
-      credential.private_key,
-      scopes
-    )
-
-    const sheets = google.sheets({ version: 'v4', auth: jwt })
-    const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: '1Extj_-zHi8swFzmF-hU76gRCy8gwn60RSUEO5rVhTJY',
-      range: 'Sheet1',
-    })
-    return {
-      props: {
-        sheets: response.data.values,
-      },
-      revalidate: 10,
-    }
-  } catch (err) {
-    console.log(err)
-  }
-
-  return {
-    props: {},
-  }
 }

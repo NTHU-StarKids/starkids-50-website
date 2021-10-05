@@ -8,6 +8,7 @@ import Layout from '@/components/Layout'
 
 type TProps = {
   disabled: boolean
+  messageGroups: TMessageGroup[]
 }
 
 type TMessage = {
@@ -89,83 +90,8 @@ const MessageGroup = ({
   )
 }
 
-const ChatSection = ({ disabled }: TProps): JSX.Element => {
+const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
   const profileUrl = '/img/profile/sample-profile-1@4x.png'
-
-  const messageGroups: TMessageGroup[] = [
-    {
-      name: '吳慧生',
-      profileUrl: profileUrl,
-      isSelf: false,
-      sentAt: '2021-11-27T13:00:01Z',
-      messages: [
-        {
-          sentAt: '2021-11-27T13:00:01Z',
-          text: '嶺外音書絕，城春草木深',
-        },
-        {
-          sentAt: '2021-11-27T13:00:01Z',
-          text: '故人西辭黃鶴樓',
-        },
-      ],
-    },
-    {
-      name: '陳善麟',
-      profileUrl: profileUrl,
-      isSelf: false,
-      sentAt: '2021-11-27T13:02:53Z',
-      messages: [
-        {
-          sentAt: '2021-11-27T13:02:53Z',
-          text: '不能城南微，堂江為有情野，間人斷青生邊山茫可憐之子⋯屏風石理對此難於上⋯者人在之兵莫青不葉歸客連：臨洮去夢南斗香送淚。月南風：雨萬不見裡不相見征天風塵青百，',
-        },
-      ],
-    },
-    {
-      name: '楊佳慧',
-      profileUrl: profileUrl,
-      isSelf: true,
-      sentAt: '2021-11-27T13:29:35Z',
-      messages: [
-        {
-          sentAt: '2021-11-27T13:29:35Z',
-          text: '不能城南微，堂江為有情野，間人斷青生邊山茫可憐之子⋯屏風石理對此難於上⋯者人在之兵莫青不葉歸客連：臨洮去夢南斗香送淚。月南風：雨萬不見裡不相見征天風塵青百，',
-        },
-      ],
-    },
-    {
-      name: '左敬虹',
-      profileUrl: profileUrl,
-      isSelf: false,
-      sentAt: '2021-11-27T14:41:22Z',
-      messages: [
-        {
-          sentAt: '2021-11-27T14:41:22Z',
-          text: '喵',
-        },
-      ],
-    },
-    {
-      name: '陳柏瑋',
-      profileUrl: profileUrl,
-      isSelf: true,
-      sentAt: '2021-11-28T06:29:10Z',
-      messages: [
-        {
-          sentAt: '2021-11-28T06:29:10Z',
-          text: '喵喵喵',
-        },
-        {
-          sentAt: '2021-11-28T06:29:46Z',
-          text: '外日之清綠水，如青雲雨，',
-        },
-        {
-          sentAt: '2021-11-28T07:03:12Z',
-          text: '八月都東流水沙場，生登嗟幽人識蹉跎君不見：花鄉心孤日月朝關何為十好，鴛鴦柳色不然杯春宵寒山，閒山泉水陶然共。',
-        },
-      ],
-    },
-  ]
 
   return (
     <Section>
@@ -233,11 +159,63 @@ const ChatSection = ({ disabled }: TProps): JSX.Element => {
   )
 }
 
-export default function ChatPage(): JSX.Element {
+export default function ChatPage({ sheets }: { sheets?: any }): JSX.Element {
   const disabled = false
+  console.log(sheets)
+  const dataSheets = sheets.filter((sheet, index) => index != 0)
+  console.log(dataSheets, 'dataSheets')
+  const profileMap = {
+    'sample-profile-1@4x.png': '/img/profile/sample-profile-1@4x.png',
+  }
+  const messageGroups = dataSheets.map((sheet) => {
+    return {
+      name: sheet[1],
+      profileUrl: profileMap[sheet[3]],
+      isSelf: false,
+      sentAt: sheet[0],
+      messages: [
+        {
+          sentAt: sheet[0],
+          text: sheet[2],
+        },
+      ],
+    }
+  })
   return (
     <Layout title="留言板">
-      <ChatSection disabled={disabled} />
+      <ChatSection disabled={disabled} messageGroups={messageGroups} />
     </Layout>
   )
+}
+import { google } from 'googleapis'
+import credential from '@/constants/googleCredential'
+
+export async function getStaticProps({}) {
+  try {
+    const scopes = ['https://www.googleapis.com/auth/spreadsheets']
+    const jwt = new google.auth.JWT(
+      credential.client_email,
+      null,
+      credential.private_key,
+      scopes
+    )
+
+    const sheets = google.sheets({ version: 'v4', auth: jwt })
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1Extj_-zHi8swFzmF-hU76gRCy8gwn60RSUEO5rVhTJY',
+      range: 'Sheet1',
+    })
+    return {
+      props: {
+        sheets: response.data.values,
+      },
+      revalidate: 10,
+    }
+  } catch (err) {
+    console.log(err)
+  }
+
+  return {
+    props: {},
+  }
 }

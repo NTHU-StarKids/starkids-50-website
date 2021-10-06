@@ -1,12 +1,14 @@
 import dayjs from 'dayjs'
-// import { v4 as uuidv4 } from 'uuid'
+
+import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane, faRandom } from '@fortawesome/free-solid-svg-icons'
 
 import { H2 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
-// import credential from '@/constants/googleCredential'
+import { profileMap } from '@/constants'
+import { useChats } from '@/hook'
 
 type TProps = {
   disabled: boolean
@@ -162,31 +164,31 @@ const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
 }
 
 export default function ChatPage(): JSX.Element {
-  const disabled = false
+  const [messageGroups, setMessageGroups] = useState<TMessageGroup[]>([])
+  const { data, isLoading: isChatsLoading } = useChats()
 
-  // const dataSheets = sheets.filter((sheet, index) => index != 0)
-  // const profileMap = {
-  //   'sample-profile-1@4x.png': '/img/profile/sample-profile-1@4x.png',
-  // }
-  // const messageGroups = dataSheets.map((sheet) => {
-  //   return {
-  //     name: sheet[2],
-  //     profileUrl: profileMap[sheet[4]],
-  //     isSelf: false,
-  //     sentAt: sheet[0],
-  //     messages: [
-  //       {
-  //         sentAt: sheet[0],
-  //         text: sheet[3],
-  //       },
-  //     ],
-  //   }
-  // })
-
-  // console.log(uuidv4())
+  useEffect(() => {
+    if (!isChatsLoading) {
+      console.log(data.chats, 'data.chats')
+      const messages: TMessageGroup[] = data.chats.map((chat) => {
+        return {
+          ...chat,
+          isSelf: false,
+          profileUrl: profileMap[chat.profile],
+          messages: [
+            {
+              sentAt: chat.sentAt,
+              text: chat.text,
+            },
+          ],
+        }
+      })
+      setMessageGroups(messages)
+    }
+  }, [isChatsLoading])
   return (
     <Layout title="留言板">
-      <ChatSection disabled={disabled} messageGroups={[]} />
+      <ChatSection disabled={isChatsLoading} messageGroups={messageGroups} />
     </Layout>
   )
 }

@@ -58,6 +58,10 @@ export const relatedLinks = [
   },
 ]
 
+export const profileMap = {
+  'sample-profile-1': '/img/profile/sample-profile-1@4x.png',
+}
+
 export const CABINETS = [
   {
     age: 0,

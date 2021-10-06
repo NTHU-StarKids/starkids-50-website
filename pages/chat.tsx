@@ -129,7 +129,7 @@ const ChatSection = ({
 
   const sendMessage = async () => {
     if (!disabled && message) {
-      const result = await createChat(nickname, message, profile)
+      const result = await createChat(nickname || '匿名', message, profile)
       if (result) {
         appendChatId(result.id)
         setMessage('')
@@ -270,7 +270,6 @@ export default function ChatPage(): JSX.Element {
     }
 
     if (isChatsFeteched) {
-      console.log(chatIds, 'chatIds')
       const messages: TMessageGroup[] = []
       let prevMessageGroup: TMessageGroup
       data.chats.forEach((chat, index) => {

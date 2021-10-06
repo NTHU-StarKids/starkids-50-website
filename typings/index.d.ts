@@ -1,3 +1,11 @@
+interface IChat {
+  id: string
+  sentAt: string
+  name: string
+  text: string
+  profile: string
+}
+
 type TMetadata = {
   imageUrl?: string
   description?: string

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane, faRandom } from '@fortawesome/free-solid-svg-icons'
 
+import { createChat } from '@/api'
 import { H2 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
@@ -13,6 +14,7 @@ import { useChats } from '@/hook'
 type TProps = {
   disabled: boolean
   messageGroups: TMessageGroup[]
+  refetchChats: () => void
 }
 
 type TMessage = {
@@ -21,11 +23,29 @@ type TMessage = {
 }
 
 type TMessageGroup = {
+  id: string
   name: string
   profileUrl: string
   isSelf: boolean
   sentAt: string
   messages: TMessage[]
+}
+
+const appendChatId = (id: string) => {
+  const ids = JSON.parse(localStorage.getItem('chatIds')) || []
+  ids.push(id)
+  const chatIds = Array.from(new Set(ids))
+  localStorage.setItem('chatIds', JSON.stringify(chatIds))
+}
+
+const getChatIds = (): string[] => {
+  const chatIds = JSON.parse(localStorage.getItem('chatIds'))
+  if (!chatIds) {
+    localStorage.setItem('chatIds', JSON.stringify([]))
+  }
+
+  const ids = chatIds || []
+  return ids
 }
 
 const MessageGroup = ({
@@ -94,8 +114,36 @@ const MessageGroup = ({
   )
 }
 
-const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
-  const profileUrl = '/img/profile/sample-profile-1@4x.png'
+const ChatSection = ({
+  disabled,
+  messageGroups,
+  refetchChats,
+}: TProps): JSX.Element => {
+  const randomProfile = (): string => {
+    return 'sample-profile-1'
+  }
+
+  const [nickname, setNickname] = useState<string>('')
+  const [message, setMessage] = useState<string>('')
+  const [profile, setProfile] = useState<string>(randomProfile())
+
+  const sendMessage = async () => {
+    if (!disabled && message) {
+      const result = await createChat(nickname, message, profile)
+      if (result) {
+        appendChatId(result.id)
+        setMessage('')
+        refetchChats()
+      }
+    }
+  }
+
+  const changeProfile = () => {
+    if (!disabled) {
+      console.log('changeProfile')
+      setProfile(randomProfile())
+    }
+  }
 
   return (
     <Section>
@@ -107,19 +155,48 @@ const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
           </div>
         </div>
         <div className="relative bg-gray-600 w-full h-116 sm:h-132 md:h-148 lg:h-164 xl:h-180 2xl:h-200 rounded-xl overflow-y-scroll">
-          <div className="absolute left-0 bottom-24 flex flex-col gap-4 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-176 px-2 pb-3 pt-6 lg:p-4 overflow-y-scroll">
-            {messageGroups.map((messageGroup, index) => (
-              <MessageGroup key={`messageGroup-${index}`} {...messageGroup} />
-            ))}
+          <div className="absolute left-0 bottom-24 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-176 px-2 pb-3 pt-6 lg:p-4 overflow-x-hidden overflow-y-scroll">
+            <div
+              className={`absolute top-0 w-full h-92 sm:h-108 md:h-124 lg:h-140 xl:h-156 2xl:h-176 flex place-content-center transition-opacity duration-700 delay-1000 opacity-100 ${
+                disabled ? '' : 'opacity-0'
+              }`}
+            >
+              <svg
+                className="my-auto animate-spin h-10 w-10 rounded-full bg-transparent border-4 border-purple-500 border-opacity-90"
+                viewBox="0 0 24 24"
+                style={{ borderRightColor: '#F8F7FD' }}
+              >
+                Loading ...
+              </svg>
+            </div>
+
+            <div
+              className={`flex flex-col gap-4 transition-opacity duration-700 delay-1000 ${
+                disabled ? 'opacity-0' : 'opacity-100'
+              }`}
+            >
+              {messageGroups.map((messageGroup, index) => (
+                <MessageGroup key={`messageGroup-${index}`} {...messageGroup} />
+              ))}
+            </div>
           </div>
           <div className="absolute left-0 bottom-0 w-full h-24 border-t-2 border-gray-500 px-2 md:px-4 py-2">
             <div className="flex gap-1 h-full">
               <div className="flex w-12 md:w-16 h-full">
                 <div
-                  className="relative self-center w-12 md:w-16 h-12 md:h-16 rounded-full bg-center bg-cover cursor-pointer"
-                  style={{ backgroundImage: `url('${profileUrl}')` }}
+                  className={`relative self-center w-12 md:w-16 h-12 md:h-16 rounded-full bg-center bg-cover ${
+                    disabled ? 'cursor-not-allowed' : 'cursor-pointer'
+                  }`}
+                  style={{
+                    backgroundImage: `url('/img/profile/${profile}@4x.png')`,
+                  }}
+                  onClick={changeProfile}
                 >
-                  <div className="absolute right-0 bottom-0 w-6 h-6 rounded-full bg-purple-500 p-1">
+                  <div
+                    className={`absolute right-0 bottom-0 w-6 h-6 rounded-full p-1 ${
+                      disabled ? 'bg-gray-400' : 'bg-purple-500'
+                    }`}
+                  >
                     <FontAwesomeIcon icon={faRandom} />
                   </div>
                 </div>
@@ -134,6 +211,8 @@ const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
                     placeholder="名字/暱稱"
                     disabled={disabled}
                     autoComplete="off"
+                    value={nickname}
+                    onChange={(e) => setNickname(e.target.value)}
                   />
                 </div>
                 <div className="relative w-full h-9 bg-white rounded-full px-3.5 overflow-hidden">
@@ -142,6 +221,9 @@ const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
                     name="message"
                     placeholder="輸入訊息"
                     disabled={disabled}
+                    autoComplete="off"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                   <div
                     className={`absolute w-8 h-8 rounded-full p-1.5 pl-1 ${
@@ -150,6 +232,7 @@ const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
                         : 'bg-purple-500 cursor-pointer'
                     }`}
                     style={{ bottom: '0.09rem', right: '0.125rem' }}
+                    onClick={sendMessage}
                   >
                     <FontAwesomeIcon icon={faPaperPlane} />
                   </div>
@@ -165,30 +248,73 @@ const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
 
 export default function ChatPage(): JSX.Element {
   const [messageGroups, setMessageGroups] = useState<TMessageGroup[]>([])
-  const { data, isLoading: isChatsLoading } = useChats()
+  const { data, isFetched: isChatsFeteched, refetch } = useChats()
 
   useEffect(() => {
-    if (!isChatsLoading) {
-      console.log(data.chats, 'data.chats')
-      const messages: TMessageGroup[] = data.chats.map((chat) => {
-        return {
-          ...chat,
-          isSelf: false,
-          profileUrl: profileMap[chat.profile],
-          messages: [
-            {
-              sentAt: chat.sentAt,
-              text: chat.text,
-            },
-          ],
+    const chatIds = getChatIds()
+    const generateMessageGroup = (chat: IChat): TMessageGroup => {
+      const messageGroup = {
+        id: chat.id,
+        name: chat.name,
+        profileUrl: profileMap[chat.profile],
+        isSelf: chatIds.includes(chat.id),
+        sentAt: chat.sentAt,
+        messages: [
+          {
+            sentAt: chat.sentAt,
+            text: chat.text,
+          },
+        ],
+      }
+      return messageGroup
+    }
+
+    if (isChatsFeteched) {
+      console.log(chatIds, 'chatIds')
+      const messages: TMessageGroup[] = []
+      let prevMessageGroup: TMessageGroup
+      data.chats.forEach((chat, index) => {
+        if (index == 0) {
+          prevMessageGroup = generateMessageGroup(chat)
+          return
+        }
+
+        if (
+          dayjs(chat.sentAt).diff(dayjs(prevMessageGroup.sentAt)) <
+            5 * 60 * 1000 &&
+          chatIds.includes(chat.id) &&
+          chatIds.includes(prevMessageGroup.id)
+        ) {
+          const msg = {
+            sentAt: chat.sentAt,
+            text: chat.text,
+          }
+          prevMessageGroup.messages.push(msg)
+        } else {
+          messages.push(prevMessageGroup)
+          prevMessageGroup = generateMessageGroup(chat)
+
+          if (index == data.chats.length - 1) {
+            messages.push(prevMessageGroup)
+          }
+          return
+        }
+
+        if (index == data.chats.length - 1) {
+          messages.push(prevMessageGroup)
         }
       })
+
       setMessageGroups(messages)
     }
-  }, [isChatsLoading])
+  }, [isChatsFeteched, data])
   return (
     <Layout title="留言板">
-      <ChatSection disabled={isChatsLoading} messageGroups={messageGroups} />
+      <ChatSection
+        disabled={!isChatsFeteched}
+        messageGroups={messageGroups}
+        refetchChats={refetch}
+      />
     </Layout>
   )
 }

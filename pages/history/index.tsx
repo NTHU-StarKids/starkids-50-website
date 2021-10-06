@@ -32,7 +32,7 @@ const CabinetSection = (): JSX.Element => {
 
   const onAgeChange = (ages: number[]) => {
     const [newAge] = ages
-    window.sessionStorage.setItem('defaultAge', String(newAge))
+    sessionStorage.setItem('defaultAge', String(newAge))
     setAge([newAge])
     setNewCabinet(newAge)
   }
@@ -46,7 +46,7 @@ const CabinetSection = (): JSX.Element => {
 
   useEffect(() => {
     const newAge = parseInt(
-      window.sessionStorage.getItem('defaultAge') || String(defaultAge)
+      sessionStorage.getItem('defaultAge') || String(defaultAge)
     )
     setAge([newAge])
     setNewCabinet(newAge)

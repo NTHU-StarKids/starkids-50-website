@@ -14,11 +14,11 @@ const PostsSection = (): JSX.Element => {
   const decades = [1970, 1980, 1990, 2000, 2010]
 
   const onTabChange = (index: number) => {
-    window.sessionStorage.setItem('defaultTag', String(index))
+    sessionStorage.setItem('defaultTag', String(index))
   }
 
   useEffect(() => {
-    setDefaultTab(parseInt(window.sessionStorage.getItem('defaultTag') || '0'))
+    setDefaultTab(parseInt(sessionStorage.getItem('defaultTag') || '0'))
   }, [])
 
   return (

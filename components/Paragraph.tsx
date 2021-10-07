@@ -6,7 +6,7 @@ type TProps = {
   className?: string
 }
 
-const P = ({ children, className = '' }: TProps) => {
+const P = ({ children, className = '' }: TProps): JSX.Element => {
   return (
     <p className={classNames(className, 'font-light tracking-wider')}>
       {children}

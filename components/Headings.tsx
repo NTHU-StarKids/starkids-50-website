@@ -6,7 +6,7 @@ type TProps = {
   className?: string
 }
 
-export const H1 = ({ children, className = '' }: TProps) => {
+export const H1 = ({ children, className = '' }: TProps): JSX.Element => {
   return (
     <h1
       className={classNames(
@@ -19,7 +19,7 @@ export const H1 = ({ children, className = '' }: TProps) => {
   )
 }
 
-export const H2 = ({ children, className = '' }: TProps) => {
+export const H2 = ({ children, className = '' }: TProps): JSX.Element => {
   return (
     <h2 className={classNames('text-2xl tracking-widest mb-8', className)}>
       {children}
@@ -27,7 +27,7 @@ export const H2 = ({ children, className = '' }: TProps) => {
   )
 }
 
-export const H3 = ({ children, className = '' }: TProps) => {
+export const H3 = ({ children, className = '' }: TProps): JSX.Element => {
   return (
     <h3 className={classNames('text-xl tracking-widest', className)}>
       {children}
@@ -35,7 +35,7 @@ export const H3 = ({ children, className = '' }: TProps) => {
   )
 }
 
-export const H4 = ({ children, className = '' }: TProps) => {
+export const H4 = ({ children, className = '' }: TProps): JSX.Element => {
   return (
     <h4 className={classNames('text-lg tracking-wider', className)}>
       {children}

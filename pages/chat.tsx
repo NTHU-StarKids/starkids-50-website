@@ -70,7 +70,11 @@ const MessageGroup = ({
       <div className="w-full text-left px-2 md:px-3">
         {messages.map((message, index) => {
           return (
-            <div key={`message-${index}`} className="font-light">
+            <div
+              key={`message-${index}`}
+              className="font-light"
+              title={dayjs(sentAt).format('YYYY/MM/DD HH:mm:ss')}
+            >
               {index == 0 &&
                 (isSelf ? (
                   <p className="tracking-wide text-gray-50 leading-4 text-right">
@@ -165,9 +169,7 @@ const ChatSection = ({
                 className="my-auto animate-spin h-10 w-10 rounded-full bg-transparent border-4 border-purple-500 border-opacity-90"
                 viewBox="0 0 24 24"
                 style={{ borderRightColor: '#F8F7FD' }}
-              >
-                Loading ...
-              </svg>
+              ></svg>
             </div>
 
             <div
@@ -281,8 +283,9 @@ export default function ChatPage(): JSX.Element {
         if (
           dayjs(chat.sentAt).diff(dayjs(prevMessageGroup.sentAt)) <
             5 * 60 * 1000 &&
-          chatIds.includes(chat.id) &&
-          chatIds.includes(prevMessageGroup.id)
+          ((chatIds.includes(chat.id) &&
+            chatIds.includes(prevMessageGroup.id)) ||
+            (!chatIds.includes(chat.id) && chat.name == prevMessageGroup.name))
         ) {
           const msg = {
             sentAt: chat.sentAt,

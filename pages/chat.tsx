@@ -227,7 +227,7 @@ const ChatSection = ({
                   />
                   <div
                     className={`absolute w-8 h-8 rounded-full p-1.5 pl-1 ${
-                      disabled
+                      disabled || !message
                         ? 'bg-gray-400 cursor-not-allowed'
                         : 'bg-purple-500 cursor-pointer'
                     }`}
@@ -307,6 +307,7 @@ export default function ChatPage(): JSX.Element {
       setMessageGroups(messages)
     }
   }, [isChatsFeteched, data])
+
   return (
     <Layout title="留言板">
       <ChatSection

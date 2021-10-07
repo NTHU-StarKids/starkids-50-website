@@ -11,13 +11,18 @@ const Header = (): JSX.Element => {
   return (
     <header className="shadow-md fixed top-0 w-full bg-gray-700 z-50">
       <nav className="flex items-center justify-between px-8 h-12">
-        <div className="flex items-center w-12 text-2xl">
+        <div className="flex items-center text-2xl gap-x-3">
+          <img src="/img/logo.png" className="w-12" alt="清大天文社 Logo" />
           <Link href="/" passHref>
-            <img
-              src="/img/logo.png"
-              className="cursor-pointer"
-              alt="清大天文社 Logo"
-            />
+            <span
+              className={`py-1 cursor-pointer border-b-2 transition-all duration-300 tracking-wider text-base font-light ${
+                router.pathname == '/'
+                  ? 'text-purple-300 border-purple-300 font-normal border-opacity-100'
+                  : 'border-opacity-0 hover:border-opacity-25 hover:font-normal'
+              }`}
+            >
+              首頁
+            </span>
           </Link>
         </div>
         <div className="hidden sm:flex-1"></div>

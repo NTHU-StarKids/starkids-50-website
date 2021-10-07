@@ -8,6 +8,10 @@ export const menuLinks = [
     url: '/posts',
   },
   {
+    name: '成果錦集',
+    url: '/album',
+  },
+  {
     name: '留言板',
     url: '/chat',
   },

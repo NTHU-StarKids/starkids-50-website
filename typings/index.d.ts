@@ -56,3 +56,16 @@ type TCabinet = {
   name: string
   positions: TPosition[]
 }
+
+type TAlbumImage = {
+  imgUrl: string
+  description: string
+}
+
+type TAlbumCategory = {
+  name: string
+  slug: string
+  coverImgUrl: string
+  description: string
+  images: TAlbumImage[]
+}

@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 
-import { useEffect, useState } from 'react'
+import { KeyboardEvent, useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane, faRandom } from '@fortawesome/free-solid-svg-icons'
 
@@ -107,7 +107,16 @@ const MessageGroup = ({
                       : ''
                   }`}
                 >
-                  {message.text}
+                  {message.text.split('\n').map((str, index) => {
+                    if (index == message.text.split('\n').length + 1)
+                      return <span key={`msg-${index}`}>{str}</span>
+                    return (
+                      <span key={`msg-${index}`}>
+                        {str}
+                        <br></br>
+                      </span>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -130,13 +139,19 @@ const ChatSection = ({
   const [nickname, setNickname] = useState<string>('')
   const [message, setMessage] = useState<string>('')
   const [profile, setProfile] = useState<string>(randomProfile())
+  const messageRef = useRef()
+  const focusOutBtnRef = useRef()
 
   const sendMessage = async () => {
-    if (!disabled && message) {
+    if (!disabled && message && message.split(/\n|\r|\r\n/g).join('')) {
       const result = await createChat(nickname || '匿名', message, profile)
       if (result) {
         appendChatId(result.id)
         setMessage('')
+        // @ts-ignore
+        focusOutBtnRef.current.click()
+        // @ts-ignore
+        messageRef.current.focus()
         refetchChats()
       }
     }
@@ -146,6 +161,23 @@ const ChatSection = ({
     if (!disabled) {
       console.log('changeProfile')
       setProfile(randomProfile())
+    }
+  }
+
+  const isTouchDevice = () => {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0
+  }
+
+  const onMessageKeyDown = (event: KeyboardEvent) => {
+    if (
+      !disabled &&
+      event.key === 'Enter' &&
+      !event.nativeEvent.isComposing &&
+      !event.shiftKey &&
+      !isTouchDevice()
+    ) {
+      sendMessage()
+      event.preventDefault()
     }
   }
 
@@ -217,27 +249,42 @@ const ChatSection = ({
                     onChange={(e) => setNickname(e.target.value)}
                   />
                 </div>
-                <div className="relative w-full h-9 bg-white rounded-full px-3.5 overflow-hidden">
-                  <textarea
-                    className="form-textarea w-full h-full px-0 pt-1.5 rounded placeholder-gray-400 text-black tracking-wider border-none outline-none focus:ring-0 focus:ring-transparent"
-                    name="message"
-                    placeholder="輸入訊息"
-                    disabled={disabled}
-                    autoComplete="off"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                  />
+                <div className="relative flex justify-between gap-1 w-full h-9 bg-white rounded-full pl-3.5 pr-0.5 overflow-hidden">
                   <div
-                    className={`absolute w-8 h-8 rounded-full p-1.5 pl-1 ${
-                      disabled || !message
-                        ? 'bg-gray-400 cursor-not-allowed'
-                        : 'bg-purple-500 cursor-pointer'
-                    }`}
-                    style={{ bottom: '0.09rem', right: '0.125rem' }}
-                    onClick={sendMessage}
+                    className="w-full overflow-y-scroll"
+                    style={{ marginTop: '0.4rem' }}
                   >
-                    <FontAwesomeIcon icon={faPaperPlane} />
+                    <textarea
+                      className="form-textarea w-full h-full p-0 rounded placeholder-gray-400 text-black tracking-wider border-none outline-none focus:ring-0 focus:ring-transparent"
+                      name="message"
+                      autoFocus={true}
+                      placeholder="輸入訊息"
+                      disabled={disabled}
+                      autoComplete="off"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      onKeyDown={(e) => onMessageKeyDown(e)}
+                      ref={messageRef}
+                    />
                   </div>
+                  <div className="flex w-8 h-9">
+                    <div
+                      className={`w-8 h-8 self-center rounded-full p-1.5 pl-1 ${
+                        disabled ||
+                        !message ||
+                        !message.split(/\n|\r|\r\n/g).join('')
+                          ? 'bg-gray-400 cursor-not-allowed'
+                          : 'bg-purple-500 cursor-pointer'
+                      }`}
+                      onClick={sendMessage}
+                    >
+                      <FontAwesomeIcon icon={faPaperPlane} />
+                    </div>
+                  </div>
+                  <button
+                    className="hidden invisable"
+                    ref={focusOutBtnRef}
+                  ></button>
                 </div>
               </div>
             </div>
@@ -285,7 +332,9 @@ export default function ChatPage(): JSX.Element {
             5 * 60 * 1000 &&
           ((chatIds.includes(chat.id) &&
             chatIds.includes(prevMessageGroup.id)) ||
-            (!chatIds.includes(chat.id) && chat.name == prevMessageGroup.name))
+            (!chatIds.includes(chat.id) &&
+              !chatIds.includes(prevMessageGroup.id) &&
+              chat.name == prevMessageGroup.name))
         ) {
           const msg = {
             sentAt: chat.sentAt,

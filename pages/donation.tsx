@@ -29,7 +29,7 @@ const sampleGoods = [
   },
 ]
 
-const SponsorshipSection = (): JSX.Element => {
+const DonationSection = (): JSX.Element => {
   return (
     <Section>
       <H2>贊助辦法</H2>
@@ -76,10 +76,10 @@ const GoodsSection = ({ goods }: TListProps): JSX.Element => {
   )
 }
 
-export default function SponserPage(): JSX.Element {
+export default function DonationPage(): JSX.Element {
   return (
     <Layout title="贊助我們">
-      <SponsorshipSection />
+      <DonationSection />
       <GoodsSection goods={sampleGoods} />
     </Layout>
   )

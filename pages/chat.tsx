@@ -2,7 +2,11 @@ import dayjs from 'dayjs'
 
 import { KeyboardEvent, useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperPlane, faRandom } from '@fortawesome/free-solid-svg-icons'
+import {
+  faPaperPlane,
+  faRandom,
+  faSync,
+} from '@fortawesome/free-solid-svg-icons'
 
 import { createChat } from '@/api'
 import { H2 } from '@/components/Headings'
@@ -187,25 +191,19 @@ const ChatSection = ({
       <div className="relative">
         <div className="absolute w-full -top-4 flex justify-center z-20">
           <div className="rounded-full bg-purple-500 h-8 px-4 py-2 text-lg leading-4 tracking-wider">
+            {disabled ? (
+              <FontAwesomeIcon
+                className="animate-spin h-4 mr-2 inline"
+                icon={faSync}
+              />
+            ) : null}
             歡迎來到留言板 rrrrrr
           </div>
         </div>
         <div className="relative bg-gray-600 w-full h-116 sm:h-132 md:h-148 lg:h-164 xl:h-180 2xl:h-200 rounded-xl overflow-y-scroll">
           <div className="absolute left-0 bottom-24 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-176 px-2 pb-3 pt-6 lg:p-4 overflow-x-hidden overflow-y-scroll">
             <div
-              className={`absolute top-0 w-full h-92 sm:h-108 md:h-124 lg:h-140 xl:h-156 2xl:h-176 flex place-content-center transition-opacity duration-700 delay-1000 opacity-100 ${
-                disabled ? '' : 'opacity-0'
-              }`}
-            >
-              <svg
-                className="my-auto animate-spin h-10 w-10 rounded-full bg-transparent border-4 border-purple-500 border-opacity-90"
-                viewBox="0 0 24 24"
-                style={{ borderRightColor: '#F8F7FD' }}
-              ></svg>
-            </div>
-
-            <div
-              className={`flex flex-col gap-4 transition-opacity duration-700 delay-1000 ${
+              className={`flex flex-col gap-4 transition-opacity duration-700 delay-300 ${
                 disabled ? 'opacity-0' : 'opacity-100'
               }`}
             >

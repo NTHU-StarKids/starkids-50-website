@@ -25,7 +25,7 @@ const CategorySection = ({
 }: TProps): JSX.Element => {
   return (
     <Section className="pb-20">
-      <div className="flex justify-center content-end">
+      <div className="flex justify-center items-center">
         <Link href={`/album/${prevCategory.slug}`} passHref>
           <FontAwesomeIcon
             icon={faChevronLeft}

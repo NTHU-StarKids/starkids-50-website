@@ -17,7 +17,7 @@ export const menuLinks = [
   },
   {
     name: '贊助我們',
-    url: '/sponser',
+    url: '/donation',
   },
 ]
 

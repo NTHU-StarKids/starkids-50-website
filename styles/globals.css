@@ -73,10 +73,12 @@ textarea {
 .form-checkbox:checked:hover,
 .form-checkbox:checked:focus,
 .form-radio:checked:hover,
-.form-radio:checked:focus {
-  border-color: transparent;
-  background-color: rgb(101, 98, 191);
-  background-image: none;
+.form-radio:checked:focus,
+.form-radio:checked,
+.form-radio:checked {
+  border-color: #6562bf;
+  background-color: white;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="%236562BF" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3.5"/></svg>');
 }
 
 .slick-active {

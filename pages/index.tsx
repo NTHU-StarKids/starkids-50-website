@@ -129,7 +129,7 @@ const AboutUsSection = (): JSX.Element => {
                     <input
                       type="radio"
                       name="member"
-                      className="form-radio p-2 bg-white border-2 border-purple-600 checked:bg-purple-600 checked:bg-none focus:ring-0 focus:ring-transparent"
+                      className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
                     />
                     <P className="mx-2">是，</P>
                     <input
@@ -144,7 +144,7 @@ const AboutUsSection = (): JSX.Element => {
                     <input
                       type="radio"
                       name="member"
-                      className="form-radio p-2 bg-white border-2 border-purple-600 checked:bg-purple-600 checked:bg-none focus:ring-0 focus:ring-transparent"
+                      className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
                     />
                     <P className="mx-2">否</P>
                   </div>

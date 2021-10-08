@@ -1,5 +1,13 @@
 import Error from 'next/error'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faAngleDoubleLeft,
+  faAngleDoubleRight,
+  faAngleLeft,
+  faAngleRight,
+} from '@fortawesome/free-solid-svg-icons'
 
 import { H3 } from '@/components/Headings'
 import Section from '@/components/Section'
@@ -9,9 +17,17 @@ import { getPostFirstParagraph } from '@/utils'
 
 type TProps = {
   post: TPost
+  index: number
+  nextPost: TPost
+  prevPost: TPost
 }
 
-const PostSection = ({ post }: TProps): JSX.Element => {
+const PostSection = ({
+  post,
+  index,
+  nextPost,
+  prevPost,
+}: TProps): JSX.Element => {
   return (
     <Section className="pb-20">
       <div
@@ -58,6 +74,45 @@ const PostSection = ({ post }: TProps): JSX.Element => {
           }
         })}
       </div>
+
+      <div className="mt-12 flex justify-center items-center">
+        <Link href={`/history/${posts[0].slug}`} passHref>
+          <FontAwesomeIcon
+            icon={faAngleDoubleLeft}
+            className="h-5 mr-4 text-gray-300 hover:text-white cursor-pointer"
+            title={posts[0].title}
+            fixedWidth
+          />
+        </Link>
+        <Link href={`/history/${prevPost.slug}`} passHref>
+          <FontAwesomeIcon
+            icon={faAngleLeft}
+            className="h-5 mr-8 text-gray-300 hover:text-white cursor-pointer"
+            title={prevPost.title}
+            fixedWidth
+          />
+        </Link>
+        <span className="w-12 bg-gray-600 rounded-full tracking-wider cursor-default">
+          {index + 1 < 10 ? '0' : ''}
+          {index + 1}
+        </span>
+        <Link href={`/history/${nextPost.slug}`} passHref>
+          <FontAwesomeIcon
+            icon={faAngleRight}
+            className="h-5 ml-7 text-gray-300 hover:text-white cursor-pointer"
+            title={nextPost.title}
+            fixedWidth
+          />
+        </Link>
+        <Link href={`/history/${posts[posts.length - 1].slug}`} passHref>
+          <FontAwesomeIcon
+            icon={faAngleDoubleRight}
+            className="h-5 ml-4 text-gray-300 hover:text-white cursor-pointer"
+            title={posts[posts.length - 1].title}
+            fixedWidth
+          />
+        </Link>
+      </div>
     </Section>
   )
 }
@@ -65,8 +120,9 @@ const PostSection = ({ post }: TProps): JSX.Element => {
 const HistoryPostPage = (): JSX.Element => {
   const router = useRouter()
   const { slug } = router.query
-  const post = posts.find((p) => p.slug == slug)
-  if (!post) return <Error statusCode={404} />
+  const index = posts.findIndex((c) => c.slug == slug)
+  if (index == -1) return <Error statusCode={404} />
+  const post = posts[index]
 
   const firstParagraph = getPostFirstParagraph(post)
   const metadata: TMetadata = {
@@ -74,9 +130,28 @@ const HistoryPostPage = (): JSX.Element => {
     description: firstParagraph,
   }
 
+  const length = posts.length
+  let prevIndex = 0
+  let nextIndex = 0
+  if (index == 0) {
+    prevIndex = length - 1
+    nextIndex = 1
+  } else if (index == length - 1) {
+    prevIndex = index - 1
+    nextIndex = 0
+  } else {
+    prevIndex = index - 1
+    nextIndex = index + 1
+  }
+
   return (
     <Layout title={post.title} metadata={metadata}>
-      <PostSection post={post} />
+      <PostSection
+        post={post}
+        index={index}
+        nextPost={posts[nextIndex]}
+        prevPost={posts[prevIndex]}
+      />
     </Layout>
   )
 }

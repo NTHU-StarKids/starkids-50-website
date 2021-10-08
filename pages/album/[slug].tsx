@@ -2,10 +2,7 @@ import Error from 'next/error'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 import { H3 } from '@/components/Headings'
 import Section from '@/components/Section'
@@ -28,8 +25,8 @@ const CategorySection = ({
       <div className="flex justify-center items-center">
         <Link href={`/album/${prevCategory.slug}`} passHref>
           <FontAwesomeIcon
-            icon={faChevronLeft}
-            className="w-2.5 mr-8 text-gray-300 cursor-pointer"
+            icon={faAngleLeft}
+            className="w-2.5 mr-8 text-gray-300 hover:text-white cursor-pointer"
             title={prevCategory.name}
             fixedWidth
           />
@@ -37,8 +34,8 @@ const CategorySection = ({
         <H3 className="cursor-default">{category.name}</H3>
         <Link href={`/album/${nextCategory.slug}`} passHref>
           <FontAwesomeIcon
-            icon={faChevronRight}
-            className="w-2.5 ml-7 text-gray-300 cursor-pointer"
+            icon={faAngleRight}
+            className="w-2.5 ml-7 text-gray-300 hover:text-white cursor-pointer"
             title={nextCategory.name}
             fixedWidth
           />

@@ -74,21 +74,17 @@ const MessageGroup = ({
       <div className="w-full text-left px-2 md:px-3">
         {messages.map((message, index) => {
           return (
-            <div
-              key={`message-${index}`}
-              className="font-light"
-              title={dayjs(sentAt).format('YYYY/MM/DD HH:mm:ss')}
-            >
+            <div key={`message-${index}`} className="font-light">
               {index == 0 &&
                 (isSelf ? (
-                  <p className="tracking-wide text-gray-50 leading-4 text-right">
+                  <p className="tracking-wide text-gray-50 leading-4 text-right cursor-default">
                     <span className="mr-2 text-sm text-gray-200">
                       {dayjs(sentAt).format('YYYY/MM/DD HH:mm')}
                     </span>
                     {name}
                   </p>
                 ) : (
-                  <p className="tracking-wide text-gray-50 leading-4">
+                  <p className="tracking-wide text-gray-50 leading-4 cursor-default">
                     {name}
                     <span className="ml-2 text-sm text-gray-200">
                       {dayjs(sentAt).format('YYYY/MM/DD HH:mm')}
@@ -110,6 +106,7 @@ const MessageGroup = ({
                         : 'rounded-tl-none'
                       : ''
                   }`}
+                  title={dayjs(sentAt).format('YYYY/MM/DD HH:mm:ss')}
                 >
                   {message.text.split('\n').map((str, index) => {
                     if (index == message.text.split('\n').length + 1)
@@ -189,28 +186,47 @@ const ChatSection = ({
     <Section>
       <H2 className="mb-10">留言板</H2>
       <div className="relative">
-        <div className="absolute w-full -top-4 flex justify-center z-20">
-          <div className="rounded-full bg-purple-500 h-8 px-4 py-2 text-lg leading-4 tracking-wider">
+        <div className="absolute w-full -top-4 flex justify-center z-30">
+          <div className="rounded-full bg-purple-500 h-8 px-4 py-2 text-base sm:text-lg leading-4 sm:leading-4 tracking-wider">
             {disabled ? (
               <FontAwesomeIcon
                 className="animate-spin h-4 mx-2 inline"
                 icon={faSync}
               />
             ) : (
-              '🎉 清大天文50週年生日快樂 🎂'
+              '清大天文50年生日快樂 🎉'
             )}
           </div>
         </div>
-        <div className="relative bg-gray-600 w-full h-116 sm:h-132 md:h-148 lg:h-164 xl:h-180 2xl:h-200 rounded-xl overflow-y-scroll">
-          <div className="absolute left-0 bottom-24 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-176 px-2 pb-3 pt-6 lg:p-4 overflow-x-hidden overflow-y-scroll">
+        <div className="relative bg-gray-600 w-full h-116 sm:h-132 md:h-148 lg:h-164 xl:h-180 2xl:h-200 rounded-xl">
+          <div className="absolute left-0 bottom-24 w-full h-92 sm:h-108 md:h-124 lg:h-140 xl:h-156 2xl:h-176 overflow-hidden">
             <div
-              className={`flex flex-col gap-4 transition-opacity duration-700 delay-300 ${
+              className={`absolute top-0 w-full h-full flex place-content-center transition-opacity duration-700 z-10 opacity-100 ${
+                disabled ? '' : 'opacity-0'
+              }`}
+            >
+              <svg
+                className="my-auto animate-spin h-10 w-10 rounded-full bg-transparent border-4 border-purple-500 border-opacity-90"
+                viewBox="0 0 24 24"
+                style={{ borderRightColor: '#F8F7FD' }}
+              ></svg>
+            </div>
+
+            <div
+              className={`absolute w-full h-full z-20 transition-opacity duration-700 ${
                 disabled ? 'opacity-0' : 'opacity-100'
               }`}
             >
-              {messageGroups.map((messageGroup, index) => (
-                <MessageGroup key={`messageGroup-${index}`} {...messageGroup} />
-              ))}
+              <div
+                className={`absolute bottom-0 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-176 flex flex-col gap-4 px-2 pb-3 pt-6 lg:p-4 overflow-y-scroll`}
+              >
+                {messageGroups.map((messageGroup, index) => (
+                  <MessageGroup
+                    key={`messageGroup-${index}`}
+                    {...messageGroup}
+                  />
+                ))}
+              </div>
             </div>
           </div>
           <div className="absolute left-0 bottom-0 w-full h-24 border-t-2 border-gray-500 px-2 md:px-4 py-2">

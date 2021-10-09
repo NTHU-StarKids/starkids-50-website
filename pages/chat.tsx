@@ -197,7 +197,7 @@ const ChatSection = ({
                 icon={faSync}
               />
             ) : null}
-            歡迎來到留言板 rrrrrr
+            🎉 清大天文50歲生日快樂 🎂
           </div>
         </div>
         <div className="relative bg-gray-600 w-full h-116 sm:h-132 md:h-148 lg:h-164 xl:h-180 2xl:h-200 rounded-xl overflow-y-scroll">

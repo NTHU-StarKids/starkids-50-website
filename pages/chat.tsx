@@ -193,11 +193,12 @@ const ChatSection = ({
           <div className="rounded-full bg-purple-500 h-8 px-4 py-2 text-lg leading-4 tracking-wider">
             {disabled ? (
               <FontAwesomeIcon
-                className="animate-spin h-4 mr-2 inline"
+                className="animate-spin h-4 mx-2 inline"
                 icon={faSync}
               />
-            ) : null}
-            🎉 清大天文50歲生日快樂 🎂
+            ) : (
+              '🎉 清大天文50歲生日快樂 🎂'
+            )}
           </div>
         </div>
         <div className="relative bg-gray-600 w-full h-116 sm:h-132 md:h-148 lg:h-164 xl:h-180 2xl:h-200 rounded-xl overflow-y-scroll">

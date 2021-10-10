@@ -48,7 +48,7 @@ const DailySection = (): JSX.Element => {
         className="relative w-full h-80 lg:h-96 bg-center bg-cover"
         style={{ backgroundImage: `url('${picture.imgUrl}')` }}
       >
-        <div className="absolute bottom-0 w-full px-6 py-4 bg-gray-900 bg-opacity-40 text-white">
+        <div className="absolute bottom-0 w-full px-6 py-4 bg-gray-900 bg-opacity-40 text-white cursor-default select-none">
           <H3 className="mb-1 truncate">每日精選</H3>
           <P>{picture.description}</P>
         </div>
@@ -74,7 +74,7 @@ const CategorySection = (): JSX.Element => {
                 className="relative w-full h-48 sm:h-60 lg:h-72 bg-center bg-cover rounded-2xl overflow-hidden"
                 style={{ backgroundImage: `url('${category.coverImgUrl}')` }}
               >
-                <div className="absolute bottom-0 w-full px-6 py-4 bg-gray-900 bg-opacity-40 text-white">
+                <div className="absolute bottom-0 w-full px-6 py-4 bg-gray-900 bg-opacity-40 text-white select-none">
                   <H3 className="truncate">{category.name}</H3>
                 </div>
               </div>

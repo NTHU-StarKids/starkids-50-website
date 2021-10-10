@@ -50,7 +50,7 @@ const Goods = ({ good }: TProps): JSX.Element => {
         className="w-full bg-center bg-cover h-60"
         style={{ backgroundImage: `url('${good.imageUrl}')` }}
       ></div>
-      <div className="w-full px-4 lg:px-8 py-4 text-left">
+      <div className="w-full px-4 lg:px-8 py-4 text-left cursor-default select-none">
         <H3 className="mb-1 text-center truncate">{good.name}</H3>
         <p
           className="text-center font-light tracking-wider overflow-hidden w-full h-20 leading-7"

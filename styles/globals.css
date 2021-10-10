@@ -6,6 +6,11 @@ textarea {
   resize: none;
 }
 
+::selection {
+  color: #333333;
+  background: #b6b5ff;
+}
+
 .hamburger-btn {
   width: 20px;
   height: 24px;

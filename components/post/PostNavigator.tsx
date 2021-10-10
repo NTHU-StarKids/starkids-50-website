@@ -32,17 +32,19 @@ const NavigationArrow = ({
   }
 
   const marginMapping = {
-    first: 'mr-4',
-    previous: 'mr-8',
-    next: 'ml-7',
-    last: 'ml-4',
+    first: '',
+    previous: '',
+    next: '',
+    last: '',
   }
 
   return (
     <FontAwesomeIcon
       icon={iconMapping[type]}
-      className={`h-5 ${marginMapping[type]} text-gray-300 ${
-        disabled ? 'cursor-not-allowed' : 'hover:text-white cursor-pointer'
+      className={`h-6 ${marginMapping[type]}  ${
+        disabled
+          ? 'text-gray-600 cursor-not-allowed'
+          : 'text-gray-300 hover:text-white cursor-pointer'
       }`}
       title={title}
       fixedWidth
@@ -57,7 +59,7 @@ const PostNavigator = ({ posts, index, prefix }: TProps): JSX.Element => {
   const nextPost: TPost = posts[index + 1 >= length ? index : index + 1]
 
   return (
-    <div className="mt-12 flex justify-center items-center">
+    <div className="mt-12 flex gap-x-6 justify-center items-center">
       {index == 0 ? (
         <>
           <NavigationArrow type="first" disabled={true} />
@@ -78,7 +80,7 @@ const PostNavigator = ({ posts, index, prefix }: TProps): JSX.Element => {
         </>
       )}
 
-      <span className="w-12 bg-gray-600 rounded-full tracking-wider cursor-default">
+      <span className="w-12 ml-3 mr-2 bg-gray-600 rounded-full tracking-wider cursor-default select-none">
         {index + 1 < 10 ? '0' : ''}
         {index + 1}
       </span>

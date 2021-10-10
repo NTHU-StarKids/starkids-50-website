@@ -10,7 +10,7 @@ export const H1 = ({ children, className = '' }: TProps): JSX.Element => {
   return (
     <h1
       className={classNames(
-        'text-3xl tracking-widest mb-4 font-semibold',
+        'text-3xl tracking-widest mb-4 font-semibold cursor-default select-none',
         className
       )}
     >
@@ -21,7 +21,12 @@ export const H1 = ({ children, className = '' }: TProps): JSX.Element => {
 
 export const H2 = ({ children, className = '' }: TProps): JSX.Element => {
   return (
-    <h2 className={classNames('text-2xl tracking-widest mb-8', className)}>
+    <h2
+      className={classNames(
+        'text-2xl tracking-widest mb-8 cursor-default select-none',
+        className
+      )}
+    >
       {children}
     </h2>
   )

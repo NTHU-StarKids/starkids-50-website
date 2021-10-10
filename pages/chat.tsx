@@ -77,14 +77,14 @@ const MessageGroup = ({
             <div key={`message-${index}`} className="font-light">
               {index == 0 &&
                 (isSelf ? (
-                  <p className="tracking-wide text-gray-50 leading-4 text-right cursor-default">
+                  <p className="tracking-wide text-gray-50 leading-4 text-right cursor-default select-none">
                     <span className="mr-2 text-sm text-gray-200">
                       {dayjs(sentAt).format('YYYY/MM/DD HH:mm')}
                     </span>
                     {name}
                   </p>
                 ) : (
-                  <p className="tracking-wide text-gray-50 leading-4 cursor-default">
+                  <p className="tracking-wide text-gray-50 leading-4 cursor-default select-none">
                     {name}
                     <span className="ml-2 text-sm text-gray-200">
                       {dayjs(sentAt).format('YYYY/MM/DD HH:mm')}
@@ -187,7 +187,7 @@ const ChatSection = ({
       <H2 className="mb-10">留言板</H2>
       <div className="relative">
         <div className="absolute w-full -top-4 flex justify-center z-30">
-          <div className="rounded-full bg-purple-500 h-8 px-4 py-2 text-base sm:text-lg leading-4 sm:leading-4 tracking-wider">
+          <div className="rounded-full bg-purple-500 h-8 px-4 py-2 text-base sm:text-lg leading-4 sm:leading-4 tracking-wider select-none">
             {disabled ? (
               <FontAwesomeIcon
                 className="animate-spin h-4 mx-2 inline"

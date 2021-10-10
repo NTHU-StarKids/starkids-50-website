@@ -18,7 +18,7 @@ const Post = ({ post }: TProps): JSX.Element => {
 
   return (
     <Link href={`${router.pathname}/${post.slug}`} passHref>
-      <div className="flex flex-col lg:flex-row bg-gray-600 hover:bg-gray-650 rounded-2xl h-96 lg:h-48 w-full overflow-hidden transition-colors duration-200 cursor-pointer">
+      <div className="flex flex-col lg:flex-row bg-gray-600 hover:bg-gray-650 rounded-2xl h-96 lg:h-48 w-full overflow-hidden transition-colors duration-200 cursor-pointer select-none">
         <div
           className="w-full lg:w-2/5 xl:w-1/3 2xl:w-1/4 bg-center bg-cover h-40 lg:h-auto"
           style={{ backgroundImage: `url('${post.coverUrl}')` }}

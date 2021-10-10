@@ -31,7 +31,7 @@ const PostsSection = (): JSX.Element => {
               <Tab as={Fragment} key={`tab-${year}`}>
                 {({ selected }) => (
                   <button
-                    className={`history-tab rounded-xl sm:rounded-t-2xl sm:rounded-b-none p-2 sm:px-4 md:px-5 sm:pt-3 sm:pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 ${
+                    className={`history-tab rounded-xl sm:rounded-t-2xl sm:rounded-b-none p-2 sm:px-4 md:px-5 sm:pt-3 sm:pb-2 tracking-wider md:tracking-widest outline-none transition-colors duration-200 select-none ${
                       selected ? 'bg-purple-600 text-white' : 'text-gray-200'
                     }`}
                   >

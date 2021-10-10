@@ -31,7 +31,7 @@ const CategorySection = ({
             fixedWidth
           />
         </Link>
-        <H3 className="cursor-default">{category.name}</H3>
+        <H3 className="cursor-default select-none">{category.name}</H3>
         <Link href={`/album/${nextCategory.slug}`} passHref>
           <FontAwesomeIcon
             icon={faAngleRight}

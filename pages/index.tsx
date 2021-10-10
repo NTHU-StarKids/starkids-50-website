@@ -14,7 +14,7 @@ import { getPostFirstParagraph, getRecommendedHistoryPosts } from '@/utils'
 
 const AnniversarySection = (): JSX.Element => {
   return (
-    <Section>
+    <Section className="cursor-default select-none">
       <h1
         className="font-semibold tracking-widest text-3xl mb-3"
         style={{ fontFamily: 'GenYoMin' }}

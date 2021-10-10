@@ -57,7 +57,7 @@ const CabinetSection = (): JSX.Element => {
       <H2>歷屆幹部</H2>
       <div className="flex justify-center">
         <div className="bg-purple-100 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-scroll">
-          <H3 className="text-purple-600">
+          <H3 className="text-purple-600 cursor-default select-none">
             {cabinet.name}
             <span className="ml-2 tracking-wider">
               (
@@ -133,13 +133,13 @@ const CabinetSection = (): JSX.Element => {
               ></div>
 
               <div
-                className="absolute -left-3 tracking-wider text-gray-300 text-sm"
+                className="absolute -left-3 tracking-wider text-gray-300 text-sm cursor-default select-none"
                 style={{ top: '-2.3rem', paddingLeft: '0.1rem' }}
               >
                 元老
               </div>
               <div
-                className="absolute -right-2 tracking-wider text-gray-300"
+                className="absolute -right-2 tracking-wider text-gray-300 cursor-default select-none"
                 style={{ top: '-2.4rem', paddingLeft: '0.1rem' }}
               >
                 {CABINETS.length - 1}

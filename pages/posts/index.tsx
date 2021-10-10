@@ -5,7 +5,7 @@ import CarouselSection from '@/components/CarouselSection'
 import { H2 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
-import PostList from '@/components/PostList'
+import PostList from '@/components/post/PostList'
 import posts from '@/constants/magazinePosts'
 import { getPostFirstParagraph, getRecommendedMagazinePosts } from '@/utils'
 

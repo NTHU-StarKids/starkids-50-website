@@ -6,7 +6,7 @@ import posts from '@/constants/historyPosts'
 import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
-import PostList from '@/components/PostList'
+import PostList from '@/components/post/PostList'
 import P from '@/components/Paragraph'
 
 const OriginSection = (): JSX.Element => {

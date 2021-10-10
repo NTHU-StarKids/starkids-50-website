@@ -36,4 +36,5 @@ yarn-error.log*
 # VS Code
 .vscode
 
+imaging/results/*
 starkids-50-anniversary*.json

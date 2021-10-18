@@ -316,7 +316,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-5.jpg',
+        url: '/img/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-5.JPG',
         description: '',
       },
     ],
@@ -778,7 +778,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-10.jpg',
+        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-10.JPG',
         description: '2019年10月 天文日',
       },
       {

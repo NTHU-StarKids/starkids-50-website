@@ -60,6 +60,7 @@ type TCabinet = {
 type TAlbumImage = {
   imgUrl: string
   description: string
+  portrait: boolean
 }
 
 type TAlbumCategory = {

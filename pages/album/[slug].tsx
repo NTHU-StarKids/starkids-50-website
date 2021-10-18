@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 import { H3 } from '@/components/Headings'
+import P from '@/components/Paragraph'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 import { categories } from '@/constants/album'
@@ -24,31 +25,46 @@ const CategorySection = ({
     <Section className="pb-20">
       <div className="flex justify-center items-center">
         <Link href={`/album/${prevCategory.slug}`} passHref>
-          <FontAwesomeIcon
-            icon={faAngleLeft}
-            className="w-2.5 mr-8 text-gray-300 hover:text-white cursor-pointer"
-            title={prevCategory.name}
-            fixedWidth
-          />
+          <a title={prevCategory.name}>
+            <FontAwesomeIcon
+              icon={faAngleLeft}
+              className="w-2.5 mr-8 text-gray-300 hover:text-white cursor-pointer"
+              fixedWidth
+            />
+          </a>
         </Link>
         <H3 className="cursor-default select-none">{category.name}</H3>
         <Link href={`/album/${nextCategory.slug}`} passHref>
-          <FontAwesomeIcon
-            icon={faAngleRight}
-            className="w-2.5 ml-7 text-gray-300 hover:text-white cursor-pointer"
-            title={nextCategory.name}
-            fixedWidth
-          />
+          <a title={nextCategory.name}>
+            <FontAwesomeIcon
+              icon={faAngleRight}
+              className="w-2.5 ml-7 text-gray-300 hover:text-white cursor-pointer"
+              fixedWidth
+            />
+          </a>
         </Link>
       </div>
-      <div className="mt-8 grid gap-x-4 gap-y-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+      <div className="mt-12">
+        <P>{category.description}</P>
+      </div>
+
+      <div className="mt-8 grid gap-x-4 gap-y-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {category.images.map((image, index) => {
           return (
             <div key={`image-${index}`}>
               <div
-                className="w-full h-48 sm:h-60 lg:h-72 bg-center bg-cover rounded-xl overflow-hidden"
+                className={`${
+                  image.portrait ? 'w-full sm:w-2/3 sm:mx-auto' : 'w-full'
+                } rounded-xl overflow-hidden`}
                 style={{ backgroundImage: `url('${image.imgUrl}')` }}
-              ></div>
+              >
+                <img
+                  src={image.imgUrl}
+                  className="w-full"
+                  alt={image.description}
+                />
+              </div>
               <p className="mt-2">{image.description}</p>
             </div>
           )

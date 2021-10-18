@@ -13,7 +13,7 @@ import { H2 } from '@/components/Headings'
 import Section from '@/components/Section'
 import SplitNewLine from '@/components/SplitNewLine'
 import Layout from '@/components/Layout'
-import { profileMap } from '@/constants'
+import { availableProfiles } from '@/constants'
 import { useChats } from '@/hook'
 
 type TProps = {
@@ -35,6 +35,8 @@ type TMessageGroup = {
   sentAt: string
   messages: TMessage[]
 }
+
+const defaultProfile = 'profile-01'
 
 const appendChatId = (id: string) => {
   const ids = JSON.parse(localStorage.getItem('chatIds')) || []
@@ -125,13 +127,9 @@ const ChatSection = ({
   messageGroups,
   refetchChats,
 }: TProps): JSX.Element => {
-  const randomProfile = (): string => {
-    return 'sample-profile-1'
-  }
-
   const [nickname, setNickname] = useState<string>('')
   const [message, setMessage] = useState<string>('')
-  const [profile, setProfile] = useState<string>(randomProfile())
+  const [profile, setProfile] = useState<string>(defaultProfile)
   const messageRef = useRef()
   const focusOutBtnRef = useRef()
 
@@ -152,8 +150,17 @@ const ChatSection = ({
 
   const changeProfile = () => {
     if (!disabled) {
-      console.log('changeProfile')
-      setProfile(randomProfile())
+      const currentIndex = availableProfiles.findIndex((p) => p == profile)
+      if (
+        currentIndex === -1 ||
+        currentIndex === availableProfiles.length - 1
+      ) {
+        setProfile(availableProfiles[0])
+        localStorage.setItem('profile', availableProfiles[0])
+      } else {
+        setProfile(availableProfiles[currentIndex + 1])
+        localStorage.setItem('profile', availableProfiles[currentIndex + 1])
+      }
     }
   }
 
@@ -173,6 +180,16 @@ const ChatSection = ({
       event.preventDefault()
     }
   }
+
+  useEffect(() => {
+    const picture = localStorage.getItem('profile') || defaultProfile
+    const index = availableProfiles.findIndex((p) => p == picture)
+    if (index === -1) {
+      localStorage.setItem('profile', defaultProfile)
+    } else {
+      setProfile(availableProfiles[index])
+    }
+  }, [])
 
   return (
     <Section>
@@ -221,7 +238,7 @@ const ChatSection = ({
               </div>
             </div>
           </div>
-          <div className="absolute left-0 bottom-0 w-full h-24 border-t-2 border-gray-500 px-2 md:px-4 py-2">
+          <div className="absolute left-0 bottom-0 w-full h-24 border-t-2 border-gray-500 px-2 md:px-4 py-2 select-none">
             <div className="flex gap-1 h-full">
               <div className="flex w-12 md:w-16 h-full">
                 <div
@@ -229,7 +246,7 @@ const ChatSection = ({
                     disabled ? 'cursor-not-allowed' : 'cursor-pointer'
                   }`}
                   style={{
-                    backgroundImage: `url('/img/profile/${profile}@4x.png')`,
+                    backgroundImage: `url('/img/profile/${profile}.png')`,
                   }}
                   onClick={changeProfile}
                 >
@@ -312,7 +329,7 @@ export default function ChatPage(): JSX.Element {
       const messageGroup = {
         id: chat.id,
         name: chat.name,
-        profileUrl: profileMap[chat.profile],
+        profileUrl: `/img/profile/${chat.profile}.png`,
         isSelf: chatIds.includes(chat.id),
         sentAt: chat.sentAt,
         messages: [

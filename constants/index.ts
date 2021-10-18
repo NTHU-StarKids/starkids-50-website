@@ -62,9 +62,22 @@ export const relatedLinks = [
   },
 ]
 
-export const profileMap = {
-  'sample-profile-1': '/img/profile/sample-profile-1@4x.png',
-}
+export const availableProfiles: string[] = [
+  'profile-01',
+  'profile-02',
+  'profile-03',
+  'profile-04',
+  'profile-05',
+  'profile-06',
+  'profile-07',
+  'profile-08',
+  'profile-09',
+  'profile-10',
+  'profile-11',
+  'profile-12',
+  'profile-13',
+  'profile-14',
+]
 
 export const CABINETS = [
   {

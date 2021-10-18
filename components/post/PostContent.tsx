@@ -1,3 +1,6 @@
+import { H3 } from '@/components/Headings'
+import SplitNewLine from '@/components/SplitNewLine'
+
 type TProps = {
   contents: (TPostParagraph | TPostImage)[]
 }
@@ -10,13 +13,25 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
           return (
             <p
               key={`content-${index}`}
-              className="mb-6 font-light tracking-widest ml-1 md:ml-0"
+              className="mb-4 font-light tracking-widest ml-1 md:ml-0"
             >
-              {
+              <SplitNewLine
                 // @ts-ignore
-                content.text
-              }
+                text={content.text}
+              />
             </p>
+          )
+        } else if (content.type == 'subtitle') {
+          return (
+            <H3
+              key={`content-${index}`}
+              className="mt-12 mb-2 tracking-wider text-center"
+            >
+              <SplitNewLine
+                // @ts-ignore
+                text={content.text}
+              />
+            </H3>
           )
         } else if (content.type == 'image') {
           return (

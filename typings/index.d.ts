@@ -23,6 +23,11 @@ type TPostParagraph = {
   text: string
 }
 
+type TPostSubtitle = {
+  type: string = 'subtitle'
+  text: string
+}
+
 type TPostImage = {
   type: string = 'image'
   url: string
@@ -30,7 +35,11 @@ type TPostImage = {
 }
 
 type TPost = {
-  author: string
+  author?: string
+  interviewee?: string
+  interviewer?: string
+  writer?: string
+  editor?: string
   coverUrl: string
   slug: string
   title: string

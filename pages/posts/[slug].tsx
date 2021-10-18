@@ -18,11 +18,18 @@ const PostSection = ({ post, index }: TProps): JSX.Element => {
   return (
     <Section className="pb-20">
       <div
-        className="w-full h-64 bg-center bg-cover mb-8"
+        className="w-full h-96 xl:h-120 bg-center bg-cover mb-8"
         style={{ backgroundImage: `url('${post.coverUrl}')` }}
       ></div>
       <h2 className="text-2xl tracking-widest mb-2">{post.title}</h2>
-      <H3>作者/{post.author}</H3>
+      {post.author && <H3 className="mt-2">作者/{post.author}</H3>}
+      {post.interviewee && (
+        <H3 className="mt-2">
+          受訪者/{post.interviewee}、採訪/{post.interviewer}
+        </H3>
+      )}
+      {post.writer && <H3 className="mt-2">撰文/{post.writer}</H3>}
+      {post.editor && <H3 className="mt-2">編輯/{post.editor}</H3>}
 
       <PostContent contents={post.contents} />
 

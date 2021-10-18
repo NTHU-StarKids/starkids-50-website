@@ -11,6 +11,7 @@ import {
 import { createChat } from '@/api'
 import { H2 } from '@/components/Headings'
 import Section from '@/components/Section'
+import SplitNewLine from '@/components/SplitNewLine'
 import Layout from '@/components/Layout'
 import { profileMap } from '@/constants'
 import { useChats } from '@/hook'
@@ -108,16 +109,7 @@ const MessageGroup = ({
                   }`}
                   title={dayjs(sentAt).format('YYYY/MM/DD HH:mm:ss')}
                 >
-                  {message.text.split('\n').map((str, index) => {
-                    if (index == message.text.split('\n').length + 1)
-                      return <span key={`msg-${index}`}>{str}</span>
-                    return (
-                      <span key={`msg-${index}`}>
-                        {str}
-                        <br></br>
-                      </span>
-                    )
-                  })}
+                  <SplitNewLine text={message.text} />
                 </div>
               </div>
             </div>

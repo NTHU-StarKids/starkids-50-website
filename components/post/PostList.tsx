@@ -23,17 +23,19 @@ const Post = ({ post }: TProps): JSX.Element => {
           className="w-full lg:w-2/5 xl:w-1/3 2xl:w-1/4 bg-center bg-cover h-40 lg:h-auto"
           style={{ backgroundImage: `url('${post.coverUrl}')` }}
         ></div>
-        <div className="w-full lg:w-3/5 xl:w-full px-4 lg:px-8 py-4 text-left">
+        <div className="w-full lg:w-3/5 xl:w-2/3 2xl:w-3/4 px-4 lg:px-8 py-4 text-left">
           <div className="flex justify-between tracking-widest">
             <span className="text-xl mb-1 lg:mb-4 text-center lg:text-left w-full lg:w-2/3 truncate">
               {post.title}
             </span>
             <span className="hidden lg:inline lg:ml-4 lg:mr-2 text-base text-right w-max">
-              作者/{post.author}
+              {post.author
+                ? `作者/${post.author}`
+                : `受訪者/${post.interviewee}`}
             </span>
           </div>
           <p className="lg:hidden mb-4 text-base text-center tracking-widest">
-            作者/{post.author}
+            {post.author ? `作者/${post.author}` : `受訪者/${post.interviewee}`}
           </p>
           <p
             className="text-center lg:text-left font-light tracking-wider overflow-hidden w-full h-28 leading-7"

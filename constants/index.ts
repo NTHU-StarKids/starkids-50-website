@@ -341,7 +341,7 @@ export const CABINETS = [
     age: 26,
     name: '第26屆',
     positions: [
-      { name: '鄭　莊', department: '電機 00', position: '社長' },
+      { name: '鄭　莊', department: '電機 98', position: '社長' },
       { name: '吳承恩', department: '物理 98', position: '社長' },
       { name: '吳承恩', department: '物理 98', position: '副社長' },
       { name: '陳怡舒', department: '外語 98', position: '教學股' },

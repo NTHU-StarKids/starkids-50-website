@@ -39,7 +39,7 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
               <img
                 // @ts-ignore
                 src={content.url}
-                className="rounded-xl mx-auto max-h-72 w-full md:w-auto md:max-w-screen-md"
+                className="rounded-xl mx-auto sm:max-h-96 w-full sm:w-auto md:max-w-screen-md"
                 // @ts-ignore
                 alt={content.description}
               />

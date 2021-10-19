@@ -17,7 +17,7 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
       {contents.map((content, index) => {
         if (content.type == 'paragraph') {
           return (
-            <p key={`content-${index}`} className="ml-1 md:ml-0">
+            <p key={`content-${index}`}>
               <SplitNewLine
                 // @ts-ignore
                 text={content.text}

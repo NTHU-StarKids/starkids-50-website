@@ -65,7 +65,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/鄧延璋',
-    author: '鄧延璋',
+    author: '鄧延璋（物理74級）',
     coverUrl:
       '/img/posts/recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club-1.jpg',
     slug: 'recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club',
@@ -400,7 +400,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '受訪者/丘政倫',
-    interviewee: '丘政倫學長',
+    interviewee: '丘政倫',
     interviewer: '何梓華、吳沂騰、傅喻',
     writer: '何梓華',
     editor: '丘政倫、蒲思云',
@@ -1223,7 +1223,8 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/林彥興',
-    author: '林彥興（理學院21級）',
+    author:
+      '林彥興（理學院21級，EASY天文地科博覽會創辦人之一，清大天文社第48屆教學長，第49屆副社長。現為清大天文所碩士生。）',
     editor: '傅喻',
     coverUrl:
       '/img/posts/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-3.jpg',
@@ -1379,7 +1380,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/辛水泉',
-    author: '辛水泉（物理78級）',
+    author: '辛水泉（物理78級，物理所80級，現居新竹市，服務於采鈺科技公司）',
     editor: '傅喻',
     coverUrl:
       '/img/posts/lao-xiao-you-xin-she-yuan-guan-xing-ti-yan-fen-xiang-1.jpg',

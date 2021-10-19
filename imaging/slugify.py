@@ -1,4 +1,9 @@
+import sys
 from unidecode import unidecode
 
-text = '清大天文社近況速覽'
-print(unidecode(text).lower().replace(' ', '-')[0: -1])
+def main(argv):
+  text = argv[0]
+  print(unidecode(text).lower().replace(' ', '-')[0: -1])
+
+if __name__ == "__main__":
+  main(sys.argv[1:])

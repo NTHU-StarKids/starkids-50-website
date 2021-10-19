@@ -51,7 +51,7 @@ const CarouselSection = ({
               <div
                 key={`slide-${index}`}
                 className="w-2/3 outline-none"
-                onClick={() => router.replace(`/${link}/${slide.slug}`)}
+                onClick={() => router.push(`/${link}/${slide.slug}`)}
               >
                 <div
                   className="relative bg-center bg-cover h-80 lg:h-96 mx-1.5 text-black"

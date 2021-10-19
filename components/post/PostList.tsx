@@ -36,7 +36,7 @@ const Post = ({ post }: TProps): JSX.Element => {
             </span>
           </div>
           <p className="lg:hidden mb-4 text-base text-center tracking-widest">
-            {post.author ? `作者/${post.author}` : `受訪者/${post.interviewee}`}
+            {post.shortAuthorName}
           </p>
           <p
             className="text-center lg:text-left font-light tracking-wider overflow-hidden w-full h-28 leading-7"

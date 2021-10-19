@@ -48,6 +48,7 @@ type TPostImage = {
 }
 
 type TPost = {
+  shortAuthorName: string
   author?: string
   interviewee?: string
   interviewer?: string

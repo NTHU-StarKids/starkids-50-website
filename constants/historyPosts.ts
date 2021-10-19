@@ -1,5 +1,6 @@
-const posts = [
+const posts: TPost[] = [
   {
+    shortAuthorName: '作者/謝淳帆',
     author: '謝淳帆',
     coverUrl: '/img/sample-cover-5@4x.png',
     slug: 'zui-hou-yi-wan-hei-zai-yi-shi-zai-bi-jiao-ren-xiao-shi-a-peng-you-ci-bu',
@@ -34,6 +35,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/高淑萍',
     author: '高淑萍',
     coverUrl: '/img/sample-cover-3@4x.png',
     slug: 'shi-wo-hui-zhan-de-de-hong-shi-bu-bu-hao-jin-tian-jiu-de-hua-bei-jiu-mei',
@@ -84,6 +86,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/趙瑜如',
     author: '趙瑜如',
     coverUrl: '/img/sample-cover-7@4x.png',
     slug: 'ti-ren-huan-wu-nai-ge-de-zhan-bu-shi',
@@ -143,6 +146,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/林萱緯',
     author: '林萱緯',
     coverUrl: '/img/sample-cover-6@4x.png',
     slug: 'man-ke-neng-hui-e-kan-qi-lai-a-shi-ying-gai',
@@ -193,6 +197,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/陳韻婷',
     author: '陳韻婷',
     coverUrl: '/img/sample-cover-3@4x.png',
     slug: 'shi-zi-xian-zai-you-shuo-wo-zhi-dao-gan',
@@ -248,6 +253,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/李怡婷',
     author: '李怡婷',
     coverUrl: '/img/sample-good-1@4x.png',
     slug: 'huan-ji-hu-shi-da-jia-ye-zhen-de-huan-shi-ji-lu',
@@ -285,6 +291,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/郭亮岑',
     author: '郭亮岑',
     coverUrl: '/img/sample-cover-2@4x.png',
     slug: 'hao-qi-hao-jiu-ming-yu-zhou-bu-yao-shi-mo-shi',
@@ -315,6 +322,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/王景駿',
     author: '王景駿',
     coverUrl: '/img/sample-cover-1@4x.png',
     slug: 'dao-zi-ji-lai-yi-wei-liao-de-dao-mei-dong-ni',
@@ -356,6 +364,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/鄧國靖',
     author: '鄧國靖',
     coverUrl: '/img/sample-good-3@4x.png',
     slug: 'xiao-shi-jie-ge-shi-du-mei-de-li-liang-bang-shi',
@@ -385,6 +394,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/陳松萱',
     author: '陳松萱',
     coverUrl: '/img/sample-cover-5@4x.png',
     slug: 'you-xi-huo-tong-shi-wo-de-zhen-shi-tai-ding-de-de-yue-lai-yue',
@@ -418,6 +428,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/王成軒',
     author: '王成軒',
     coverUrl: '/img/sample-cover-7@4x.png',
     slug: 'xie-lai-de-ren-wei-de-sui-ran-mei-huan-shi-wei',
@@ -469,6 +480,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/陳怡君',
     author: '陳怡君',
     coverUrl: '/img/sample-cover-4@4x.png',
     slug: 'shi-zhe-yang-zai-na-li-gan-jue-dui-sheng-ri-kuai-zen-mo',
@@ -506,6 +518,7 @@ const posts = [
     ],
   },
   {
+    shortAuthorName: '作者/謝佩伯',
     author: '謝佩伯',
     coverUrl: '/img/sample-good-2@4x.png',
     slug: 'sheng-dan-wu-wu-wu-zui-jin-de-lai-jue-de-bian-huan-you',

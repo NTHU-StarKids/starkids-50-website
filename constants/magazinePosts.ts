@@ -2,7 +2,7 @@ const posts: TPost[] = [
   {
     author: '鄧延璋',
     coverUrl:
-      '/img/recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club-1.jpg',
+      '/img/posts/recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club-1.jpg',
     slug: 'recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club',
     title:
       'Recollection on the Mirror-Grinding Days: The Founding of the Astronomy Club',
@@ -15,7 +15,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club-1.jpg',
+        url: '/img/posts/recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club-1.jpg',
         description:
           '左起：沈采蘋 (物理74級)，葉則亮 (核工75級)，鄧延璋 (物理74級)，陳昱寜 (物理74級)',
       },
@@ -37,7 +37,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club-2.jpg',
+        url: '/img/posts/recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club-2.jpg',
         description: '1971年磨鏡組成員葉迎春工作側拍',
       },
       {
@@ -80,7 +80,7 @@ const posts: TPost[] = [
     writer: '吳沂騰',
     editor: '何梓華、蒲思云',
     coverUrl:
-      '/img/suo-wei-xing-qu-jiu-shi-wen-zi-ji-ni-dao-di-xiang-gan-ma-1.jpg',
+      '/img/posts/suo-wei-xing-qu-jiu-shi-wen-zi-ji-ni-dao-di-xiang-gan-ma-1.jpg',
     slug: 'suo-wei-xing-qu-jiu-shi-wen-zi-ji-ni-dao-di-xiang-gan-ma',
     title: '專訪秦一男教授：「所謂興趣，就是問自己：『你到底想幹嘛？』」',
     decade: 1980,
@@ -132,7 +132,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/suo-wei-xing-qu-jiu-shi-wen-zi-ji-ni-dao-di-xiang-gan-ma-3.jpg',
+        url: '/img/posts/suo-wei-xing-qu-jiu-shi-wen-zi-ji-ni-dao-di-xiang-gan-ma-3.jpg',
         description: '',
       },
       {
@@ -181,7 +181,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/suo-wei-xing-qu-jiu-shi-wen-zi-ji-ni-dao-di-xiang-gan-ma-2.jpg',
+        url: '/img/posts/suo-wei-xing-qu-jiu-shi-wen-zi-ji-ni-dao-di-xiang-gan-ma-2.jpg',
         description: '',
       },
       {
@@ -196,7 +196,7 @@ const posts: TPost[] = [
     writer: '何梓華',
     editor: '蒲思云',
     coverUrl:
-      '/img/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-1.jpg',
+      '/img/posts/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-1.jpg',
     slug: 'xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai',
     title: '專訪賴詩萍教授：「先別急著擔心」－勇於嘗試的豁達心態',
     decade: 1990,
@@ -204,7 +204,7 @@ const posts: TPost[] = [
     contents: [
       {
         type: 'image',
-        url: '/img/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-1.jpg',
+        url: '/img/posts/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-1.jpg',
         description: '',
       },
       {
@@ -233,12 +233,12 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-2.jpg',
+        url: '/img/posts/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-2.jpg',
         description: '',
       },
       {
         type: 'image',
-        url: '/img/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-3.jpg',
+        url: '/img/posts/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-3.jpg',
         description: '',
       },
       {
@@ -295,7 +295,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-4.jpg',
+        url: '/img/posts/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-4.jpg',
         description: '',
       },
       {
@@ -316,7 +316,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-5.JPG',
+        url: '/img/posts/xian-bie-ji-zhu-dan-xin-yong-yu-chang-shi-de-huo-da-xin-tai-5.JPG',
         description: '',
       },
     ],
@@ -326,7 +326,7 @@ const posts: TPost[] = [
     interviewer: '何梓華、吳沂騰、傅喻',
     writer: '何梓華',
     editor: '丘政倫、蒲思云',
-    coverUrl: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-3.jpg',
+    coverUrl: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-3.jpg',
     slug: 'bian-xue-bian-wan-wo-de-tian-wen-lu',
     title: '專訪丘政倫副研究員：「邊學邊玩，我的天文路」',
     decade: 2000,
@@ -334,7 +334,7 @@ const posts: TPost[] = [
     contents: [
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-1.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-1.jpg',
         description: '帥氣丘學長的演化史',
       },
       {
@@ -359,7 +359,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-2.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-2.jpg',
         description: '讓我們紅塵作伴，活得瀟瀟灑灑',
       },
       {
@@ -372,7 +372,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-3.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-3.jpg',
         description: '我們不只是星子，還是風子',
       },
       {
@@ -405,7 +405,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-4.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-4.jpg',
         description: '中興計畫之一－協助新東陽舉辦中秋賞月活動',
       },
       {
@@ -426,7 +426,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-5.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-5.jpg',
         description: '清大天文社第一個十周年社慶：30周年社慶',
       },
       {
@@ -467,7 +467,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-6.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-6.jpg',
         description: 'COSI計畫－被流放的丘學長',
       },
       {
@@ -480,7 +480,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-7.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-7.jpg',
         description:
           '前往南極之旅」－抵達南極的窗外美景（左上）、初抵McMurdo的興奮（右上）、載著科研人員的C-17（左下）、夏季可容納1000人的McMurdo小鎮（右下',
       },
@@ -490,7 +490,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-8.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-8.jpg',
         description: '張祥光老師前來探望被流放的丘學長',
       },
       {
@@ -535,22 +535,22 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-9.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-9.jpg',
         description: '丘學長自己做的企鵝梗圖',
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-10.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-10.jpg',
         description: '與企鵝的安全之吻',
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-11.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-11.jpg',
         description: '阿德利企鵝造訪氣球科研區',
       },
       {
         type: 'image',
-        url: '/img/bian-xue-bian-wan-wo-de-tian-wen-lu-12.jpg',
+        url: '/img/posts/bian-xue-bian-wan-wo-de-tian-wen-lu-12.jpg',
         description: '口愛的企鵝',
       },
     ],
@@ -559,7 +559,7 @@ const posts: TPost[] = [
     author:
       '吳奕勳（經濟23級）、吳冠昱（材料16級）、張瓊尹（工科22級）、傅喻（人社22級）、許正憲（物理23級）',
     editor: '蒲思云、傅喻',
-    coverUrl: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-1.jpg',
+    coverUrl: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-1.jpg',
     slug: 'qing-da-tian-wen-she-jin-kuang-su-lan',
     title: '五十年後更茁壯！清大天文社近況速覽',
     decade: 2010,
@@ -567,7 +567,7 @@ const posts: TPost[] = [
     contents: [
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-2.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-2.jpg',
         description: '',
       },
       {
@@ -604,12 +604,12 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-3.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-3.jpg',
         description: '2014年 星趴社長會議 credit：歐柏昇',
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-4.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-4.jpg',
         description: '2015年 臺清聯合寒訓 credit：游鈞量',
       },
       {
@@ -646,7 +646,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-16.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-16.jpg',
         description: '',
       },
       {
@@ -683,12 +683,12 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-5.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-5.jpg',
         description: '2020年3月 天文攝影工作坊首開課',
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-6.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-6.jpg',
         description: '2021年天文攝影展 credit：傅喻',
       },
       {
@@ -713,12 +713,12 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-7.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-7.jpg',
         description: '屬於清大天文社的梅西爾星表 credit：王立宇',
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-8.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-8.jpg',
         description:
           '從2021年9月開始，固定於天文社粉專上以本社攝影結果介紹一張梅西爾天體 credit：何梓華',
       },
@@ -736,7 +736,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-9.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-9.jpg',
         description:
           '2021年9月儀器考，圖中為EM-200赤道儀搭配FLT-132單筒望遠鏡 credit：王立宇',
       },
@@ -778,7 +778,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-10.JPG',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-10.JPG',
         description: '2019年10月 天文日',
       },
       {
@@ -791,12 +791,12 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-11.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-11.jpg',
         description: '2015年元旦 港大天文學會來訪 credit：黃聖文',
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-12.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-12.jpg',
         description: '2017年2月，清大天文社回訪港大天文學會 credit：梁閎翔',
       },
       {
@@ -817,7 +817,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-13.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-13.jpg',
         description: '2020年10月 於建功高中進行服務學習課程 credit：吳奕勳',
       },
       {
@@ -830,12 +830,12 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-14.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-14.jpg',
         description: '',
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-15.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-15.jpg',
         description: '',
       },
       {
@@ -848,22 +848,22 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-17.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-17.jpg',
         description: '右為FC-100H and EM-2、左為GP-80M',
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-18.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-18.jpg',
         description: 'FLT-132 and EM-200',
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-19.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-19.jpg',
         description: 'GP-80M',
       },
       {
         type: 'image',
-        url: '/img/qing-da-tian-wen-she-jin-kuang-su-lan-20.jpg',
+        url: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-20.jpg',
         description: 'ZS-61 and EM-2',
       },
     ],
@@ -871,7 +871,7 @@ const posts: TPost[] = [
   {
     author: '吳冠昱（材料17級）、徐安廷（電機18級）、王立宇（工科21級）',
     editor: '傅喻',
-    coverUrl: '/img/2017-total-solor-eclipse-3.jpg',
+    coverUrl: '/img/posts/2017-total-solor-eclipse-3.jpg',
     slug: '2017-total-solor-eclipse',
     title: '2017年追逐北美日全食',
     decade: 2010,
@@ -907,7 +907,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/2017-total-solor-eclipse-1.jpg',
+        url: '/img/posts/2017-total-solor-eclipse-1.jpg',
         description: 'Mt. Rainer National Park 合照',
       },
       {
@@ -924,7 +924,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/2017-total-solor-eclipse-3.jpg',
+        url: '/img/posts/2017-total-solor-eclipse-3.jpg',
         description: '日冕',
       },
       {
@@ -933,7 +933,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/2017-total-solor-eclipse-4.jpg',
+        url: '/img/posts/2017-total-solor-eclipse-4.jpg',
         description: '日食軌',
       },
       {
@@ -954,7 +954,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/2017-total-solor-eclipse-2.jpg',
+        url: '/img/posts/2017-total-solor-eclipse-2.jpg',
         description: '旅館前與社旗合照',
       },
       {
@@ -966,7 +966,8 @@ const posts: TPost[] = [
   {
     author: '林彥興（理學院21級）',
     editor: '傅喻',
-    coverUrl: '/img/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-3.jpg',
+    coverUrl:
+      '/img/posts/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-3.jpg',
     slug: 'da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se',
     title: '大學生在科普中的可能角色',
     decade: 2010,
@@ -1006,7 +1007,7 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-1.jpg',
+        url: '/img/posts/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-1.jpg',
         description: 'Easy網頁的截圖',
       },
       {
@@ -1019,12 +1020,12 @@ const posts: TPost[] = [
       },
       {
         type: 'image',
-        url: '/img/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-2.jpg',
+        url: '/img/posts/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-2.jpg',
         description: '發表於科學月刊的文章',
       },
       {
         type: 'image',
-        url: '/img/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-3.jpg',
+        url: '/img/posts/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-3.jpg',
         description: '發表於泛科學之文章',
       },
       {
@@ -1114,6 +1115,96 @@ const posts: TPost[] = [
       {
         type: 'paragraph',
         text: '網際網路的普及讓資訊的傳遞變得前所未有的便捷，但在曾被深鎖的寶貴知識變得觸手可及的同時，各種錯誤與誤導性的資訊也泛濫成災。如何解決這個問題是項龐大的工程，短期內也看不到任何一勞永逸的解方。但身為大學生的我們，在持續精進自己的同時，也可以將自身所學以文章、影音等各種形式分享給更多的人，為改善網際網路的知識環境，盡一份綿薄之力。',
+      },
+    ],
+  },
+  {
+    author: '辛水泉（物理78級）',
+    editor: '傅喻',
+    coverUrl:
+      '/img/posts/lao-xiao-you-xin-she-yuan-guan-xing-ti-yan-fen-xiang-1.jpg',
+    slug: 'lao-xiao-you-xin-she-yuan-guan-xing-ti-yan-fen-xiang',
+    title: '老校友，新社員——觀星體驗分享',
+    decade: 2010,
+    recommended: false,
+    contents: [
+      {
+        type: 'paragraph',
+        text: '謝謝傅喻社長邀稿，讓我藉天文社五十週年的機會和大家分享個人從天文觀星中得到的樂趣。',
+      },
+      {
+        type: 'paragraph',
+        text: '我是78B/80G物理系友，2019年加入天文社的新社員。在校時未加入天文社，錯失參與天文社篳路藍縷的工作，殊為可惜。但也幸運地選修了倪維斗老師的地球物理課，學習基礎的宇宙天文知識，之後在閱讀天文科普書籍、關注天文觀測訊息，都是生活中享受新知學習的開心時刻。',
+      },
+      {
+        type: 'subtitle',
+        text: '熱愛天文，走入志工\n學習成為天文知識傳播人，帶著孩子領略浩瀚無垠的星空',
+      },
+      {
+        type: 'paragraph',
+        text: '早年時期工作是生活重心，直到2008年，持續著對天文的熱愛及興趣，加入台北天文館志工的行列。台北天文館展出豐富多元，工作團隊對天文充滿熱情的，很吸引人，在接受訓練後，開啟了兩年半回味無窮，難忘的志工服務體驗。',
+      },
+      {
+        type: 'paragraph',
+        text: '參訪天文館展覽的民眾老少都有，在展場導覽前，我認真研讀資料，希望透過生動講解，深入淺出地將天文知識傳播給一般民眾，激發他們對天文的興趣，看見民眾因為對天文多了一分瞭解的欣悅表情，是我最大的回饋。在天文台值班時，想著如何帶領民眾認識天文望遠鏡，激發他們探索天文奧妙的好奇心，是我最大的挑戰。參觀民眾亮起的眼神，或疑惑的表情，都左右我的心情，戰戰兢兢準備每次值班工作，希望不負參觀民眾所望。',
+      },
+      {
+        type: 'paragraph',
+        text: '展場導覽、天文台值班外，最好玩的莫過於參加觀星活動，活動甚受喜愛，往往一開放報名即刻秒殺。一群人一起遠赴山上、離島等光害少的地方，隨興地躺在野地裡，耳朵聽著天文名嘴講解星空，視線跟著指星筆東南西北移動，思緒也自由地漫遊在點點繁星之中。帶隊的天文名嘴甚是厲害，滿天星斗時，講解得鉅細靡遺、頭頭是道，增添我們對星空的認識與喜愛；星空稀微時，他們也能穿插趣味故事，講得引人入勝，恍如視線裡也是滿天星光閃爍。他們熱情及富感染力的講解，讓人黏上觀星、愛上觀星。',
+      },
+      {
+        type: 'paragraph',
+        text: '同年，我也開始參加偏鄉學校的導讀志工活動，學期間每個月至尖石鄉的國小，透過說故事的方式，培養學生對閱讀的興趣。天文迷如我，自然加入天文介紹作為高年級學生的導讀內容。我用豐富天文圖片、太空人失重狀態下有趣的生活影片等，希望能在短短一堂課的時間，帶領孩子們領略我們身處的太陽系以及人類的太空探索活動。若能引起學生對天文的好奇，將來不忘仰望星空進而深入學習，那是再好不過了！',
+      },
+      {
+        type: 'subtitle',
+        text: '從組裝望遠鏡的一小步，到協助重建清大天文台的一大步\n望遠鏡不僅拉近人們與星空的距離，更縮短了彼此年齡及物理距離',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/lao-xiao-you-xin-she-yuan-guan-xing-ti-yan-fen-xiang-2.jpg',
+        description: '望遠鏡DIY',
+      },
+      {
+        type: 'paragraph',
+        text: '2015年，有幸參加了台大吳俊輝教授主持的天文望遠鏡DIY工作營，兩天的時間，動手完成二十公分望遠鏡的組裝。吳教授多年的經驗與改良，將望遠鏡拆解成易於組裝的部品，一步一步指導完成組裝，不分年齡都能享受動手的樂趣，在我鄰桌的營友就是位小學生! 有了二十公分望遠鏡後，迫不及待觀測星空，映入眼簾的是一系列的驚喜：興奮於初見光亮的月面及清晰的月球坑；驚艷於親眼看見帶環的土星；讚嘆於天地間怎麼能有如此美麗的星球景象。自己開心，更想分享這份喜悅，於是邀請家人、朋友、同事，在住家屋頂、在公司高樓平台、在新竹高鐵站旁暗黑空地，辦起小型觀星活動。頭一次親眼看見月亮和土星，家人、朋友那驚嘆連連的表情及聲音，讓我記憶深刻。原來，星空探索的慾望，深埋在大多數人的心裡。',
+      },
+      {
+        type: 'paragraph',
+        text: '2018年，78級同學舉辦物理系畢業四十年同學會，離校多年，對系上師長培育之恩銘記在心，班上同學希望能回饋母系，經與余怡德主任討論後，選定重建天文台。天文台裡待修的二十五公分的望遠鏡不僅是母校很好的教學設備，也是可提供附近社區與學校一處隨時能親近星空的天文台。',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/lao-xiao-you-xin-she-yuan-guan-xing-ti-yan-fen-xiang-3.jpg',
+        description: '望遠鏡揭碑',
+      },
+      {
+        type: 'paragraph',
+        text: '經過78級同學慷慨解囊，與賴詩萍教授的精心籌劃，天文台於2019年5月改建完成，重新啟用。啟用之後在賴教授與天文所、天文社同學的熱心支持下，已舉辦多次開放民眾參加的觀星活動，並開始接受團體預約參訪。很感謝賴老師和同學們不遺餘力地付出，78級同學都很高興看到天文觀測的熱情之火能在母校與鄰近地區再度燃起，讓更多的學弟妹、校外民眾、鄰近學校師生，能和我們一起享受觀星的樂趣。',
+      },
+      {
+        type: 'subtitle',
+        text: '上知天文，下啖美食\n彌補遺憾重新入社，才知道加入的是天文（廚藝）社',
+      },
+      {
+        type: 'paragraph',
+        text: '以資深天文迷暨資深校友加入天文社成為新社員後，我參加了2020年10月9日在五峰國小的觀星活動，本想只是藉機重溫學生生活，沒想到竟是參加了一場震撼視覺、滿足味蕾的觀星美食饗宴！',
+      },
+      {
+        type: 'paragraph',
+        text: '活動中社上前輩教導望遠鏡架設，並且在讓人不安的星況下，神預言南風將吹開雲層，果然，稍晚雲層漸漸散去，星空全開。社員們躺在操場上，聆聽精彩解說，享受迷人的星空，沉浸在美好的氛圍裡，我也重溫了一段大學生活時光。學弟妹不僅指導觀星，廚藝更是一絕。原以為晚餐大概是訂購的紙盒便當，吃飽不餓就好，沒想到呈現眼前的竟是現做、配料豐富、香氣撲鼻的義大利麵，真是驚奇。美食盛宴尚未結束，加碼預告還有宵夜，為大家準備的是牛排，當下我以為是學弟妹的玩笑話，沒想到在觀星告一段落的休息時間，學弟妹們開始忙碌起來，沒一會兒真的端出媲美專業主廚的香煎厚牛排，簡直是山中米其林。',
+      },
+      {
+        type: 'paragraph',
+        text: '之後從社長口中才知道，清大天文社的廚藝美食在全國大專天文社團中早已出名，我們好福氣。講給賴教授聽，賴教授驚訝說她身為天文社指導老師，竟然還沒嚐過。賴老師，不要懷疑，您一定要參加同學的觀星（美食）營，事忙分不開身的話，請您選宵夜的那一段時間去就好!',
+      },
+      {
+        type: 'paragraph',
+        text: '午夜時分，在觀星深夜食堂飽餐一頓後，我和內人及同事先行離開，漫步到停車場，一抬頭，剎見銀亮的獵戶座正緩緩從林梢升起，美得讓人駐足不想離開！這晚美好的種種，將隨著銀亮的獵戶座，鑲進腦海裡，永永遠遠不忘。',
+      },
+      {
+        type: 'paragraph',
+        text: '感謝同事嫚君協助我完成此文，和學弟妹分享觀星體驗，謝謝你們耐心讀到文末！',
       },
     ],
   },

@@ -34,7 +34,7 @@ const getDailyPicture = (): TAlbumImage => {
 const TitleSection = (): JSX.Element => {
   return (
     <Section className="pb-0">
-      <H2>成果錦集</H2>
+      <H2>成果集錦</H2>
     </Section>
   )
 }
@@ -88,7 +88,7 @@ const CategorySection = (): JSX.Element => {
 
 export default function AlbumPage(): JSX.Element {
   return (
-    <Layout title="成果錦集">
+    <Layout title="成果集錦">
       <TitleSection />
       <DailySection />
       <CategorySection />

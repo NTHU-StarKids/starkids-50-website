@@ -8,7 +8,7 @@ export const menuLinks = [
     url: '/posts',
   },
   {
-    name: '成果錦集',
+    name: '成果集錦',
     url: '/album',
   },
   {

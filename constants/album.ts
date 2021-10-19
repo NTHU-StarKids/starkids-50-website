@@ -147,72 +147,72 @@ export const categories: TAlbumCategory[] = [
     images: [
       {
         imgUrl: '/img/album/winter-observation-01.jpg',
-        description: '2001阿里山寒訓',
+        description: '2001 阿里山寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-02.jpg',
-        description: '2008新竹尖石鄉暑訓',
+        description: '2008 新竹尖石鄉暑訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-03.jpg',
-        description: '2009寒訓',
+        description: '2009 寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-04.jpg',
-        description: '2010武陵寒訓',
+        description: '2010 武陵寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-05.jpg',
-        description: '2011塔塔加寒訓',
+        description: '2011 塔塔加寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-06.jpg',
-        description: '2012大雪山寒訓',
+        description: '2012 大雪山寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-07.jpg',
-        description: '2013鹿林天文台寒訓',
+        description: '2013 鹿林天文台寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-08.jpg',
-        description: '2014福壽山寒訓',
+        description: '2014 福壽山寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-09.jpg',
-        description: '2015福壽山寒訓',
+        description: '2015 福壽山寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-10.jpg',
-        description: '2016東埔山莊寒訓',
+        description: '2016 東埔山莊寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-11.jpg',
-        description: '2017東埔山莊寒訓',
+        description: '2017 東埔山莊寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-12.jpg',
-        description: '2018東埔山莊寒訓',
+        description: '2018 東埔山莊寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-13.jpg',
-        description: '2019東埔山莊寒訓',
+        description: '2019 東埔山莊寒訓',
         portrait: false,
       },
       {
         imgUrl: '/img/album/winter-observation-14.jpg',
-        description: '2020福壽山寒訓',
+        description: '2020 福壽山寒訓',
         portrait: false,
       },
     ],
@@ -226,67 +226,67 @@ export const categories: TAlbumCategory[] = [
     images: [
       {
         imgUrl: '/img/album/star-party-01.jpg',
-        description: '2007星趴',
+        description: '2007 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-02.jpg',
-        description: '2008星趴',
+        description: '2008 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-03.jpg',
-        description: '2009星趴',
+        description: '2009 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-04.jpg',
-        description: '2010星趴',
+        description: '2010 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-05.jpg',
-        description: '2011星趴',
+        description: '2011 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-06.jpg',
-        description: '2012星趴',
+        description: '2012 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-07.jpg',
-        description: '2013星趴',
+        description: '2013 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-08.jpg',
-        description: '2014星趴',
+        description: '2014 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-09.jpg',
-        description: '2015聯合小小星趴',
+        description: '2015 聯合小小星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-10.jpg',
-        description: '2016星趴',
+        description: '2016 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-11.jpg',
-        description: '2017星趴',
+        description: '2017 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-12.jpg',
-        description: '2018星趴',
+        description: '2018 星趴',
         portrait: false,
       },
       {
         imgUrl: '/img/album/star-party-13.jpg',
-        description: '2019星趴',
+        description: '2019 星趴',
         portrait: false,
       },
     ],
@@ -300,17 +300,17 @@ export const categories: TAlbumCategory[] = [
     images: [
       {
         imgUrl: '/img/album/night-out-01.jpg',
-        description: '2017台大x清大天文夜衝',
+        description: '2017 台大x清大天文夜衝',
         portrait: false,
       },
       {
         imgUrl: '/img/album/night-out-02.jpg',
-        description: '2018野馬農園夜衝之FLT-132開光',
+        description: '2018 野馬農園夜衝之FLT-132開光',
         portrait: false,
       },
       {
         imgUrl: '/img/album/night-out-03.jpg',
-        description: '2002新樂，pentax加上機車的夜衝',
+        description: '2002 新樂，pentax加上機車的夜衝',
         portrait: false,
       },
       {
@@ -329,37 +329,37 @@ export const categories: TAlbumCategory[] = [
     images: [
       {
         imgUrl: '/img/album/astro-event-01.jpg',
-        description: '2017天文社有群瘋子遠赴北美，只為了一張日冕照片',
+        description: '2017 天文社有群瘋子遠赴北美，只為了一張日冕照片',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-event-03.jpg',
-        description: '2003水星從太陽前面經過',
+        description: '2003 水星從太陽前面經過',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-event-05.jpg',
-        description: '2018猩紅血月',
+        description: '2018 猩紅血月',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-event-02.jpg',
-        description: '2012驚鴻一瞥，下次見到便是2117年了',
+        description: '2012 驚鴻一瞥，下次見到便是2117年了',
         portrait: true,
       },
       {
         imgUrl: '/img/album/astro-event-04.jpg',
-        description: '2020夏至日環食',
+        description: '2020 夏至日環食',
         portrait: true,
       },
       {
         imgUrl: '/img/album/astro-event-06.jpg',
-        description: '2019物館天文台重新啟用，在這裡舉辦天文日',
+        description: '2019 物館天文台重新啟用，在這裡舉辦天文日',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-event-07.jpg',
-        description: '2019物館天文台重新啟用，在這裡舉辦天文日',
+        description: '2019 物館天文台重新啟用，在這裡舉辦天文日',
         portrait: false,
       },
     ],
@@ -373,77 +373,111 @@ export const categories: TAlbumCategory[] = [
     images: [
       {
         imgUrl: '/img/album/astro-camp-01.jpg',
-        description: '2001年天文營',
+        description: '2001 天文營',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-02.jpg',
-        description: '2002年天文營於風雲樓用餐',
+        description: '2002 天文營於風雲樓用餐',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-03.jpg',
-        description: '2008年天文營五峰國小野炊',
+        description: '2008 天文營五峰國小野炊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-04.jpg',
-        description: '2010年天文營於五峰國小',
+        description: '2010 天文營於五峰國小',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-05.jpg',
-        description: '2013年天文營晚會長劇',
+        description: '2013 天文營晚會長劇',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-06.jpg',
-        description: '2015年天文營開場舞',
+        description: '2015 天文營開場舞',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-07.jpg',
-        description: '2016年天文營小隊劇謝幕',
+        description: '2016 天文營小隊劇謝幕',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-08.jpg',
-        description: '2018年天文營',
+        description: '2018 天文營',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-09.jpg',
-        description: '2018年天文營舞會',
+        description: '2018 天文營舞會',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-10.jpg',
-        description: '2019年天文營結業式',
+        description: '2019 天文營結業式',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-11.jpg',
-        description: '2019年天文營',
+        description: '2019 天文營',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-12.jpg',
-        description: '2019年天文營選修課',
+        description: '2019 天文營選修課',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-13.jpg',
-        description: '2019年天文營太陽觀測',
+        description: '2019 天文營太陽觀測',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-14.jpg',
-        description: '2019年天文營水大地',
+        description: '2019 天文營水大地',
         portrait: false,
       },
       {
         imgUrl: '/img/album/astro-camp-15.jpg',
-        description: '2019年天文營晚會長劇',
+        description: '2019 天文營晚會長劇',
+        portrait: false,
+      },
+    ],
+  },
+  {
+    name: '天文服務學習',
+    slug: 'service-learning',
+    coverImgUrl: '/img/album/service-learning-01.jpg',
+    description:
+      '天文服學，又名天文教育推廣活動，帶動國中小天文教育，加深學生們對於天文的熱情以及興趣，後期也結合建功高中的天文台進行知識推廣教育，在教學之餘，也培養大學生天文領域中的知識及操作技巧，同時培養團隊合作及臨場反應',
+    images: [
+      {
+        imgUrl: '/img/album/service-learning-03.jpg',
+        description: '2015 天文服務學習',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/service-learning-02.jpg',
+        description: '2016 天文服務學習',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/service-learning-01.jpg',
+        description: '2017 天文服務學習',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/service-learning-05.jpg',
+        description: '2018 天文服務學習',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/service-learning-04.jpg',
+        description: '2019 天文服務學習',
         portrait: false,
       },
     ],
@@ -531,82 +565,82 @@ export const categories: TAlbumCategory[] = [
     images: [
       {
         imgUrl: '/img/album/courses-and-speeches-01.jpg',
-        description: '2020劉志安老師演講：梅西爾馬拉松活動介紹與經驗分享',
+        description: '2020 劉志安老師演講：梅西爾馬拉松活動介紹與經驗分享',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-02.jpg',
-        description: '2020顏鴻選演講：看星星的人',
+        description: '2020 顏鴻選演講：看星星的人',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-03.jpg',
-        description: '2019社課：望遠鏡',
+        description: '2019 社課：望遠鏡',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-04.jpg',
-        description: '2010社課：恆星演化',
+        description: '2010 社課：恆星演化',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-05.jpg',
-        description: '2016聯合社課：狄密特的星空',
+        description: '2016 聯合社課：狄密特的星空',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-06.jpg',
-        description: '2017賴詩萍教授演講：星星製造手冊',
+        description: '2017 賴詩萍教授演講：星星製造手冊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-07.jpg',
-        description: '2018張祥光教授演講：中子星的故事',
+        description: '2018 張祥光教授演講：中子星的故事',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-08.jpg',
-        description: '2019潘國全教授演講：超新星與多信使天文學',
+        description: '2019 潘國全教授演講：超新星與多信使天文學',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-09.jpg',
-        description: '2020天文攝影工作坊',
+        description: '2020 天文攝影工作坊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-10.jpg',
-        description: '2020社課：宇宙論',
+        description: '2020 社課：宇宙論',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-11.jpg',
-        description: '2019歐伯昇演講：天文社怎麼玩',
+        description: '2019 歐伯昇演講：天文社怎麼玩',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-12.jpg',
-        description: '2017天文、自保社聯合社課',
+        description: '2017 天文、自保社聯合社課',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-13.jpg',
-        description: '2019社課：系外行星',
+        description: '2019 社課：系外行星',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-14.jpg',
-        description: '2007社課',
+        description: '2007 社課',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-15.jpg',
-        description: '2013社課',
+        description: '2013 社課',
         portrait: false,
       },
       {
         imgUrl: '/img/album/courses-and-speeches-16.jpg',
-        description: '2016社課：望遠鏡',
+        description: '2016 社課：望遠鏡',
         portrait: false,
       },
     ],
@@ -620,82 +654,166 @@ export const categories: TAlbumCategory[] = [
     images: [
       {
         imgUrl: '/img/album/general-meeting-01.jpg',
-        description: '2003零參級送舊',
+        description: '2003 零參級送舊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-02.jpg',
-        description: '2009零玖級送舊',
+        description: '2009 零玖級送舊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-03.jpg',
-        description: '2010壹零級送舊',
+        description: '2010 壹零級送舊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-04.jpg',
-        description: '2010壹壹級送舊',
+        description: '2010 壹壹級送舊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-05.jpg',
-        description: '2014畢業團體照',
+        description: '2014 畢業團體照',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-06.jpg',
-        description: '2016期末社員大會',
+        description: '2016 期末社員大會',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-07.jpg',
-        description: '2016壹陸級送舊',
+        description: '2016 壹陸級送舊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-08.jpg',
-        description: '2016期末甜點大會',
+        description: '2016 期末甜點大會',
         portrait: true,
       },
       {
         imgUrl: '/img/album/general-meeting-09.jpg',
-        description: '2017期末社員大會(夏)',
+        description: '2017 期末社員大會(夏)',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-10.jpg',
-        description: '2017壹柒級送舊',
+        description: '2017 壹柒級送舊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-11.jpg',
-        description: '2017期末社員大會(冬) aka做薑餅屋',
+        description: '2017 期末社員大會(冬) aka做薑餅屋',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-12.jpg',
-        description: '2018期末社員大會',
+        description: '2018 期末社員大會',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-13.jpg',
-        description: '2019期末社員大會',
+        description: '2019 期末社員大會',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-14.jpg',
-        description: '2019壹玖級送舊',
+        description: '2019 壹玖級送舊',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-15.jpg',
-        description: '2020期末社員大會',
+        description: '2020 期末社員大會',
         portrait: false,
       },
       {
         imgUrl: '/img/album/general-meeting-16.jpg',
-        description: '2020貳零級送舊',
+        description: '2020 貳零級送舊',
+        portrait: false,
+      },
+    ],
+  },
+  {
+    name: '社聚/社遊',
+    slug: 'reunion-and-play',
+    coverImgUrl: '/img/album/reunion-and-play-14.jpg',
+    description:
+      '如果社窩是我們溫暖的被子，那這些社慶社遊等活動就是針線，將大家的心串在一塊。',
+    images: [
+      {
+        imgUrl: '/img/album/reunion-and-play-01.jpg',
+        description: '2001 老人聚餐',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-02.jpg',
+        description: '2003 墾丁出遊',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-03.jpg',
+        description: '2010 大溪社遊',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-04.jpg',
+        description: '2011 南庄社遊',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-05.jpg',
+        description: '2012 中秋火鍋+神永生日 (你很勇ㄟ)',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-06.jpg',
+        description: '2014 畢業拍照，清交友好象徵',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-07.jpg',
+        description: '2015 社聚',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-08.jpg',
+        description: '2018 春遊 (焦點都在我身上)',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-09.jpg',
+        description: '2018 社慶 (看社長一枝獨秀)',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-10.jpg',
+        description: '2019 社聚 (好阿大家都不要鏡頭)',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-11.jpg',
+        description: '2020 畢業照',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-12.jpg',
+        description: '有個熟悉的東西出現了ㄋ',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-13.jpg',
+        description: '2020 社慶 (好好吃~~',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-14.jpg',
+        description: '2011 11級送舊',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-15.jpg',
+        description: '2017 台大清大夜衝 (大老出現',
         portrait: false,
       },
     ],
@@ -709,7 +827,7 @@ export const categories: TAlbumCategory[] = [
     images: [
       {
         imgUrl: '/img/album/equipments-01.jpg',
-        description: '2003年使用FC-100進行水星凌日觀測',
+        description: '2003 年使用FC-100進行水星凌日觀測',
         portrait: false,
       },
       {
@@ -754,7 +872,7 @@ export const categories: TAlbumCategory[] = [
       },
       {
         imgUrl: '/img/album/equipments-10.jpg',
-        description: '2018年初買的新玩具-FLT-132',
+        description: '2018 年初買的新玩具-FLT-132',
         portrait: true,
       },
       {

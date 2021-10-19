@@ -1,7 +1,7 @@
 import Error from 'next/error'
 import { useRouter } from 'next/router'
 
-import { H3 } from '@/components/Headings'
+import Container from '@/components/Container'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 import PostContent from '@/components/post/PostContent'
@@ -18,11 +18,16 @@ const PostSection = ({ post, index }: TProps): JSX.Element => {
   return (
     <Section className="pb-20">
       <div
-        className="w-full h-64 bg-center bg-cover mb-8"
+        className="w-full h-72 sm:h-96 xl:h-120 bg-center bg-cover mb-8"
         style={{ backgroundImage: `url('${post.coverUrl}')` }}
       ></div>
-      <h2 className="text-2xl tracking-widest mb-2">{post.title}</h2>
-      <H3>作者/{post.author}</H3>
+
+      <Container className="article-header">
+        <h2 className="title">{post.title}</h2>
+        <div className="authors">
+          <p>作者 / {post.author}</p>
+        </div>
+      </Container>
 
       <PostContent contents={post.contents} />
 

@@ -1,20 +1,23 @@
-import { H3 } from '@/components/Headings'
+import Container from '@/components/Container'
 import SplitNewLine from '@/components/SplitNewLine'
 
 type TProps = {
-  contents: (TPostParagraph | TPostImage)[]
+  contents: (
+    | TPostParagraph
+    | TPostSubtitle
+    | TPostOrderList
+    | TPostUnorderList
+    | TPostImage
+  )[]
 }
 
 const PostContent = ({ contents }: TProps): JSX.Element => {
   return (
-    <div className="mt-12 text-left">
+    <Container className="article-container mt-14 text-left">
       {contents.map((content, index) => {
         if (content.type == 'paragraph') {
           return (
-            <p
-              key={`content-${index}`}
-              className="mb-4 font-light tracking-widest ml-1 md:ml-0"
-            >
+            <p key={`content-${index}`} className="ml-1 md:ml-0">
               <SplitNewLine
                 // @ts-ignore
                 text={content.text}
@@ -23,15 +26,12 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
           )
         } else if (content.type == 'subtitle') {
           return (
-            <H3
-              key={`content-${index}`}
-              className="mt-12 mb-2 tracking-wider text-center"
-            >
+            <p key={`content-${index}`} className="subtitle">
               <SplitNewLine
                 // @ts-ignore
                 text={content.text}
               />
-            </H3>
+            </p>
           )
         } else if (content.type == 'image') {
           return (
@@ -46,7 +46,7 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
               {
                 // @ts-ignore
                 content.description ? (
-                  <p className="mt-2 font-light text-sm text-center tracking-widest">
+                  <p className="img-description">
                     {
                       // @ts-ignore
                       content.description
@@ -56,9 +56,40 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
               }
             </div>
           )
+        } else if (content.type == 'unorderList') {
+          return (
+            // @ts-ignore
+            <ul style={{ listStyleType: content.styleType }}>
+              {
+                // @ts-ignore
+                content.title
+              }
+              {
+                // @ts-ignore
+                content.list.map((c: string, index: number) => {
+                  return <li key={`orderList-${index}`}>{c}</li>
+                })
+              }
+            </ul>
+          )
+        } else if (content.type == 'orderList') {
+          return (
+            <ol>
+              {
+                // @ts-ignore
+                content.title
+              }
+              {
+                // @ts-ignore
+                content.list.map((c: string, index: number) => {
+                  return <li key={`orderList-${index}`}>{c}</li>
+                })
+              }
+            </ol>
+          )
         }
       })}
-    </div>
+    </Container>
   )
 }
 

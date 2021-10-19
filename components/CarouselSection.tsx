@@ -4,7 +4,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import { useRouter } from 'next/router'
 
-import { H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import P from '@/components/Paragraph'
 
@@ -61,7 +60,9 @@ const CarouselSection = ({
                   }}
                 >
                   <div className="absolute bottom-0 w-full px-6 pb-10 py-4 bg-gray-900 bg-opacity-40 text-white">
-                    <H3 className="mb-1 truncate">{slide.title}</H3>
+                    <p className="mb-1 font-medium text-xl truncate tracking-wider">
+                      {slide.title}
+                    </p>
                     <P className="truncate">{slide.description}</P>
                   </div>
                 </div>

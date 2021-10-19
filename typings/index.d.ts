@@ -28,6 +28,19 @@ type TPostSubtitle = {
   text: string
 }
 
+type TPostOrderList = {
+  type: string = 'orderList'
+  title?: string
+  list: string[]
+}
+
+type TPostUnorderList = {
+  type: string = 'unorderList'
+  styleType: string = 'disc' | 'square'
+  title?: string
+  list: string[]
+}
+
 type TPostImage = {
   type: string = 'image'
   url: string
@@ -45,7 +58,13 @@ type TPost = {
   title: string
   decade?: number
   recommended: boolean
-  contents: (TPostParagraph | TPostImage)[]
+  contents: (
+    | TPostParagraph
+    | TPostSubtitle
+    | TPostOrderList
+    | TPostUnorderList
+    | TPostImage
+  )[]
 }
 
 type TGoods = {

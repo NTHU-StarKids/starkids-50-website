@@ -11,6 +11,67 @@ textarea {
   background: #b6b5ff;
 }
 
+.article-header .title {
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.article-header .authors {
+  text-align: left;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+}
+
+.article-container p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.06rem;
+}
+
+.article-container .subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.15rem;
+}
+
+.article-container .subtitle span {
+  line-height: 2rem;
+}
+
+.article-container .img-description {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.4rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.article-container ol,
+.article-container ul {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.06rem;
+}
+
+.article-container ol {
+  list-style-type: decimal;
+}
+
+.article-container li {
+  margin-left: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
 .hamburger-btn {
   width: 20px;
   height: 24px;

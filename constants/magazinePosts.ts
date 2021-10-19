@@ -69,8 +69,14 @@ const posts: TPost[] = [
         text: 'The last time I climbed onto the observatory was in summer 1976, a week before I left for US to pursue graduate studies. ',
       },
       {
-        type: 'paragraph',
-        text: '補記：\n1. 1971年九月新學年度開學後有兩位大一新生經常到磨鏡室觀看製鏡的程序。他們是葉則亮 (NE75B) 及楊錫欽 (Chem75B)，後來分别擔任第二及第三届社長。有他們兩位的熱忱投入，天文社的根基才得以穏固。\n2. 國科會精密儀器中心當時就在清華校園裡，由核工系楊覺民教授兼管。楊教授很關心及支持望遠鏡的製作。機械及控制等都是科儀中心製造的。\n3. 在16”進行中有兩件事要解决。一是天文台的地點，二是經費的來源。當時大部分的物理系教授都對這個項目很感興奮。所以很快就决定蓋在物理館頂上。\n4. 經費的來源比較麻煩。物理系的教授李怡嚴及王企祥説這類性質的款項是由毛高文教授决定，但要由學生申請，他們不便出面。毛高文剛從美國回來籌設工業化學系所。我完全不認識他。聯絡之後約了星期六晚上到他家去談。我心裡七上八下，請黃銘爵同去。黃是研究生，見過的場面比較多。到了毛家，師母應門。另有三位教授 （沈君山，劉兆玄，及一位數學系的）也在，與毛教授圍著一個方桌，表情嚴肅。毛教授過來跟我們談，師母替了毛教授的位子。毛教授問得非常詳细，他要知道我們是否有决心及毅力完成這個工作。幾分鐘後方桌那邊的氣氛突轉輕鬆，沈君山不斷隔空揶揄毛高文，劉兆玄也不時插幾句，意思是催毛高文快做决定，好回方桌辦正經事。對這突如其來的「助攻」，我心裡是感激不已。果然毛高文很快就同意撥款二十萬元，這在五十年前是很大的數目。當晚在場的三位教授，其後相繼做過清華校長，也都曾在國家行政機關任職。',
+        type: 'orderList',
+        title: '補記：',
+        list: [
+          '1971年九月新學年度開學後有兩位大一新生經常到磨鏡室觀看製鏡的程序。他們是葉則亮 (NE75B) 及楊錫欽 (Chem75B)，後來分别擔任第二及第三届社長。有他們兩位的熱忱投入，天文社的根基才得以穏固。',
+          '國科會精密儀器中心當時就在清華校園裡，由核工系楊覺民教授兼管。楊教授很關心及支持望遠鏡的製作。機械及控制等都是科儀中心製造的。',
+          '在16”進行中有兩件事要解决。一是天文台的地點，二是經費的來源。當時大部分的物理系教授都對這個項目很感興奮。所以很快就决定蓋在物理館頂上。',
+          '經費的來源比較麻煩。物理系的教授李怡嚴及王企祥説這類性質的款項是由毛高文教授决定，但要由學生申請，他們不便出面。毛高文剛從美國回來籌設工業化學系所。我完全不認識他。聯絡之後約了星期六晚上到他家去談。我心裡七上八下，請黃銘爵同去。黃是研究生，見過的場面比較多。到了毛家，師母應門。另有三位教授 （沈君山，劉兆玄，及一位數學系的）也在，與毛教授圍著一個方桌，表情嚴肅。毛教授過來跟我們談，師母替了毛教授的位子。毛教授問得非常詳细，他要知道我們是否有决心及毅力完成這個工作。幾分鐘後方桌那邊的氣氛突轉輕鬆，沈君山不斷隔空揶揄毛高文，劉兆玄也不時插幾句，意思是催毛高文快做决定，好回方桌辦正經事。對這突如其來的「助攻」，我心裡是感激不已。果然毛高文很快就同意撥款二十萬元，這在五十年前是很大的數目。當晚在場的三位教授，其後相繼做過清華校長，也都曾在國家行政機關任職。',
+        ],
       },
     ],
   },
@@ -185,8 +191,12 @@ const posts: TPost[] = [
         description: '',
       },
       {
-        type: 'paragraph',
-        text: '註：\n1. 氫氣增感：利用純N2的乾燥特性平均底片上的水分，使其離子不易擴散，而不至於造成感度低下，再則利用氫具良好催化作用之特性，將底片做一次先期性的化學性曝光\n2. PE2：IBM Personal Editor II，個人編輯器２',
+        type: 'orderList',
+        title: '註：',
+        list: [
+          '氫氣增感：利用純N2的乾燥特性平均底片上的水分，使其離子不易擴散，而不至於造成感度低下，再則利用氫具良好催化作用之特性，將底片做一次先期性的化學性曝光',
+          'PE2：IBM Personal Editor II，個人編輯器２',
+        ],
       },
     ],
   },
@@ -583,8 +593,21 @@ const posts: TPost[] = [
         text: '這本五十週年紀念專刊中，我們蒐集了過去學長姐們的故事，不同時代的天文社員，創造出屬於自身時代的光輝。現在，輪到我們了！本文將從數個主題帶你認識天文社近年風貌：',
       },
       {
-        type: 'paragraph',
-        text: '▻ 全國大學天文社聯盟串聯南北各大學　\n▻ 新科技保存舊時代，雲端上有檔案大海\n▻ 天文攝影，將宇宙收納於指腹之間\n▻ 從古老星表玩新花樣：梅西爾計畫\n▻ 使用儀器前，先來考試吧！\n▻ ​​天文物理讀書會，打開學術視野\n▻ 清華大學天文台打造「看得見」的科普\n▻ 跨海情誼，與香港大學的互訪與終了\n▻ 社團開課囉！服務學習推廣天文教育\n▻ 日常點滴——社團常年活動\n▻ 火力介紹——社團主力儀器',
+        type: 'unorderList',
+        styleType: 'square',
+        list: [
+          '全國大學天文社聯盟串聯南北各大學',
+          '新科技保存舊時代，雲端上有檔案大海',
+          '天文攝影，將宇宙收納於指腹之間',
+          '從古老星表玩新花樣：梅西爾計畫',
+          '使用儀器前，先來考試吧！',
+          '​​天文物理讀書會，打開學術視野',
+          '清華大學天文台打造「看得見」的科普',
+          '跨海情誼，與香港大學的互訪與終了',
+          '社團開課囉！服務學習推廣天文教育',
+          '日常點滴——社團常年活動',
+          '火力介紹——社團主力儀器',
+        ],
       },
       {
         type: 'subtitle',
@@ -753,8 +776,14 @@ const posts: TPost[] = [
         text: '天文物理讀書會曾經深究過的題目繁多，以2021年暑期天文物理讀書會為例，每次讀書會約有9-12人參加，由四位導讀人帶來四篇精彩論文：',
       },
       {
-        type: 'paragraph',
-        text: '・林彥興: THE IMPACT OF RADIO AGN BUBBLE COMPOSITION ON THE DYNAMICS AND THERMAL BALANCE OF THE INTRACLUSTER MEDIUM (Yang et al. 2018)\n・謝明學: Event Horizon Telescope observations of the jet launching and collimation in Centaurus A (Michael Janssen et al. 2021)\n・葉勇陞: Dark matter admixed neutron stars (Kain, B. 2021)\n・張瓊尹: THE DISCOVERY OF THE LARGEST GAS FILAMENT IN OUR GALAXY, OR A NEW SPIRAL ARM? (Chong Li et al. 2021)',
+        type: 'unorderList',
+        styleType: 'disc',
+        list: [
+          '林彥興: THE IMPACT OF RADIO AGN BUBBLE COMPOSITION ON THE DYNAMICS AND THERMAL BALANCE OF THE INTRACLUSTER MEDIUM (Yang et al. 2018)',
+          '謝明學: Event Horizon Telescope observations of the jet launching and collimation in Centaurus A (Michael Janssen et al. 2021)',
+          '葉勇陞: Dark matter admixed neutron stars (Kain, B. 2021)',
+          '張瓊尹: THE DISCOVERY OF THE LARGEST GAS FILAMENT IN OUR GALAXY, OR A NEW SPIRAL ARM? (Chong Li et al. 2021)',
+        ],
       },
       {
         type: 'subtitle',
@@ -958,8 +987,11 @@ const posts: TPost[] = [
         description: '旅館前與社旗合照',
       },
       {
-        type: 'paragraph',
-        text: '註解：Vancouver, BC, Canada <-- 230 km --> Seattle, WA, USA <-- 350 km --> Salem, OR, USA',
+        type: 'orderList',
+        title: '註解：',
+        list: [
+          'Vancouver, BC, Canada <-- 230 km --> Seattle, WA, USA <-- 350 km --> Salem, OR, USA',
+        ],
       },
     ],
   },

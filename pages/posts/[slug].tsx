@@ -1,7 +1,7 @@
 import Error from 'next/error'
 import { useRouter } from 'next/router'
 
-import { H3 } from '@/components/Headings'
+import Container from '@/components/Container'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
 import PostContent from '@/components/post/PostContent'
@@ -18,18 +18,24 @@ const PostSection = ({ post, index }: TProps): JSX.Element => {
   return (
     <Section className="pb-20">
       <div
-        className="w-full h-96 xl:h-120 bg-center bg-cover mb-8"
+        className="w-full h-72 sm:h-96 xl:h-120 bg-center bg-cover mb-8"
         style={{ backgroundImage: `url('${post.coverUrl}')` }}
       ></div>
-      <h2 className="text-2xl tracking-widest mb-2">{post.title}</h2>
-      {post.author && <H3 className="mt-2">作者/{post.author}</H3>}
-      {post.interviewee && (
-        <H3 className="mt-2">
-          受訪者/{post.interviewee}、採訪/{post.interviewer}
-        </H3>
-      )}
-      {post.writer && <H3 className="mt-2">撰文/{post.writer}</H3>}
-      {post.editor && <H3 className="mt-2">編輯/{post.editor}</H3>}
+
+      <Container className="article-header">
+        <h2 className="title">{post.title}</h2>
+        <div className="authors">
+          {post.author && <p>作者 / {post.author}</p>}
+          {post.interviewee && (
+            <>
+              <p>受訪者 / {post.interviewee}</p>
+              <p>採訪 / {post.interviewer}</p>
+            </>
+          )}
+          {post.writer && <p>撰文 / {post.writer}</p>}
+          {post.editor && <p>編輯 / {post.editor}</p>}
+        </div>
+      </Container>
 
       <PostContent contents={post.contents} />
 

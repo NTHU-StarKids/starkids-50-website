@@ -11,10 +11,11 @@ type TListProps = {
 
 const Post = ({ post }: TProps): JSX.Element => {
   const router = useRouter()
-  const firstParagraph = post.contents.find(
+  const paragraphs = post.contents.filter(
     (content) => content.type == 'paragraph'
-    // @ts-ignore
-  ).text
+  )
+  // @ts-ignore
+  const firstParagraph = `${paragraphs[0].text}${paragraphs[1].text}`
 
   return (
     <Link href={`${router.pathname}/${post.slug}`} passHref>

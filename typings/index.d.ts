@@ -54,6 +54,7 @@ type TPost = {
   interviewer?: string
   writer?: string
   editor?: string
+  source?: string
   coverUrl: string
   slug: string
   title: string

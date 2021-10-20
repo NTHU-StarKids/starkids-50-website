@@ -34,6 +34,7 @@ const PostSection = ({ post, index }: TProps): JSX.Element => {
           )}
           {post.writer && <p>撰文 / {post.writer}</p>}
           {post.editor && <p>編輯 / {post.editor}</p>}
+          {post.source && <p>出處 / {post.source}</p>}
         </div>
       </Container>
 

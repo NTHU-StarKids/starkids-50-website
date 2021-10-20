@@ -1605,7 +1605,7 @@ const posts: TPost[] = [
   {
     shortAuthorName: '作者/陳文心',
     author:
-      '陳文心（現任職於艾里有限公司，就讀於清華大學天文所碩士班，曾任全國大學天文社聯盟理事、台大天文社社長。）',
+      '陳文心（現任職於艾里有限公司，就讀於清華大學天文所碩士班，曾任全國大學天文社聯盟理事、台大天文社社長）',
     editor: '吳奕勳',
     coverUrl: '/img/posts/nthu-observatory-from-past-present-to-future-1.jpg',
     slug: 'nthu-observatory-from-past-present-to-future',

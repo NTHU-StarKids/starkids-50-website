@@ -164,6 +164,11 @@ const ChatSection = ({
     }
   }
 
+  const onChangeNickname = (name: string) => {
+    setNickname(name)
+    localStorage.setItem('chatNickname', name)
+  }
+
   const isTouchDevice = () => {
     return 'ontouchstart' in window || navigator.maxTouchPoints > 0
   }
@@ -188,6 +193,11 @@ const ChatSection = ({
       localStorage.setItem('profile', defaultProfile)
     } else {
       setProfile(availableProfiles[index])
+    }
+
+    const chatNickname = localStorage.getItem('chatNickname')
+    if (chatNickname) {
+      setNickname(chatNickname)
     }
   }, [])
 
@@ -270,7 +280,7 @@ const ChatSection = ({
                     disabled={disabled}
                     autoComplete="off"
                     value={nickname}
-                    onChange={(e) => setNickname(e.target.value)}
+                    onChange={(e) => onChangeNickname(e.target.value)}
                   />
                 </div>
                 <div className="relative flex justify-between gap-1 w-full h-9 bg-white rounded-full pl-3.5 pr-0.5 overflow-hidden">

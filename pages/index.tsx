@@ -6,6 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 import CarouselSection from '@/components/CarouselSection'
+import Container from '@/components/Container'
 import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
 import Layout from '@/components/Layout'
@@ -41,19 +42,15 @@ const AboutUsSection = (): JSX.Element => {
   const [showForm, setShowForm] = useState<boolean>(false)
   return (
     <Section color="purple-100">
-      <H2>關於我們</H2>
-      <P className="mb-4">
-        方便需要看別人。間的日常禮於個小，要多願望難人婚交往自己可能。
-      </P>
-      <P className="mb-4">
-        那笑我我對重大人，同一認親卡一個完了不覺得，是時知道自都是我，能有會有，的人都什麼以一點點沒看過一件，得很得不村民帥哥做的那麼。況帽發生想不覺得，想：過看來是一是無炭治郎一下這不小心？
-      </P>
-      <P className="mb-4">
-        很討厭好看一般的可能不⋯給對方：天使沒關開很認真，了我跟我一方好一點的開始太棒⋯我不會可以。
-      </P>
-      <P className="mb-8">
-        認為道為什邊不安好好笑是要都不用，這些台灣一也是我眼神。
-      </P>
+      <Container>
+        <H2>關於我們</H2>
+        <P className="mb-4">
+          動手做　要有中國的科學自信！<br></br>用腦想　培育蒼穹的浩瀚心胸！
+        </P>
+        <P className="mb-8">
+          歲月如白駒過隙，倏然即逝，今年終於來到了我們清大天文社創立的50周年，我們將於臺灣時間11/27（六）擴大舉辦50周年社慶，並與美國連線同步直播，在此敬邀各位海內外的社友們回來共襄盛舉，一同歡慶這值得紀念的一刻。
+        </P>
+      </Container>
 
       <div className="flex justify-center">
         <div
@@ -82,13 +79,13 @@ const AboutUsSection = (): JSX.Element => {
           }`}
         >
           <H3 className="mb-2">
-            國立清華大學 名人堂
+            國立清華大學 物理館1樓中庭
             <FontAwesomeIcon
               className="w-4 inline mb-1.5 ml-2 text-purple-600"
               icon={faMapMarkerAlt}
             />
           </H3>
-          <H3 className="mb-8">2021年11月20日 (六) 13:30~17:00</H3>
+          <H3 className="mb-8">2021年11月27日 (六) 13:30~17:00</H3>
           <P className="mb-4">
             安排社友短講、文物展覽、攝影作品、紀念品販售、社窩參觀、茶點。
             <br></br>
@@ -110,7 +107,15 @@ const AboutUsSection = (): JSX.Element => {
                   type="text"
                   name="department"
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
-                  placeholder="系級（請填寫校系全名）"
+                  placeholder="系級（xx系xx級）"
+                  autoComplete="off"
+                />
+
+                <input
+                  type="text"
+                  name="identity"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
+                  placeholder="社內身份"
                   autoComplete="off"
                 />
 
@@ -122,31 +127,40 @@ const AboutUsSection = (): JSX.Element => {
                   autoComplete="off"
                 />
 
-                <P className="mt-4 my-2">是否攜帶家庭成員？</P>
+                <input
+                  type="text"
+                  name="phone"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
+                  placeholder="聯絡電話"
+                  autoComplete="off"
+                />
+
+                <P className="mt-4 my-2">社慶當天是否到場？</P>
 
                 <div className="my-2">
                   <div className="flex items-center my-2">
                     <input
                       type="radio"
-                      name="member"
+                      name="attendence"
                       className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
                     />
-                    <P className="mx-2">是，</P>
-                    <input
-                      type="text"
-                      name="memberAge"
-                      className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
-                      placeholder="成員年齡"
-                      autoComplete="off"
-                    />
+                    <P className="mx-2">參加（臺灣）</P>
                   </div>
                   <div className="flex items-center my-2">
                     <input
                       type="radio"
-                      name="member"
+                      name="attendence"
                       className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
                     />
-                    <P className="mx-2">否</P>
+                    <P className="mx-2">參加（美國）</P>
+                  </div>
+                  <div className="flex items-center my-2">
+                    <input
+                      type="radio"
+                      name="attendence"
+                      className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
+                    />
+                    <P className="mx-2">不克前來</P>
                   </div>
                 </div>
 

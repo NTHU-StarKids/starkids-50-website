@@ -49,7 +49,7 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
                   <p className="img-description">
                     {
                       // @ts-ignore
-                      content.description
+                      <SplitNewLine text={content.description} />
                     }
                   </p>
                 ) : null

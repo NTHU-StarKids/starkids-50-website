@@ -29,7 +29,7 @@ const PostSection = ({ post, index }: TProps): JSX.Element => {
           {post.interviewee && (
             <>
               <p>受訪者 / {post.interviewee}</p>
-              <p>採訪 / {post.interviewer}</p>
+              {post.interviewer && <p>採訪 / {post.interviewer}</p>}
             </>
           )}
           {post.writer && <p>撰文 / {post.writer}</p>}

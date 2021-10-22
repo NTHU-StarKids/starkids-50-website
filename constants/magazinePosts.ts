@@ -1,7 +1,7 @@
 const posts: TPost[] = [
   {
     shortAuthorName: '作者/丘宏義',
-    author: '丘宏義',
+    author: '丘宏義（創社指導老師）',
     editor: '傅喻',
     coverUrl: '/img/posts/chuang-she-zhi-dao-lao-shi-de-hua-1.jpg',
     slug: 'chuang-she-zhi-dao-lao-shi-de-hua',
@@ -65,7 +65,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '受訪者/陳昱寧',
-    interviewee: '陳昱寧（物理系74級，創社第一屆社員）',
+    interviewee: '陳昱寧（物理 74 級，創社第 1 屆社員）',
     interviewer: '傅喻',
     writer: '傅喻、陳昱寧',
     editor: '蒲思云',
@@ -285,7 +285,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/鄧延璋',
-    author: '鄧延璋（物理74級）',
+    author: '鄧延璋（物理 74 級，第 1 屆社長）',
     coverUrl:
       '/img/posts/recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club-1.jpg',
     slug: 'recollection-on-the-mirror-grinding-days-the-founding-of-the-astronomy-club',
@@ -366,8 +366,86 @@ const posts: TPost[] = [
     ],
   },
   {
+    shortAuthorName: '作者/楊錫欽',
+    author: '楊錫欽（化學 75 級，第 3 屆社長）',
+    editor: '傅喻',
+    coverUrl: '/img/posts/gei-she-you-men-de-tu-wen-ji-1.jpg',
+    slug: 'gei-she-you-men-de-tu-wen-ji',
+    title: '匆匆又十年，給社友們的圖文輯',
+    decade: 1970,
+    recommended: false,
+    contents: [
+      {
+        type: 'paragraph',
+        text: '一個社團之所以能夠在五十週年時吸引歷屆社友共襄盛舉，並不只是因為第一屆創社的歷史有多麽的輝煌，又或是當下的社員有多麽優秀，還有賴歷屆社友們努力維繫',
+      },
+      {
+        type: 'paragraph',
+        text: '楊錫欽學長畢業於清大化學系，是清大天文第三屆社長',
+      },
+      {
+        type: 'paragraph',
+        text: '學生時代，他成立了觀星股，安排幹部們值夜帶領社員熟悉觀星知識，同時編輯了數期〈天文通訊〉，成為清大天文社最早的自編刊物，匯集社員們的科普書寫作品',
+      },
+      {
+        type: 'paragraph',
+        text: '除了學生時代投入天文社，畢業後熱衷於聯繫社友之間的情誼，以下是楊錫欽學長想向社友們分享的圖文：',
+      },
+      {
+        type: 'paragraph',
+        text: '「2011年天文社 40 週年慶，主辦人簡若帆社長不但邀請到前校長徐遐生演講，還搭起太平洋兩岸的視訊活動，老社友錨起勁來把往事挖了一圈，用 email 釐清歷屆社長的排序：鄧延璋、葉則亮、楊錫欽、黃一農、吳覺宇、江啟文、陳偉、許哲榮、謝立宜、張祥光、賴詩萍、金振山.....這實在是天文社的一大盛事',
+      },
+      {
+        type: 'paragraph',
+        text: '光陰如梭，2021年又到天文社 50 週年，值年社長傅喻向社友廣邀文稿，我也借此機會用幾張圖片聊聊這些年與老社友的些許互動情況，希望撩撥老少社友的初心：星空如此多嬌，引無數天文同好競折腰。」',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/gei-she-you-men-de-tu-wen-ji-2.jpg',
+        description:
+          '楊錫欽學長年少模樣，與清華大學早年校景，1971年攝於清華就圖書館前',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/gei-she-you-men-de-tu-wen-ji-3.jpg',
+        description:
+          '2013年，丘宏義博士新書發表會，在台北汀州街金石堂書局舉行，吸引舊雨新知前往參加。\n左起：理學院張祥光老師（也是清大天文第 14 屆社長）、楊錫欽學長、丘宏義老師、薛麗珍董事長',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/gei-she-you-men-de-tu-wen-ji-4.jpg',
+        description:
+          '2014年4月29日陪同第一屆創社成員沈采蘋（左一）拜訪鹿林天文台，沈采蘋學姊是創社時期磨鏡的成員之一，自清華畢業之後，赴美高就，任職於 NASA',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/gei-she-you-men-de-tu-wen-ji-5.jpg',
+        description:
+          '2013年1月9日陪同沈采蘋學姊拜訪天文社社窩，此時天文社所擁有的空間，已與學姊學生時代大不相同',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/gei-she-you-men-de-tu-wen-ji-6.jpg',
+        description:
+          '2014年4月27日楊錫欽學長及其夫人（左二、左一）陪同第一屆沈采蘋學姊（左三）和創社社長鄧延璋（左四）到訪天文社，攝於天文社窩所在的活動中心（蒙民偉樓）的樓頂',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/gei-she-you-men-de-tu-wen-ji-7.jpg',
+        description:
+          '2020年11月20日楊錫欽學長及其夫人（左二、左一）與第四屆社長黃一農及其夫人（左三、左四）於清華大學圖書館會面。黃一農老師自清華畢業後，赴哥倫比亞大學攻讀天文學博士，後來學術興趣自天文轉向人文，任教於清華大學人社院，曾任院長，2020年底於清華大學圖書館舉辦「歷史偵探黃一農」展覽，呈現重要史學研究成果',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/gei-she-you-men-de-tu-wen-ji-8.jpg',
+        description:
+          '2019年第五十屆社長傅喻（左一）和活動長連思瑜（左四）在還原社團歷史時，此時兩人對社史近乎一無所知，透過歷史資料找尋適合訪談的社友，選中的第一位受訪對象即是楊錫欽學長（右三），當日在其夫人陪同下，於清大圖書館會面，四人相談甚歡',
+      },
+    ],
+  },
+  {
     shortAuthorName: '作者/林富源',
-    author: '林富源（物理86級，第12屆社長）',
+    author: '林富源（物理 86 級，第 13 屆社長）',
     editor: '傅喻',
     coverUrl: '/img/posts/the-days-with-halley-3.jpg',
     slug: 'the-days-with-halley',
@@ -554,7 +632,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/金升光',
-    author: '金升光（物理86級）',
+    author: '金升光（物理 86 級，第 13 屆副社長）',
     editor: '傅喻',
     coverUrl: '/img/posts/yi-tian-zhen-de-zhi-you-24hr-ma-2.jpg',
     slug: 'yi-tian-zhen-de-zhi-you-24hr-ma',
@@ -644,8 +722,144 @@ const posts: TPost[] = [
     ],
   },
   {
+    shortAuthorName: '受訪者/張祥光',
+    interviewee: '張祥光（物理 87 級，第 14 屆社長）',
+    writer: '蒲思云',
+    editor: '傅喻',
+    coverUrl: '/img/posts/the-days-in-astronomy-club-1.jpg',
+    slug: 'the-days-in-astronomy-club',
+    title: '演講紀錄｜中午的約會：張祥光教授在天文社的那些日子',
+    decade: 1980,
+    recommended: false,
+    contents: [
+      {
+        type: 'image',
+        url: '/img/posts/the-days-in-astronomy-club-1.jpg',
+        description:
+          '2021年張祥光教授返回天文社分享，演講結束合照。\n第一排左三：張祥光教授',
+      },
+      {
+        type: 'paragraph',
+        text: '2021年，是清大天文五十週年！為此，社團早在年初就規劃了一系列演講，邀請曾經擔任過天文社長且目前任職於理學院的三位老師回到社團演講，這三位分別是：第14屆社長張祥光老師、賴詩萍老師和潘國全老師，分享他們大學時代在天文社的日子。',
+      },
+      {
+        type: 'paragraph',
+        text: '然而，2021年，也是 COVID-19 紛紛擾擾的一年，學期中，所有實體活動都嘎然而止，三場演講只完成了張祥光教授帶來的第一場。這唯一一場演講，就成為了五十週年社慶彌足珍貴的回憶。',
+      },
+      {
+        type: 'paragraph',
+        text: '「當初每個晴朗炙熱的中午，我就會騎上我的黑色腳踏車去天文台看黑子，中午的天文台很熱，也沒冷氣，但聽著收音機看黑子，不知為何還感覺有些浪漫......。」',
+      },
+      {
+        type: 'subtitle',
+        text: '哈雷彗星回歸',
+      },
+      {
+        type: 'paragraph',
+        text: '如本刊前一篇林富源〈當年我們一起追哈雷的日子〉，張祥光教授任職社長時，恰逢哈雷彗星即將回歸，對天文社來說是一件大事！當年教授與林富源（第12屆社長）等人組織天文社的社員辦研討會、發行專號，當時的哈雷彗星專號、社訊，這些成果和背後籌備資料至今都還被完整保存著。在教授之後接任社長的張瑋，更接力舉辦觀測活動，雖然當年哈雷回歸距離地球很遠、很暗，依然花費多任社長許多心力來迎接哈雷，至今看來都是很有意思的資料。',
+      },
+      {
+        type: 'subtitle',
+        text: '與太陽黑子的午餐約會',
+      },
+      {
+        type: 'paragraph',
+        text: '張祥光教授說，當年他心嚮清大，為的就是那座天文台，甫升上大學就立刻入社。想當年，天文台轉向還得要手動轉，雖然設備不是一流，卻已足以把他「騙」進清大、「騙」上天文研究的道路。',
+      },
+      {
+        type: 'paragraph',
+        text: '比起哈雷彗星留下了豐碩的集體記憶，其實張祥光教授回想起來，最有記憶的還是自己花了幾年時間日日上天文台觀測太陽黑子的回憶。',
+      },
+      {
+        type: 'paragraph',
+        text: '太陽黑子是太陽光球上磁場活動造成降溫而形成的斑點，因為比其他表面部分低溫，會以黑班的形式出現在光球上，通常包含比較黑的本影跟比較亮的半影。至今學界還未了解其詳細的形成機制，但很早就發現太陽黑子大約以11年為一個週期，11年內會在光球上產生數量不一的黑斑，張祥光教授觀測的年代正逢第21個黑子週。',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/the-days-in-astronomy-club-6.gif',
+        description: '蝴蝶圖；轉自 NASA',
+      },
+      {
+        type: 'paragraph',
+        text: '在張祥光教授觀測的那時候，天文社還能夠全權管理天文台，每個晴朗炙熱的中午，他會騎上他的黑色腳踏車去天文台看黑子。中午的天文台很熱，也沒冷氣，偶爾有伴，但也通常沒有，雖然條件不是最好，但一個人聽著收音機用C8看黑子，現在想來還覺得挺浪漫的。當年他全用手描點，連半影都畫，放在望遠鏡下端詳，自己手描的點竟跟投影差不多。每天配合天文蓋斗畫太陽赤道，分析當天天氣影響下的視寧度和太陽黑子的分布，並用電腦做成月報表，就是他當年的日常，更是他感到很驕傲的事。',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/the-days-in-astronomy-club-2.jpg',
+        description: '清華大學物理系刊，第十七期',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/the-days-in-astronomy-club-3.jpg',
+        description: '第十七期物理系刊中刊載的太陽黑子觀測紀錄',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/the-days-in-astronomy-club-4.jpg',
+        description: '每日黑子分布及觀測能見度月報表',
+      },
+      {
+        type: 'paragraph',
+        text: '與太陽黑子在中午約會，也讓張祥光教授覺得被看見。',
+      },
+      {
+        type: 'paragraph',
+        text: '當年，周定一教授尚未到清大任教，只是從國外回來清華給一個演講，周定一教授研究恆星，吸引張祥光教授問了好多問題，這一個舉措，又使得他被其他教授認出來：「就是常常在紀錄黑子的那個同學」，問到他觀測的狀況云云。',
+      },
+      {
+        type: 'paragraph',
+        text: '是那刻，他才發現原來有人注意到他正在做的事，且自己做的事似乎有其重要性。後來張祥光教授在清大物理系刊（第十七期）上發表自己觀測太陽黑子幾年的觀測結果。',
+      },
+      {
+        type: 'subtitle',
+        text: '那些細小的青春碎片',
+      },
+      {
+        type: 'paragraph',
+        text: '天文社似乎承包了張祥光教授大學時期很多的浪漫，在社團的那些日子，就像一疊書信躺在久未開啟的抽屜裡。今年第50屆社長傅喻去邀請張教授時，教授還笑稱自己沒什麼故事值得說，直到傅社長拿了一疊從社辦歷史資料給張教授，那些塵封的記憶才鮮活了起來，或許不是什麼非常大的事，只是大家一起在那片雙子座流星雨下喝綠豆湯，或是一起背著器材坐夜車下墾丁，但都是言語不足以完整描述的青春。',
+      },
+      {
+        type: 'paragraph',
+        text: '當年教授剛接社長的時候，組織幹訓，卻也只記得在成功嶺聯絡幹訓事宜，一下訓就背著器材跟社團幹部搭夜間火車南下墾丁，白天在墾丁睡了半天，晚上醒來觀星罷了。',
+      },
+      {
+        type: 'paragraph',
+        text: '又當年修習李怡嚴老師開設的電磁學，在期中考前一夜，他與社員躺在天文台外的屋頂看雙子座流星雨，共喝一鍋綠豆湯，在屋頂上露宿一宿之後，一早直接抓著一支筆跑下樓考電磁學。下屆幹部上任時，好像是去了巴陵幹訓，他卻不記得太多，只找到一張照片。',
+      },
+      {
+        type: 'image',
+        url: '/img/posts/the-days-in-astronomy-club-5.jpg',
+        description: '巴陵幹訓合影',
+      },
+      {
+        type: 'paragraph',
+        text: '或許那次次活動裡看了什麼，在幾十年之後不再那麼有意義，真正的寶藏，是那些很青春的故事，那些長大之後的我們沒有辦法複製，純粹的熱血和快樂。',
+      },
+      {
+        type: 'subtitle',
+        text: '再次鍍鏡',
+      },
+      {
+        type: 'paragraph',
+        text: '演講最後張祥光教授提到清大天文社早期的主力：十六吋望遠鏡，當時有卸幹的學長提議要翻修望遠鏡，張祥光教授欣然附和，接下重新鍍鏡的工作，那時他們第一次拆開一個望遠鏡。後來教授看了一些書，和校內真空蒸鍍的實驗室合作，先刮除原本的鏡漆，再透過真空蒸鍍的技術，將鏡面重新鍍上鋁，很快就完成任務了。',
+      },
+      {
+        type: 'paragraph',
+        text: '反觀社團學長們答應完成的馬達修理卻一直沒處理，但後來教授也卸幹，開始忙其他的事，漸漸淡出社團。後來教授去當兵，在部隊裡接到金升光（第17屆社長）的電話，得知在拆遷天文台過程中，發現十吋望遠鏡的鏡片不見了，此事最終也不了了之。',
+      },
+      {
+        type: 'subtitle',
+        text: '結語',
+      },
+      {
+        type: 'paragraph',
+        text: '那個聽張祥光教授分享的夜晚，歡笑頻傳，我們彷彿都被教授帶回去他記憶中的清大校園，看他記憶中最美的天文社回憶，雖然如今想來，好多回憶都已破碎，但我們仍能透過教授分享的神色感受到那股青春的悸動與熱血，藉以遙想自己在天文社的回憶，甚至是將會收穫的青春。',
+      },
+    ],
+  },
+  {
     shortAuthorName: '受訪者/秦一男',
-    interviewee: '秦一男老師',
+    interviewee: '秦一男教授',
     interviewer: '何梓華、吳沂騰',
     writer: '吳沂騰',
     editor: '何梓華、蒲思云',
@@ -766,7 +980,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '受訪者/賴詩萍',
-    interviewee: '賴詩萍老師（第21屆社長，現為清大天文所教授）',
+    interviewee: '賴詩萍（物理 93 級，第 21 屆社長，現為清大天文所教授）',
     interviewer: '何梓華、吳沂騰',
     writer: '何梓華',
     editor: '蒲思云',
@@ -899,7 +1113,7 @@ const posts: TPost[] = [
   {
     shortAuthorName: '作者/蔡柏生',
     author:
-      '蔡柏生 Tro, Skyquasar（原科96級，天文社第24屆副社長，現居聖地牙哥，任職於雲端軟體公司負責產品開發）',
+      '蔡柏生 Tro, Skyquasar（原科 96 級，第 24 屆副社長，現居聖地牙哥，任職於雲端軟體公司負責產品開發）',
     editor: '吳奕勳',
     coverUrl: '/img/posts/tian-wen-she-de-kai-fang-yu-zhuan-xing-7.jpg',
     slug: 'tian-wen-she-de-kai-fang-yu-zhuan-xing',
@@ -1121,7 +1335,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '受訪者/丘政倫',
-    interviewee: '丘政倫',
+    interviewee: '丘政倫（物理 03 級，第 31 屆社長）',
     interviewer: '何梓華、吳沂騰、傅喻',
     writer: '何梓華',
     editor: '丘政倫、蒲思云',
@@ -1356,7 +1570,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/卜宏毅',
-    author: '卜宏毅（物理03級，臺師大物理系助理教授）',
+    author: '卜宏毅（物理 03 級，現為臺師大物理系助理教授）',
     editor: '吳奕勳',
     coverUrl: '/img/posts/falling-into-you-3.jpg',
     slug: 'falling-into-you',
@@ -1443,7 +1657,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '受訪者/潘國全',
-    interviewee: '潘國全（物理04級，32屆天文社長，現為天文所助理教授）',
+    interviewee: '潘國全（物理 04 級，第 32 屆社長，現為清大天文所助理教授）',
     interviewer: '吳奕勳',
     writer: '吳奕勳',
     editor: '蒲思云、傅喻',
@@ -1514,7 +1728,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/張文軒',
-    author: '張文軒（物理11級，39屆社長，現經營宇宙浪人工作室）',
+    author: '張文軒（物理 11 級，第 39 屆社長，現經營宇宙浪人工作室）',
     editor: '吳奕勳',
     coverUrl: '/img/posts/tian-wen-she-kuo-bie-shi-nian-hui-yi-lu-6.jpg',
     slug: 'tian-wen-she-kuo-bie-shi-nian-hui-yi-lu',
@@ -1670,7 +1884,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/林聖鈞',
-    author: '林聖鈞（數學12級，40屆社長）',
+    author: '林聖鈞（數學 12 級，第 40 屆社長）',
     coverUrl: '/img/posts/na-xie-ceng-jing-de-re-xie-shi-guang-1.jpg',
     slug: 'na-xie-ceng-jing-de-re-xie-shi-guang',
     title: '回望十年前，那些曾經的熱血時光——第40屆的精采歲月',
@@ -1717,7 +1931,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/黃千祐',
-    author: '黃千祐（物理22級）',
+    author: '黃千祐（物理 22 級）',
     editor: '何梓華',
     coverUrl: '/img/posts/cong-wu-hui-dao-he-jie-1.jpg',
     slug: 'cong-wu-hui-dao-he-jie',
@@ -1769,7 +1983,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/陳可璇',
-    author: '陳可璇（材料14級，42屆社長）',
+    author: '陳可璇（材料 14 級，第 42 屆社長）',
     editor: '吳奕勳',
     coverUrl: '/img/posts/di-42-jie-de-huo-ban-yu-hui-gu-1.jpg',
     slug: 'di-42-jie-de-huo-ban-yu-hui-gu',
@@ -1811,7 +2025,7 @@ const posts: TPost[] = [
   {
     shortAuthorName: '作者/多人',
     author:
-      '吳奕勳（經濟23級）、吳冠昱（材料16級）、張瓊尹（工科22級）、傅喻（人社22級）、許正憲（物理23級）',
+      '吳冠昱（材料 16 級，第 44 屆社長）、張瓊尹（工科 22 級，第 49 屆教學）、傅喻（人社 22 級，第 50 屆社長）、許正憲（物理 23 級，第 50 屆教學）、吳奕勳（經濟 23 級，第 51 屆副社長）',
     editor: '蒲思云、傅喻',
     coverUrl: '/img/posts/qing-da-tian-wen-she-jin-kuang-su-lan-1.jpg',
     slug: 'qing-da-tian-wen-she-jin-kuang-su-lan',
@@ -2144,13 +2358,13 @@ const posts: TPost[] = [
   {
     shortAuthorName: '作者/多人',
     author:
-      '吳冠昱（罐總，材料16級）、徐安廷（徐總，電機18級）、王立宇（白總，工科21級）',
+      '吳冠昱（材料 16 級，第 44 屆社長）、徐安廷（電機 18 級，第 46 屆社長）、王立宇（工科 21 級，第 49 屆社長）',
     editor: '蒲思云',
     coverUrl: '/img/posts/the-g20-in-astronomy-club-1.jpg',
     slug: 'the-g20-in-astronomy-club',
     title: '天文社的G20高峰會 - 清華天文董事會',
     decade: 2010,
-    recommended: true,
+    recommended: false,
     contents: [
       {
         type: 'paragraph',
@@ -2209,13 +2423,14 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/多人',
-    author: '吳冠昱（材料17級）、徐安廷（電機18級）、王立宇（工科21級）',
+    author:
+      '吳冠昱（材料 16 級，第 44 屆社長）、徐安廷（電機 18 級，第 46 屆社長）、王立宇（工科 21 級，第 49 屆社長）',
     editor: '傅喻',
     coverUrl: '/img/posts/2017-total-solor-eclipse-3.jpg',
     slug: '2017-total-solor-eclipse',
     title: '2017年追逐北美日全食',
     decade: 2010,
-    recommended: true,
+    recommended: false,
     contents: [
       {
         type: 'paragraph',
@@ -2308,7 +2523,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/王立宇',
-    author: '王立宇（工科21級）',
+    author: '王立宇（工科 21 級，第 49 屆社長）',
     editor: '蒲思云',
     coverUrl: '/img/posts/jiu-si-yi-sheng-de-ye-ma-ye-chong-1.jpg',
     slug: 'jiu-si-yi-sheng-de-ye-ma-ye-chong',
@@ -2375,7 +2590,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/許正憲',
-    author: '許正憲（物理23級）',
+    author: '許正憲（物理 23 級，第 50 屆教學）',
     editor: '何梓華',
     coverUrl: '/img/posts/tian-wen-she-zhi-yu-wo-1.jpg',
     slug: 'tian-wen-she-zhi-yu-wo',
@@ -2425,7 +2640,7 @@ const posts: TPost[] = [
   {
     shortAuthorName: '作者/林彥興',
     author:
-      '林彥興（理學院21級，EASY天文地科博覽會創辦人之一，清大天文社第48屆教學長，第49屆副社長。現為清大天文所碩士生。）',
+      '林彥興（理學院 21 級，第 49 屆副社長，EASY 天文地科博覽會創辦人之一，現為清大天文所碩士生）',
     editor: '傅喻',
     coverUrl:
       '/img/posts/da-xue-sheng-zai-ke-pu-zhong-de-ke-neng-jiao-se-3.jpg',
@@ -2581,7 +2796,8 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/辛水泉',
-    author: '辛水泉（物理78級，物理所80級，現居新竹市，服務於采鈺科技公司）',
+    author:
+      '辛水泉（物理 78 級，物理所 80 級，現居新竹市，服務於采鈺科技公司）',
     editor: '傅喻',
     coverUrl:
       '/img/posts/lao-xiao-you-xin-she-yuan-guan-xing-ti-yan-fen-xiang-1.jpg',
@@ -2763,7 +2979,7 @@ const posts: TPost[] = [
   },
   {
     shortAuthorName: '作者/張家銘',
-    author: '張家銘（物理23級）',
+    author: '張家銘（物理 23 級）',
     editor: '何梓華',
     coverUrl: '/img/posts/the-outlook-of-astronomy-club-1.jpg',
     slug: 'the-outlook-of-astronomy-club',
@@ -2824,7 +3040,7 @@ const posts: TPost[] = [
   {
     shortAuthorName: '作者/林彥興',
     author:
-      '林彥興（理學院21級，EASY天文地科博覽會創辦人之一，清大天文社第48屆教學長，第49屆副社長。現為清大天文所碩士生。）',
+      '林彥興（理學院 21 級，第 49 屆副社長，EASY 天文地科博覽會創辦人之一，現為清大天文所碩士生）',
     editor: '傅喻',
     coverUrl: '/img/posts/2021-tian-wen-ling-xiu-ying-1.jpg',
     slug: '2021-tian-wen-ling-xiu-ying',

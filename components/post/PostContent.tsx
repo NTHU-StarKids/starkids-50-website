@@ -67,7 +67,11 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
               {
                 // @ts-ignore
                 content.list.map((c: string, index: number) => {
-                  return <li key={`orderList-${index}`}>{c}</li>
+                  return (
+                    <li key={`orderList-${index}`}>
+                      <SplitNewLine text={c} />
+                    </li>
+                  )
                 })
               }
             </ul>
@@ -82,7 +86,11 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
               {
                 // @ts-ignore
                 content.list.map((c: string, index: number) => {
-                  return <li key={`orderList-${index}`}>{c}</li>
+                  return (
+                    <li key={`orderList-${index}`}>
+                      <SplitNewLine text={c} />
+                    </li>
+                  )
                 })
               }
             </ol>

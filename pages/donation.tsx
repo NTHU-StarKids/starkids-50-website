@@ -14,18 +14,20 @@ type TListProps = {
 const sampleGoods = [
   {
     imageUrl: '/img/sample-good-1@4x.png',
-    name: '商品名稱商品名稱',
-    description: '商品說明商品說明商品說明商品說明商品說明商品說明商品說明',
+    name: '紀念外套',
+    description:
+      '正面為Astro字樣（刺繡），背面則為NTHU 50 AC及星球圖案（印刷）',
   },
   {
     imageUrl: '/img/sample-good-2@4x.png',
-    name: '商品名稱商品名稱',
-    description: '商品說明商品說明商品說明商品說明商品說明商品說明商品說明',
+    name: '紀念酒杯組',
+    description: '三入一組，限量150組',
   },
   {
     imageUrl: '/img/sample-good-3@4x.png',
-    name: '商品名稱商品名稱',
-    description: '商品說明商品說明商品說明商品說明商品說明商品說明商品說明',
+    name: '50週年紀念社刊',
+    description:
+      '內容收錄了歷屆許多社友們的投稿及社團現況，帶我們一探天文社半世紀以來的軌跡！',
   },
 ]
 

@@ -403,7 +403,7 @@ const posts: TPost[] = [
         type: 'image',
         url: '/img/posts/gei-she-you-men-de-tu-wen-ji-2.jpg',
         description:
-          '楊錫欽學長年少模樣，與清華大學早年校景，1971年攝於清華就圖書館前',
+          '楊錫欽學長年少模樣，與清華大學早年校景，1971年攝於清華舊圖書館前',
       },
       {
         type: 'image',

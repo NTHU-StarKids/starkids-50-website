@@ -202,7 +202,7 @@ export default function HomePage(): JSX.Element {
   return (
     <Layout title="首頁">
       <AnniversarySection />
-      <CarouselSection slides={slides} link="history" />
+      <CarouselSection slides={slides} link="posts" />
       <AboutUsSection />
     </Layout>
   )

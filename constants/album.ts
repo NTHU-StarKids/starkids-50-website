@@ -36,6 +36,7 @@ export const dailies: TAlbumImage[] = [
     title: '2020 夏至日環食行跡',
     parameters:
       'Date: Jun. 21st, 2020\nLocation: Sanxiantai, Taitung, Taiwan\nCamera:Canon EOS 5DIII\nLens: Canon EF 24-105mm f/4L IS USM\nFocal Length: 30mm\nAperture: f/8\nISO: 200\nPhoto Editor: Photoshop',
+    position: 'bg-bottom',
   },
   {
     imgUrl: '/img/album/daily-picks-5.jpg',

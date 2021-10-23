@@ -94,6 +94,7 @@ type TAlbumImage = {
   author?: string
   title?: string
   parameters?: string
+  position?: string
 }
 
 type TAlbumCategory = {

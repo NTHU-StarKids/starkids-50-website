@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import dayjs from 'dayjs'
 import { sha256 } from 'js-sha256'
 import Link from 'next/link'
@@ -50,7 +50,9 @@ const DailySection = (): JSX.Element => {
     <>
       <Section className="pt-0 pb-6">
         <div
-          className="relative w-full h-80 lg:h-96 bg-center bg-cover cursor-pointer"
+          className={`relative w-full h-80 lg:h-96 ${
+            picture.portrait ? picture.position : 'bg-center'
+          } bg-cover cursor-pointer`}
           style={{ backgroundImage: `url('${picture.imgUrl}')` }}
           onClick={() => setIsOpen(true)}
         >
@@ -60,46 +62,78 @@ const DailySection = (): JSX.Element => {
           </div>
         </div>
       </Section>
-      <Transition
-        show={isOpen}
-        enter="transition duration-100 ease-out"
-        enterFrom="transform scale-95 opacity-0"
-        enterTo="transform scale-100 opacity-100"
-        leave="transition duration-75 ease-out"
-        leaveFrom="transform scale-100 opacity-100"
-        leaveTo="transform scale-95 opacity-0"
-      >
+      <Transition show={isOpen} as={Fragment}>
         <Dialog
           open={isOpen}
           onClose={() => setIsOpen(false)}
           className="fixed z-50 inset-0 overflow-y-auto"
         >
           <div className="flex items-center justify-center min-h-screen">
-            <Dialog.Overlay className="fixed inset-0 bg-black opacity-50" />
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Dialog.Overlay className="fixed inset-0 bg-black opacity-50" />
+            </Transition.Child>
 
-            <div className="relative bg-gray-700 text-white rounded-2xl w-5/6 mx-auto my-20 px-4 py-12 tracking-wider">
-              <p className="text-xl text-center mb-6 cursor-default select-none">
-                {picture.title}
-              </p>
-              <div className="w-full sm:w-5/6 md:w-4/5 lg:w-2/3 mx-auto">
-                <img src={picture.imgUrl} className="mb-4" />
-                <p>作者：{picture.author}</p>
-                <p className="mb-4">
-                  說明：<br></br>
-                  <SplitNewLine
-                    className="font-light"
-                    text={picture.description}
-                  />
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-90"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-90"
+            >
+              <div className="relative bg-gray-700 text-white rounded-2xl w-5/6 mx-auto my-20 px-4 pt-4 pb-12 tracking-wider">
+                <div
+                  className="hamburger-btn open float-right"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <p className="text-xl text-center mb-6 cursor-default select-none">
+                  {picture.title}
                 </p>
-                <p className="mb-4">
-                  拍攝參數：<br></br>
-                  <SplitNewLine
-                    className="font-light tracking-wide"
-                    text={picture.parameters}
+                <div
+                  className={`w-full ${
+                    picture.portrait
+                      ? 'sm:w-2/3 md:w-7/12 lg:w-2/5'
+                      : 'sm:w-5/6 md:w-4/5 lg:w-2/3'
+                  } mx-auto`}
+                >
+                  <img
+                    src={picture.imgUrl}
+                    alt={picture.title}
+                    className="mb-6"
                   />
-                </p>
+                </div>
+                <div className={`w-full sm:w-5/6 md:w-4/5 lg:w-2/3 mx-auto`}>
+                  <p className="mb-2">作者：{picture.author}</p>
+                  <p className="mb-4">
+                    說明：<br></br>
+                    <SplitNewLine
+                      className="font-light"
+                      text={picture.description}
+                    />
+                  </p>
+                  <p className="mb-4">
+                    拍攝參數：<br></br>
+                    <SplitNewLine
+                      className="font-light tracking-wide"
+                      text={picture.parameters}
+                    />
+                  </p>
+                </div>
               </div>
-            </div>
+            </Transition.Child>
           </div>
         </Dialog>
       </Transition>

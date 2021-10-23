@@ -1,8 +1,10 @@
+import { Fragment, useState } from 'react'
 import Error from 'next/error'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { Dialog, Transition } from '@headlessui/react'
 
 import { H3 } from '@/components/Headings'
 import P from '@/components/Paragraph'
@@ -21,56 +23,134 @@ const CategorySection = ({
   nextCategory,
   prevCategory,
 }: TProps): JSX.Element => {
+  const initImage: TAlbumImage = {
+    imgUrl: '',
+    description: '',
+    portrait: false,
+  }
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [image, setImage] = useState<TAlbumImage>(initImage)
+  const prviewImage = (img: TAlbumImage) => {
+    if (window.innerWidth >= 640) {
+      setImage(img)
+      setIsOpen(true)
+    }
+  }
+
   return (
-    <Section className="pb-20">
-      <div className="flex justify-center items-center">
-        <Link href={`/album/${prevCategory.slug}`} passHref>
-          <a title={prevCategory.name}>
-            <FontAwesomeIcon
-              icon={faAngleLeft}
-              className="w-2.5 mr-8 text-gray-300 hover:text-white cursor-pointer"
-              fixedWidth
-            />
-          </a>
-        </Link>
-        <H3 className="cursor-default select-none">{category.name}</H3>
-        <Link href={`/album/${nextCategory.slug}`} passHref>
-          <a title={nextCategory.name}>
-            <FontAwesomeIcon
-              icon={faAngleRight}
-              className="w-2.5 ml-7 text-gray-300 hover:text-white cursor-pointer"
-              fixedWidth
-            />
-          </a>
-        </Link>
-      </div>
+    <>
+      <Section className="pb-20">
+        <div className="flex justify-center items-center">
+          <Link href={`/album/${prevCategory.slug}`} passHref>
+            <a title={prevCategory.name}>
+              <FontAwesomeIcon
+                icon={faAngleLeft}
+                className="w-2.5 mr-8 text-gray-300 hover:text-white cursor-pointer"
+                fixedWidth
+              />
+            </a>
+          </Link>
+          <H3 className="cursor-default select-none">{category.name}</H3>
+          <Link href={`/album/${nextCategory.slug}`} passHref>
+            <a title={nextCategory.name}>
+              <FontAwesomeIcon
+                icon={faAngleRight}
+                className="w-2.5 ml-7 text-gray-300 hover:text-white cursor-pointer"
+                fixedWidth
+              />
+            </a>
+          </Link>
+        </div>
 
-      <div className="mt-12">
-        <P>{category.description}</P>
-      </div>
+        <div className="mt-12">
+          <P>{category.description}</P>
+        </div>
 
-      <div className="mt-8 grid gap-x-4 gap-y-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {category.images.map((image, index) => {
-          return (
-            <div key={`image-${index}`}>
-              <div
-                className={`${
-                  image.portrait ? 'w-full sm:w-2/3 sm:mx-auto' : 'w-full'
-                } rounded-xl overflow-hidden`}
-                style={{ backgroundImage: `url('${image.imgUrl}')` }}
-              >
-                <img
-                  src={image.imgUrl}
-                  className="w-full"
-                  alt={image.description}
-                />
+        <div className="mt-8 grid gap-x-4 gap-y-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {category.images.map((image, index) => {
+            return (
+              <div key={`image-${index}`}>
+                <div
+                  className={`${
+                    image.portrait ? 'w-full sm:w-2/3 sm:mx-auto' : 'w-full'
+                  } rounded-xl overflow-hidden cursor-default sm:cursor-pointer`}
+                  style={{ backgroundImage: `url('${image.imgUrl}')` }}
+                  onClick={() => prviewImage(image)}
+                >
+                  <img
+                    src={image.imgUrl}
+                    className="w-full"
+                    alt={image.description}
+                  />
+                </div>
+                <p className="mt-2">{image.description}</p>
               </div>
-              <p className="mt-2">{image.description}</p>
-            </div>
-          )
-        })}
-      </div>
-    </Section>
+            )
+          })}
+        </div>
+      </Section>
+
+      <Transition show={isOpen} as={Fragment}>
+        <Dialog
+          open={isOpen}
+          onClose={() => setIsOpen(false)}
+          className="fixed z-50 inset-0 overflow-y-auto"
+        >
+          <div className="flex items-center justify-center min-h-screen">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Dialog.Overlay className="fixed inset-0 bg-black opacity-50" />
+            </Transition.Child>
+
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-90"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-90"
+            >
+              <div className="relative bg-gray-700 text-white rounded-2xl w-5/6 mx-auto my-20 px-4 pt-4 pb-12 tracking-wider">
+                <div
+                  className="hamburger-btn open float-right"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                {image.description && (
+                  <p className="text-lg text-center ml-6 mb-4">
+                    {image.description}
+                  </p>
+                )}
+                <div
+                  className={`w-full ${
+                    image.portrait
+                      ? 'sm:w-2/3 md:w-7/12 lg:w-2/5'
+                      : 'sm:w-5/6 md:w-4/5 lg:w-2/3'
+                  } mx-auto`}
+                >
+                  <img
+                    src={image.imgUrl}
+                    alt={image.description}
+                    className="mb-6 mx-auto"
+                  />
+                </div>
+              </div>
+            </Transition.Child>
+          </div>
+        </Dialog>
+      </Transition>
+    </>
   )
 }
 

@@ -62,6 +62,7 @@ const DailySection = (): JSX.Element => {
           </div>
         </div>
       </Section>
+
       <Transition show={isOpen} as={Fragment}>
         <Dialog
           open={isOpen}

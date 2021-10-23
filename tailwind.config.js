@@ -65,6 +65,9 @@ module.exports = {
         'purple-600': purple600,
         'purple-700': purple700,
       },
+      cursor: {
+        'zoom-in': 'zoom-in',
+      },
       width: {
         ...extendWidthHeight,
       },

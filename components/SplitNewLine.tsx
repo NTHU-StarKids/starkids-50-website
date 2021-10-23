@@ -1,12 +1,13 @@
 type TProps = {
   text: string
+  className?: string
 }
 
-const SplitNewLine = ({ text }: TProps): JSX.Element => {
+const SplitNewLine = ({ text, className }: TProps): JSX.Element => {
   const split_text = text.split('\n')
 
   return (
-    <>
+    <span className={className}>
       {split_text.map((str, index) => {
         if (index == split_text.length + 1)
           return <span key={`text-${index}`}>{str}</span>
@@ -17,7 +18,7 @@ const SplitNewLine = ({ text }: TProps): JSX.Element => {
           </span>
         )
       })}
-    </>
+    </span>
   )
 }
 

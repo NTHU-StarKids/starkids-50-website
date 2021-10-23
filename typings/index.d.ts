@@ -91,6 +91,9 @@ type TAlbumImage = {
   imgUrl: string
   description: string
   portrait: boolean
+  author?: string
+  title?: string
+  parameters?: string
 }
 
 type TAlbumCategory = {

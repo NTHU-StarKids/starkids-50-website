@@ -13,7 +13,7 @@ const purple500 = '#8683FF'
 const purple300 = '#B6B5FF'
 const purple100 = '#F8F7FD'
 
-const extendHeight = {
+const extendWidthHeight = {
   92: '23rem',
   100: '25rem',
   104: '26rem',
@@ -65,12 +65,15 @@ module.exports = {
         'purple-600': purple600,
         'purple-700': purple700,
       },
+      width: {
+        ...extendWidthHeight,
+      },
       height: {
-        ...extendHeight,
+        ...extendWidthHeight,
       },
       maxHeight: {
         '2x-screen': '200vh',
-        ...extendHeight,
+        ...extendWidthHeight,
       },
       transitionProperty: {
         'max-height': 'max-height',

@@ -1,11 +1,14 @@
+import { useState } from 'react'
 import dayjs from 'dayjs'
 import { sha256 } from 'js-sha256'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { Dialog, Transition } from '@headlessui/react'
 
 import { H2, H3 } from '@/components/Headings'
 import P from '@/components/Paragraph'
 import Section from '@/components/Section'
+import SplitNewLine from '@/components/SplitNewLine'
 import Layout from '@/components/Layout'
 import { dailies, categories } from '@/constants/album'
 
@@ -41,19 +44,66 @@ const TitleSection = (): JSX.Element => {
 
 const DailySection = (): JSX.Element => {
   const picture = getDailyPicture()
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   return (
-    <Section className="pt-0 pb-6">
-      <div
-        className="relative w-full h-80 lg:h-96 bg-center bg-cover"
-        style={{ backgroundImage: `url('${picture.imgUrl}')` }}
-      >
-        <div className="absolute bottom-0 w-full px-6 py-4 bg-gray-900 bg-opacity-40 text-white cursor-default select-none">
-          <H3 className="mb-1 truncate">每日精選</H3>
-          <P>{picture.description}</P>
+    <>
+      <Section className="pt-0 pb-6">
+        <div
+          className="relative w-full h-80 lg:h-96 bg-center bg-cover cursor-pointer"
+          style={{ backgroundImage: `url('${picture.imgUrl}')` }}
+          onClick={() => setIsOpen(true)}
+        >
+          <div className="absolute bottom-0 w-full px-6 py-4 bg-gray-900 bg-opacity-40 text-white cursor-default select-none">
+            <H3 className="mb-1 truncate">每日精選</H3>
+            <P>{picture.title}</P>
+          </div>
         </div>
-      </div>
-    </Section>
+      </Section>
+      <Transition
+        show={isOpen}
+        enter="transition duration-100 ease-out"
+        enterFrom="transform scale-95 opacity-0"
+        enterTo="transform scale-100 opacity-100"
+        leave="transition duration-75 ease-out"
+        leaveFrom="transform scale-100 opacity-100"
+        leaveTo="transform scale-95 opacity-0"
+      >
+        <Dialog
+          open={isOpen}
+          onClose={() => setIsOpen(false)}
+          className="fixed z-50 inset-0 overflow-y-auto"
+        >
+          <div className="flex items-center justify-center min-h-screen">
+            <Dialog.Overlay className="fixed inset-0 bg-black opacity-50" />
+
+            <div className="relative bg-gray-700 text-white rounded-2xl w-5/6 mx-auto my-20 px-4 py-12 tracking-wider">
+              <p className="text-xl text-center mb-6 cursor-default select-none">
+                {picture.title}
+              </p>
+              <div className="w-full sm:w-5/6 md:w-4/5 lg:w-2/3 mx-auto">
+                <img src={picture.imgUrl} className="mb-4" />
+                <p>作者：{picture.author}</p>
+                <p className="mb-4">
+                  說明：<br></br>
+                  <SplitNewLine
+                    className="font-light"
+                    text={picture.description}
+                  />
+                </p>
+                <p className="mb-4">
+                  拍攝參數：<br></br>
+                  <SplitNewLine
+                    className="font-light tracking-wide"
+                    text={picture.parameters}
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+    </>
   )
 }
 

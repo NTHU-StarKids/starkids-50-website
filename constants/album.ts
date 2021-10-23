@@ -1,28 +1,111 @@
 export const dailies: TAlbumImage[] = [
   {
-    imgUrl: '/img/album-1@4x.png',
-    description: '照片說明照片說明照片說明照片說明照片說明',
+    imgUrl: '/img/album/daily-picks-1.jpg',
+    description:
+      '二年級下學期修了清大物理系開的「基礎天文觀測」課程，老師、助教和八位修課同學到鹿林天文台實作，完成作業之後的長長閒暇時間，我就和跨校來修課的前交大天文社長楊順嘉到戶外拍銀河。\n在他等待相機曝那幾百張銀河的時間裡，我們到處走來走去，我以為鹿林的隱僻應足以遠離一切光害，沒想到，在某個可以遠眺的角落，遠方人煙聚居的沃土燈火依稀，天文人向來嫌棄光害，但那天晚上，我欣喜於天上與人間的光芒同時在我們眼底熠熠。',
     portrait: false,
+    author: '傅喻',
+    title: '天上與人間同時在我們眼底熠熠',
+    parameters: 'Canon PowerShot G7 X',
   },
   {
-    imgUrl: '/img/album-2@4x.png',
-    description: '照片說明照片說明照片說明照片說明照片說明',
+    imgUrl: '/img/album/daily-picks-2.jpg',
+    description:
+      '二年級下學期修了清大物理系開的「基礎天文觀測」課程，托這門課程的福，有幸能夠去鹿林天文台住上幾晚。聽說在我們來之前，天文台這一帶飄了雨，的確，走起路還可以感受到兩旁花草漉漉。\n感謝陳文心助教借我鏡頭，以及饒佩書學姊對我的作品給予滿滿稱讚，當我們一起去拍星星，就會有很多可愛的回憶。',
     portrait: false,
+    author: '傅喻',
+    title: '微雨後的暗夜，我們一起去拍星星',
+    parameters: 'Canon EOS 760D',
   },
   {
-    imgUrl: '/img/album-3@4x.png',
-    description: '照片說明照片說明照片說明照片說明照片說明',
+    imgUrl: '/img/album/daily-picks-3.jpg',
+    description:
+      '這張是用台灣最大口徑的望遠鏡，鹿林天文台LOT拍攝的窄頻影像。主要拍攝Hα以及OIII波段，透過影像處理合成而製，這裡我使用HOO假色合成，因此圖片中紅色為Hα波段的光，綠色及藍色則為OIII，可以由此看見蟹狀星雲中氣體的分布情形。',
     portrait: false,
+    author: '張家銘',
+    title: 'M1 超新星殘骸－蟹狀星雲',
+    parameters:
+      '13張 600s Hα, 13張 600s OIII, Dark, Flat, Bias 各十張, 拍攝日期：2020/11/22 03:00~05:00',
   },
   {
-    imgUrl: '/img/album-4@4x.png',
-    description: '照片說明照片說明照片說明照片說明照片說明',
-    portrait: false,
+    imgUrl: '/img/album/daily-picks-4.jpg',
+    description:
+      '每張照片背後，都有一個故事。\n故事描述著一群人，原先為了避開人潮想去台東池上，但利用氣象資料 & 高中地科知識 & 反三角函數 & Stellarium，在理性的驅使下改去更沒問題的三仙台 XD 又在海邊巨石上現地場勘、早九插旗卡位與烈陽下的等待，三台單眼相機頂著幾個小時二三十幾度的高溫，順利完成不同的任務，其中最 M 的那位，又花了四個多小時時間，整理照片 & 嘗試各種不同配色、修圖、排版，才產出這張滿意的作品！',
+    portrait: true,
+    author: '徐安廷',
+    title: '2020 夏至日環食行跡',
+    parameters:
+      'Date: Jun. 21st, 2020\nLocation: Sanxiantai, Taitung, Taiwan\nCamera:Canon EOS 5DIII\nLens: Canon EF 24-105mm f/4L IS USM\nFocal Length: 30mm\nAperture: f/8\nISO: 200\nPhoto Editor: Photoshop',
   },
   {
-    imgUrl: '/img/album-5@4x.png',
-    description: '照片說明照片說明照片說明照片說明照片說明',
+    imgUrl: '/img/album/daily-picks-5.jpg',
+    description:
+      '火鳥星雲位在獵戶座腰帶下方，作為眾多天文攝影入門者的首選，是個相當好練習的目標之一。\n社團自 2010 年初期，即開始整備儀器武力，嘗試拍攝火鳥星雲。\n歷經多年的器材升級，以及拍攝完的後製能力提升，終在 46 屆幹部努力下，拍攝出令人滿意且感動的生動火鳥！',
     portrait: false,
+    author: '徐安廷',
+    title: 'M42火鳥星雲 & NGC1977跑步者星雲',
+    parameters:
+      'Date: Jan. 19th, 2017\nLocation: Tataka, Nantou, Taiwan\nMount: Takahashi EM200 Temma 2M\nTelescope: Takahashi FC-100H\nCamera: Canon EOS 60D(mod.) + QHY-5LII\nExposure Time: 1hr57min\nISO: 1600\nPhoto Editor: Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-6.jpg',
+    description:
+      '馬頭星雲不知道為甚麼怎麼拍都拍不好⋯⋯\n無論是儀器出問題還是人為出問題，到現在為止就是沒有一組好的馬頭照可以好好後製。這張照片在邊緣的地方似乎因為平場的關係，所以全部都呈現詭異的顏色，只好裁切掉大多數的部分啦QQ\n到底甚麼時候才可以拍好馬頭啊!!!',
+    portrait: false,
+    author: '林上景',
+    title: '再一次災難的馬頭',
+    parameters:
+      'Date : 2021/02/08\nMount :EM-200\nTelescope :R200SS\nCamera :Nikon D810\nExposure Time :300s* 24\nISO1600\nDark*20 / Flat*10 / Bias*20\nDeepSkyStacker / Photoshop cc',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-7.jpg',
+    description:
+      '這張照片拍攝使用清大天文台望遠鏡——全台最大的折射式望遠鏡，影像顯示出相當多的月面細節；同時也提高了飽和度，以顯示出月表成分的不同。',
+    portrait: false,
+    author: '楊順嘉',
+    title: '弦月',
+    parameters:
+      '清大天文台showa 25cm折射鏡、QHY174c\n12 frames mosaic，120sec per frame',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-8.jpg',
+    description:
+      '在玫瑰星雲中心，有星團輻射出強烈的太陽風，使星雲被吹出了一個大洞。 ',
+    portrait: false,
+    author: '楊順嘉',
+    title: '玫瑰星雲',
+    parameters:
+      'NEQ6pro、fs-102、QHY8L、AMP50mm、QHY5l-ii-m, gain:53 offset:128   300secx24@-10C w/ dark flat bias',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-9.jpg',
+    description:
+      '『在黑暗廣袤的宇宙中，我隻身漂流千年，直至閃耀如星的你劃破寂靜而降臨。 謝謝你曾帶給我的光和熱，即使….我們終將告別。』\n即使到了下半場，也就是日落前後才能觀測的時段，這顆彗星的魅力依舊不減反增，而高山上的的低度光害又更佳地突顯了祂的雄偉。回想起當天日落後，在架設儀器中一個不經意地抬頭，就猛然地看到那西北方地平線上幾乎有15°以上的彗髮，當下的感動實在無以言喻！\n另外，回家疊圖後才發現，恰好有拍到彗星旁的一顆小星系NGC3198，彗髮的大對比星系的小，縱使星系的實際大小遠遠不是彗星所能比擬的，算是個相當有趣的組合！',
+    portrait: false,
+    author: '王立宇',
+    title: 'Neowise 與 NGC3198',
+    parameters:
+      'Skywatcher EQ6-R Pro, WO GT-102 + Flat 68lll, Nikon D800(mod.) ; ISO 1600, 120s*3 ; edited with PS ; 2020/07/22 @合歡山昆陽停車場',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-10.jpg',
+    description:
+      '『光子一點一滴的累積，紅色、青色、藍色，黯淡的薄紗緩緩浮現，若隱若現地，飄逸在天鵝的面前。』\n天鵝座環是一個位於天鵝座的巨大超新星殘骸，在天空中的視角達到3°之廣，但因為其表面亮度較低，所以相較於其他夏季明亮的星雲來說不易觀測與拍攝。\n影像左右明亮的絲狀結構就是俗稱的西/東面紗星雲，其中紅色的部分來自H-alpha與SII，而青藍色則來自於OIII。',
+    portrait: false,
+    author: '王立宇',
+    title: '天鵝的薄紗',
+    parameters:
+      'Skywatcher EQ6-R Pro, WO GT-102 + Flat 68lll, QHY mini guiding scope + QHY-5ll, QHY PoleMaster, Nikon D800(mod.) ; ISO 800, 300s*57(5 frame mosaic), w/ dark, flat, bias ; edited with DSS, PS, StarNet++ ; 2020/07/22-23 @合歡山昆陽停車場',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-11.jpg',
+    description:
+      '『星空的航海家「威廉･赫歇爾」，乘著名為望遠鏡的小船，發現了2000光年外，漂蕩在黑暗塵埃上的那片新大陸。』\n北美洲星雲是一個位在天津四附近的電離氫區，由18世紀著名的天文學家「威廉･赫歇爾」所發現，由於其形狀酷似北美洲而得名。\n 其豔麗的紅色來自於星雲中大量的游離氫，而其深邃的黑色則是暗星雲阻擋了後方的星星與星雲的光線。這張影像在去除星點後，能夠更加清楚地看到發射星雲與塵埃的結構。',
+    portrait: false,
+    author: '王立宇、吳家頡',
+    title: '「威廉･赫歇爾」發現的新大陸',
+    parameters:
+      'Skywatcher EQ6-R Pro, WO GT-102 + Flat6A ll, QHY mini guiding scope + QHY 5ll, QHY PoleMaster + Canon EOS 5DII(mod.) ; ISO 800, 300s*21, w/ dark, flat, bias ; edited with DSS, PS, StarNet++ ; 2019/09/02 @新竹縣五峰鄉野馬農園',
   },
 ]
 

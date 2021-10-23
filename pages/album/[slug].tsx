@@ -118,17 +118,22 @@ const CategorySection = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-90"
             >
-              <div className="relative bg-gray-700 text-white rounded-2xl w-5/6 mx-auto my-20 px-4 pt-4 pb-12 tracking-wider">
-                <div
-                  className="hamburger-btn open float-right"
+              <div
+                className={`relative bg-gray-700 text-white rounded-2xl w-5/6 mx-auto my-20 px-4 pt-4 ${
+                  image.description ? 'pb-12' : ''
+                } tracking-wider`}
+              >
+                <button
+                  className="hamburger-btn open float-right outline-none focus:outline-none"
                   onClick={() => setIsOpen(false)}
                 >
                   <span></span>
                   <span></span>
                   <span></span>
-                </div>
+                </button>
+
                 {image.description && (
-                  <p className="text-lg text-center ml-6 mb-4">
+                  <p className="text-lg font-light text-center mb-4 px-12">
                     {image.description}
                   </p>
                 )}
@@ -142,7 +147,7 @@ const CategorySection = ({
                   <img
                     src={image.imgUrl}
                     alt={image.description}
-                    className="mb-6 mx-auto"
+                    className="mb-4 mx-auto"
                   />
                 </div>
               </div>

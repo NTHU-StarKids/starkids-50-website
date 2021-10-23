@@ -92,15 +92,16 @@ const DailySection = (): JSX.Element => {
               leaveTo="opacity-0 scale-90"
             >
               <div className="relative bg-gray-700 text-white rounded-2xl w-5/6 mx-auto my-20 px-4 pt-4 pb-12 tracking-wider">
-                <div
-                  className="hamburger-btn open float-right"
+                <button
+                  className="hamburger-btn open float-right outline-none focus:outline-none"
                   onClick={() => setIsOpen(false)}
                 >
                   <span></span>
                   <span></span>
                   <span></span>
-                </div>
-                <p className="text-xl text-center mb-6 cursor-default select-none">
+                </button>
+
+                <p className="text-xl text-center mb-6 px-12 cursor-default select-none">
                   {picture.title}
                 </p>
                 <div

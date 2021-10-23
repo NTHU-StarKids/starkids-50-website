@@ -384,7 +384,7 @@ export const categories: TAlbumCategory[] = [
     images: [
       {
         imgUrl: '/img/album/night-out-01.jpg',
-        description: '2017 台大x清大天文夜衝',
+        description: '2017 清大x台大天文夜衝',
         portrait: false,
       },
       {

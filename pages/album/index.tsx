@@ -50,8 +50,8 @@ const DailySection = (): JSX.Element => {
     <>
       <Section className="pt-0 pb-6">
         <div
-          className={`relative w-full h-80 lg:h-96 ${
-            picture.portrait ? picture.position : 'bg-center'
+          className={`relative w-full h-80 lg:h-96 xl:h-112 2xl:h-128 ${
+            picture.position ? picture.position : 'bg-center'
           } bg-cover cursor-pointer`}
           style={{ backgroundImage: `url('${picture.imgUrl}')` }}
           onClick={() => setIsOpen(true)}

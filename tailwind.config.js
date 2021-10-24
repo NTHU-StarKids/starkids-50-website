@@ -78,6 +78,9 @@ module.exports = {
         '2x-screen': '200vh',
         ...extendWidthHeight,
       },
+      maxWidth: {
+        'screen-xs': '480px',
+      },
       transitionProperty: {
         'max-height': 'max-height',
       },

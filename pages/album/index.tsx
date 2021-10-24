@@ -114,7 +114,7 @@ const DailySection = (): JSX.Element => {
                   <img
                     src={picture.imgUrl}
                     alt={picture.title}
-                    className="mb-6"
+                    className="mb-6 rounded-2xl"
                   />
                 </div>
                 <div className={`w-full sm:w-5/6 md:w-4/5 lg:w-2/3 mx-auto`}>

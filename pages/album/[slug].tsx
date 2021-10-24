@@ -147,7 +147,7 @@ const CategorySection = ({
                   <img
                     src={image.imgUrl}
                     alt={image.description}
-                    className="mb-4 mx-auto"
+                    className="mb-4 mx-auto rounded-2xl"
                   />
                 </div>
               </div>

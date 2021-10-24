@@ -56,7 +56,7 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
                 <img
                   // @ts-ignore
                   src={content.url}
-                  className="rounded-xl mx-auto sm:max-h-96 w-full sm:w-auto md:max-w-screen-md cursor-default sm:cursor-pointer"
+                  className="rounded-xl mx-auto w-full sm:w-auto sm:max-w-screen-xs md:max-w-screen-sm sm:max-h-112 cursor-default sm:cursor-pointer"
                   // @ts-ignore
                   alt={content.description}
                   // @ts-ignore
@@ -168,7 +168,7 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
                   <img
                     src={image.url}
                     alt={image.description}
-                    className="mb-4 mx-auto"
+                    className="mb-4 mx-auto rounded-2xl"
                   />
                 </div>
               </div>

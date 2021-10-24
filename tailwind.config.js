@@ -11,7 +11,8 @@ const purple700 = '#38364e'
 const purple600 = '#6562BF'
 const purple500 = '#8683FF'
 const purple300 = '#B6B5FF'
-const purple100 = '#F8F7FD'
+const purple100 = '#E7E6FF'
+const purple50 = '#F8F7FD'
 
 const extendWidthHeight = {
   92: '23rem',
@@ -59,6 +60,7 @@ module.exports = {
         'gray-650': gray650,
         'gray-700': gray700,
         'gray-900': gray900,
+        'purple-50': purple50,
         'purple-100': purple100,
         'purple-300': purple300,
         'purple-500': purple500,

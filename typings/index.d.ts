@@ -104,3 +104,9 @@ type TAlbumCategory = {
   description: string
   images: TAlbumImage[]
 }
+
+type TDiary = {
+  sn: string
+  duration: string
+  url: string
+}

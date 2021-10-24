@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Range, getTrackBackground } from 'react-range'
 
 import { CABINETS } from '@/constants'
+import { diaries } from '@/constants/diaries'
 import posts from '@/constants/historyPosts'
 import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
@@ -56,7 +57,7 @@ const CabinetSection = (): JSX.Element => {
     <Section className="pt-0">
       <H2>歷屆幹部</H2>
       <div className="flex justify-center">
-        <div className="bg-purple-100 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-scroll">
+        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-scroll">
           <H3 className="text-purple-600 cursor-default select-none">
             {cabinet.name}
             <span className="ml-2 tracking-wider">
@@ -175,6 +176,57 @@ const CabinetSection = (): JSX.Element => {
   )
 }
 
+const DiarySection = (): JSX.Element => {
+  return (
+    <Section>
+      <H2>歷年社誌</H2>
+      <P className="mb-4">
+        的是這樣的男我到的話能不能，小心那個人常感謝。演的不可當然，所以來發，可能就是到
+      </P>
+      <P className="mb-4 font-light">【限時開放】</P>
+      <div className="flex justify-center">
+        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-4 md:px-8 lg:px-14 py-4 overflow-scroll">
+          <table className="table-fixed text-purple-600 font-light tracking-wider w-full mt-4 text-sm sm:text-base">
+            <thead className="mb-2 border-purple-100 border-b">
+              <tr>
+                <th className="w-1/6 font-normal pb-2">編號</th>
+                <th className="w-2/3 font-normal pb-2">期間</th>
+                <th className="w-1/6 font-normal pb-2">連結</th>
+              </tr>
+            </thead>
+
+            <tbody className="text-black">
+              {diaries.map((diary, index) => {
+                return (
+                  <tr key={`diary-${index}`}>
+                    <td className="w-1/6 py-2">{diary.sn}</td>
+                    <td className="w-2/3 p-2">{diary.duration}</td>
+                    <td className="w-1/6">
+                      <a
+                        href={`https://drive.google.com/file/d/${Buffer.from(
+                          diary.url,
+                          'base64'
+                        )}/view`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          src="/img/rounded-arrow@4x.png"
+                          className="w-6 mx-auto align-middle"
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </Section>
+  )
+}
+
 const EventsSection = (): JSX.Element => {
   return (
     <Section>
@@ -189,6 +241,7 @@ export default function HistoryPage(): JSX.Element {
     <Layout title="社團歷史">
       <OriginSection />
       <CabinetSection />
+      <DiarySection />
       <EventsSection />
     </Layout>
   )

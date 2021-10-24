@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 type Props = {
   children?: ReactNode
   className?: string
-  color?: 'default' | 'white' | 'purple-700' | 'purple-100'
+  color?: 'default' | 'white' | 'purple-700' | 'purple-50'
 }
 
 const Section = ({
@@ -19,8 +19,8 @@ const Section = ({
     case 'purple-700':
       colorClass = 'bg-purple text-white'
       break
-    case 'purple-100':
-      colorClass = 'bg-purple-100 text-black'
+    case 'purple-50':
+      colorClass = 'bg-purple-50 text-black'
       break
     default:
       colorClass = 'bg-gray-700 text-white'

@@ -41,7 +41,7 @@ const AnniversarySection = (): JSX.Element => {
 const AboutUsSection = (): JSX.Element => {
   const [showForm, setShowForm] = useState<boolean>(false)
   return (
-    <Section color="purple-100">
+    <Section color="purple-50">
       <Container>
         <H2>關於我們</H2>
         <P className="mb-4">

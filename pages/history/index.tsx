@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Range, getTrackBackground } from 'react-range'
 
 import { CABINETS } from '@/constants'
-import { diaries } from '@/constants/diaries'
+// import { diaries } from '@/constants/diaries'
 import Container from '@/components/Container'
 import posts from '@/constants/historyPosts'
 import { H2, H3 } from '@/components/Headings'
@@ -217,6 +217,7 @@ const DiarySection = (): JSX.Element => {
         </P>
       </Container>
 
+      {/*
       <P className="mb-4 font-light">【限時開放】</P>
       <div className="flex justify-center">
         <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 px-0.5 py-2 rounded-xl overflow-hidden">
@@ -259,6 +260,7 @@ const DiarySection = (): JSX.Element => {
           </div>
         </div>
       </div>
+      */}
     </Section>
   )
 }

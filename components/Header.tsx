@@ -10,8 +10,8 @@ const Header = (): JSX.Element => {
 
   return (
     <header
-      className="shadow-md fixed top-0 w-full bg-gray-700 bg-opacity-70 z-50 select-none"
-      style={{ backdropFilter: 'blur(5px)' }}
+      className="shadow-md fixed top-0 w-full bg-gray-700 bg-opacity-75 z-50 select-none"
+      style={{ backdropFilter: 'blur(5px)', WebkitBackdropFilter: 'blur(5px)' }}
     >
       <nav className="flex items-center justify-between px-8 h-12">
         <div className="flex items-center text-2xl gap-x-3">

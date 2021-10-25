@@ -19,7 +19,7 @@ type TListProps = {
   goods: TGoods[]
 }
 
-const sampleGoods: TGoods[] = [
+const goods: TGoods[] = [
   {
     imageUrl: '/img/goods-1.jpg',
     imageDetailUrl: '/img/goods-2.jpg',
@@ -243,7 +243,7 @@ export default function DonationPage(): JSX.Element {
   return (
     <Layout title="贊助我們">
       <DonationSection />
-      <GoodsSection goods={sampleGoods} />
+      <GoodsSection goods={goods} />
     </Layout>
   )
 }

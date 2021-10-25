@@ -15,6 +15,7 @@ const purple100 = '#E7E6FF'
 const purple50 = '#F8F7FD'
 
 const extendWidthHeight = {
+  88: '22rem',
   92: '23rem',
   100: '25rem',
   104: '26rem',

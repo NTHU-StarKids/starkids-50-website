@@ -236,15 +236,15 @@ const ChatSection = ({
                 disabled ? 'opacity-0' : 'opacity-100'
               }`}
             >
-              <div
-                className={`absolute bottom-0 w-full max-h-92 sm:max-h-108 md:max-h-124 lg:max-h-140 xl:max-h-156 2xl:max-h-176 flex flex-col gap-4 px-2 pb-3 pt-6 lg:p-4 overflow-y-scroll`}
-              >
-                {messageGroups.map((messageGroup, index) => (
-                  <MessageGroup
-                    key={`messageGroup-${index}`}
-                    {...messageGroup}
-                  />
-                ))}
+              <div className="absolute bottom-0 w-full px-0.5 pt-2 pb-1 overflow-hidden">
+                <div className="w-full max-h-88 sm:max-h-104 md:max-h-120 lg:max-h-136 xl:max-h-152 2xl:max-h-172 flex flex-col gap-4 px-2 pb-3 pt-6 lg:p-4 overflow-x-hidden overflow-y-scroll">
+                  {messageGroups.map((messageGroup, index) => (
+                    <MessageGroup
+                      key={`messageGroup-${index}`}
+                      {...messageGroup}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -285,7 +285,7 @@ const ChatSection = ({
                 </div>
                 <div className="relative flex justify-between gap-1 w-full h-9 bg-white rounded-full pl-3.5 pr-0.5 overflow-hidden">
                   <div
-                    className="w-full overflow-y-scroll"
+                    className="w-full no-scrollbar overflow-y-scroll"
                     style={{ marginTop: '0.4rem' }}
                   >
                     <textarea

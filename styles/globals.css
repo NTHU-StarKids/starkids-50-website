@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+  left: -100px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 4px;
+}
+
+/* scrollbar itself */
+::-webkit-scrollbar-thumb {
+  background-color: #858585;
+  background-clip: padding-box;
+  border-radius: 4px;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* set button(top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
 textarea {
   resize: none;
 }

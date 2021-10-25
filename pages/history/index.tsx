@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Range, getTrackBackground } from 'react-range'
 
 import { CABINETS } from '@/constants'
-// import { diaries } from '@/constants/diaries'
+import { diaries } from '@/constants/diaries'
 import Container from '@/components/Container'
 import posts from '@/constants/historyPosts'
 import { H2, H3 } from '@/components/Headings'
@@ -77,38 +77,44 @@ const CabinetSection = (): JSX.Element => {
     <Section className="pt-0">
       <H2>歷屆幹部</H2>
       <div className="flex justify-center">
-        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-x-hidden overflow-y-scroll">
-          <H3 className="text-purple-600 cursor-default select-none">
-            {cabinet.name}
-            <span className="ml-2 tracking-wider">
-              (
-              {cabinet.age
-                ? `${foundYear + cabinet.age - 1} ~ ${foundYear + cabinet.age}`
-                : foundYear}
-              )
-            </span>
-          </H3>
-          <table className="text-black font-light tracking-wider w-full mt-4 text-left text-sm sm:text-base">
-            <tbody>
-              {cabinet.positions.map((people, index) => {
-                return (
-                  <tr key={`cabinet-${index}`}>
-                    <td className="p-2 w-20 lg:w-28 xl:w-32 2xl:w-36">
-                      {people.name}
-                    </td>
-                    <td
-                      className={`p-2${cabinet.age != 0 ? '' : ' text-right'}`}
-                    >
-                      {people.department}
-                    </td>
-                    {cabinet.age != 0 ? (
-                      <td className="p-2 text-right">{people.position}</td>
-                    ) : null}
-                  </tr>
+        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 px-0.5 py-2 rounded-xl overflow-hidden">
+          <div className="bg-purple-50 w-full h-full rounded-xl px-6 md:px-10 lg:px-14 py-6 overflow-x-hidden overflow-y-scroll">
+            <H3 className="text-purple-600 cursor-default select-none">
+              {cabinet.name}
+              <span className="ml-2 tracking-wider">
+                (
+                {cabinet.age
+                  ? `${foundYear + cabinet.age - 1} ~ ${
+                      foundYear + cabinet.age
+                    }`
+                  : foundYear}
                 )
-              })}
-            </tbody>
-          </table>
+              </span>
+            </H3>
+            <table className="text-black font-light tracking-wider w-full mt-4 text-left text-sm sm:text-base">
+              <tbody>
+                {cabinet.positions.map((people, index) => {
+                  return (
+                    <tr key={`cabinet-${index}`}>
+                      <td className="p-2 w-20 lg:w-28 xl:w-32 2xl:w-36">
+                        {people.name}
+                      </td>
+                      <td
+                        className={`p-2${
+                          cabinet.age != 0 ? '' : ' text-right'
+                        }`}
+                      >
+                        {people.department}
+                      </td>
+                      {cabinet.age != 0 ? (
+                        <td className="p-2 text-right">{people.position}</td>
+                      ) : null}
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
@@ -211,48 +217,48 @@ const DiarySection = (): JSX.Element => {
         </P>
       </Container>
 
-      {/*
       <P className="mb-4 font-light">【限時開放】</P>
       <div className="flex justify-center">
-        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-4 md:px-8 lg:px-14 py-4 overflow-x-hidden overflow-y-scroll">
-          <table className="table-fixed text-purple-600 font-light tracking-wider w-full mt-4 text-sm sm:text-base">
-            <thead className="mb-2 border-purple-100 border-b">
-              <tr>
-                <th className="w-1/6 font-normal pb-2">編號</th>
-                <th className="w-2/3 font-normal pb-2">期間</th>
-                <th className="w-1/6 font-normal pb-2">連結</th>
-              </tr>
-            </thead>
+        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 px-0.5 py-2 rounded-xl overflow-hidden">
+          <div className="bg-purple-50 w-full h-full rounded-xl px-6 md:px-10 lg:px-14 py-6 overflow-x-hidden overflow-y-scroll">
+            <table className="table-fixed text-purple-600 font-light tracking-wider w-full mt-4 text-sm sm:text-base">
+              <thead className="mb-2 border-purple-100 border-b">
+                <tr>
+                  <th className="w-1/6 font-normal pb-2">編號</th>
+                  <th className="w-2/3 font-normal pb-2">期間</th>
+                  <th className="w-1/6 font-normal pb-2">連結</th>
+                </tr>
+              </thead>
 
-            <tbody className="text-black">
-              {diaries.map((diary, index) => {
-                return (
-                  <tr key={`diary-${index}`}>
-                    <td className="w-1/6 py-2">{diary.sn}</td>
-                    <td className="w-2/3 p-2">{diary.duration}</td>
-                    <td className="w-1/6">
-                      <a
-                        href={`https://drive.google.com/file/d/${Buffer.from(
-                          diary.url,
-                          'base64'
-                        )}/view`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src="/img/rounded-arrow@4x.png"
-                          className="w-6 mx-auto align-middle"
-                        />
-                      </a>
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
+              <tbody className="text-black">
+                {diaries.map((diary, index) => {
+                  return (
+                    <tr key={`diary-${index}`}>
+                      <td className="w-1/6 py-2">{diary.sn}</td>
+                      <td className="w-2/3 p-2">{diary.duration}</td>
+                      <td className="w-1/6">
+                        <a
+                          href={`https://drive.google.com/file/d/${Buffer.from(
+                            diary.url,
+                            'base64'
+                          )}/view`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <img
+                            src="/img/rounded-arrow@4x.png"
+                            className="w-6 mx-auto align-middle"
+                          />
+                        </a>
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-      */}
     </Section>
   )
 }

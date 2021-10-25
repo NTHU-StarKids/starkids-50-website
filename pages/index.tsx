@@ -195,7 +195,7 @@ const AboutUsSection = (): JSX.Element => {
           </div>
 
           <P className="mt-6 text-gray-600">
-            詳細辦理規劃將於11月初以電子郵件寄發。<br></br>
+            詳細辦理規劃將於11月中前以電子郵件寄發。<br></br>
             任何問題請聯絡天文社信箱：nthu.astro@gmail.com
           </P>
         </div>

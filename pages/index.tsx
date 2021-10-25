@@ -137,7 +137,7 @@ const AboutUsSection = (): JSX.Element => {
 
                 <P className="mt-4 my-2">社慶當天是否到場？</P>
 
-                <div className="my-2">
+                <div className="mt-2 mb-4">
                   <div className="flex items-center my-2">
                     <input
                       type="radio"
@@ -163,6 +163,24 @@ const AboutUsSection = (): JSX.Element => {
                     <P className="mx-2">不克前來</P>
                   </div>
                 </div>
+
+                <input
+                  type="number"
+                  name="family_member"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
+                  min={0}
+                  max={15}
+                  placeholder="同行家屬人數"
+                  autoComplete="off"
+                />
+
+                <textarea
+                  name="suggestion"
+                  className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
+                  placeholder="任何想對現在的天文社說的話"
+                  autoComplete="off"
+                  rows={5}
+                />
 
                 <div className="flex justify-center mt-12">
                   <div

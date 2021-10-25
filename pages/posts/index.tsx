@@ -25,7 +25,7 @@ const PostsSection = (): JSX.Element => {
     <Section>
       <H2 className="mt-4 mb-12">社友來稿</H2>
       <Tab.Group defaultIndex={defaultTab} onChange={onTabChange}>
-        <Tab.List className="sm:border-b-4 border-purple-600 mb-10 flex flex-wrap gap-2 justify-center sm:justify-between">
+        <Tab.List className="sm:border-b-4 border-purple-600 mb-10 lg:mx-16 flex flex-wrap gap-2 justify-center sm:justify-between">
           {decades.map((year) => {
             return (
               <Tab as={Fragment} key={`tab-${year}`}>

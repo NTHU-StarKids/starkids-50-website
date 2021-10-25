@@ -383,23 +383,23 @@ export const categories: TAlbumCategory[] = [
       '夜衝是天文社最隨意的觀測活動，也是天文觀測靠天吃飯的最佳證明。可能因天氣預報決定上山，幾小時後便已就定位、準備拍攝；可能沒帶任何望遠鏡，鋁墊一鋪，靠著一雙肉眼欣賞滿天星子。',
     images: [
       {
+        imgUrl: '/img/album/night-out-03.jpg',
+        description: '2002 新樂，pentax 加上機車的夜衝',
+        portrait: false,
+      },
+      {
         imgUrl: '/img/album/night-out-01.jpg',
         description: '2017 清大x台大天文夜衝',
         portrait: false,
       },
       {
         imgUrl: '/img/album/night-out-02.jpg',
-        description: '2018 野馬農園夜衝之FLT-132開光',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/night-out-03.jpg',
-        description: '2002 新樂，pentax加上機車的夜衝',
+        description: '2018 野馬農園夜衝之 FLT-132 開光',
         portrait: false,
       },
       {
         imgUrl: '/img/album/night-out-04.jpg',
-        description: '寶二水庫與雙子座流星雨',
+        description: '2018 寶二水庫與雙子座流星雨',
         portrait: false,
       },
     ],
@@ -412,29 +412,30 @@ export const categories: TAlbumCategory[] = [
       '撼動人心的天文現象一直是天文社追逐的目標之一，即便有時路途遙遠，仍有些人舟車勞頓只為那一剎那。曾經荒廢的天文台在天文所賴詩萍教授和陳文心的努力下，再一次展露風華，不久的將來，也許天文台也會成為天文社拍攝重要天文奇景的一項工具吧。',
     images: [
       {
-        imgUrl: '/img/album/astro-event-01.jpg',
-        description: '2017 天文社有群瘋子遠赴北美，只為了一張日冕照片',
-        portrait: false,
-      },
-      {
         imgUrl: '/img/album/astro-event-03.jpg',
         description: '2003 水星從太陽前面經過',
         portrait: false,
       },
+      {
+        imgUrl: '/img/album/astro-event-02.jpg',
+        description: '2012 驚鴻一瞥，下次見到便是2117年了',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/astro-event-01.jpg',
+        description: '2017 天文社有群瘋子遠赴北美，只為了一張日冕照片',
+        portrait: false,
+      },
+
       {
         imgUrl: '/img/album/astro-event-05.jpg',
         description: '2018 猩紅血月',
         portrait: false,
       },
       {
-        imgUrl: '/img/album/astro-event-02.jpg',
-        description: '2012 驚鴻一瞥，下次見到便是2117年了',
-        portrait: true,
-      },
-      {
-        imgUrl: '/img/album/astro-event-04.jpg',
-        description: '2020 夏至日環食',
-        portrait: true,
+        imgUrl: '/img/album/astro-event-07.jpg',
+        description: '2019 物館天文台重新啟用，在這裡舉辦天文日',
+        portrait: false,
       },
       {
         imgUrl: '/img/album/astro-event-06.jpg',
@@ -442,9 +443,9 @@ export const categories: TAlbumCategory[] = [
         portrait: false,
       },
       {
-        imgUrl: '/img/album/astro-event-07.jpg',
-        description: '2019 物館天文台重新啟用，在這裡舉辦天文日',
-        portrait: false,
+        imgUrl: '/img/album/astro-event-04.jpg',
+        description: '2020 夏至日環食',
+        portrait: true,
       },
     ],
   },
@@ -648,18 +649,8 @@ export const categories: TAlbumCategory[] = [
       '社課及演講天文社最定期的活動之一。社課讓社員學習基礎的天文知識，演講則邀請天文界知名人士作經驗分享；學習完基本的知識後，後續也提供更進階及實作的課程。2020年更開設工作坊傳承天文攝影的技術。',
     images: [
       {
-        imgUrl: '/img/album/courses-and-speeches-01.jpg',
-        description: '2020 劉志安老師演講：梅西爾馬拉松活動介紹與經驗分享',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/courses-and-speeches-02.jpg',
-        description: '2020 顏鴻選演講：看星星的人',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/courses-and-speeches-03.jpg',
-        description: '2019 社課：望遠鏡',
+        imgUrl: '/img/album/courses-and-speeches-14.jpg',
+        description: '2007 社課',
         portrait: false,
       },
       {
@@ -668,8 +659,23 @@ export const categories: TAlbumCategory[] = [
         portrait: false,
       },
       {
+        imgUrl: '/img/album/courses-and-speeches-15.jpg',
+        description: '2013 社課',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/courses-and-speeches-16.jpg',
+        description: '2016 社課：望遠鏡',
+        portrait: false,
+      },
+      {
         imgUrl: '/img/album/courses-and-speeches-05.jpg',
         description: '2016 聯合社課：狄密特的星空',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/courses-and-speeches-12.jpg',
+        description: '2017 天文、自保社聯合社課',
         portrait: false,
       },
       {
@@ -683,8 +689,33 @@ export const categories: TAlbumCategory[] = [
         portrait: false,
       },
       {
+        imgUrl: '/img/album/courses-and-speeches-11.jpg',
+        description: '2019 歐伯昇演講：天文社怎麼玩',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/courses-and-speeches-03.jpg',
+        description: '2019 社課：望遠鏡',
+        portrait: false,
+      },
+      {
         imgUrl: '/img/album/courses-and-speeches-08.jpg',
         description: '2019 潘國全教授演講：超新星與多信使天文學',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/courses-and-speeches-13.jpg',
+        description: '2019 社課：系外行星',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/courses-and-speeches-01.jpg',
+        description: '2020 劉志安老師演講：梅西爾馬拉松活動介紹與經驗分享',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/courses-and-speeches-02.jpg',
+        description: '2020 顏鴻選演講：看星星的人',
         portrait: false,
       },
       {
@@ -695,36 +726,6 @@ export const categories: TAlbumCategory[] = [
       {
         imgUrl: '/img/album/courses-and-speeches-10.jpg',
         description: '2020 社課：宇宙論',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/courses-and-speeches-11.jpg',
-        description: '2019 歐伯昇演講：天文社怎麼玩',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/courses-and-speeches-12.jpg',
-        description: '2017 天文、自保社聯合社課',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/courses-and-speeches-13.jpg',
-        description: '2019 社課：系外行星',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/courses-and-speeches-14.jpg',
-        description: '2007 社課',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/courses-and-speeches-15.jpg',
-        description: '2013 社課',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/courses-and-speeches-16.jpg',
-        description: '2016 社課：望遠鏡',
         portrait: false,
       },
     ],
@@ -846,6 +847,11 @@ export const categories: TAlbumCategory[] = [
         portrait: false,
       },
       {
+        imgUrl: '/img/album/reunion-and-play-14.jpg',
+        description: '2011 11級送舊',
+        portrait: false,
+      },
+      {
         imgUrl: '/img/album/reunion-and-play-05.jpg',
         description: '2012 中秋火鍋+神永生日 (你很勇ㄟ)',
         portrait: false,
@@ -858,6 +864,11 @@ export const categories: TAlbumCategory[] = [
       {
         imgUrl: '/img/album/reunion-and-play-07.jpg',
         description: '2015 社聚',
+        portrait: false,
+      },
+      {
+        imgUrl: '/img/album/reunion-and-play-15.jpg',
+        description: '2017 台大清大夜衝 (大老出現',
         portrait: false,
       },
       {
@@ -888,16 +899,6 @@ export const categories: TAlbumCategory[] = [
       {
         imgUrl: '/img/album/reunion-and-play-13.jpg',
         description: '2020 社慶 (好好吃~~',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/reunion-and-play-14.jpg',
-        description: '2011 11級送舊',
-        portrait: false,
-      },
-      {
-        imgUrl: '/img/album/reunion-and-play-15.jpg',
-        description: '2017 台大清大夜衝 (大老出現',
         portrait: false,
       },
     ],

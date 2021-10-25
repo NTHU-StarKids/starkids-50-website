@@ -9,7 +9,10 @@ const Header = (): JSX.Element => {
   const router = useRouter()
 
   return (
-    <header className="shadow-md fixed top-0 w-full bg-gray-700 z-50 select-none">
+    <header
+      className="shadow-md fixed top-0 w-full bg-gray-700 bg-opacity-70 z-50 select-none"
+      style={{ backdropFilter: 'blur(5px)' }}
+    >
       <nav className="flex items-center justify-between px-8 h-12">
         <div className="flex items-center text-2xl gap-x-3">
           <img src="/img/logo.png" className="w-12" alt="清大天文社 Logo" />

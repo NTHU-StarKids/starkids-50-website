@@ -271,7 +271,7 @@ const ChatSection = ({
               </div>
 
               <div className="w-full h-full flex flex-col gap-2 pl-1 md:pl-2">
-                <div className="w-3/4 sm:w-1/2 h-9 bg-white rounded-full px-3.5 overflow-hidden">
+                <div className="w-full sm:w-1/2 h-9 bg-white rounded-full px-3.5 overflow-hidden">
                   <input
                     type="text"
                     className="form-input w-full h-full px-0 rounded placeholder-gray-400 text-black tracking-wider border-none outline-none focus:ring-0 focus:ring-transparent"

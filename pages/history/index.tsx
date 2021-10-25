@@ -77,7 +77,7 @@ const CabinetSection = (): JSX.Element => {
     <Section className="pt-0">
       <H2>歷屆幹部</H2>
       <div className="flex justify-center">
-        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-scroll">
+        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-6 md:px-10 lg:px-14 py-8 overflow-x-hidden overflow-y-scroll">
           <H3 className="text-purple-600 cursor-default select-none">
             {cabinet.name}
             <span className="ml-2 tracking-wider">
@@ -200,19 +200,21 @@ const DiarySection = (): JSX.Element => {
   return (
     <Section>
       <H2>歷年社誌</H2>
-      <P className="mb-4">
-        1980
-        年起，社誌成為社員們駐足於社窩時，讓幹部、社員撰寫意見或抒發心情的紙本平台，四十餘年的時間，累積百本的社誌數量，默默記錄著這些年社團的種種稗官野史。2017
-        年底新購買的掃描機加入，催生當時社員逐步掃描社誌建檔想法的實踐，電子化後的社誌，除了能永久保存外，更能讓歷屆社員們不再受限於物理距離的限制，得以在線上倒轉回每本社誌撰寫時的青澀時光～
-      </P>
-      <P className="mb-4">
-        ※ 社誌電子檔連結清單將於 50 年社慶日前後公布，敬請期待！
-      </P>
+      <Container>
+        <P className="mb-4">
+          1980
+          年起，社誌成為社員們駐足於社窩時，讓幹部、社員撰寫意見或抒發心情的紙本平台，四十餘年的時間，累積百本的社誌數量，默默記錄著這些年社團的種種稗官野史。2017
+          年底新購買的掃描機加入，催生當時社員逐步掃描社誌建檔想法的實踐，電子化後的社誌，除了能永久保存外，更能讓歷屆社員們不再受限於物理距離的限制，得以在線上倒轉回每本社誌撰寫時的青澀時光～
+        </P>
+        <P className="mb-4">
+          ※ 社誌電子檔連結清單將於 50 年社慶日前後公布，敬請期待！
+        </P>
+      </Container>
 
       {/*
       <P className="mb-4 font-light">【限時開放】</P>
       <div className="flex justify-center">
-        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-4 md:px-8 lg:px-14 py-4 overflow-scroll">
+        <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-4 md:px-8 lg:px-14 py-4 overflow-x-hidden overflow-y-scroll">
           <table className="table-fixed text-purple-600 font-light tracking-wider w-full mt-4 text-sm sm:text-base">
             <thead className="mb-2 border-purple-100 border-b">
               <tr>

@@ -71,6 +71,7 @@ type TPost = {
 
 type TGoods = {
   imageUrl: string
+  imageDetailUrl: string
   name: string
   description: string
 }

@@ -101,7 +101,7 @@ const DailySection = (): JSX.Element => {
                   <span></span>
                 </button>
 
-                <p className="text-xl text-center mb-6 px-12 cursor-default select-none">
+                <p className="text-xl text-center mb-6 px-12 tracking-wider cursor-default select-none">
                   {picture.title}
                 </p>
                 <div

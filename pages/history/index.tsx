@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { Range, getTrackBackground } from 'react-range'
 
 import { CABINETS } from '@/constants'
-import { diaries } from '@/constants/diaries'
+// import { diaries } from '@/constants/diaries'
+import Container from '@/components/Container'
 import posts from '@/constants/historyPosts'
 import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
@@ -14,13 +15,32 @@ const OriginSection = (): JSX.Element => {
   return (
     <Section>
       <H2>緣起</H2>
-      <P className="mb-4">
-        的是這樣的男我到的話能不能，小心那個人常感謝。演的不可當然，所以來發，可能就是到還，的感覺大概是一個，給媽媽於是：是這樣也好想的遺言。記得是給後，最近式的的衣吃了我直接你們的，以不想回家我就來出現了雖，個時候他就是本時間了。
-      </P>
-      <P className="mb-4">可以時間。</P>
-      <P className="mb-8">
-        但在的不真的是了個大小，不知道了兩難以的話說聖誕老⋯覺得我一直交給，大概手遊多還沒。
-      </P>
+      <Container>
+        <P className="mb-4">
+          西元 1971 年 8
+          月初，丘宏義教授帶領鄧延璋、沈采蘋、陳昱寧、徐魁森等學長姐籌備磨製 16
+          吋卡式望遠鏡，至同年 11 月底 16
+          吋鏡全部架設調整完畢，為當時全國口徑最大之望遠鏡。同月底 29 日晚上 7
+          點於清華大學物理館舉行天文社成立大會，天文社正式宣告成立，並由物理 74
+          級鄧延璋學長出任第一屆社長。
+        </P>
+        <P className="mb-4">
+          走過五十個年頭的天文社，曾經或現任社員已累積數百數千人之多，不少學長姊仍然致力於天文相關領域，如沈采蘋學姊、秦一男學長、金升光學長、蘇裕農學長等等在天文界皆享有盛名，而現任社團指導老師
+          - 賴詩萍學姊，以及前任指導老師 -
+          張祥光學長，不僅是現任清大物理系教授，也分別是本社第 21 屆及第 14
+          屆社長。
+        </P>
+        <P className="mb-4">
+          社窩（社團辦公室）位置經過不斷的搬遷，從最早的舊物理館頂樓天文台，1990
+          年舊物理館拆除，舊天文台夷為平地，暫遷至衛生中心二樓（即保健室樓上），後來經歷過學生活動中心
+          510、507、02，到 2003 年遷進目前所在的活中 318
+          社窩，經過學長姊及社員們的改造和維護，溫暖且生活機能充足的活中 318
+          已成為近幾年社員的重要聚集地及回憶。
+        </P>
+        <P className="mb-8">
+          如今，五十年的經驗傳承、溫暖的社窩、數架社員一同籌措資金的主力望遠鏡、完整的章程組織架構，以及滿櫃子的觀測資料和書籍，全都記錄著我們一同寫下的歷史篇章。期許年復一年，這份追逐星光的熱情、分享璀璨夜空的感動，能持續不斷壯大散播出去！
+        </P>
+      </Container>
     </Section>
   )
 }
@@ -181,8 +201,15 @@ const DiarySection = (): JSX.Element => {
     <Section>
       <H2>歷年社誌</H2>
       <P className="mb-4">
-        的是這樣的男我到的話能不能，小心那個人常感謝。演的不可當然，所以來發，可能就是到
+        1980
+        年起，社誌成為社員們駐足於社窩時，讓幹部、社員撰寫意見或抒發心情的紙本平台，四十餘年的時間，累積百本的社誌數量，默默記錄著這些年社團的種種稗官野史。2017
+        年底新購買的掃描機加入，催生當時社員逐步掃描社誌建檔想法的實踐，電子化後的社誌，除了能永久保存外，更能讓歷屆社員們不再受限於物理距離的限制，得以在線上倒轉回每本社誌撰寫時的青澀時光～
       </P>
+      <P className="mb-4">
+        ※ 社誌電子檔連結清單將於 50 年社慶日前後公布，敬請期待！
+      </P>
+
+      {/*
       <P className="mb-4 font-light">【限時開放】</P>
       <div className="flex justify-center">
         <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 rounded-xl px-4 md:px-8 lg:px-14 py-4 overflow-scroll">
@@ -223,6 +250,7 @@ const DiarySection = (): JSX.Element => {
           </table>
         </div>
       </div>
+      */}
     </Section>
   )
 }

@@ -6,6 +6,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import Container from '@/components/Container'
 import { H2, H3 } from '@/components/Headings'
 import Section from '@/components/Section'
+import SplitNewLine from '@/components/SplitNewLine'
 import Layout from '@/components/Layout'
 import P from '@/components/Paragraph'
 
@@ -20,24 +21,35 @@ type TListProps = {
 
 const sampleGoods: TGoods[] = [
   {
-    imageUrl: '/img/sample-good-1@4x.png',
-    imageDetailUrl: '/img/sample-good-1@4x.png',
-    name: '紀念外套',
+    imageUrl: '/img/goods-1.jpg',
+    imageDetailUrl: '/img/goods-2.jpg',
+    title: '紀念外套',
+    name: '紀念外套（750 元／件）',
     description:
-      '正面為 Astro 字樣（刺繡），背面則為 NTHU 50 AC 及星球圖案（印刷）',
+      '正面為 Astro 字樣（刺繡），背面則為 NTHU 50 AC 及星球圖案（印刷），底色為藏青色，材質為 50% 的棉與 50% 的聚酯纖維(微鋪棉)。如欲訂購數量超過 5 件請於下方說明尺寸及數量。',
   },
   {
-    imageUrl: '/img/sample-good-2@4x.png',
-    imageDetailUrl: '/img/sample-good-2@4x.png',
-    name: '紀念酒杯組',
-    description: '三入一組，限量 150 組',
-  },
-  {
-    imageUrl: '/img/sample-good-3@4x.png',
-    imageDetailUrl: '/img/sample-good-3@4x.png',
-    name: '50週年紀念社刊',
+    imageUrl: '/img/goods-5.jpg',
+    imageDetailUrl: '/img/goods-6.jpg',
+    title: '50 週年紀念社刊',
+    name: '50 週年紀念社刊（250 元／本）',
     description:
       '內容收錄了歷屆許多社友們的投稿及社團現況，帶我們一探天文社半世紀以來的軌跡！',
+  },
+  {
+    imageUrl: '/img/goods-3.jpg',
+    imageDetailUrl: '/img/goods-3.jpg',
+    title: '紀念酒杯組',
+    name: '紀念酒杯組（350 元／組）',
+    description:
+      'shot 杯，有天文的注音及天文社三字。三入一組，限量150組\n※紀念酒杯組因圖案為貼紙，不建議以熱水大力搓洗',
+  },
+  {
+    imageUrl: '/img/goods-4.jpg',
+    imageDetailUrl: '/img/goods-4.jpg',
+    title: '吊飾鑰匙圈',
+    name: '吊飾鑰匙圈（100元／個）',
+    description: '立體吊飾，為金屬材質，大小約預計為40*40*5mm',
   },
 ]
 
@@ -61,7 +73,7 @@ const DonationSection = (): JSX.Element => {
 
       <div className="flex justify-center">
         <a
-          href="https://forms.gle/2p6FQF2zy1dJhbe47"
+          href="https://forms.gle/cXPhuc5uu6nt77n98"
           target="_blank"
           rel="noreferrer"
         >
@@ -90,7 +102,7 @@ const Goods = ({ good, onClickGood }: TProps): JSX.Element => {
         style={{ backgroundImage: `url('${good.imageUrl}')` }}
       ></div>
       <div className="w-full px-4 lg:px-8 py-4 text-left select-none">
-        <H3 className="mb-1 text-center truncate">{good.name}</H3>
+        <H3 className="mb-1 text-center truncate">{good.title}</H3>
         <p
           className="text-center font-light tracking-wider overflow-hidden w-full h-20 leading-7"
           style={{ textOverflow: 'ellipsis' }}
@@ -107,6 +119,7 @@ const GoodsSection = ({ goods }: TListProps): JSX.Element => {
     imageUrl: '',
     imageDetailUrl: '',
     name: '',
+    title: '',
     description: '',
   }
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -147,7 +160,7 @@ const GoodsSection = ({ goods }: TListProps): JSX.Element => {
 
         <div className="flex justify-center mt-8">
           <a
-            href="https://forms.gle/vfnkwg7rJj3ahDaXA"
+            href="https://forms.gle/5YM8UP3HQ8YdbN916"
             target="_blank"
             rel="noreferrer"
           >
@@ -214,7 +227,7 @@ const GoodsSection = ({ goods }: TListProps): JSX.Element => {
                     className="mb-4 mx-auto rounded-2xl"
                   />
                   <p className="text-lg font-light text-center mb-4 px-12">
-                    {good.description}
+                    <SplitNewLine text={good.description} />
                   </p>
                 </div>
               </div>

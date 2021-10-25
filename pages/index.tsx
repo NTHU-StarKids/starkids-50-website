@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronRight,
   faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons'
 
+import { signup } from '@/api'
 import CarouselSection from '@/components/CarouselSection'
 import Container from '@/components/Container'
 import { H2, H3 } from '@/components/Headings'
@@ -40,6 +41,67 @@ const AnniversarySection = (): JSX.Element => {
 
 const AboutUsSection = (): JSX.Element => {
   const [showForm, setShowForm] = useState<boolean>(false)
+
+  // form variables
+  type TSignupForm = {
+    name: string
+    department: string
+    identity: string
+    email: string
+    phone: string
+    attendence: string
+    familyMember: string
+    suggestion: string
+  }
+
+  const initSignupForm: TSignupForm = {
+    name: '',
+    department: '',
+    identity: '',
+    email: '',
+    phone: '',
+    attendence: '參加（臺灣）',
+    familyMember: '',
+    suggestion: '',
+  }
+
+  const [checked, setChecked] = useState<boolean>(false)
+  const [signupForm, setSignupForm] = useState<TSignupForm>(initSignupForm)
+
+  const validateForm = () => {
+    const emailRegex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if (
+      signupForm.name &&
+      signupForm.department &&
+      signupForm.identity &&
+      signupForm.email &&
+      emailRegex.test(signupForm.email) &&
+      signupForm.attendence &&
+      signupForm.familyMember != undefined &&
+      signupForm.familyMember != ''
+    ) {
+      setChecked(true)
+    } else {
+      setChecked(false)
+    }
+  }
+
+  const onInputChange = (key: string, value: string) => {
+    setSignupForm((prev) => ({ ...prev, [key]: value }))
+  }
+
+  const submit = async () => {
+    if (checked) {
+      await signup(signupForm)
+      setSignupForm(initSignupForm)
+    }
+  }
+
+  useEffect(() => {
+    validateForm()
+  }, [signupForm])
+
   return (
     <Section color="purple-50">
       <Container>
@@ -48,7 +110,9 @@ const AboutUsSection = (): JSX.Element => {
           動手做　要有中國的科學自信！<br></br>用腦想　培育蒼穹的浩瀚心胸！
         </P>
         <P className="mb-8">
-          歲月如白駒過隙，倏然即逝，今年終於來到了我們清大天文社創立的50週年，我們將於臺灣時間11/27（六）擴大舉辦50週年社慶，並與美國連線同步直播，在此敬邀各位海內外的社友們回來共襄盛舉，一同歡慶這值得紀念的一刻。
+          歲月如白駒過隙，倏然即逝，今年終於來到了我們清大天文社創立的 50
+          週年，我們將於臺灣時間 11/27（六）擴大舉辦 50
+          週年社慶，並與美國連線同步直播，在此敬邀各位海內外的社友們回來共襄盛舉，一同歡慶這值得紀念的一刻。
         </P>
       </Container>
 
@@ -98,41 +162,51 @@ const AboutUsSection = (): JSX.Element => {
                 <input
                   type="text"
                   name="name"
+                  value={signupForm.name}
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="姓名"
                   autoComplete="off"
+                  onChange={(e) => onInputChange('name', e.target.value)}
                 />
 
                 <input
                   type="text"
                   name="department"
+                  value={signupForm.department}
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="系級（xx系xx級）"
                   autoComplete="off"
+                  onChange={(e) => onInputChange('department', e.target.value)}
                 />
 
                 <input
                   type="text"
                   name="identity"
+                  value={signupForm.identity}
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="社內身份"
                   autoComplete="off"
+                  onChange={(e) => onInputChange('identity', e.target.value)}
                 />
 
                 <input
                   type="email"
                   name="email"
+                  value={signupForm.email}
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="電子信箱"
                   autoComplete="off"
+                  onChange={(e) => onInputChange('email', e.target.value)}
                 />
 
                 <input
                   type="text"
                   name="phone"
+                  value={signupForm.phone}
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="聯絡電話"
                   autoComplete="off"
+                  onChange={(e) => onInputChange('phone', e.target.value)}
                 />
 
                 <P className="mt-4 my-2">社慶當天是否到場？</P>
@@ -142,7 +216,12 @@ const AboutUsSection = (): JSX.Element => {
                     <input
                       type="radio"
                       name="attendence"
+                      value="參加（臺灣）"
                       className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
+                      checked={signupForm.attendence == '參加（臺灣）'}
+                      onChange={(e) =>
+                        onInputChange('attendence', e.target.value)
+                      }
                     />
                     <P className="mx-2">參加（臺灣）</P>
                   </div>
@@ -150,7 +229,12 @@ const AboutUsSection = (): JSX.Element => {
                     <input
                       type="radio"
                       name="attendence"
+                      value="參加（美國）"
                       className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
+                      checked={signupForm.attendence == '參加（美國）'}
+                      onChange={(e) =>
+                        onInputChange('attendence', e.target.value)
+                      }
                     />
                     <P className="mx-2">參加（美國）</P>
                   </div>
@@ -158,7 +242,12 @@ const AboutUsSection = (): JSX.Element => {
                     <input
                       type="radio"
                       name="attendence"
+                      value="不克前來"
                       className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
+                      checked={signupForm.attendence == '不克前來'}
+                      onChange={(e) =>
+                        onInputChange('attendence', e.target.value)
+                      }
                     />
                     <P className="mx-2">不克前來</P>
                   </div>
@@ -166,26 +255,36 @@ const AboutUsSection = (): JSX.Element => {
 
                 <input
                   type="number"
-                  name="family_member"
+                  name="familyMember"
+                  value={signupForm.familyMember}
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   min={0}
                   max={15}
                   placeholder="同行家屬人數"
                   autoComplete="off"
+                  onChange={(e) =>
+                    onInputChange('familyMember', e.target.value)
+                  }
                 />
 
                 <textarea
                   name="suggestion"
+                  value={signupForm.suggestion}
                   className="w-full my-2 px-4 py-2 font-light tracking-wide ring-offset-2 border-2 border-purple-600 rounded text-black focus:outline-none focus:ring-2 ring-offset-2 ring-purple-600 ring-opacity-60"
                   placeholder="任何想對現在的天文社說的話"
                   autoComplete="off"
                   rows={5}
+                  onChange={(e) => onInputChange('suggestion', e.target.value)}
                 />
 
                 <div className="flex justify-center mt-12">
                   <div
-                    className="px-3 py-2 w-28 border-2 border-purple-600 bg-purple-600 text-white rounded-lg cursor-pointer select-none tracking-wider"
-                    onClick={() => console.log('submit form')}
+                    className={`px-3 py-2 w-28 border-2 ${
+                      checked
+                        ? 'border-purple-600 bg-purple-600 cursor-pointer'
+                        : 'border-gray-400 bg-gray-400 cursor-not-allowed'
+                    } text-white rounded-lg select-none tracking-wider`}
+                    onClick={() => submit()}
                   >
                     確認送出
                   </div>

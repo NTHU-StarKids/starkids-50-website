@@ -22,3 +22,6 @@ export const getChats = () => callAPI({ url: '/chats', method: 'GET' })
 
 export const createChat = (name: string, text: string, profile: string) =>
   callAPI({ url: '/chats', method: 'POST', body: { name, text, profile } })
+
+export const signup = (body: any) =>
+  callAPI({ url: '/signup', method: 'POST', body })

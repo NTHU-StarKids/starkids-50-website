@@ -120,7 +120,21 @@ const GoodsSection = ({ goods }: TListProps): JSX.Element => {
   return (
     <>
       <Section className="pt-8">
-        <H2>回饋商品</H2>
+        <H2>紀念品</H2>
+        <Container>
+          <P className="mb-4">
+            為了紀念這難得的 50
+            週年，我們特別設計了以下數個紀念品，將於社慶當天在活動現場進行販售，也歡迎各位社友們事先訂購～
+          </P>
+          <P className="mb-4">
+            我們也提供郵寄到府的方案，無論社慶當天是否有空到場皆可訂購，國內國外皆可～
+            <br></br>我們將於社慶結束後陸續寄出
+          </P>
+          <P className="mb-8">
+            ※由於成品製作中，以下圖片皆為示意圖，可能與成品有細微差異，還請見諒
+          </P>
+        </Container>
+
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:px-16 outline-none">
           {goods.map((good, index) => (
             <Goods
@@ -133,12 +147,12 @@ const GoodsSection = ({ goods }: TListProps): JSX.Element => {
 
         <div className="flex justify-center mt-8">
           <a
-            href="https://forms.gle/2p6FQF2zy1dJhbe47"
+            href="https://forms.gle/vfnkwg7rJj3ahDaXA"
             target="_blank"
             rel="noreferrer"
           >
             <div className="flex items-center h-12 pl-2 pr-4 py-2 bg-purple-600 border-2 border-purple-600 rounded-lg cursor-pointer select-none">
-              <p className="w-24 tracking-wider max-h-full">選購表單</p>
+              <p className="w-24 tracking-wider max-h-full">預購表單</p>
               <FontAwesomeIcon
                 className="max-h-full w-4"
                 icon={faExternalLinkAlt}

@@ -3,6 +3,7 @@ import { clubLinks, relatedLinks } from '@/constants'
 
 import { H3 } from '@/components/Headings'
 import Small from '@/components/Small'
+import SplitNewLine from '@/components/SplitNewLine'
 
 const Footer = (): JSX.Element => {
   return (
@@ -13,14 +14,15 @@ const Footer = (): JSX.Element => {
             <H3 className="border-b border-opacity-20 pb-4">清大天文社</H3>
             <div className="flex flex-shrink-0 px-2 py-8 items-center justify-between">
               {clubLinks.map((link, index) => (
-                <div className="w-7" key={`club-link-${index}`}>
-                  <a
-                    href={link.url}
-                    target="_blank"
-                    title={link.title}
-                    rel="noreferrer"
-                  >
+                <div
+                  className="has-tooltip w-9 p-1 rounded-full hover:bg-400"
+                  key={`club-link-${index}`}
+                >
+                  <a href={link.url} target="_blank" rel="noreferrer">
                     <img src={link.image} alt={link.title} />
+                    <span className="tooltip mt-2.5 -ml-7 w-14 text-gray-200 text-2xs text-center font-light">
+                      {link.tooltip}
+                    </span>
                   </a>
                 </div>
               ))}
@@ -31,14 +33,15 @@ const Footer = (): JSX.Element => {
             <H3 className="border-b border-opacity-20 pb-4">相關連結</H3>
             <div className="flex flex-shrink-0 gap-x-6 px-2 py-8 items-center justify-between">
               {relatedLinks.map((link, index) => (
-                <div className="w-7" key={`related-link-${index}`}>
-                  <a
-                    href={link.url}
-                    target="_blank"
-                    title={link.title}
-                    rel="noreferrer"
-                  >
+                <div
+                  className="has-tooltip w-9 px-1 pt-0.5 pb-1.5 rounded-full hover:bg-400"
+                  key={`related-link-${index}`}
+                >
+                  <a href={link.url} target="_blank" rel="noreferrer">
                     <img src={link.image} alt={link.title} />
+                    <span className="tooltip mt-2.5 -ml-7 w-14 text-gray-200 text-2xs text-center font-light">
+                      <SplitNewLine text={link.tooltip} />
+                    </span>
                   </a>
                 </div>
               ))}

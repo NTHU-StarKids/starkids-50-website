@@ -13,6 +13,7 @@ const purple500 = '#8683FF'
 const purple300 = '#B6B5FF'
 const purple100 = '#E7E6FF'
 const purple50 = '#F8F7FD'
+const background400 = '#605E71'
 
 const extendWidthHeight = {
   88: '22rem',
@@ -67,9 +68,13 @@ module.exports = {
         'purple-500': purple500,
         'purple-600': purple600,
         'purple-700': purple700,
+        400: background400,
       },
       cursor: {
         'zoom-in': 'zoom-in',
+      },
+      fontSize: {
+        '2xs': '.625rem',
       },
       width: {
         ...extendWidthHeight,

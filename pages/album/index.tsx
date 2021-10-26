@@ -21,19 +21,6 @@ const getDailyPicture = (): TAlbumImage => {
   return dailies[index]
 }
 
-// const ComingSoonSection = (): JSX.Element => {
-//   return (
-//     <Section className="h-72">
-//       <div className="mt-16 flex justify-center items-center">
-//         <FontAwesomeIcon className="h-20 mr-6" icon={faHammer} />
-//         <h1 className="text-5xl tracking-wider font-semibold">
-//           Coming Soon...
-//         </h1>
-//       </div>
-//     </Section>
-//   )
-// }
-
 const TitleSection = (): JSX.Element => {
   return (
     <Section className="pb-0">

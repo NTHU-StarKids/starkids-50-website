@@ -226,7 +226,7 @@ const GoodsSection = ({ goods }: TListProps): JSX.Element => {
                     alt={good.name}
                     className="mb-4 mx-auto rounded-2xl"
                   />
-                  <p className="text-lg font-light text-center mb-4 px-12">
+                  <p className="text-lg font-light text-center mb-4 md:px-12">
                     <SplitNewLine text={good.description} />
                   </p>
                 </div>

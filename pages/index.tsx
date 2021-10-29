@@ -401,8 +401,13 @@ export default function HomePage(): JSX.Element {
     return slide
   })
 
+  const metadata: TMetadata = {
+    description:
+      '「動手做 要有中國的科學自信！用腦想 培育蒼穹的浩瀚心胸！」歲月如白駒過隙，倏然即逝，今年終於來到了我們清大天文社創立的 50 週年，我們將於臺灣時間 11/27（六）擴大舉辦 50 週年社慶，並與美國連線同步直播，在此敬邀各位海內外的社友們回來共襄盛舉，一同歡慶這值得紀念的一刻。',
+  }
+
   return (
-    <Layout title="首頁">
+    <Layout title="首頁" metadata={metadata}>
       <AnniversarySection />
       <CarouselSection slides={slides} link="posts" />
       <AboutUsSection />

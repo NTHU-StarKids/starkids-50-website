@@ -240,8 +240,13 @@ const GoodsSection = ({ goods }: TListProps): JSX.Element => {
 }
 
 export default function DonationPage(): JSX.Element {
+  const metadata: TMetadata = {
+    description:
+      '為了能夠在星空中看得更深更遠，我們總不畏風寒的登上高山，借助著望遠鏡和相機，一次又一次穿越令人屏息的黑暗。因此我們希望能有更好的儀器與基本設備以讓我們更接近繁星。',
+  }
+
   return (
-    <Layout title="贊助我們">
+    <Layout title="贊助我們" metadata={metadata}>
       <DonationSection />
       <GoodsSection goods={goods} />
     </Layout>

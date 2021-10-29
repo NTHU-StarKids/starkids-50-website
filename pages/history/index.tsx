@@ -275,8 +275,13 @@ const EventsSection = (): JSX.Element => {
 }
 
 export default function HistoryPage(): JSX.Element {
+  const metadata: TMetadata = {
+    description:
+      '西元 1971 年 8 月初，丘宏義教授帶領鄧延璋、沈采蘋、陳昱寧、徐魁森等學長姐籌備磨製 16 吋卡式望遠鏡，至同年 11 月底 16 吋鏡全部架設調整完畢，為當時全國口徑最大之望遠鏡。同月底 29 日晚上 7 點於清華大學物理館舉行天文社成立大會，天文社正式宣告成立，並由物理 74 級鄧延璋學長出任第一屆社長。',
+  }
+
   return (
-    <Layout title="社團歷史">
+    <Layout title="社團歷史" metadata={metadata}>
       <OriginSection />
       <CabinetSection />
       <DiarySection />

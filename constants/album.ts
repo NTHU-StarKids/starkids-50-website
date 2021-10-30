@@ -6,7 +6,7 @@ export const dailies: TAlbumImage[] = [
     portrait: false,
     author: '傅喻',
     title: '天上與人間同時在我們眼底熠熠',
-    parameters: 'Canon PowerShot G7 X',
+    parameters: 'Camera: Canon PowerShot G7 X',
   },
   {
     imgUrl: '/img/album/daily-picks-2.jpg',
@@ -15,17 +15,17 @@ export const dailies: TAlbumImage[] = [
     portrait: false,
     author: '傅喻',
     title: '微雨後的暗夜，我們一起去拍星星',
-    parameters: 'Canon EOS 760D',
+    parameters: 'Camera: Canon EOS 760D',
   },
   {
     imgUrl: '/img/album/daily-picks-3.jpg',
     description:
-      '這張是用台灣最大口徑的望遠鏡，鹿林天文台LOT拍攝的窄頻影像。主要拍攝Hα以及OIII波段，透過影像處理合成而製，這裡我使用HOO假色合成，因此圖片中紅色為Hα波段的光，綠色及藍色則為OIII，可以由此看見蟹狀星雲中氣體的分布情形。',
+      '這張是用台灣最大口徑的望遠鏡，鹿林天文台 LOT 拍攝的窄頻影像。主要拍攝 Hα 以及 OIII 波段，透過影像處理合成而製，這裡我使用 HOO 假色合成，因此圖片中紅色為 Hα 波段的光，綠色及藍色則為 OIII，可以由此看見蟹狀星雲中氣體的分布情形。',
     portrait: false,
     author: '張家銘',
     title: 'M1 超新星殘骸－蟹狀星雲',
     parameters:
-      '13張 600s Hα, 13張 600s OIII, Dark, Flat, Bias 各十張, 拍攝日期：2020/11/22 03:00~05:00',
+      'Date: Nov. 22nd, 2020 03:00~05:00\nLocation: NCU Lulin observatory, Nantou, Taiwan\nTelescope: Lulin One-Meter Telescope (LOT)\nExposure Time: Hα 600s x 13, OIII 600s x 13, w/ dark, flat, bias x 10',
   },
   {
     imgUrl: '/img/album/daily-picks-4.jpg',
@@ -36,14 +36,14 @@ export const dailies: TAlbumImage[] = [
     title: '2020 夏至日環食行跡',
     parameters:
       'Date: Jun. 21st, 2020\nLocation: Sanxiantai, Taitung, Taiwan\nCamera:Canon EOS 5DIII\nLens: Canon EF 24-105mm f/4L IS USM\nFocal Length: 30mm\nAperture: f/8\nISO: 200\nPhoto Editor: Photoshop',
-    position: 'bg-bottom',
+    position: 'bottom',
   },
   {
     imgUrl: '/img/album/daily-picks-5.jpg',
     description:
       '火鳥星雲位在獵戶座腰帶下方，作為眾多天文攝影入門者的首選，是個相當好練習的目標之一。\n社團自 2010 年初期，即開始整備儀器武力，嘗試拍攝火鳥星雲。\n歷經多年的器材升級，以及拍攝完的後製能力提升，終在 46 屆幹部努力下，拍攝出令人滿意且感動的生動火鳥！',
     portrait: false,
-    author: '徐安廷',
+    author: '清大天文社',
     title: 'M42火鳥星雲 & NGC1977跑步者星雲',
     parameters:
       'Date: Jan. 19th, 2017\nLocation: Tataka, Nantou, Taiwan\nMount: Takahashi EM200 Temma 2M\nTelescope: Takahashi FC-100H\nCamera: Canon EOS 60D(mod.) + QHY-5LII\nExposure Time: 1hr57min\nISO: 1600\nPhoto Editor: Photoshop',
@@ -56,7 +56,7 @@ export const dailies: TAlbumImage[] = [
     author: '林上景',
     title: '再一次災難的馬頭',
     parameters:
-      'Date : 2021/02/08\nMount :EM-200\nTelescope :R200SS\nCamera :Nikon D810\nExposure Time :300s* 24\nISO1600\nDark*20 / Flat*10 / Bias*20\nDeepSkyStacker / Photoshop cc',
+      'Date: Feb. 8th, 2021\nMount: Takahashi EM-200\nTelescope: R200SS\nCamera: Nikon D810\nExposure Time: 300s x 24, w/ dark, flat, bias\nISO: 1600\nPhoto Editor: DeepSkyStacker, Photoshop cc',
   },
   {
     imgUrl: '/img/album/daily-picks-7.jpg',
@@ -66,7 +66,7 @@ export const dailies: TAlbumImage[] = [
     author: '楊順嘉',
     title: '弦月',
     parameters:
-      '清大天文台showa 25cm折射鏡、QHY174c\n12 frames mosaic，120sec per frame',
+      'Telescope: 清大天文台 showa 25cm 折射鏡\nCamera: QHY174c\nExposure Time: 12 frames mosaic, 120sec per frame',
   },
   {
     imgUrl: '/img/album/daily-picks-8.jpg',
@@ -76,7 +76,7 @@ export const dailies: TAlbumImage[] = [
     author: '楊順嘉',
     title: '玫瑰星雲',
     parameters:
-      'NEQ6pro、fs-102、QHY8L、AMP50mm、QHY5l-ii-m, gain:53 offset:128   300secx24@-10C w/ dark flat bias',
+      'Mount: NEQ6pro\nTelescope: FS-102: Camera: QHY8L、AMP50mm、QHY5l-ii-m\nExposure Time: gain:53, offset:128, 00secx24@-10C w/ dark flat bias',
   },
   {
     imgUrl: '/img/album/daily-picks-9.jpg',
@@ -86,7 +86,7 @@ export const dailies: TAlbumImage[] = [
     author: '王立宇',
     title: 'Neowise 與 NGC3198',
     parameters:
-      'Skywatcher EQ6-R Pro, WO GT-102 + Flat 68lll, Nikon D800(mod.) ; ISO 1600, 120s*3 ; edited with PS ; 2020/07/22 @合歡山昆陽停車場',
+      'Date: Jul. 22nd, 2020\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Skywatcher EQ6-R Pro\nTelescope: WO GT-102 + Flat 68lll\nCamera: Nikon D800(mod.) \nISO: 1600\nExposure Time: 120s x 3\nPhoto Editor: Photoshop',
   },
   {
     imgUrl: '/img/album/daily-picks-10.jpg',
@@ -96,7 +96,7 @@ export const dailies: TAlbumImage[] = [
     author: '王立宇',
     title: '天鵝的薄紗',
     parameters:
-      'Skywatcher EQ6-R Pro, WO GT-102 + Flat 68lll, QHY mini guiding scope + QHY-5ll, QHY PoleMaster, Nikon D800(mod.) ; ISO 800, 300s*57(5 frame mosaic), w/ dark, flat, bias ; edited with DSS, PS, StarNet++ ; 2020/07/22-23 @合歡山昆陽停車場',
+      'Date: Jul. 22nd~23rd, 2020\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Skywatcher EQ6-R Pro\nTelescope: WO GT-102 + Flat 68lll QHY mini guiding scope + QHY-5ll, QHY PoleMaster\nCamera: Nikon D800(mod.)\nISO: 800\nExposure Time: 300s x 57 (5 frame mosaic), w/ dark, flat, bias\nPhoto Editor: DeepSkyStacker, PS, StarNet++',
   },
   {
     imgUrl: '/img/album/daily-picks-11.jpg',
@@ -106,9 +106,321 @@ export const dailies: TAlbumImage[] = [
     author: '王立宇、吳家頡',
     title: '「威廉･赫歇爾」發現的新大陸',
     parameters:
-      'Skywatcher EQ6-R Pro, WO GT-102 + Flat6A ll, QHY mini guiding scope + QHY 5ll, QHY PoleMaster + Canon EOS 5DII(mod.) ; ISO 800, 300s*21, w/ dark, flat, bias ; edited with DSS, PS, StarNet++ ; 2019/09/02 @新竹縣五峰鄉野馬農園',
+      'Date: Sep. 2nd, 2019\nLocation: Yema farm, Wufeng, Hsinchu, Taiwan\nMount: Skywatcher EQ6-R Pro\nTelescope: WO GT-102 + Flat6A ll, QHY mini guiding scope + QHY 5ll, QHY PoleMaster\nCamera: Canon EOS 5DII(mod.)\nISO: 800\nExposure Time: 300s x 21, w/ dark, flat, bias\nPhoto Editor: DeepSkyStacker, PS, StarNet++',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-12.jpg',
+    description:
+      'M31 不僅是銀河系的鄰居、美麗的螺旋星系、肉眼可見最大、最遙遠的深空天體，更是當代星系天文學的重大里程碑。\n出乎很多人意料的是，人類在 20 世紀上葉以前的宇宙觀與今天可是大不相同。當時的人們認為，我們所見的一切星體，都屬於銀河系的一部份。\n直到 1924 年，天文學家哈伯對 M31 進行了精確的距離量測，發現它的距離遠超過當時對銀河系大小的認知，是獨立於銀河系之外的另一個星系。而每一個星系，就像是宇宙中一個個的小島一般，從此刷新人們的宇宙觀。',
+    portrait: false,
+    author: '清大天文社',
+    title: 'M31 仙女座大星系',
+    parameters:
+      'Date: Dec. 21st, 2017\nLocation: Yema farm, Wufeng, Hsinchu, Taiwan\nMount: Takahashi EM-200 Temma 2M\nTelescope: FC-100H\nGuiding: FS-60C + QHY 5ll\nCamera: Canon EOS 60D (mod.)\nExposure Time: multiple, w/ dark, flat, bias\nISO: 1600\nPhoto Editor: DeepSkyStacker, Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-13.jpg',
+    description:
+      'M20 有三種鮮豔的顏色，分別是紅、藍、黑。紅色的部分屬於發射星雲，紅光來自其中游離的氫原子發出的 H Alpha 譜線；藍色的部分屬於反射星雲，因為反射鄰近恆星發出的光線而發出藍光；而星雲中間有如裂痕般的黑色線條就屬於暗星雲，因為吸收了背景的光線而呈現黑色。',
+    portrait: false,
+    author: '徐安廷、黃昱修、林新綠',
+    title: 'M20 三裂星雲',
+    parameters:
+      'Date: Apr. 3rd, 2017\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Takahashi EM-200 Temma 2M\nTelescope: FC-100H\nGuiding: FS-60C + QHY 5ll\nCamera: Canon EOS 60D (mod.)\nExposure Time: 600s x 9, w/ dark, flat, bias\nISO: 1600\nPhoto Editor: DeepSkyStacker, Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-14.jpg',
+    description: '冬季主要亮星都位在南邊星空，隨著星辰推移拉出一條條滿滿星軌。',
+    portrait: false,
+    author: '徐安廷',
+    title: '塔塔加南天星軌',
+    parameters:
+      'Date: Jan. 29th, 2019\nLocation: Tataka, Ali Mountain, Chiayi, Taiwan\nCamera: Canon EOS 5DIII\nLens: Canon EF 24-105mm f/4L IS USM\nFocal Length: 24mm\nAperture: f/4\nExposure Time: 3hrs\nISO: 1600\nPhoto Editor: Startrails, Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-15.jpg',
+    description:
+      '北銘 x 桃銘 x 文化 x 實踐 x 清大 x 交大 x 台大，七校塔塔加東埔巧遇之寒訓。謝謝天，謝謝地，給了我們璀璨的星空，以及，滿滿儀器觀測盛況。',
+    portrait: false,
+    author: '徐安廷',
+    title: '七校聯合寒訓',
+    parameters:
+      'Date: Jan. 30th, 2019\nLocation: Tataka, Ali Mountain, Chiayi, Taiwan\nCamera: Canon EOS 5DIII\nLens: Canon EF 24-105mm f/4L IS USM\nFocal Length: 24mm\nAperture: f/4.5\nExposure Time: 25sec\nISO: 1600\nPhoto Editor: Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-16.jpg',
+    description:
+      '維納斯帶，地球影子 v.s. 陽光與塵埃交互作用產生的天然漸層。佐上清晨的雲海，如詩如畫。',
+    portrait: false,
+    author: '徐安廷',
+    title: '維納斯帶佐雲海',
+    parameters:
+      'Date: Jan. 31st, 2019\nLocation: Tataka, Ali Mountain, Chiayi, Taiwan\nCamera: Canon EOS 5DIII\nLens: Canon EF 24-105mm f/4L IS USM\nFocal Length: 30mm\nAperture: f/6.3\nExposure Time: 1/500sec\nISO: 1600\nPhoto Editor: Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-17.jpg',
+    description:
+      '夏季銀河，一個相當芭樂但也是一個不好拍好的目標，結合台大天文陳前社長從日本空運來台的星空雲台，輕鬆 Get 人生第一張滿意的銀河照。',
+    portrait: true,
+    author: '徐安廷',
+    title: '松雪樓銀河',
+    parameters:
+      'Date: Jul. 14th, 2018\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Vixen Polarie\nCamera: Canon EOS 5DIII\nLens: Canon EF 50mm F1.4 USM\nFocal Length: 50mm\nAperture: f/2.8\nExposure Time: 1min x 82\nISO: 3200\nPhoto Editor: DeepSkyStacker, Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-18.jpg',
+    description:
+      '一群人，半夜臨時熱血起意開車到北海岸，避開市區遮蔽的雲層。在鹹濕海風的吹拂，望著血月在海平面緩緩西沈。',
+    portrait: true,
+    author: '徐安廷',
+    title: '月全食軌',
+    parameters:
+      'Date: Jul. 28th, 2018\nLocation: Fugui Cape, New Taipei City, Taiwan\nCamera: Canon EOS 5DIII\nLens: Canon EF 24-105mm f/4L IS USM\nFocal Length: 35mm\nAperture: f/4\nPhoto Editor: Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-19.jpg',
+    description:
+      '當日天氣其實非常不佳，大面積的中高雲來來去去，因此我們只能握著手中的快門線，祈禱雲趕快散去，一看到月亮從雲縫中露出便立馬狂按快門。幸運的是，最後僅存的幾張能看的照片剛好能夠串起整個月全食的過程，讓我們得以製作這張月食階段圖。',
+    portrait: false,
+    author: '王立宇、陳昕霈',
+    title: '20180728 天狗食月',
+    parameters:
+      'Date: Jul. 28th, 2018\nLocation: Physics building, NTHU, Hsinchu, Taiwan\nMount: Takahashi EM-200 Temma 2M\nTelescope: WO FLT-132 + Flat68 III\nCamera: Canon EOS 60D (mod.)\nExposure Time: 1/500s-1/5s\nISO: 100-4000\nPhoto Editor: Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-20.jpg',
+    description:
+      '『心情沮喪時，不妨抬頭仰望星空吧！連宇宙，也會一起笑你的。』\n馬卡萊恩鏈是室女座星系群的一部分，這些星系沿著一條平滑的曲線分布，其中最亮的兩顆眼睛 M84與 M86 是最先被梅西爾所發現的。長鏈中至少有七個星系在同步移動，因此之後便以發現他們有著共同運動的天體物理學家「班傑明 ･ 馬卡萊恩」所命名。\n值得注意的是，左下角那顆明亮的 M87 室女 A 星系，就是在 2019 年 4 月，人類史上第一個利用事件視界望遠鏡捕捉到黑洞影像的所在星系喔！',
+    portrait: false,
+    author: '王立宇',
+    title: '馬卡萊恩的鎖鏈（Makarian’s Chain）',
+    parameters:
+      'Date: Mar. 1st, 2019\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Skywatcher EQ6-R Pro\nTelescope: WO GT-102 + Flat6A ll\nGuiding: QHY mini guiding scope + QHY-5ll\nCamera: Canon EOS 50D (mod.), QHY PoleMaster\nExposure Time: 600s x 18, w/ dark, flat, bias\nISO: 800\nPhoto Editor: DeepSkyStacker, Photoshop, StarNet++',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-21.jpg',
+    description:
+      '螺旋星雲是位在寶瓶座的行星狀星雲，為最接近地球的行星狀星雲之一，由一顆質量類似太陽的恆星在生命的末期，向外拋出氣體所形成。其中心的白矮星持續放出強烈的能量，使得周圍的氣體發出明亮的螢光。\n螺旋星雲曾被稱為上帝之眼 "Eye of God" ，而在電影魔戒三部曲風靡全球之後，在網路上也被稱為索倫之眼 "Eye of Sauron" 。',
+    portrait: false,
+    author: '王立宇',
+    title: '上帝之眼 "Eye of God"（NGC7293螺旋星雲）',
+    parameters:
+      'Date: Jul. 23th, 2020\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Skywatcher EQ6-R Pro\nTelescope: WO GT-102 + Flat68 Ill\nGuiding: QHY mini guiding scope + QHY-5ll\nCamera: Nikon D800 (mod.), QHY PoleMaster\nExposure Time: 300s x 5, w/ dark, flat, bias\nISO: 800\nPhoto Editor: DeepSkyStacker, Photoshop, StarNet++',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-22.jpg',
+    description:
+      'M17 是一個位在人馬座的電離氫區，距離地球約 5000 - 6000 光年，直徑約為 15 光年，是銀河系中質量最大且最明亮的恆星形成區之一。因為長的像馬蹄形的希臘字母 Ω（omega），所以 M17 也被稱為 Ω 星雲。',
+    portrait: false,
+    author: '清大天文社',
+    title: 'M17 歐米茄星雲',
+    parameters:
+      'Date: Apr. 7th, 2019\nLocation: Yema farm, Wufeng, Hsinchu, Taiwan\nMount: Takahashi EM-200 Temma 2M\nTelescope: WO FLT-132 + Flat 68III\nGuiding: APM mini guiding scope 60mm + QHY 5ll\nCamera: Canon EOS 60D (mod.)\nExposure Time: 600s x 8, w/ dark, flat, bias\nISO: 1600\nPhoto Editor: DeepSkyStacker, Photoshop, StarNet++',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-23.jpg',
+    description: '銀河系內最大，也是少數能以肉眼看見的球狀星團。',
+    portrait: false,
+    author: '王立宇',
+    title: 'NGC 5139 歐米茄星團',
+    parameters:
+      'Date: Mar. 1st, 2019\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Skywatcher EQ6-R Pro\nTelescope: WO GT-102 + Flat6A ll\nGuiding: QHY mini guiding scope + QHY-5ll\nCamera: Canon EOS 50D (mod.), QHY PoleMaster\nExposure Time: 600s x 6, w/ dark, flat, bias\nISO: 800\nPhoto Editor: DeepSkyStacker, Photoshop, StarNet++',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-24.jpg',
+    description:
+      '聖誕樹星雲是位在麒麟座內的一個電離氫區，其中包含了四個天體：錐狀星雲、聖誕樹星團、雪花星團以及狐狸皮星雲。錐狀星雲位在聖誕樹的頂端，在這張圖中看起來像一個倒過來的 V 字型，錐狀的部分本身是由低溫塵埃所組成的暗星雲，剛好檔在一個微弱的發射星雲前方。而藍色的狐狸皮星雲則位在聖誕樹的中上段，是屬於塵埃反射鄰近恆心的反射星雲。',
+    portrait: true,
+    author: '清大天文社',
+    title: '斑斕絢麗的聖誕節（NGC2264 聖誕樹星雲）',
+    parameters:
+      'Date: Jan. 20th, 2020\nLocation: Fushoushan farm, Taichung, Taiwan\nMount: Takahashi EM-200 Temma 2M\nTelescope: WO FLT-132 + Flat 68III\nGuiding: APM mini guiding scope 60mm + QHY 5ll\nCamera: Canon EOS 5D II (mod.), QHY Polemaster\nExposure Time: 300s x 27, w/ dark, flat, bias\nISO: 1600\nPhoto Editor: DeepSkyStacker, Photoshop, StarNet++',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-25.jpg',
+    description:
+      '合歡山的暗空公園需要大家來共同守護，如此美景才有辦法在每年的夏天持續上演。',
+    portrait: true,
+    author: '王立宇',
+    title: '合歡山星河高潟',
+    parameters:
+      'Date: Jul. 22st, 2020\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Skywatcher Star Adventurer\nCamera: Nikon D5500\nLens: Nikkor AF-S DX 18-140mm\nFocal Length: 18mm\nAperture: f/4.5\nExposure Time: 120s x 28, w/ dark, flat, bias\nISO: 1600\nPhoto Editor: DeepSkyStacker, Photoshop, StarNet++',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-26.jpg',
+    description:
+      '墨西哥帽星系是專業的天文攝影愛好者時常拍攝的目標之一，但是在個人儀器的口徑與焦距限制之下，這個目標通常都拍起來都十分微小。而前年物理系開設的「基礎天文觀測」課程，讓我有幸能使用全台最大的「鹿林一米望遠鏡」做拍攝，在 1000mm F/8 的解析之下， M104 懸臂的暗帶十分地明顯！',
+    portrait: false,
+    author: '王立宇',
+    title: '這頂戴在頭上肯定很潮（M104 墨西哥帽星系）',
+    parameters:
+      'Date: Apr. 28th, 2019\nLocation: NCU Lulin observatory, Nantou, Taiwan\nTelescope: Lulin One-Meter Telescope (LOT)\nFocal Length: 1000mm\nAperture: f/8\nExposure Time: B-band 60s x 10, V-band 60s x 5, R-band 60s x 5, w/ dark, flat, bias\nPhoto Editor: AstroImageJ, SAO DS9, Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-27.jpg',
+    description:
+      '黑眼星系是專業的天文攝影愛好者時常拍攝的目標之一，但是在個人儀器的口徑與焦距限制之下，這個目標通常都拍起來都十分微小。而前年物理系開設的「基礎天文觀測」課程，讓我有幸能使用全台最大的「鹿林一米望遠鏡」做拍攝，在 1000mm F/8 的解析之下， M64 中心的塵埃十分地明顯！',
+    portrait: false,
+    author: '王立宇',
+    title: 'M64 黑眼星系',
+    parameters:
+      'Date: Apr. 28th, 2019\nLocation: NCU Lulin observatory, Nantou, Taiwan\nTelescope: Lulin One-Meter Telescope (LOT)\nFocal Length: 1000mm\nAperture: f/8\nExposure Time: B-band 60s x 10, V-band 60s x 5, R-band 60s x 5, w/ dark, flat, bias\nPhoto Editor: AstroImageJ, SAO DS9, Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-28.jpg',
+    description: '在另一個世界，也有笑聲，有哭聲，有歌聲，有怨聲嗎？',
+    portrait: false,
+    author: '楊順嘉',
+    title: '創生螺旋（M33 三角座大星系）',
+    parameters:
+      'Date: Nov. 23th, 2019\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Skywatcher NEQ6- Pro\nTelescope: FS-102\nGuiding: APM-50mm + QHY5L-II-M\nCamera: QHY8L (Gain: 53, Offset: 128, Temp: -10C)\nExposure Time: 300s x 47, w/ dark, flat, bias\nPhoto Editor: DeepSkyStacker, Photoshop, Topaz DeNoise AI',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-29.jpg',
+    description: '孤島上有著一點一點的氫離子。',
+    portrait: false,
+    author: '楊順嘉',
+    title: 'M101 風車星系',
+    parameters:
+      'Date: Feb. 21st, 2020\nLocation: Yema farm, Wufeng, Hsinchu, Taiwan\nMount: Skywatcher NEQ6- Pro\nTelescope: FS-102\nGuiding: APM-50mm + QHY5L-II-M\nCamera: QHY8L (Gain: 4, Offset: 125, Temp: -10C)\nExposure Time: 300s x 55\nPhoto Editor: DeepSkyStacker, Photoshop, Topaz DeNoise AI, Astroflat Pro',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-30.jpg',
+    description:
+      '人們對影像的評價標準不一。有人喜歡高對比的視覺衝擊，有人喜歡彩虹般的五彩斑斕，也有人喜歡淡麗而含蓄的美。只要沒有違反科學事實，圖該怎麼修並沒有標準答案。',
+    portrait: false,
+    author: '林彥興',
+    title: 'M27 啞鈴星雲',
+    parameters:
+      'Telescope: LOT from Lulin Observatory\nInstrument: SOFIA\nExposure Time: R-Band 60s x 5, V-Band 60s x 5, B-band 60s x 11, w/ dark, flat, bias\nPhoto Editor: DeepSkyStacker, AstroImageJ, StarNet++, Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-31.jpg',
+    description:
+      '真正好好的接觸天文攝影是在去年夏天吧，這也是當時第一組拍的天體，天文攝影真的是可以讓人獲得滿滿的成就感，也可以讓人憤不顧肝的往下鑽研呢（Ｘ',
+    portrait: false,
+    author: '林上景',
+    title: 'M8 礁湖星雲 & M20 三裂星雲',
+    parameters:
+      'Date: Jul. 24th, 2020\nLocation: Hehuan Mountain, Nantou, Taiwan\nMount: Takahashi EM-200\nTelescope: Takahashi FSQ-106\nCamara : Nikon D750\nISO: 1600\nExposure Time: 180s x 54, w/ dark, flat, bias\nPhoto Editor: DeepSkyStacker, Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-32.jpg',
+    description:
+      '暑假時出現了 C/2020 F3 ，可惜當時沒有親手用望遠鏡拍下，這次 11 月去鹿林剛好遇到 C/2020 M3 ，因此他成為了我人生中第一顆追蹤拍攝的彗星，只是可惜的是鹿林的 TAOS 好像沒辦法追蹤彗星，中間慧核還是有一點小脫線，但至少還是完成了人生的一個里程碑！',
+    portrait: false,
+    author: '林上景',
+    title: 'C/2020 F3 彗星',
+    parameters:
+      'Date: Nov. 20, 2020\nLocation: NCU Lulin observatory, Nantou, Taiwan\nCamera: Canon EOS 6D\nISO: 1600\nExposure Time: 180s x 11, w/ dark, flat, bias\nPhoto Editor: DeepSkyStacker, Photoshop',
+  },
+  {
+    imgUrl: '/img/album/daily-picks-33.jpg',
+    description:
+      '為了拍攝這個距離我們 2300 萬光年遠的黯淡星系，這張 M51 是以當今社上口徑最大的折射式望遠鏡 FLT-132 進行了近兩個小時的曝光才拍攝到，也是 FLT-132 的開光作品。',
+    portrait: false,
+    author: '徐安廷',
+    title: 'M51 渦狀星系',
+    parameters:
+      'Date: Mar. 17th, 2018\nLocation: Yema farm, Wufeng, Hsinchu, Taiwan\nMount: Takahashi EM-200 Temma 2M\nTelescope: WO FLT-132 + Flat 68III\nGuiding: APM mini guiding scope 60mm + QHY 5ll\nCamera: Canon EOS 60D (mod.)\nExposure Time: 600s x 12, w/ dark, flat, bias\nISO: 1600\nPhoto Editor: DeepSkyStacker, Photoshop',
   },
 ]
+
+export const dailyPicksIndex = {
+  '20211031': 14,
+  '20211101': 2,
+  '20211102': 16,
+  '20211103': 19,
+  '20211104': 22,
+  '20211105': 20,
+  '20211106': 8,
+  '20211107': 7,
+  '20211108': 11,
+  '20211109': 18,
+  '20211110': 10,
+  '20211111': 28,
+  '20211112': 26,
+  '20211113': 17,
+  '20211114': 33,
+  '20211115': 9,
+  '20211116': 31,
+  '20211117': 23,
+  '20211118': 1,
+  '20211119': 30,
+  '20211120': 3,
+  '20211121': 32,
+  '20211122': 29,
+  '20211123': 25,
+  '20211124': 4,
+  '20211125': 6,
+  '20211126': 12,
+  '20211127': 5,
+  '20211128': 24,
+  '20211129': 21,
+  '20211130': 27,
+  '20211201': 13,
+  '20211202': 15,
+  '20211203': 17,
+  '20211204': 26,
+  '20211205': 30,
+  '20211206': 2,
+  '20211207': 14,
+  '20211208': 18,
+  '20211209': 5,
+  '20211210': 20,
+  '20211211': 27,
+  '20211212': 21,
+  '20211213': 28,
+  '20211214': 15,
+  '20211215': 12,
+  '20211216': 6,
+  '20211217': 22,
+  '20211218': 8,
+  '20211219': 7,
+  '20211220': 25,
+  '20211221': 19,
+  '20211222': 31,
+  '20211223': 1,
+  '20211224': 10,
+  '20211225': 23,
+  '20211226': 3,
+  '20211227': 11,
+  '20211228': 32,
+  '20211229': 13,
+  '20211230': 4,
+  '20211231': 29,
+  '20220101': 16,
+  '20220102': 33,
+  '20220103': 9,
+  '20220104': 24,
+  '20220105': 30,
+  '20220106': 25,
+  '20220107': 17,
+  '20220108': 1,
+  '20220109': 9,
+  '20220110': 6,
+  '20220111': 22,
+  '20220112': 11,
+  '20220113': 16,
+  '20220114': 21,
+  '20220115': 13,
+  '20220116': 14,
+  '20220117': 31,
+  '20220118': 4,
+  '20220119': 27,
+  '20220120': 5,
+  '20220121': 29,
+  '20220122': 12,
+  '20220123': 20,
+  '20220124': 26,
+  '20220125': 18,
+  '20220126': 10,
+  '20220127': 7,
+  '20220128': 19,
+  '20220129': 28,
+  '20220130': 24,
+  '20220131': 3,
+}
 
 export const categories: TAlbumCategory[] = [
   {
@@ -116,7 +428,7 @@ export const categories: TAlbumCategory[] = [
     slug: 'anniversary',
     coverImgUrl: '/img/album/anniversary-05.jpg',
     description:
-      '清大天文社成立屆滿50年！每年社員們皆會在11/29生日這天前後，舉辦大小慶祝活動，並有五年一小慶、十年一大慶的潛規則，一同回顧過去這些溫馨的社員團聚時刻吧！',
+      '清大天文社成立屆滿 50 年！每年社員們皆會在 11/29 生日這天前後，舉辦大小慶祝活動，並有五年一小慶、十年一大慶的潛規則，一同回顧過去這些溫馨的社員團聚時刻吧！',
     images: [
       {
         imgUrl: '/img/album/anniversary-01.jpg',
@@ -572,7 +884,7 @@ export const categories: TAlbumCategory[] = [
     slug: 'hkusuastro-exchange',
     coverImgUrl: '/img/album/hkusuastro-exchange-08.jpg',
     description:
-      '2013、2015年香港大學學生會天文學會來台訪問本社，2017年2月初藉著兩年的週期加上"反主為客"的想法，這次換我們組團回訪，實地了解香港學生天文圈的狀況，交流彼此社團活動的生態，教學相長！',
+      '2013、2015 年香港大學學生會天文學會來台訪問本社，2017 年 2 月初藉著兩年的週期加上 "反主為客" 的想法，這次換我們組團回訪，實地了解香港學生天文圈的狀況，交流彼此社團活動的生態，教學相長！',
     images: [
       {
         imgUrl: '/img/album/hkusuastro-exchange-01.jpg',
@@ -646,7 +958,7 @@ export const categories: TAlbumCategory[] = [
     slug: 'courses-and-speeches',
     coverImgUrl: '/img/album/courses-and-speeches-09.jpg',
     description:
-      '社課及演講天文社最定期的活動之一。社課讓社員學習基礎的天文知識，演講則邀請天文界知名人士作經驗分享；學習完基本的知識後，後續也提供更進階及實作的課程。2020年更開設工作坊傳承天文攝影的技術。',
+      '社課及演講天文社最定期的活動之一。社課讓社員學習基礎的天文知識，演講則邀請天文界知名人士作經驗分享；學習完基本的知識後，後續也提供更進階及實作的課程。2020 年更開設工作坊傳承天文攝影的技術。',
     images: [
       {
         imgUrl: '/img/album/courses-and-speeches-14.jpg',
@@ -908,7 +1220,7 @@ export const categories: TAlbumCategory[] = [
     slug: 'equipments',
     coverImgUrl: '/img/album/equipments-12.jpg',
     description:
-      '大家都知道器材室是我們的軍火庫，積累了數十年來前人留下的的各種儀器，從赤道儀、折/反射式、雙筒、濾鏡到各種目鏡等不勝枚舉，在近十年內也添購了EM-200赤道儀與FLT-132望遠鏡等高級貨，就讓我們來看看這些儀器在觀測活動時所展現的英姿吧！',
+      '大家都知道器材室是我們的軍火庫，積累了數十年來前人留下的的各種儀器，從赤道儀、折/反射式、雙筒、濾鏡到各種目鏡等不勝枚舉，在近十年內也添購了 EM-200 赤道儀與 FLT-132 望遠鏡等高級貨，就讓我們來看看這些儀器在觀測活動時所展現的英姿吧！',
     images: [
       {
         imgUrl: '/img/album/equipments-01.jpg',

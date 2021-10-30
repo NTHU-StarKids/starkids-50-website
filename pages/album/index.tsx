@@ -10,13 +10,16 @@ import P from '@/components/Paragraph'
 import Section from '@/components/Section'
 import SplitNewLine from '@/components/SplitNewLine'
 import Layout from '@/components/Layout'
-import { dailies, categories } from '@/constants/album'
+import { dailies, dailyPicksIndex, categories } from '@/constants/album'
 
 const getDailyPicture = (): TAlbumImage => {
   const length = dailies.length
   const today = dayjs().format('YYYYMMDD')
   const hash = sha256(today)
-  const index = parseInt(`0x${hash}`) % length
+  const index =
+    dailyPicksIndex[today] === undefined
+      ? parseInt(`0x${hash}`) % length
+      : dailyPicksIndex[today] - 1
 
   return dailies[index]
 }
@@ -37,10 +40,11 @@ const DailySection = (): JSX.Element => {
     <>
       <Section className="pt-0 pb-6">
         <div
-          className={`relative w-full h-80 lg:h-96 xl:h-112 2xl:h-128 ${
-            picture.position ? picture.position : 'bg-center'
-          } bg-cover cursor-pointer`}
-          style={{ backgroundImage: `url('${picture.imgUrl}')` }}
+          className="relative w-full h-80 lg:h-96 xl:h-112 2xl:h-128 bg-cover cursor-pointer"
+          style={{
+            backgroundImage: `url('${picture.imgUrl}')`,
+            backgroundPosition: picture.position ? picture.position : 'center',
+          }}
           onClick={() => setIsOpen(true)}
         >
           <div className="absolute bottom-0 w-full px-6 py-4 bg-gray-900 bg-opacity-40 text-white cursor-default select-none">

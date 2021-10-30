@@ -333,6 +333,10 @@ export default function ChatPage(): JSX.Element {
   const [messageGroups, setMessageGroups] = useState<TMessageGroup[]>([])
   const { data, isFetched: isChatsFeteched, refetch } = useChats()
 
+  const metadata: TMetadata = {
+    description: '留言板',
+  }
+
   useEffect(() => {
     const chatIds = getChatIds()
     const generateMessageGroup = (chat: IChat): TMessageGroup => {
@@ -395,7 +399,7 @@ export default function ChatPage(): JSX.Element {
   }, [isChatsFeteched, data])
 
   return (
-    <Layout title="留言板">
+    <Layout title="留言板" metadata={metadata}>
       <ChatSection
         disabled={!isChatsFeteched}
         messageGroups={messageGroups}

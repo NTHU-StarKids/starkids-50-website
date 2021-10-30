@@ -43,12 +43,12 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
             )
           } else if (content.type == 'subtitle') {
             return (
-              <p key={`content-${index}`} className="subtitle">
+              <h3 key={`content-${index}`} className="subtitle">
                 <SplitNewLine
                   // @ts-ignore
                   text={content.text}
                 />
-              </p>
+              </h3>
             )
           } else if (content.type == 'image') {
             return (

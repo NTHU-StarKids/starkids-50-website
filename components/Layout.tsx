@@ -36,7 +36,12 @@ const Layout = ({ children, title = '', metadata }: TProps): JSX.Element => {
         />
         <meta name="description" content="" />
 
-        <meta property="og:title" content={`${title} - 清大天文社 50 週年`} />
+        <meta
+          property="og:title"
+          content={
+            title ? `${title} - 清大天文社 50 週年` : '清大天文社 50 週年'
+          }
+        />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"

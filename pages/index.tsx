@@ -407,7 +407,7 @@ export default function HomePage(): JSX.Element {
   }
 
   return (
-    <Layout title="首頁" metadata={metadata}>
+    <Layout metadata={metadata}>
       <AnniversarySection />
       <CarouselSection slides={slides} link="posts" />
       <AboutUsSection />

@@ -33,7 +33,7 @@ const TitleSection = (): JSX.Element => {
 }
 
 const DailySection = (): JSX.Element => {
-  const picture = getDailyPicture()
+  const [picture] = useState<TAlbumImage>(getDailyPicture())
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   return (

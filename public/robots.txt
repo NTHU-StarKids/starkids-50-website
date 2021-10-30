@@ -1,0 +1,10 @@
+# robots.txt for 50.starkids.club
+
+User-agent: *
+Allow: /
+Disallow: /chat
+
+Sitemap: https://50.starkids.club/sitemap-static.xml
+Sitemap: https://50.starkids.club/sitemap-album.xml
+Sitemap: https://50.starkids.club/sitemap-history.xml
+Sitemap: https://50.starkids.club/sitemap-posts.xml

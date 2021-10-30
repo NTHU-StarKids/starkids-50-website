@@ -20,6 +20,7 @@ body::-webkit-scrollbar {
 ::-webkit-scrollbar-thumb {
   background-color: #858585;
   background-clip: padding-box;
+  -webkit-background-clip: padding-box;
   border-radius: 4px;
 }
 

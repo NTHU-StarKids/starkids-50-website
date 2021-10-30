@@ -15,7 +15,7 @@ const Header = (): JSX.Element => {
     >
       <nav className="flex items-center justify-between px-8 h-12">
         <div className="flex items-center text-2xl gap-x-3">
-          <img src="/img/logo.png" className="w-12" alt="清大天文社 Logo" />
+          <img src="/img/logo@xs.png" className="w-12" alt="清大天文社 Logo" />
           <Link href="/" passHref>
             <span
               className={`py-1 cursor-pointer border-b-2 transition-all duration-300 tracking-wider text-base font-light ${

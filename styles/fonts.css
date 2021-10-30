@@ -6,4 +6,5 @@
   font-weight: normal;
   src: local('GenYoMin'),
     url('/fonts/GenYoMinTWStripped-B-01.ttf') format('woff');
+  font-display: swap;
 }

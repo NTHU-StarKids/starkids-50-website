@@ -353,7 +353,7 @@ const AboutUsSection = (): JSX.Element => {
 
                 <p className="text-lg text-center my-8 px-6 sm:px-12 tracking-wider">
                   報名成功！我們已經收到您的回覆囉，詳細辦理規劃將於 11
-                  月中前以電子郵件寄送，願星空燦懶！
+                  月中前以電子郵件寄送，願星空燦爛！
                 </p>
                 <p className="text-lg text-center my-6 px-6 sm:px-12 tracking-wider">
                   另外，這次 50

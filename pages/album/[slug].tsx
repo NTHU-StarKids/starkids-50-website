@@ -73,7 +73,7 @@ const CategorySection = ({
                 <div
                   className={`${
                     image.portrait ? 'w-full sm:w-2/3 sm:mx-auto' : 'w-full'
-                  } rounded-xl overflow-hidden cursor-default sm:cursor-pointer`}
+                  } min-h-48 rounded-xl overflow-hidden cursor-default sm:cursor-pointer`}
                   style={{ backgroundImage: `url('${image.imgUrl}')` }}
                   onClick={() => prviewImage(image)}
                 >

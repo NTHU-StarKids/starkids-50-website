@@ -1157,7 +1157,7 @@ export const categories: TAlbumCategory[] = [
       },
       {
         imgUrl: '/img/album/reunion-and-play-02.jpg',
-        description: '2003 墾丁出遊',
+        description: '2001 綠島出遊',
         portrait: false,
       },
       {

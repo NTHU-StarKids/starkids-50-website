@@ -420,7 +420,7 @@ export const CABINETS = [
       { name: '林剛逸', department: '物理 02', position: '副社長' },
       { name: '胡佳伶', department: '生科 03', position: '教學' },
       { name: '丘政倫', department: '物理 03', position: '活動' },
-      { name: '莊韻絹', department: '', position: '美宣' },
+      { name: '莊韻絹', department: '外語 03', position: '美宣' },
       { name: '王怡喬', department: '物理 03', position: '生器' },
     ],
   },

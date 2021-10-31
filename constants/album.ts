@@ -889,6 +889,11 @@ export const categories: TAlbumCategory[] = [
         description: '2019 天文服務學習',
         portrait: false,
       },
+      {
+        imgUrl: '/img/album/service-learning-06.jpg',
+        description: '2020 天文服務學習',
+        portrait: false,
+      },
     ],
   },
   {

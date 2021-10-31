@@ -34,7 +34,10 @@ const Layout = ({ children, title = '', metadata }: TProps): JSX.Element => {
           name="keywords"
           content="清大天文50,清大天文社50週年,清大天文社五十週年,清大天文社50社慶,清大天文50週年,清大天文50社慶,週年,周年,社慶,50,50週年,50社慶,50歲,清華,大學,清大,清華大學,清大天文社,天文,天文社,星空之子,NTHU Astronomy Club 50 Anniversary,50 anniversary"
         />
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content={metadata?.description ? metadata.description : ''}
+        />
 
         <meta
           property="og:title"

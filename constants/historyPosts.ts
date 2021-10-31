@@ -2,6 +2,72 @@ const posts: TPost[] = [
   {
     shortAuthorName: '作者/傅喻',
     author: '傅喻',
+    coverUrl: '/img/history/the-big-bang-1.jpg',
+    slug: 'the-big-bang',
+    title: 'The Big Bang',
+    recommended: true,
+    contents: [
+      {
+        type: 'paragraph',
+        text: '1971 年，清華校長徐賢修邀請在美國 NASA 任職的丘宏義教授到清華客座訪問一學期，開設「天文物理」課程，同時也北上到臺大授課。',
+      },
+      {
+        type: 'paragraph',
+        text: '丘宏義感覺到自己停留時間短暫，僅僅透過課堂教學不能夠充分發揮此行回臺的作用，而開始規劃課外帶領學生製作天文望遠鏡、學習觀測技術，或許能夠引導學生體會接觸天文的意趣，留下更長遠的影響。',
+      },
+      {
+        type: 'paragraph',
+        text: '望遠鏡製作計畫提出之後，漸漸得到學生響應，由高年級的的徐魁森、蔡民雄、黃銘爵和博士班的陳文典負責製作鏡架、磨鏡機、和電子控制系統；大一的的陳昱寧、鄧延璋、沈采蘋、和葉迎春負責將鏡板研磨成主鏡。',
+      },
+      {
+        type: 'paragraph',
+        text: '清華的其他老師也相當關注這個計畫，李怡嚴、王企祥、沈君山、毛高文等鼎力相助，協助籌措建造天文台的經費，媒合國科會科儀中心製作零件。',
+      },
+      {
+        type: 'unorderList',
+        styleType: 'disc',
+        title: '計畫執行時程：',
+        list: [
+          '四月中：製作八吋牛頓式望遠鏡。',
+          '七月中：八吋牛頓式望遠鏡完成。望遠鏡的赤道儀由徐魁森設計，委託國科會精密科學儀器中心製作。',
+          '八月初：籌備製作十六吋望遠鏡。',
+          '八月中：高年級同學們製作一臺磨鏡機，運用磨鏡機又快速製作了一個牛頓式望遠鏡，成為後來十六吋望遠鏡的尋星鏡。',
+          '八月底：在磨鏡機的輔助之下，同學們進一步製作十六吋卡式望遠鏡。',
+          '十一月：十六吋望遠鏡完成。',
+        ],
+      },
+      {
+        type: 'image',
+        url: '/img/history/the-big-bang-3.jpg',
+        description: '十六吋望遠鏡鏡架製作過程',
+      },
+      {
+        type: 'image',
+        url: '/img/history/the-big-bang-2.jpg',
+        description: '磨鏡組兩位同學與八吋望遠鏡合影',
+      },
+      {
+        type: 'paragraph',
+        text: '十六吋望遠鏡完成後，成為當時全國鏡面最大的望遠鏡，為這個新社團帶來了十足的宣傳效果，地方報紙出現多篇報導。許多社友曾表示，他們在高中時代就已經知道清大天文台和磨鏡的事蹟，心嚮往之，成為考上清大後加入天文社的遠因。',
+      },
+      {
+        type: 'paragraph',
+        text: '然而時日漸久，保養問題浮現，鏡片需要不停重新蒸鍍，零件毀損也需要更新。十六吋望遠鏡與八吋望遠鏡真正派得上用場的時候並不多，使用狀況時好時壞，更多時候被閒置著。社團幹部們逐漸找到借用國外進口望遠鏡的管道，沈君山也為社團張羅到更好的觀測儀器。',
+      },
+      {
+        type: 'image',
+        url: '/img/history/the-big-bang-4.jpg',
+        description: '呂助增老師與陳通老師的真空蒸鍍機',
+      },
+      {
+        type: 'paragraph',
+        text: '1988 年清大物理館拆遷，天文台從磨鏡機到望遠鏡這所有的自製成果就在搬遷過程中佚失。',
+      },
+    ],
+  },
+  {
+    shortAuthorName: '作者/傅喻',
+    author: '傅喻',
     coverUrl: '/img/history/science-monthly-1.jpg',
     slug: 'science-monthly',
     title: '幼苗與科學月刊',
@@ -69,6 +135,71 @@ const posts: TPost[] = [
       {
         type: 'paragraph',
         text: '半世紀後的今天，清大天文社的社辦甚至有自己的伺服器、無線網路、電腦、雙螢幕、影印機和掃描機，任何社員都可以自由使用。學校為我們付費購買的數位資料庫，又或是國內外免費資源，我們與知識的距離，絕對比半個世紀以前更近。正是因為這個距離收斂，使我們翻閱老舊的科學月刊與社刊時，更震懾於前人為了克服距離做出的努力。',
+      },
+    ],
+  },
+  {
+    shortAuthorName: '作者/傅喻',
+    author: '傅喻',
+    coverUrl: '/img/history/the-earliest-astronomy-camp-1.jpg',
+    slug: 'the-earliest-astronomy-camp',
+    title: '最早的天文營，圓山清大兩頭跑！',
+    recommended: false,
+    contents: [
+      {
+        type: 'paragraph',
+        text: '清大天文社曾經在民國 66 學年度（1977 年）暑假至民國 71 學年度（1982 年）暑假舉行天文營，有規劃地向全國各大專院校招收營隊學員。',
+      },
+      {
+        type: 'paragraph',
+        text: '此時的天文營是配合救國團「暑期自強活動大專學生學生研究隊籌組辦法」舉行，救國團的辦法中明確寫出籌組研究對的目的在於「使理論與實際相結合，以拓展學術研究領域」，而天文營絕對是這個理念的最佳體現！',
+      },
+      {
+        type: 'paragraph',
+        text: '營隊為期五天，可以分成三個主要部分：',
+      },
+      {
+        type: 'paragraph',
+        text: '❶ 白天幾乎全是學者演講，天文社邀集了全台重要的天文學者，幫學員帶來足具深度的內容。曾經參與講學的學者與課程包含了：​​沈君山 / 漫談天文、蔡章獻 / 天文台操作、阮國全 / 星象觀測、盧世斌 / 天文觀測儀器、陳志聰 / 天文攝影、孫方鐸 / 軌道計算、陳通 / 真空鍍鏡、賴忠信 / 光學實驗、倪維斗 / 天文物理、李俊弘 / 早期天文學與天文發展。',
+      },
+      {
+        type: 'paragraph',
+        text: '❷ 夜晚安排觀測活動，此時天文社自製的十六吋望遠鏡和八吋望遠鏡就成了焦點！然而學生自製的望遠鏡品質終究有疑慮，因此天文社又向新竹中學、新竹社教館、明道中學借用多架望遠鏡，其中，新竹社教館在 1976 年從日本進口了精良的折射式望遠鏡，然而社教館並無人懂得使用，清大天文社從此成了社教館望遠鏡的主要使用者。藉由營隊活動，對外建立起緊密的合作關係，社團的運作不再侷限於校內，而能延伸觸角。',
+      },
+      {
+        type: 'paragraph',
+        text: '❸ 其中一日前往台北圓山天文台參觀，圓山天文台的台長蔡章獻和技工阮國全一直以來對清大天文社呵護備至，清大天文社舉辦全國性活動時，他們總是不畏迢迢路程來到新竹講學，並將清大天文社的活動訊息公告到《天文快報》，讓全國相關社群知道。',
+      },
+      {
+        type: 'image',
+        url: '/img/history/the-earliest-astronomy-camp-1.jpg',
+        description:
+          '清華大學沈君山院長在談天文新知，據學生回憶，沈君山教授特別喜歡講黑洞主題',
+      },
+      {
+        type: 'image',
+        url: '/img/history/the-earliest-astronomy-camp-2.jpg',
+        description: '中央大學王顯達老師講授太陽系的各種情形',
+      },
+      {
+        type: 'image',
+        url: '/img/history/the-earliest-astronomy-camp-3.jpg',
+        description: '明道中學天文台台長盧世斌老師講述望遠鏡的構造',
+      },
+      {
+        type: 'image',
+        url: '/img/history/the-earliest-astronomy-camp-4.jpg',
+        description: '圓山天文台台長蔡章獻在講述觀星技巧',
+      },
+      {
+        type: 'image',
+        url: '/img/history/the-earliest-astronomy-camp-5.jpg',
+        description: '圓山天文台技士阮國全在講述野外觀測的技巧',
+      },
+      {
+        type: 'image',
+        url: '/img/history/the-earliest-astronomy-camp-6.jpg',
+        description: '清華大學陳志聰老師在講述天文攝影',
       },
     ],
   },

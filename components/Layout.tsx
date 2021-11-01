@@ -19,7 +19,7 @@ const Layout = ({ children, title = '', metadata }: TProps): JSX.Element => {
         <meta charSet="utf-8" />
 
         <title>
-          {title ? `${title} - 清大天文社 50 週年` : '清大天文社 50 週年'}
+          {title ? `${title} - 清大天文社50週年` : '清大天文社50週年'}
         </title>
         <link rel="icon" href="/favicon.ico" />
 

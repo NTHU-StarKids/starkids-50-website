@@ -49,7 +49,7 @@ const goods: TGoods[] = [
     imageDetailUrl: '/img/goods-4.jpg',
     title: '吊飾鑰匙圈',
     name: '吊飾鑰匙圈（100元／個）',
-    description: '立體吊飾，為金屬材質，大小約預計為 40 x 40 x 5mm',
+    description: '立體吊飾，為金屬材質，大小約預計為 40 x 40 x 2.5mm',
   },
 ]
 

@@ -69,6 +69,11 @@ const DonationSection = (): JSX.Element => {
           3000
           元整將贈送一幅我們自製，從拍攝到設計皆為社員操刀的梅西爾天體海報（僅限認購與捐款者可獲得）。
         </P>
+        <img
+          src="/img/messier-catalog.jpg"
+          className="mb-8 rounded-xl mx-auto w-full sm:w-auto sm:max-w-screen-xs md:max-w-screen-sm sm:max-h-112"
+          alt="清大天文社梅西爾海報"
+        />
       </Container>
 
       <div className="flex justify-center">

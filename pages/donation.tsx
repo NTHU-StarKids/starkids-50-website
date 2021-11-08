@@ -38,7 +38,7 @@ const goods: TGoods[] = [
   },
   {
     imageUrl: '/img/goods-3.jpg',
-    imageDetailUrl: '/img/goods-3.jpg',
+    imageDetailUrl: '/img/goods-7.jpg',
     title: '紀念酒杯組',
     name: '紀念酒杯組（350 元／組）',
     description:

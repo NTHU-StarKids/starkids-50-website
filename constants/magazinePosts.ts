@@ -516,7 +516,7 @@ const posts: TPost[] = [
         type: 'image',
         url: '/img/posts/the-days-in-astronomy-club-1.jpg',
         description:
-          '2021 年張祥光教授返回天文社分享，演講結束合照。\n第一排左三：張祥光教授',
+          '2021 年張祥光教授返回天文社分享，演講結束合照。\n第一排右三：張祥光教授',
       },
       {
         type: 'paragraph',

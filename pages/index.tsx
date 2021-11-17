@@ -118,7 +118,7 @@ const AboutUsSection = (): JSX.Element => {
           <P className="mb-8">
             歲月如白駒過隙，倏然即逝，今年終於來到了我們清大天文社創立的 50
             週年，我們將於臺灣時間 11/27（六）擴大舉辦 50
-            週年社慶，並與美國連線同步直播，在此敬邀各位海內外的社友們回來共襄盛舉，一同歡慶這值得紀念的一刻。
+            週年社慶，並與美國連線同步視訊，在此敬邀各位海內外的社友們回來共襄盛舉，一同歡慶這值得紀念的一刻。
           </P>
         </Container>
 
@@ -237,14 +237,14 @@ const AboutUsSection = (): JSX.Element => {
                       <input
                         type="radio"
                         name="attendence"
-                        value="參加（美國）"
+                        value="參加（線上）"
                         className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
-                        checked={signupForm.attendence == '參加（美國）'}
+                        checked={signupForm.attendence == '參加（線上）'}
                         onChange={(e) =>
                           onInputChange('attendence', e.target.value)
                         }
                       />
-                      <P className="mx-2">參加（美國）</P>
+                      <P className="mx-2">參加（線上）</P>
                     </div>
                     <div className="flex items-center my-2">
                       <input
@@ -403,7 +403,7 @@ export default function HomePage(): JSX.Element {
 
   const metadata: TMetadata = {
     description:
-      '動手做 要有中國的科學自信！用腦想 培育蒼穹的浩瀚心胸！歲月如白駒過隙，倏然即逝，今年終於來到了我們清大天文社創立的 50 週年，我們將於臺灣時間 11/27（六）擴大舉辦 50 週年社慶，並與美國連線同步直播，在此敬邀各位海內外的社友們回來共襄盛舉，一同歡慶這值得紀念的一刻。',
+      '動手做 要有中國的科學自信！用腦想 培育蒼穹的浩瀚心胸！歲月如白駒過隙，倏然即逝，今年終於來到了我們清大天文社創立的 50 週年，我們將於臺灣時間 11/27（六）擴大舉辦 50 週年社慶，並與美國連線同步視訊，在此敬邀各位海內外的社友們回來共襄盛舉，一同歡慶這值得紀念的一刻。',
   }
 
   return (

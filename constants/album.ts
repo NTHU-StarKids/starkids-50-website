@@ -544,6 +544,11 @@ export const categories: TAlbumCategory[] = [
         description: '49年大合照 (2020.12.11)',
         portrait: false,
       },
+      {
+        imgUrl: '/img/album/anniversary-21.jpg',
+        description: '50年大合照 (2021.11.27)',
+        portrait: false,
+      },
     ],
   },
   {

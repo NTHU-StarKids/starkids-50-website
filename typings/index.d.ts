@@ -112,3 +112,10 @@ type TDiary = {
   duration: string
   url: string
 }
+
+type TDonation = {
+  name: string
+  department?: string
+  currency: string
+  amount: number
+}

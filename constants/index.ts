@@ -76,6 +76,23 @@ export const relatedLinks = [
   },
 ]
 
+export const donations: TDonation[] = [
+  { name: '辛水泉', department: '物理 78', currency: 'NTD', amount: 100000 },
+  { name: '金升光', department: '物理 86', currency: 'NTD', amount: 3750 },
+  { name: '張祥光', department: '物理 87', currency: 'NTD', amount: 3000 },
+  { name: '蘇裕農', department: '化學 89', currency: 'NTD', amount: 3000 },
+  { name: '賴詩萍', department: '物理 93', currency: 'NTD', amount: 6000 },
+  { name: '邱文華', department: '化工 93', currency: 'NTD', amount: 3000 },
+  { name: '丘政倫', department: '物理 03', currency: 'NTD', amount: 3000 },
+  { name: '張建凡', department: '動機 03', currency: 'NTD', amount: 6000 },
+  { name: '潘國全', department: '物理 04', currency: 'NTD', amount: 3000 },
+  { name: '徐安廷', department: '電機 18', currency: 'NTD', amount: 12000 },
+  { name: '邱羿櫳', department: '物理 18', currency: 'NTD', amount: 3000 },
+  { name: '郭人萱', department: '外語 18', currency: 'NTD', amount: 4200 },
+  { name: '王立宇', department: '工科 21', currency: 'NTD', amount: 5000 },
+  { name: '匿　名', currency: 'NTD', amount: 10000 },
+]
+
 export const availableProfiles: string[] = [
   'profile-01',
   'profile-02',

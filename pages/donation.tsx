@@ -9,6 +9,7 @@ import Section from '@/components/Section'
 import SplitNewLine from '@/components/SplitNewLine'
 import Layout from '@/components/Layout'
 import P from '@/components/Paragraph'
+import { donations } from '@/constants'
 
 type TProps = {
   onClickGood: (good: TGoods) => void
@@ -93,6 +94,45 @@ const DonationSection = (): JSX.Element => {
           </div>
         </a>
       </div>
+    </Section>
+  )
+}
+
+const DonationList = (): JSX.Element => {
+  return (
+    <Section>
+      <H2>捐款芳名錄</H2>
+      <Container>
+        <div className="flex justify-center">
+          <div className="bg-purple-50 w-full md:w-3/5 px-0.5 py-2 rounded-xl">
+            <div className="bg-purple-50 w-full rounded-xl px-6 md:px-10 lg:px-14 py-6 overflow-hidden">
+              <table className="table-fixed text-purple-600 font-light tracking-wider w-full mt-4 text-sm sm:text-base">
+                <thead className="mb-2 border-purple-100 border-b">
+                  <tr>
+                    <th className="font-normal pb-2">捐款人</th>
+                    <th className="font-normal pb-2">系級</th>
+                    <th className="font-normal pb-2">金額 (NTD)</th>
+                  </tr>
+                </thead>
+
+                <tbody className="text-black">
+                  {donations.map((donation, index) => {
+                    return (
+                      <tr key={`donation-${index}`}>
+                        <td className="p-1">{donation.name}</td>
+                        <td className="p-1">{donation.department}</td>
+                        <td className="p-1">
+                          {donation.amount.toLocaleString()}
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </Container>
     </Section>
   )
 }
@@ -254,6 +294,7 @@ export default function DonationPage(): JSX.Element {
   return (
     <Layout title="贊助我們" metadata={metadata}>
       <DonationSection />
+      <DonationList />
       <GoodsSection goods={goods} />
     </Layout>
   )

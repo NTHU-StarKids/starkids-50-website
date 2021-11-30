@@ -33,6 +33,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+input:disabled,
+textarea:disabled {
+  background-color: #f9f9f9;
+  cursor: not-allowed;
+}
+
 textarea {
   resize: none;
 }

@@ -45,6 +45,7 @@ const AnniversarySection = (): JSX.Element => {
 const AboutUsSection = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [showForm, setShowForm] = useState<boolean>(false)
+  const formDisabled = true
 
   // form variables
   type TSignupForm = {
@@ -96,7 +97,7 @@ const AboutUsSection = (): JSX.Element => {
   }
 
   const submit = async () => {
-    if (checked) {
+    if (checked && !formDisabled) {
       await signup(signupForm)
       setSignupForm(initSignupForm)
       setIsOpen(true)
@@ -173,6 +174,7 @@ const AboutUsSection = (): JSX.Element => {
                     placeholder="姓名"
                     autoComplete="off"
                     onChange={(e) => onInputChange('name', e.target.value)}
+                    disabled={formDisabled}
                   />
 
                   <input
@@ -185,6 +187,7 @@ const AboutUsSection = (): JSX.Element => {
                     onChange={(e) =>
                       onInputChange('department', e.target.value)
                     }
+                    disabled={formDisabled}
                   />
 
                   <input
@@ -195,6 +198,7 @@ const AboutUsSection = (): JSX.Element => {
                     placeholder="社內身份"
                     autoComplete="off"
                     onChange={(e) => onInputChange('identity', e.target.value)}
+                    disabled={formDisabled}
                   />
 
                   <input
@@ -205,6 +209,7 @@ const AboutUsSection = (): JSX.Element => {
                     placeholder="電子信箱"
                     autoComplete="off"
                     onChange={(e) => onInputChange('email', e.target.value)}
+                    disabled={formDisabled}
                   />
 
                   <input
@@ -215,6 +220,7 @@ const AboutUsSection = (): JSX.Element => {
                     placeholder="聯絡電話"
                     autoComplete="off"
                     onChange={(e) => onInputChange('phone', e.target.value)}
+                    disabled={formDisabled}
                   />
 
                   <P className="mt-4 my-2">社慶當天是否到場？</P>
@@ -226,10 +232,14 @@ const AboutUsSection = (): JSX.Element => {
                         name="attendence"
                         value="參加（臺灣）"
                         className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
-                        checked={signupForm.attendence == '參加（臺灣）'}
+                        checked={
+                          !formDisabled &&
+                          signupForm.attendence == '參加（臺灣）'
+                        }
                         onChange={(e) =>
                           onInputChange('attendence', e.target.value)
                         }
+                        disabled={formDisabled}
                       />
                       <P className="mx-2">參加（臺灣）</P>
                     </div>
@@ -238,11 +248,15 @@ const AboutUsSection = (): JSX.Element => {
                         type="radio"
                         name="attendence"
                         value="參加（線上）"
-                        className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
-                        checked={signupForm.attendence == '參加（線上）'}
+                        className="form-radio p-2 bg-transparent border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
+                        checked={
+                          !formDisabled &&
+                          signupForm.attendence == '參加（線上）'
+                        }
                         onChange={(e) =>
                           onInputChange('attendence', e.target.value)
                         }
+                        disabled={formDisabled}
                       />
                       <P className="mx-2">參加（線上）</P>
                     </div>
@@ -252,10 +266,13 @@ const AboutUsSection = (): JSX.Element => {
                         name="attendence"
                         value="不克前來"
                         className="form-radio p-2 bg-white border-2 border-purple-600 focus:ring-0 focus:ring-transparent"
-                        checked={signupForm.attendence == '不克前來'}
+                        checked={
+                          !formDisabled && signupForm.attendence == '不克前來'
+                        }
                         onChange={(e) =>
                           onInputChange('attendence', e.target.value)
                         }
+                        disabled={formDisabled}
                       />
                       <P className="mx-2">不克前來</P>
                     </div>
@@ -273,6 +290,7 @@ const AboutUsSection = (): JSX.Element => {
                     onChange={(e) =>
                       onInputChange('familyMember', e.target.value)
                     }
+                    disabled={formDisabled}
                   />
 
                   <textarea
@@ -285,18 +303,21 @@ const AboutUsSection = (): JSX.Element => {
                     onChange={(e) =>
                       onInputChange('suggestion', e.target.value)
                     }
+                    disabled={formDisabled}
                   />
 
                   <div className="flex justify-center mt-12">
                     <div
-                      className={`px-3 py-2 w-28 border-2 ${
+                      className={`px-3 py-2 ${
+                        formDisabled ? 'w-44' : 'w-28'
+                      } border-2 ${
                         checked
                           ? 'border-purple-600 bg-purple-600 cursor-pointer'
                           : 'border-gray-400 bg-gray-400 cursor-not-allowed'
                       } text-white rounded-lg select-none tracking-wider`}
                       onClick={() => submit()}
                     >
-                      確認送出
+                      確認送出{formDisabled && ' (已截止)'}
                     </div>
                   </div>
                 </form>

@@ -84,6 +84,7 @@ export const donations: TDonation[] = [
   { name: '賴詩萍', department: '物理 93', currency: 'NTD', amount: 6000 },
   { name: '邱文華', department: '化工 93', currency: 'NTD', amount: 3000 },
   { name: '丘政倫', department: '物理 03', currency: 'NTD', amount: 3000 },
+  { name: '楊志偉', department: '材料 03', currency: 'NTD', amount: 5000 },
   { name: '張建凡', department: '動機 03', currency: 'NTD', amount: 6000 },
   { name: '潘國全', department: '物理 04', currency: 'NTD', amount: 3000 },
   { name: '徐安廷', department: '電機 18', currency: 'NTD', amount: 12000 },

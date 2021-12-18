@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Range, getTrackBackground } from 'react-range'
 
 import { CABINETS } from '@/constants'
-import { diaries } from '@/constants/diaries'
+// import { diaries } from '@/constants/diaries'
 import Container from '@/components/Container'
 import posts from '@/constants/historyPosts'
 import { H2, H3 } from '@/components/Headings'
@@ -213,10 +213,12 @@ const DiarySection = (): JSX.Element => {
           年底新購買的掃描機加入，催生當時社員逐步掃描社誌建檔想法的實踐，電子化後的社誌，除了能永久保存外，更能讓歷屆社員們不再受限於物理距離的限制，得以在線上倒轉回每本社誌撰寫時的青澀時光～
         </P>
         <P className="mb-4">
-          ※ 社誌電子檔連結清單將於 50 年社慶日前後公布，敬請期待！
+          ※ 社誌電子檔連結清單將於 50 年社慶日前後公布，敬請期待！<br></br>
+          如有需要，也可寄信與社團幹部聯絡喔！
         </P>
       </Container>
 
+      {/*
       <P className="mb-4 font-light">【限時開放】</P>
       <div className="flex justify-center">
         <div className="bg-purple-50 w-full md:w-3/5 h-112 lg:h-120 xl:h-136 2xl:h-144 px-0.5 py-2 rounded-xl overflow-hidden">
@@ -259,6 +261,7 @@ const DiarySection = (): JSX.Element => {
           </div>
         </div>
       </div>
+      */}
     </Section>
   )
 }

@@ -77,6 +77,7 @@ export const relatedLinks = [
 ]
 
 export const donations: TDonation[] = [
+  { name: '陳昱寧', department: '物理 74', currency: 'NTD', amount: 3000 },
   { name: '辛水泉', department: '物理 78', currency: 'NTD', amount: 100000 },
   { name: '金升光', department: '物理 86', currency: 'NTD', amount: 3750 },
   { name: '張祥光', department: '物理 87', currency: 'NTD', amount: 3000 },

@@ -93,6 +93,7 @@ export const donations: TDonation[] = [
   { name: '郭人萱', department: '外語 18', currency: 'NTD', amount: 4200 },
   { name: '王立宇', department: '工科 21', currency: 'NTD', amount: 5000 },
   { name: '匿　名', currency: 'NTD', amount: 10000 },
+  { name: '匿　名', currency: 'NTD', amount: 10000 },
 ]
 
 export const availableProfiles: string[] = [

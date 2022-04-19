@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 
-import { KeyboardEvent, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faPaperPlane,
@@ -8,18 +8,16 @@ import {
   faSync,
 } from '@fortawesome/free-solid-svg-icons'
 
-import { createChat } from '@/api'
 import { H2 } from '@/components/Headings'
 import Section from '@/components/Section'
 import SplitNewLine from '@/components/SplitNewLine'
 import Layout from '@/components/Layout'
 import { availableProfiles } from '@/constants'
-import { useChats } from '@/hook'
+import { chats } from '@/constants/chats'
 
 type TProps = {
   disabled: boolean
   messageGroups: TMessageGroup[]
-  refetchChats: () => void
 }
 
 type TMessage = {
@@ -37,13 +35,6 @@ type TMessageGroup = {
 }
 
 const defaultProfile = 'profile-01'
-
-const appendChatId = (id: string) => {
-  const ids = JSON.parse(localStorage.getItem('chatIds')) || []
-  ids.push(id)
-  const chatIds = Array.from(new Set(ids))
-  localStorage.setItem('chatIds', JSON.stringify(chatIds))
-}
 
 const getChatIds = (): string[] => {
   const chatIds = JSON.parse(localStorage.getItem('chatIds'))
@@ -122,31 +113,12 @@ const MessageGroup = ({
   )
 }
 
-const ChatSection = ({
-  disabled,
-  messageGroups,
-  refetchChats,
-}: TProps): JSX.Element => {
+const ChatSection = ({ disabled, messageGroups }: TProps): JSX.Element => {
   const [nickname, setNickname] = useState<string>('')
-  const [message, setMessage] = useState<string>('')
+  const [message] = useState<string>('')
   const [profile, setProfile] = useState<string>(defaultProfile)
   const messageRef = useRef()
   const focusOutBtnRef = useRef()
-
-  const sendMessage = async () => {
-    if (!disabled && message && message.split(/\n|\r|\r\n/g).join('')) {
-      const result = await createChat(nickname || '匿名', message, profile)
-      if (result) {
-        appendChatId(result.id)
-        setMessage('')
-        // @ts-ignore
-        focusOutBtnRef.current.click()
-        // @ts-ignore
-        messageRef.current.focus()
-        refetchChats()
-      }
-    }
-  }
 
   const changeProfile = () => {
     if (!disabled) {
@@ -161,28 +133,6 @@ const ChatSection = ({
         setProfile(availableProfiles[currentIndex + 1])
         localStorage.setItem('profile', availableProfiles[currentIndex + 1])
       }
-    }
-  }
-
-  const onChangeNickname = (name: string) => {
-    setNickname(name)
-    localStorage.setItem('chatNickname', name)
-  }
-
-  const isTouchDevice = () => {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0
-  }
-
-  const onMessageKeyDown = (event: KeyboardEvent) => {
-    if (
-      !disabled &&
-      event.key === 'Enter' &&
-      !event.nativeEvent.isComposing &&
-      !event.shiftKey &&
-      !isTouchDevice()
-    ) {
-      sendMessage()
-      event.preventDefault()
     }
   }
 
@@ -277,10 +227,9 @@ const ChatSection = ({
                     className="form-input w-full h-full px-0 rounded placeholder-gray-400 text-black tracking-wider border-none outline-none focus:ring-0 focus:ring-transparent"
                     name="nickname"
                     placeholder="名字/暱稱"
-                    disabled={disabled}
+                    disabled={true}
                     autoComplete="off"
                     value={nickname}
-                    onChange={(e) => onChangeNickname(e.target.value)}
                   />
                 </div>
                 <div className="relative flex justify-between gap-1 w-full h-9 bg-white rounded-full pl-3.5 pr-0.5 overflow-hidden">
@@ -292,12 +241,9 @@ const ChatSection = ({
                       className="form-textarea w-full h-full p-0 rounded placeholder-gray-400 text-black tracking-wider border-none outline-none focus:ring-0 focus:ring-transparent"
                       name="message"
                       autoFocus={true}
-                      placeholder="輸入訊息"
-                      disabled={disabled}
+                      placeholder="留言功能已關閉..."
+                      disabled={true}
                       autoComplete="off"
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      onKeyDown={(e) => onMessageKeyDown(e)}
                       ref={messageRef}
                     />
                   </div>
@@ -310,7 +256,6 @@ const ChatSection = ({
                           ? 'bg-gray-400 cursor-not-allowed'
                           : 'bg-purple-500 cursor-pointer'
                       }`}
-                      onClick={sendMessage}
                     >
                       <FontAwesomeIcon icon={faPaperPlane} />
                     </div>
@@ -331,7 +276,7 @@ const ChatSection = ({
 
 export default function ChatPage(): JSX.Element {
   const [messageGroups, setMessageGroups] = useState<TMessageGroup[]>([])
-  const { data, isFetched: isChatsFeteched, refetch } = useChats()
+  const [isChatsDisabled, setIsChatsDisabled] = useState<boolean>(true)
 
   const metadata: TMetadata = {
     description: '留言板',
@@ -339,7 +284,7 @@ export default function ChatPage(): JSX.Element {
 
   useEffect(() => {
     const chatIds = getChatIds()
-    const generateMessageGroup = (chat: IChat): TMessageGroup => {
+    const generateMessageGroup = (chat: TChat): TMessageGroup => {
       const messageGroup = {
         id: chat.id,
         name: chat.name,
@@ -356,55 +301,54 @@ export default function ChatPage(): JSX.Element {
       return messageGroup
     }
 
-    if (isChatsFeteched) {
-      const messages: TMessageGroup[] = []
-      let prevMessageGroup: TMessageGroup
-      data.chats.forEach((chat, index) => {
-        if (index == 0) {
-          prevMessageGroup = generateMessageGroup(chat)
-          return
+    const messages: TMessageGroup[] = []
+    let prevMessageGroup: TMessageGroup
+    chats.forEach((chat, index) => {
+      if (index == 0) {
+        prevMessageGroup = generateMessageGroup(chat)
+        return
+      }
+
+      if (
+        dayjs(chat.sentAt).diff(dayjs(prevMessageGroup.sentAt)) <
+          5 * 60 * 1000 &&
+        ((chatIds.includes(chat.id) && chatIds.includes(prevMessageGroup.id)) ||
+          (!chatIds.includes(chat.id) &&
+            !chatIds.includes(prevMessageGroup.id) &&
+            chat.name == prevMessageGroup.name))
+      ) {
+        const msg = {
+          sentAt: chat.sentAt,
+          text: chat.text,
         }
+        prevMessageGroup.messages.push(msg)
+      } else {
+        messages.push(prevMessageGroup)
+        prevMessageGroup = generateMessageGroup(chat)
 
-        if (
-          dayjs(chat.sentAt).diff(dayjs(prevMessageGroup.sentAt)) <
-            5 * 60 * 1000 &&
-          ((chatIds.includes(chat.id) &&
-            chatIds.includes(prevMessageGroup.id)) ||
-            (!chatIds.includes(chat.id) &&
-              !chatIds.includes(prevMessageGroup.id) &&
-              chat.name == prevMessageGroup.name))
-        ) {
-          const msg = {
-            sentAt: chat.sentAt,
-            text: chat.text,
-          }
-          prevMessageGroup.messages.push(msg)
-        } else {
-          messages.push(prevMessageGroup)
-          prevMessageGroup = generateMessageGroup(chat)
-
-          if (index == data.chats.length - 1) {
-            messages.push(prevMessageGroup)
-          }
-          return
-        }
-
-        if (index == data.chats.length - 1) {
+        if (index == chats.length - 1) {
           messages.push(prevMessageGroup)
         }
-      })
+        return
+      }
 
-      setMessageGroups(messages)
-    }
-  }, [isChatsFeteched, data])
+      if (index == chats.length - 1) {
+        messages.push(prevMessageGroup)
+      }
+    })
+
+    setMessageGroups(messages)
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsChatsDisabled(false)
+    }, 1200)
+  }, [])
 
   return (
     <Layout title="留言板" metadata={metadata}>
-      <ChatSection
-        disabled={!isChatsFeteched}
-        messageGroups={messageGroups}
-        refetchChats={refetch}
-      />
+      <ChatSection disabled={isChatsDisabled} messageGroups={messageGroups} />
     </Layout>
   )
 }

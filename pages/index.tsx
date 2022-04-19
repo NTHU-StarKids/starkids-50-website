@@ -8,7 +8,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { Dialog, Transition } from '@headlessui/react'
 
-import { signup } from '@/api'
 import CarouselSection from '@/components/CarouselSection'
 import Container from '@/components/Container'
 import { H2, H3 } from '@/components/Headings'
@@ -94,14 +93,6 @@ const AboutUsSection = (): JSX.Element => {
 
   const onInputChange = (key: string, value: string) => {
     setSignupForm((prev) => ({ ...prev, [key]: value }))
-  }
-
-  const submit = async () => {
-    if (checked && !formDisabled) {
-      await signup(signupForm)
-      setSignupForm(initSignupForm)
-      setIsOpen(true)
-    }
   }
 
   useEffect(() => {
@@ -315,9 +306,8 @@ const AboutUsSection = (): JSX.Element => {
                           ? 'border-purple-600 bg-purple-600 cursor-pointer'
                           : 'border-gray-400 bg-gray-400 cursor-not-allowed'
                       } text-white rounded-lg select-none tracking-wider`}
-                      onClick={() => submit()}
                     >
-                      確認送出{formDisabled && ' (已截止)'}
+                      確認送出 (已截止)
                     </div>
                   </div>
                 </form>

@@ -1,4 +1,4 @@
-interface IChat {
+type TChat = {
   id: string
   sentAt: string
   name: string

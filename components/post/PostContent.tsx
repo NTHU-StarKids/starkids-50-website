@@ -77,8 +77,11 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
             )
           } else if (content.type == 'unorderList') {
             return (
-              // @ts-ignore
-              <ul style={{ listStyleType: content.styleType }}>
+              <ul
+                key={`content-${index}`}
+                // @ts-ignore
+                style={{ listStyleType: content.styleType }}
+              >
                 {
                   // @ts-ignore
                   content.title
@@ -97,7 +100,7 @@ const PostContent = ({ contents }: TProps): JSX.Element => {
             )
           } else if (content.type == 'orderList') {
             return (
-              <ol>
+              <ol key={`content-${index}`}>
                 {
                   // @ts-ignore
                   content.title
